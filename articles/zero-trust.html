@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zero Trust Is Not About Trust. It Is About Reducing the Cost of Being Wrong. | Jaiz Anuar</title>
+
+<meta name="description" content="Zero Trust is often misunderstood as a technology or identity project. This article explores why Zero Trust is fundamentally about accepting uncertainty and reducing the consequences of misplaced trust." />
+
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body class="light-page">
+
+<header class="page-header">
+<div class="logo">Jaiz Anuar</div>
+
+<nav>
+<a href="../index.html">Home</a>
+<a href="index.html">Articles</a>
+<a href="../papers/">Papers</a>
+<a href="../about/">About</a>
+</nav>
+
+</header>
+
+<main class="reader">
+
+<a href="index.html" class="back-link">← Back to Articles</a>
+
+<div class="article-meta">
+8 July 2026 · Cybersecurity · Zero Trust · Digital Trust · 8 min read
+</div>
+
+<h1>Zero Trust Is Not About Trust. It Is About Reducing the Cost of Being Wrong.</h1>
+
+<p class="lead">
+Few ideas in cybersecurity are as widely adopted—and as widely misunderstood—as Zero Trust. Ironically, the misunderstanding begins with its name.
+</p>
+
+<p>
+When people hear the words <strong>Zero Trust</strong>, they often imagine an organisation that trusts nobody. Employees assume it means management distrusts them. Executives believe it requires buying another security platform. Technical teams reduce it to implementing multi-factor authentication or deploying a Zero Trust Network Access (ZTNA) solution.
+</p>
+
+<p>
+None of these interpretations capture the real purpose of Zero Trust.
+</p>
+
+<p>
+Zero Trust is not an architecture built on distrust.
+It is an architecture built on humility.
+</p>
+
+<p>
+It begins with a simple acknowledgement: every trust decision, regardless of how confident we are, carries the possibility of being wrong.
+</p>
+
+<h2>The Problem Is Not Trust</h2>
+
+<p>
+Trust is essential for every organisation. Businesses cannot function without trusting employees, customers, suppliers, partners, cloud providers, software vendors, and increasingly, artificial intelligence.
+</p>
+
+<p>
+The real problem is not that trust exists.
+The problem is assuming trust will always remain valid.
+</p>
+
+<p>
+An employee can become the victim of phishing.
+An administrator can make a mistake.
+A trusted supplier can be compromised.
+A laptop can become infected.
+A software update can introduce malicious code.
+An AI agent can be manipulated into performing actions beyond its intended purpose.
+</p>
+
+<p>
+None of these situations necessarily involve malicious insiders.
+They simply demonstrate that today's trusted identity may become tomorrow's attack path.
+</p>
+
+<p>
+Zero Trust acknowledges this reality.
+</p>
+
+<h2>Every Trust Decision Is A Risk Decision</h2>
+
+<p>
+Every time a system grants access, it makes a judgement.
+Every firewall rule, every privileged role, every API token, every VPN session, every service account, and every authentication request represents a decision to trust.
+</p>
+
+<p>
+Most organisations focus on making better trust decisions.
+Zero Trust asks a different question.
+</p>
+
+<p>
+<strong>What happens when the decision is wrong?</strong>
+</p>
+
+<p>
+This subtle shift changes everything.
+</p>
+
+<p>
+Instead of trying to build perfect confidence in every decision, Zero Trust focuses on limiting the consequences when confidence turns out to be misplaced.
+</p>
+
+<h2>Reducing The Cost Of Being Wrong</h2>
+
+<p>
+Imagine an employee successfully authenticates using multi-factor authentication.
+Most organisations would consider the authentication successful and proceed to grant access.
+</p>
+
+<p>
+But authentication answers only one question.
+</p>
+
+<p>
+<strong>Who are you?</strong>
+</p>
+
+<p>
+Zero Trust continues asking questions.
+</p>
+
+<p>
+Is the device healthy?
+Is the session behaving normally?
+Does this user still require this level of privilege?
+Is this request consistent with previous behaviour?
+Has anything changed since access was first granted?
+</p>
+
+<p>
+The objective is not to eliminate trust.
+The objective is to minimise the damage when trust becomes invalid.
+</p>
+
+<p>
+Least privilege limits unnecessary access.
+Micro-segmentation limits lateral movement.
+Continuous verification reduces the lifetime of incorrect assumptions.
+Just-in-time access limits unnecessary standing privileges.
+Behaviour analytics identifies when trusted identities begin behaving differently.
+</p>
+
+<p>
+Every one of these controls serves the same purpose.
+Reduce the cost of being wrong.
+</p>
+
+<h2>The Biggest Mistake About Zero Trust</h2>
+
+<p>
+Perhaps the biggest misconception is believing Zero Trust begins with technology.
+</p>
+
+<p>
+Many organisations proudly announce their Zero Trust journey after deploying a new ZTNA solution or modern identity platform.
+Those technologies are valuable.
+But they are not Zero Trust.
+</p>
+
+<p>
+Replacing a VPN with ZTNA does not automatically eliminate excessive privileges.
+Implementing MFA does not prevent credential theft.
+Deploying identity governance does not stop poor security architecture.
+</p>
+
+<p>
+Technology enables Zero Trust.
+It does not define it.
+</p>
+
+<p>
+Zero Trust is first a way of thinking.
+Architecture comes afterwards.
+</p>
+
+<h2>Zero Trust Is No Longer Only About People</h2>
+
+<p>
+For years, cybersecurity focused primarily on human identities.
+Today, organisations manage APIs, workloads, service accounts, bots, machine identities, and AI agents that often possess privileges exceeding those of human users.
+</p>
+
+<p>
+Should these identities be trusted simply because they belong to the organisation?
+</p>
+
+<p>
+The answer remains the same.
+Trust should never become permanent simply because it was once justified.
+</p>
+
+<p>
+Machine identities deserve the same continuous verification as human identities.
+Perhaps even more.
+</p>
+
+<h2>Questions Worth Asking</h2>
+
+<ul>
+
+<li>Are we continuously verifying trust, or only authenticating once?</li>
+
+<li>How much access do users retain after their business need has changed?</li>
+
+<li>If an administrator's account were compromised today, how much damage could it cause before detection?</li>
+
+<li>How many service accounts possess privileges that nobody has reviewed in years?</li>
+
+<li>Have we reduced risk, or merely changed the technology performing the authentication?</li>
+
+<li>Does our Zero Trust strategy include APIs, workloads, and AI agents—or only employees?</li>
+
+</ul>
+
+<h2>Final Thought</h2>
+
+<p>
+The phrase <strong>"Never Trust, Always Verify"</strong> has become the unofficial slogan of Zero Trust.
+It is memorable.
+But it is also incomplete.
+</p>
+
+<p>
+Perhaps the better description is this:
+</p>
+
+<p>
+<strong>Trust when necessary. Verify continuously. Assume every trust decision can eventually become wrong.</strong>
+</p>
+
+<p>
+That is not paranoia.
+It is engineering.
+</p>
+
+<p>
+Cybersecurity is not about eliminating trust.
+It is about designing systems that continue to protect the organisation when trust inevitably fails.
+</p>
+
+<p>
+Because in cybersecurity, the most expensive mistake is rarely trusting someone.
+The most expensive mistake is assuming that trust can never be wrong.
+</p>
+
+</main>
+
+<footer>
+© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.
+</footer>
+
+</body>
+</html>
