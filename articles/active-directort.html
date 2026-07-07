@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>When Active Directory Works, But Is Not Resilient </title>
+
+<meta name="description" content="A working Active Directory is not necessarily a resilient Active Directory. Explore six architectural principles that distinguish operational health from true cyber resilience." />
+
+<link rel="stylesheet" href="../assets/style.css" />
+
+</head>
+
+<body class="light-page">
+
+<header class="page-header">
+
+<div class="logo">Jaiz Anuar</div>
+
+<nav>
+<a href="../index.html">Home</a>
+<a href="index.html">Articles</a>
+<a href="../papers/">Papers</a>
+<a href="../about/">About</a>
+</nav>
+
+</header>
+
+<main class="reader">
+
+<a href="index.html" class="back-link">← Back to Articles</a>
+
+<div class="article-meta">
+7 July 2026 · Cybersecurity · Active Directory · Security Architecture · 6 min read
+</div>
+
+<h1>When Active Directory Works, But Is Not Resilient</h1>
+
+<p class="lead">
+Many Active Directory environments appear healthy because users can log in, applications authenticate successfully, and domain controllers continue running. But a working Active Directory is not necessarily a resilient Active Directory.
+</p>
+
+<p>
+That distinction matters.
+</p>
+
+<p>
+In many organisations, Active Directory quietly sits in the background. Users authenticate every morning. Applications bind to LDAP. Group Policies are applied. Passwords are changed. Life goes on.
+</p>
+
+<p>
+As long as nothing appears broken, the environment is often considered healthy.
+</p>
+
+<p>
+But Active Directory is far more than infrastructure.
+</p>
+
+<p>
+It is the identity control plane of the organisation. It determines who can access systems, who receives privileged access, how trust relationships are established, and often where recovery begins after a cyber incident.
+</p>
+
+<p>
+The real measure of Active Directory is therefore not whether it works on a normal business day.
+</p>
+
+<p>
+The real measure is whether it continues protecting the organisation when conditions become abnormal.
+</p>
+
+<h2>1. A Working Environment Can Create False Confidence</h2>
+
+<p>
+Many organisations judge Active Directory using operational indicators.
+</p>
+
+<p>
+Domain Controllers are online. Replication is healthy. CPU utilisation is low. Users authenticate successfully. Applications continue working.
+</p>
+
+<p>
+The conclusion becomes obvious.
+</p>
+
+<p>
+<strong>"Our Active Directory is healthy."</strong>
+</p>
+
+<p>
+But healthy for what?
+</p>
+
+<p>
+Healthy during normal operations does not automatically mean resilient during compromise.
+</p>
+
+<p>
+An environment can function perfectly while still carrying architectural weaknesses. Backups may exist but remain inside the same trust boundary. Tier-0 privileges may be permanent. Disaster recovery procedures may never have been exercised. Service accounts may possess excessive permissions that nobody remembers granting.
+</p>
+
+<p>
+Operational success should never be confused with architectural resilience.
+</p>
+
+<p>
+The better question is not whether Active Directory works today.
+</p>
+
+<p>
+The better question is:
+</p>
+
+<p>
+<strong>What happens when Active Directory becomes the target?</strong>
+</p>
+
+<h2>2. Active Directory Is More Than Another Server</h2>
+
+<p>
+One of the biggest architectural mistakes is treating Domain Controllers like ordinary infrastructure servers.
+</p>
+
+<p>
+They are not.
+</p>
+
+<p>
+Active Directory is a Tier-0 asset.
+</p>
+
+<p>
+It authenticates identities. It applies security policy. It establishes trust. It controls privileged access across the enterprise.
+</p>
+
+<p>
+If an attacker compromises Active Directory, many downstream security controls become significantly less effective.
+</p>
+
+<p>
+This changes how the environment should be protected.
+</p>
+
+<p>
+Administrative access should originate from dedicated privileged workstations. Standing privileged access should be minimised. Administrative sessions should be monitored. Emergency accounts should be tightly governed. Privileged identities should exist only for as long as they are genuinely required.
+</p>
+
+<p>
+The greatest danger is not simply administrator error.
+</p>
+
+<p>
+It is an attacker inheriting administrator privilege.
+</p>
+
+<p>
+Permanent privilege creates permanent opportunity.
+</p>
+
+<h2>3. Backup Is Not Recovery</h2>
+
+<p>
+Almost every organisation claims it has Active Directory backups.
+</p>
+
+<p>
+That may well be true.
+</p>
+
+<p>
+But backup and recovery are not the same capability.
+</p>
+
+<p>
+A backup is merely a copy.
+</p>
+
+<p>
+Recovery is the ability to restore business operations under pressure.
+</p>
+
+<p>
+Modern ransomware has fundamentally changed this conversation.
+</p>
+
+<p>
+Attackers increasingly target backup infrastructure before encrypting production systems. Administrative credentials may already be compromised. Recovery environments may depend upon the very identity platform that has been attacked.
+</p>
+
+<p>
+This means organisations should regularly prove—not simply assume—that they can restore Domain Controllers, Group Policy Objects, DNS, SYSVOL, and ultimately the Active Directory forest itself.
+</p>
+
+<p>
+The critical question is no longer:
+</p>
+
+<p>
+<strong>Do we have backup?</strong>
+</p>
+
+<p>
+Instead, it becomes:
+</p>
+
+<p>
+<strong>Can we recover Active Directory quickly, cleanly, and confidently?</strong>
+</p>
+
+<h2>4. Service Accounts Quietly Increase Risk</h2>
+
+<p>
+Service accounts rarely receive the same attention as human identities.
+</p>
+
+<p>
+Yet they often possess significant privilege.
+</p>
+
+<p>
+Applications depend upon them. Backup systems use them. Monitoring platforms authenticate through them. Integration services rely upon them every day.
+</p>
+
+<p>
+Over time, they accumulate.
+</p>
+
+<p>
+Some no longer have owners. Others continue operating long after the original application has disappeared. Passwords remain unchanged for years. Privileges continue expanding.
+</p>
+
+<p>
+Unlike employees, service accounts never resign.
+</p>
+
+<p>
+A resilient Active Directory requires every service account to have a clearly identified owner, defined business purpose, appropriate privilege, monitored activity, and lifecycle management.
+</p>
+
+<p>
+Every non-human identity should still have human accountability.
+</p>
+
+<h2>5. Disaster Recovery Is More Than Another Site</h2>
+
+<p>
+Many organisations believe they have solved Active Directory resilience simply because Domain Controllers exist at a disaster recovery location.
+</p>
+
+<p>
+Unfortunately, resilience involves much more than geography.
+</p>
+
+<p>
+The disaster recovery environment must continue supporting authentication, DNS, Kerberos, LDAP, Group Policy processing, administrative recovery activities, VPN authentication, and business-critical applications under production workload.
+</p>
+
+<p>
+Recovery procedures should be exercised under realistic conditions rather than existing only as documentation.
+</p>
+
+<p>
+An architecture that succeeds only on diagrams may fail when people depend upon it most.
+</p>
+
+<h2>6. Hybrid Identity Changes Everything</h2>
+
+<p>
+Active Directory no longer exists in isolation.
+</p>
+
+<p>
+Many organisations now operate hybrid identity environments where on-premises Active Directory synchronises with Microsoft Entra ID and cloud services.
+</p>
+
+<p>
+Identity recovery therefore extends beyond Domain Controllers.
+</p>
+
+<p>
+Recovery planning must also consider synchronisation services, password hash synchronisation, Conditional Access dependencies, privileged cloud identities, Microsoft 365 services, and authentication sequencing between cloud and on-premises environments.
+</p>
+
+<p>
+Recovery should reflect the actual identity architecture—not yesterday's infrastructure boundaries.
+</p>
+
+<h2>Final Thought</h2>
+
+<p>
+A working Active Directory can hide architectural fragility.
+</p>
+
+<p>
+It may successfully support authentication, policy enforcement, administration, and business operations every single day.
+</p>
+
+<p>
+But resilience is revealed only when conditions become abnormal.
+</p>
+
+<p>
+When privileged credentials are stolen.
+</p>
+
+<p>
+When ransomware targets identity.
+</p>
+
+<p>
+When disaster recovery becomes production.
+</p>
+
+<p>
+When backup must actually be restored.
+</p>
+
+<p>
+When hybrid identity behaves differently than expected.
+</p>
+
+<p>
+That is when the architecture is truly tested.
+</p>
+
+<p>
+Active Directory should therefore never be designed simply to work.
+</p>
+
+<p>
+It should be designed to withstand compromise, recover from failure, sustain business continuity, and protect the trust foundation of the organisation.
+</p>
+
+<p>
+Because in the end, Active Directory resilience is not merely an infrastructure concern.
+</p>
+
+<p>
+It is a security architecture concern.
+</p>
+
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+</main>
+
+<footer>
+© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.
+</footer>
+
+</body>
+</html>
