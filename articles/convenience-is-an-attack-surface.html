@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convenience Is an Attack Surface | Jaiz Anuar</title>
+  <meta name="description" content="What AirDrop and Quick Share teach us about security trade-offs, operational governance, and the hidden cost of frictionless user experiences." />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <a href="index.html" class="back-link">← Back to Articles</a>
+    <div class="article-meta">9 July 2026 · Cybersecurity · Security Architecture · 6 min read</div>
+    <a class="download-button article-download" href="../papers/pdf/convenience-is-an-attack-surface.pdf" download>Download PDF</a>
+    <h1>Convenience Is an Attack Surface</h1>
+    <p class="lead">What AirDrop and Quick Share teach us about security trade-offs, operational governance, and the hidden cost of frictionless user experiences.</p>
+
+    <p>Modern technology competes on convenience.</p>
+    <p>Faster onboarding. Fewer clicks. Instant sharing. Automatic discovery. Seamless connectivity.</p>
+    <p>Users love it. Businesses demand it. Product teams optimise for it.</p>
+    <p>But cybersecurity should ask a different question: <strong>What security trade-offs were intentionally made to make this experience so convenient?</strong></p>
+    <p>Recent research involving Apple’s AirDrop and Samsung’s Quick Share reminds us that many modern digital experiences depend on an uncomfortable reality: <strong>systems often need to trust first and verify later.</strong></p>
+    <p>That design choice is not necessarily a mistake. In many cases, it is deliberate. Because convenience has a cost.</p>
+
+    <h2>The Security Cost of Frictionless Experiences</h2>
+    <p>Users expect nearby file sharing to work instantly: open the device, see nearby users, tap once, and transfer complete.</p>
+    <p>Nobody wants pairing codes, manual network configuration, certificate exchange, or complicated authentication workflows.</p>
+    <p>The result is that these technologies often need to receive, inspect, and process information from unknown nearby devices before trust is fully established.</p>
+    <p>From a user-experience perspective, this feels magical. From a security-architecture perspective, it creates pre-authentication exposure.</p>
+    <p>The vulnerability is not necessarily the software bug itself. The vulnerability may be the assumption that convenience requires trust to happen earlier than security would prefer.</p>
+
+    <h2>Verification Happened Too Late</h2>
+    <p>Traditional security thinking prefers this model:</p>
+    <ul>
+      <li>Verify identity.</li>
+      <li>Establish trust.</li>
+      <li>Accept communication.</li>
+      <li>Process data.</li>
+    </ul>
+    <p>Convenience-oriented systems often reverse the sequence:</p>
+    <ul>
+      <li>Receive communication.</li>
+      <li>Process enough information to understand the request.</li>
+      <li>Determine who the sender is.</li>
+      <li>Ask the user whether the interaction should continue.</li>
+    </ul>
+    <p>The difference may appear subtle, but security incidents often occur in that gap between receiving information and establishing trust.</p>
+
+    <h2>Physical Proximity Is Not Identity</h2>
+    <p>Technology has repeatedly fallen into the same assumption: <strong>nearby does not mean trustworthy.</strong></p>
+    <p>Bluetooth attacks exploited this assumption. RFID cloning exploited this assumption. NFC relay attacks exploited this assumption. Wi-Fi attacks exploited this assumption.</p>
+    <p>AirDrop and Quick Share are simply the latest reminder.</p>
+    <p>A device being physically close to us does not automatically make it legitimate, authorised, or safe. Physical proximity is a location attribute. It is not an identity control.</p>
+
+    <h2>Operational Governance Matters More Than Patching</h2>
+    <p>The immediate response to these vulnerabilities will naturally be to apply patches, update operating systems, and install vendor fixes.</p>
+    <p>Those actions are important, but they only address today’s vulnerability. Good operational governance addresses tomorrow’s vulnerability as well.</p>
+    <p>Organisations should ask:</p>
+    <ul>
+      <li>Should nearby sharing be enabled by default?</li>
+      <li>Should corporate devices restrict sharing to approved contacts only?</li>
+      <li>Should MDM policies disable public discovery modes?</li>
+      <li>Should highly privileged users operate under stricter settings?</li>
+      <li>Should sensitive environments prohibit proximity-based sharing entirely?</li>
+    </ul>
+    <p>These are not vulnerability-management questions. They are operating-model questions.</p>
+
+    <h2>The Principle of Least Exposure</h2>
+    <p>Cybersecurity professionals are familiar with the principle of least privilege. Perhaps modern architectures need another principle: <strong>least exposure.</strong></p>
+    <p>If a service is rarely used, it should not be continuously discoverable. If a capability is unnecessary, it should not remain enabled by default. If trust is not required, it should not be assumed.</p>
+    <p>Reducing exposure often reduces risk more effectively than adding another security control afterwards.</p>
+
+    <h2>The Bigger Lesson</h2>
+    <p>The lesson from AirDrop and Quick Share is not that file sharing is dangerous. The lesson is that convenience and security will always compete for priority.</p>
+    <p>Every reduction in friction usually requires an increase in trust. Every seamless experience introduces assumptions. Every automatic feature expands the attack surface a little further.</p>
+    <p><strong>Convenience is not free.</strong></p>
+    <p><strong>Convenience is an attack surface.</strong></p>
+
+    <h2>Final Thought</h2>
+    <p>Security vulnerabilities are often discussed as technical failures. Sometimes they are.</p>
+    <p>But sometimes vulnerabilities are simply the visible consequences of decisions that were intentionally made years earlier to improve usability, adoption, and customer experience.</p>
+    <p>The bug may eventually be patched. The design trade-off, however, will remain.</p>
+    <p>Because the question is not whether organisations should choose convenience or security. The real question is whether organisations understand the security cost of convenience before accepting the trade.</p>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+</body>
+</html>
