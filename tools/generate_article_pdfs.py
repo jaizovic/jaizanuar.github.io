@@ -79,6 +79,7 @@ def build_pdf(source):
 
     styles = getSampleStyleSheet()
     title_style = ParagraphStyle("ArticleTitle", parent=styles["Title"], fontName="Helvetica-Bold", fontSize=23, leading=28, textColor=HexColor("#0f172a"), spaceAfter=9)
+    byline_style = ParagraphStyle("Byline", parent=styles["Normal"], fontName="Helvetica", fontSize=10.5, leading=14, textColor=HexColor("#475569"), spaceAfter=9)
     meta_style = ParagraphStyle("Metadata", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=9, leading=13, textColor=HexColor("#2563eb"), spaceAfter=19)
     heading_style = ParagraphStyle("Heading", parent=styles["Heading2"], fontName="Helvetica-Bold", fontSize=15, leading=19, textColor=HexColor("#0f172a"), spaceBefore=13, spaceAfter=8)
     body_style = ParagraphStyle("Body", parent=styles["BodyText"], fontName="Helvetica", fontSize=10.5, leading=16, textColor=HexColor("#334155"), alignment=TA_LEFT, spaceAfter=10)
@@ -87,7 +88,11 @@ def build_pdf(source):
     doc = BaseDocTemplate(str(OUTPUT / filename), pagesize=A4, leftMargin=18 * mm, rightMargin=18 * mm, topMargin=19 * mm, bottomMargin=21 * mm)
     frame = Frame(doc.leftMargin, doc.bottomMargin, doc.width, doc.height, id="article")
     doc.addPageTemplates(PageTemplate(id="article", frames=[frame], onPage=footer))
-    story = [Paragraph(escape(title), title_style), Paragraph(escape(metadata), meta_style)]
+    story = [
+        Paragraph(escape(title), title_style),
+        Paragraph("By: Jaiz Anuar", byline_style),
+        Paragraph(escape(metadata), meta_style),
+    ]
     for tag, is_lead, text in parser.items:
         if tag == "h2":
             story.append(Paragraph(escape(text), heading_style))
