@@ -8,13 +8,11 @@
 </head>
 
 <body class="light-page">
-
 <header class="page-header">
   <div class="logo">Jaiz Anuar</div>
   <nav>
     <a href="../index.html">Home</a>
     <a href="index.html">Articles</a>
-    <a href="../papers/">Download PDF</a>
     <a href="../about/">About</a>
   </nav>
 </header>
@@ -22,171 +20,127 @@
 <section class="article-hero">
   <h1>Articles</h1>
   <p>Independent reflections on cybersecurity, digital trust, governance, architecture, and leadership.</p>
-
-  <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()" />
+  <div class="article-filters" aria-label="Filter articles">
+    <input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles" />
+    <select id="categoryFilter" aria-label="Filter by category"><option value="">All topics</option></select>
+    <select id="yearFilter" aria-label="Filter by year"><option value="">All years</option></select>
+  </div>
 </section>
 
-<section class="article-list" id="articleList">
+<main class="article-list">
+  <p class="results-summary" id="resultsSummary" aria-live="polite"></p>
+  <section id="articleList">
+    <article class="article-card" data-date="2026-07-10" data-categories="AI Security,Cybersecurity">
+      <div class="article-meta">10 July 2026 · AI Security · Cybersecurity · 9 min read</div>
+      <h2><a href="the-real-risk-of-ai-coding-agents-is-permission.html">The Real Risk of AI Coding Agents Is Not Intelligence. It Is Permission.</a></h2>
+      <p>AI coding agents are rapidly becoming part of developer workflows. The key security question is not how intelligent they are, but what they are allowed to access, execute, and change.</p>
+      <div class="article-actions"><a class="read-more" href="the-real-risk-of-ai-coding-agents-is-permission.html">Read article →</a><a class="download-button article-download" href="../papers/pdf/the-real-risk-of-ai-coding-agents-is-permission.pdf" download>Download PDF</a></div>
+    </article>
 
-  <article class="article-card">
-    <div class="article-meta">
-      10 July 2026 · AI Security · Cybersecurity · 9 min read
-    </div>
-    <h2>
-      <a href="the-real-risk-of-ai-coding-agents-is-permission.html">
-        The Real Risk of AI Coding Agents Is Not Intelligence. It Is Permission.
-      </a>
-    </h2>
-    <p>
-      AI coding agents are rapidly becoming part of developer workflows. The key security question is not how intelligent they are, but what they are allowed to access, execute, and change.
-    </p>
-    <a class="read-more" href="the-real-risk-of-ai-coding-agents-is-permission.html">Read article →</a>
-  </article>
+    <article class="article-card" data-date="2026-07-07" data-categories="Cybersecurity,Active Directory,Security Architecture">
+      <div class="article-meta">7 July 2026 · Cybersecurity · Active Directory · 6 min read</div>
+      <h2><a href="when-active-directory-works-but-is-not-resilient.html">When Active Directory Works, But Is Not Resilient</a></h2>
+      <p>A working Active Directory is not necessarily a resilient one. Explore six architectural principles that distinguish operational health from true cyber resilience.</p>
+      <div class="article-actions"><a class="read-more" href="when-active-directory-works-but-is-not-resilient.html">Read article →</a><a class="download-button article-download" href="../papers/pdf/when-active-directory-works-but-is-not-resilient.pdf" download>Download PDF</a></div>
+    </article>
 
-  <!-- list article content starts here -->
-<article class="article-card">
-  <div class="article-meta">
-    7 July 2026 · Cybersecurity · Active Directory · 6 min read
-  </div>
+    <article class="article-card" data-date="2026-07-04" data-categories="Zero Trust,Cybersecurity">
+      <div class="article-meta">4 July 2026 · Zero Trust · 8 min read</div>
+      <h2><a href="zero-trust-reducing-cost-of-being-wrong.html">Zero Trust Is Not About Trust. It Is About Reducing the Cost of Being Wrong.</a></h2>
+      <p>Zero Trust is often misunderstood as “trust nobody” or simply another security product. Its true purpose is limiting the consequences when trust decisions prove wrong.</p>
+      <div class="article-actions"><a class="read-more" href="zero-trust-reducing-cost-of-being-wrong.html">Read article →</a><a class="download-button article-download" href="../papers/pdf/zero-trust-reducing-cost-of-being-wrong.pdf" download>Download PDF</a></div>
+    </article>
 
-  <h2>
-    <a href="when-active-directory-works-but-is-not-resilient.html">
-      When Active Directory Works, But Is Not Resilient
-    </a>
-  </h2>
+    <article class="article-card" data-date="2026-06-25" data-categories="Cybersecurity">
+      <div class="article-meta">25 June 2026 · Cybersecurity · 7 min read</div>
+      <h2><a href="three-reasons-you-havent-been-hacked.html">Three Reasons You Haven’t Been Hacked... Yet. Only One Is Good News.</a></h2>
+      <p>Is the absence of a cyberattack really evidence of strong security? Only one of the three possible explanations should inspire confidence.</p>
+      <div class="article-actions"><a class="read-more" href="three-reasons-you-havent-been-hacked.html">Read article →</a><a class="download-button article-download" href="../papers/pdf/three-reasons-you-havent-been-hacked.pdf" download>Download PDF</a></div>
+    </article>
 
-  <p>
-    A working Active Directory is not necessarily a resilient one. Explore six architectural principles that distinguish operational health from true cyber resilience, and why identity resilience matters more than simply keeping domain controllers online.
-  </p>
+    <article class="article-card" data-date="2026-06-19" data-categories="Cybersecurity,Leadership">
+      <div class="article-meta">19 June 2026 · Cybersecurity · Leadership · 6 min read</div>
+      <h2><a href="cybersecurity-industry-profits.html">If the Cybersecurity Industry Profits from Cyberattacks, Can We Fully Trust Its Advice?</a></h2>
+      <p>A reflection on independence, incentives, vendor dependency, and the need for stronger internal cyber judgment.</p>
+      <div class="article-actions"><a class="read-more" href="cybersecurity-industry-profits.html">Read article →</a><a class="download-button article-download" href="../papers/pdf/cybersecurity-industry-profits.pdf" download>Download PDF</a></div>
+    </article>
 
-  <a class="read-more" href="when-active-directory-works-but-is-not-resilient.html">
-    Read article →
-  </a>
-</article>
-<!-- list article content end here -->
-  
-  <!-- list article content starts here -->
-<article class="article-card">
-  <div class="article-meta">
-    4 July 2026 · Zero Trust · 8 min read
-  </div>
+    <article class="article-card" data-date="2026-06-16" data-categories="Cybersecurity,Leadership,Digital Trust">
+      <div class="article-meta">16 June 2026 · Cybersecurity · Leadership · 8 min read</div>
+      <h2><a href="three-types-of-cybersecurity-confidence.html">Three Types of Cybersecurity Confidence. Which One Does Your Organisation Have?</a></h2>
+      <p>Explore the difference between imagined, borrowed, and earned confidence, and why it matters to security leaders.</p>
+      <div class="article-actions"><a class="read-more" href="three-types-of-cybersecurity-confidence.html">Read article →</a><a class="download-button article-download" href="../papers/pdf/three-types-of-cybersecurity-confidence.pdf" download>Download PDF</a></div>
+    </article>
 
-  <h2>
-    <a href="zero-trust-reducing-cost-of-being-wrong.html">
-      Zero Trust Is Not About Trust. It Is About Reducing the Cost of Being Wrong.
-    </a>
-  </h2>
+    <article class="article-card" data-date="2026-06-07" data-categories="Cybersecurity,Leadership">
+      <div class="article-meta">7 June 2026 · Cybersecurity · Leadership · 8 min read</div>
+      <h2><a href="cybersecurity-doesnt-fail-because-we-dont-know-enough.html">Cybersecurity Doesn't Fail Because We Don't Know Enough.</a></h2>
+      <p>Why cybersecurity fails when certainty replaces curiosity, and why challenging assumptions is a vital security control.</p>
+      <div class="article-actions"><a class="read-more" href="cybersecurity-doesnt-fail-because-we-dont-know-enough.html">Read article →</a><a class="download-button article-download" href="../papers/pdf/cybersecurity-doesnt-fail-because-we-dont-know-enough.pdf" download>Download PDF</a></div>
+    </article>
+  </section>
+  <nav class="pagination" id="pagination" aria-label="Article pages"></nav>
+</main>
 
-  <p>
-    Zero Trust is often misunderstood as "trust nobody" or simply another security product. This article argues that its true purpose is not eliminating trust, but limiting the consequences when trust decisions inevitably prove wrong.
-  </p>
-
-  <a class="read-more" href="zero-trust-reducing-cost-of-being-wrong.html">
-    Read article →
-  </a>
-</article>
-<!-- list article content end here --> 
-  
-  <!-- list article content starts here -->
-  <article class="article-card">
-  <div class="article-meta">
-  25 June 2026 · Cybersecurity · 7 min read
-</div>
-
-  <h2>
-    <a href="three-reasons-you-havent-been-hacked.html">
-      Three Reasons You Haven’t Been Hacked... Yet. Only One Is Good News.
-    </a>
-  </h2>
-  <p>
-    Is the absence of a cyberattack really evidence of strong security? This article explores three very different reasons an organisation may appear untouched—and why only one should inspire confidence.
-  </p>
-
-  <a class="read-more" href="three-reasons-you-havent-been-hacked.html">
-    Read article →
-  </a>
-</article>
-  <!-- list article content end here -->
-  
-  <!-- list article content starts here -->
-  <article class="article-card">
-    <div class="article-meta">
-  19 June 2026 · Cybersecurity · 6 min read
-</div>
-    <h2>
-      <a href="cybersecurity-industry-profits.html">
-        If the Cybersecurity Industry Profits from Cyberattacks, Can We Fully Trust Its Advice?
-      </a>
-    </h2>
-    <p>
-      A provocative reflection on independence, incentives, vendor dependency, and the need for stronger internal cyber judgment.
-    </p>
-    <a class="read-more" href="cybersecurity-industry-profits.html">Read article →</a>
-  </article>
-  <!-- list article content end here -->
-
-  <!-- list article content starts here -->
-<article class="article-card">
-  <div class="article-meta">
-    16 July 2026 · Cybersecurity · Leadership · 8 min read
-  </div>
-
-  <h2>
-    <a href="three-types-of-cybersecurity-confidence.html">
-      Three Types of Cybersecurity Confidence. Which One Does Your Organisation Have?
-    </a>
-  </h2>
-  <p>
-    Every organisation is confident in its cybersecurity—but not all confidence is the same. Explore the difference between imagined, borrowed, and earned confidence, and why understanding the distinction may be one of the most important security decisions an organisation can make.
-  </p>
-
-  <a class="read-more" href="three-types-of-cybersecurity-confidence.html">
-    Read article →
-  </a>
-</article>
-<!-- list article content end here -->
-  
-  <!-- list article content starts here -->
-
-<article class="article-card">
-
-  <div class="article-meta">
-    7 June 2026 · Cybersecurity · Leadership · 8 min read
-  </div>
-  <h2>
-    <a href="cybersecurity-doesnt-fail-because-we-dont-know-enough.html">
-      Cybersecurity Doesn't Fail Because We Don't Know Enough. It Fails Because We Become Too Certain About What We Think We Know.
-    </a>
-  </h2>
-
-  <p>
-    Most cyber failures do not happen because organisations lack knowledge. They happen when confidence replaces curiosity. This article explores why challenging assumptions may be one of the most important security controls of all.
-  </p>
-  <a class="read-more" href="cybersecurity-doesnt-fail-because-we-dont-know-enough.html">
-
-    Read article →
-
-  </a>
-</article>
-<!-- list article content end here -->
-  
-</section>
-
-<footer>
-  © 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.
-</footer>
+<footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
 
 <script>
-function searchArticles() {
-  const input = document.getElementById("searchInput").value.toLowerCase();
-  const cards = document.querySelectorAll(".article-card");
+const pageSize = 12;
+const list = document.getElementById('articleList');
+const cards = [...list.querySelectorAll('.article-card')].sort((a, b) => b.dataset.date.localeCompare(a.dataset.date));
+const searchInput = document.getElementById('searchInput');
+const categoryFilter = document.getElementById('categoryFilter');
+const yearFilter = document.getElementById('yearFilter');
+const pagination = document.getElementById('pagination');
+const summary = document.getElementById('resultsSummary');
 
-  cards.forEach(card => {
-    const text = card.innerText.toLowerCase();
-    card.style.display = text.includes(input) ? "block" : "none";
-  });
+function populateFilters() {
+  const categories = [...new Set(cards.flatMap(card => card.dataset.categories.split(',')))].sort();
+  const years = [...new Set(cards.map(card => card.dataset.date.slice(0, 4)))].sort().reverse();
+  categories.forEach(category => categoryFilter.add(new Option(category, category)));
+  years.forEach(year => yearFilter.add(new Option(year, year)));
 }
-</script>
 
+function pageLink(page, label, current) {
+  const link = document.createElement(current ? 'span' : 'a');
+  link.textContent = label;
+  link.className = current ? 'current-page' : '';
+  if (!current) {
+    const url = new URL(window.location);
+    url.searchParams.set('page', page);
+    link.href = url.pathname + url.search;
+    link.addEventListener('click', event => { event.preventDefault(); render(page); });
+  }
+  return link;
+}
+
+function render(requestedPage = 1) {
+  const search = searchInput.value.toLowerCase().trim();
+  const category = categoryFilter.value;
+  const year = yearFilter.value;
+  const matching = cards.filter(card => card.textContent.toLowerCase().includes(search) && (!category || card.dataset.categories.split(',').includes(category)) && (!year || card.dataset.date.startsWith(year)));
+  const totalPages = Math.max(1, Math.ceil(matching.length / pageSize));
+  const page = Math.min(Math.max(1, requestedPage), totalPages);
+  const start = (page - 1) * pageSize;
+
+  list.replaceChildren(...matching.slice(start, start + pageSize));
+  summary.textContent = matching.length ? `Showing ${start + 1}-${Math.min(start + pageSize, matching.length)} of ${matching.length} articles` : 'No articles match your search.';
+  pagination.replaceChildren();
+  if (totalPages > 1) {
+    if (page > 1) pagination.append(pageLink(page - 1, 'Previous', false));
+    for (let number = 1; number <= totalPages; number++) pagination.append(pageLink(number, number, number === page));
+    if (page < totalPages) pagination.append(pageLink(page + 1, 'Next', false));
+  }
+  const url = new URL(window.location);
+  if (page === 1) url.searchParams.delete('page'); else url.searchParams.set('page', page);
+  window.history.replaceState({}, '', url.pathname + url.search);
+}
+
+populateFilters();
+searchInput.addEventListener('input', () => render(1));
+categoryFilter.addEventListener('change', () => render(1));
+yearFilter.addEventListener('change', () => render(1));
+render(Number(new URLSearchParams(window.location.search).get('page')) || 1);
+</script>
 </body>
 </html>

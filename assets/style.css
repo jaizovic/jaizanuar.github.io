@@ -52,10 +52,17 @@ nav a:hover {
   color: #dbeafe;
 }
 
-#searchInput {
+.article-filters {
   margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#searchInput,
+.article-filters select {
   width: 100%;
-  max-width: 520px;
+  max-width: 320px;
   padding: 14px 16px;
   border-radius: 8px;
   border: none;
@@ -107,6 +114,62 @@ nav a:hover {
   color: #2563eb;
   font-weight: bold;
   text-decoration: none;
+}
+
+.article-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.article-actions .read-more {
+  margin-top: 0;
+}
+
+.article-download {
+  padding: 9px 14px;
+  font-size: 14px;
+}
+
+.reader > .article-download {
+  margin: 16px 0 6px;
+}
+
+.results-summary {
+  margin: 0 0 18px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.pagination a,
+.pagination span {
+  min-width: 20px;
+  padding: 9px 12px;
+  border-radius: 7px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pagination a {
+  background: white;
+  color: #2563eb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.pagination .current-page {
+  background: #2563eb;
+  color: white;
 }
 
 .library-list {
@@ -260,5 +323,15 @@ footer {
   .library-card {
     flex-direction: column;
     gap: 18px;
+  }
+
+  .article-filters {
+    display: grid;
+  }
+
+  #searchInput,
+  .article-filters select {
+    max-width: none;
+    box-sizing: border-box;
   }
 }
