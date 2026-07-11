@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When Security Tools Become the Noise | Jaiz Anuar</title>
+  <meta name="description" content="Why security operations should optimise for signal quality rather than alert volume, and how excessive noise can become a detection risk." />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <a href="index.html" class="back-link">← Back to Articles</a>
+    <div class="article-meta">12 April 2025 · Cybersecurity · Security Operations · 8 min read</div>
+    <a class="download-button article-download" href="../papers/pdf/when-security-tools-become-the-noise.pdf" download>Download PDF</a>
+    <h1>When Security Tools Become the Noise</h1>
+    <p class="lead">Security Operations Centres were built to make threats visible. But for many teams, the problem is no longer visibility—it is noise.</p>
+
+    <p>Organisations cannot defend against threats they cannot see. For years, the cybersecurity industry responded in the same way: collect more logs, deploy more sensors, integrate more tools, generate more alerts, and build more dashboards.</p>
+    <p>The assumption seemed reasonable: <strong>more visibility leads to better security.</strong></p>
+    <p>But many SOC teams today are discovering something unexpected. The problem is no longer visibility. The problem is noise.</p>
+
+    <h2>The Modern SOC Has a Signal Problem</h2>
+    <p>Most mature organisations now collect enormous amounts of security telemetry: endpoint detections, firewall logs, cloud activity, email events, identity anomalies, network traffic, threat-intelligence feeds, vulnerability findings, and application logs.</p>
+    <p>The SOC is no longer struggling to collect information. The SOC is struggling to understand which information actually matters.</p>
+    <p>Not every alert deserves investigation. Not every anomaly represents malicious activity. Not every suspicious event is a threat.</p>
+    <p>Yet analysts continue to spend countless hours reviewing events that ultimately lead nowhere.</p>
+
+    <h2>Alert Fatigue Is More Dangerous Than It Looks</h2>
+    <p>Alert fatigue is often treated as an operational inconvenience: too many alerts, too few analysts, not enough people, not enough budget.</p>
+    <p>But alert fatigue is much more serious than that. It changes behaviour.</p>
+    <p>The same alerts appear every day. The same investigations produce the same result: false positive, false positive, false positive.</p>
+    <p>Eventually, analysts become conditioned to expect that the next alert will also be harmless. That is when danger begins.</p>
+    <p>Attackers do not need security teams to ignore every alert. They only need security teams to ignore the right one.</p>
+    <p>The most dangerous alert in the SOC is often the alert that looks exactly like all the others.</p>
+
+    <h2>More Detection Does Not Mean More Security</h2>
+    <p>Cybersecurity teams have a habit of responding to incidents in predictable ways: add another detection rule, threat feed, dashboard, correlation use case, or tool.</p>
+    <p>The intention is good. The outcome is not always good.</p>
+    <p>Visibility increases. Complexity increases. Noise increases. Analyst workload increases. Meanwhile, detection quality may remain unchanged.</p>
+    <p>At some point, organisations need to ask an uncomfortable question: <strong>Are we detecting threats, or are we detecting activity?</strong></p>
+    <p>A failed login is activity. A PowerShell execution is activity. A file download is activity. A new process is activity. None of these automatically represent risk.</p>
+    <p>SOC teams do not exist to collect interesting events. They exist to identify events that matter.</p>
+
+    <h2>Every False Positive Has a Cost</h2>
+    <p>False positives are often accepted as part of the job. To some extent, they are unavoidable. But they are not free.</p>
+    <p>Every false positive consumes analyst time, investigation effort, and operational focus. Every false positive slowly erodes trust in the detection platform.</p>
+    <p>Over time, this becomes dangerous. Analysts stop believing the alerts. Operations teams become frustrated by repeated investigations. Business teams become reluctant to engage.</p>
+    <p>Eventually, the tools themselves lose credibility. And once security tooling loses credibility, rebuilding trust becomes difficult.</p>
+    <p>This is no longer a technical issue. It becomes a governance issue.</p>
+
+    <h2>Attackers Benefit From Noise</h2>
+    <p>Security teams often assume attackers benefit from invisibility. That is true. But attackers also benefit from excessive visibility.</p>
+    <p>A SOC overwhelmed by alerts can become just as ineffective as a SOC with no monitoring at all. One suffers from blindness. The other suffers from distraction. Both create opportunity.</p>
+    <p>Experienced attackers understand this. They know that operating inside noisy environments makes detection harder.</p>
+    <p>The objective is not always to avoid detection completely. Sometimes it is simply to become one more alert in a queue of thousands.</p>
+
+    <h2>The Objective Is Signal, Not Volume</h2>
+    <p>Security operations should optimise for signal quality rather than event quantity.</p>
+    <p>Ten highly reliable alerts may provide more value than ten thousand low-confidence detections.</p>
+    <p>Achieving this requires difficult decisions. Some use cases need tuning. Some detections need retirement. Some telemetry sources contribute little operational value. Some integrations create more work than insight.</p>
+    <p>Removing a detection can sometimes improve security more than adding another one. That idea often feels uncomfortable, because many organisations still associate more data with greater maturity. Operational reality often suggests otherwise.</p>
+    <p>Mature SOC teams are not measured by how much they collect. They are measured by how effectively they respond.</p>
+
+    <h2>AI Will Help, But AI Will Not Save Us</h2>
+    <p>The industry is increasingly turning towards artificial intelligence: AI-powered XDR, AI-assisted triage, AI-generated investigations, and AI prioritisation engines.</p>
+    <p>These technologies have enormous potential. They may reduce analyst workload, improve prioritisation, and accelerate response times.</p>
+    <p>But AI cannot solve bad detection engineering. Poor-quality signals fed into intelligent systems still produce poor outcomes.</p>
+    <p>Artificial intelligence can amplify good processes. It can also amplify bad ones.</p>
+    <p>The objective should not be replacing analysts. The objective should be allowing analysts to focus on thinking rather than filtering.</p>
+
+    <h2>Detection Engineering Is Becoming a Strategic Capability</h2>
+    <p>The future SOC may look less like a monitoring centre and more like an engineering discipline: detection engineering, threat-informed defence, behaviour analytics, security telemetry architecture, and risk-based prioritisation.</p>
+    <p>The key question is no longer: “How many alerts can we generate?”</p>
+    <p>The better question is: <strong>Which alerts would we regret ignoring?</strong></p>
+    <p>That single question changes the entire philosophy of detection.</p>
+
+    <h2>The Bigger Lesson</h2>
+    <p>Cybersecurity spent years trying to solve the visibility problem. Many organisations succeeded. Now they face a new challenge: how to create clarity from abundance.</p>
+    <p>Visibility without prioritisation creates noise. Noise creates fatigue. Fatigue creates blindness. And blindness creates opportunity.</p>
+
+    <h2>Final Thought</h2>
+    <p>The purpose of a SOC is not to collect alerts, operate dashboards, or produce impressive event volumes. The purpose of a SOC is to help organisations make good security decisions quickly.</p>
+    <p>Sometimes that means collecting more information. Sometimes it means ignoring more of it.</p>
+    <p>Because in cybersecurity, visibility without clarity can become its own vulnerability. And sometimes the biggest threat to detection is not the attacker. It is the noise surrounding them.</p>
+    <p><strong>Question assumptions.</strong></p>
+    <p><strong>Share knowledge.</strong></p>
+    <p><strong>Build trust.</strong></p>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+</body>
+</html>
