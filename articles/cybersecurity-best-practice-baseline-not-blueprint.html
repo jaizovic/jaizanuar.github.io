@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Best Practice Is a Baseline, Not a Blueprint | Jaiz Anuar</title>
+  <meta name="description" content="Best practices are a useful starting point, but good security architecture begins by understanding risk—not prescribing the same control for every environment." />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <a href="index.html" class="back-link">← Back to Articles</a>
+    <div class="article-meta">14 July 2026 · Cybersecurity · Security Architecture · 10 min read</div>
+    <a class="download-button article-download" href="../papers/pdf/cybersecurity-best-practice-baseline-not-blueprint.pdf" download>Download PDF</a>
+    <h1>Cybersecurity Best Practice Is a Baseline, Not a Blueprint</h1>
+    <p class="lead">Best practices provide a useful starting point. But good security architecture begins by understanding the risk—not by prescribing the same control for every environment.</p>
+
+    <p>“Industry best practice” is one of the most frequently used phrases in cybersecurity.</p>
+    <p>Consultants use it to support recommendations. Auditors use it to describe control gaps. Vendors use it to position their solutions. Management may rely on it when deciding whether an organisation is sufficiently protected.</p>
+    <p>Best practices are valuable. They represent established knowledge, lessons learned, and controls that have worked across many organisations.</p>
+    <p>But a best practice is not automatically the right architecture. That distinction matters.</p>
+
+    <h2>Start With the Security Objective</h2>
+    <p>Consider an organisation that allows third parties to access a core transaction system.</p>
+    <p>A consultant may recommend multi-factor authentication, or MFA. The recommendation sounds reasonable because passwords alone are no longer sufficient for protecting important systems.</p>
+    <p>However, the discussion should not begin with: “How do we implement MFA?”</p>
+    <p>It should begin with: <strong>What security risk are we trying to prevent?</strong></p>
+    <p>The real objective may be to prevent third parties from obtaining direct and uncontrolled access to the core system.</p>
+    <p>Once that objective is understood, MFA becomes one possible control—not the entire answer.</p>
+    <p>The organisation can then examine several architectural options:</p>
+    <ul>
+      <li>A web server or reverse proxy</li>
+      <li>A middleware or integration server</li>
+      <li>An SSO termination point</li>
+      <li>A tightly controlled VPN</li>
+      <li>A zero-trust access service</li>
+      <li>An API gateway</li>
+      <li>Privileged access management</li>
+      <li>Native MFA within the application</li>
+      <li>A combination of several controls</li>
+    </ul>
+    <p>Each option may contribute to the same security outcome in a different way. The purpose of security architecture is to understand those differences.</p>
+
+    <h2>MFA Protects the Login, Not the Entire Access Path</h2>
+    <p>MFA is an important security control. It makes it more difficult for an attacker to access a system using only a stolen password.</p>
+    <p>But MFA mainly strengthens authentication. It does not automatically control everything that happens before and after the user logs in.</p>
+    <p>A user may successfully complete MFA but still have excessive privileges. The user’s device may already be compromised. A valid session may be stolen. The application may contain exploitable vulnerabilities. Another network path may allow the control to be bypassed entirely.</p>
+    <p>MFA alone does not necessarily:</p>
+    <ul>
+      <li>Prevent direct connectivity to the core environment</li>
+      <li>Restrict access to approved application functions</li>
+      <li>Inspect malicious requests</li>
+      <li>Isolate third-party sessions</li>
+      <li>Protect insecure application interfaces</li>
+      <li>Detect misuse by an authorised user</li>
+      <li>Provide transaction-level monitoring</li>
+      <li>Prevent alternative access paths</li>
+    </ul>
+    <p>This does not make MFA ineffective. It simply means MFA should not be mistaken for a complete security architecture.</p>
+
+    <h2>One Objective Can Have Multiple Control Options</h2>
+    <p>There is rarely only one way to achieve a security objective.</p>
+    <p>If external users must not connect directly to a core system, a controlled web server could become the access point. Requests can be inspected, authenticated, and logged before they are allowed to reach the internal application.</p>
+    <p>A middleware server could expose only the functions required by the third party while keeping the core system isolated. An SSO termination point could centralise authentication, access policies, and user revocation.</p>
+    <p>A VPN could provide encrypted access, although it must be carefully segmented to avoid giving users unnecessary network reach. An API gateway could be used when one organisation’s application needs to communicate with another organisation’s system.</p>
+    <p>Native MFA within the application may provide immediate protection when larger architectural changes cannot be implemented quickly.</p>
+    <p>None of these options is automatically correct in every situation. Each creates different dependencies, operational requirements, and residual risks.</p>
+    <p>A web server can still be bypassed if backend access remains open. A VPN can create excessive network exposure. An API gateway can become a simple forwarding proxy if it does not enforce authorisation and validate transactions. Native MFA may still leave the application directly exposed.</p>
+    <p>The control must therefore be assessed as part of the complete access path.</p>
+
+    <h2>Human Access Is Not the Same as System Integration</h2>
+    <p>Another problem with generic recommendations is that they sometimes treat every type of access in the same way. A person accessing an application is different from one system communicating with another.</p>
+    <p>For human access, appropriate controls may include:</p>
+    <ul>
+      <li>SSO</li>
+      <li>MFA</li>
+      <li>Role-based authorisation</li>
+      <li>Device-posture validation</li>
+      <li>Session monitoring</li>
+      <li>Time-bound access</li>
+    </ul>
+    <p>For system-to-system integration, interactive MFA may not be relevant because no person is waiting to approve an authentication request.</p>
+    <p>The appropriate controls may instead include:</p>
+    <ul>
+      <li>Application or workload identity</li>
+      <li>Mutual TLS</li>
+      <li>Managed certificates and secrets</li>
+      <li>OAuth tokens</li>
+      <li>API-level authorisation</li>
+      <li>Payload validation</li>
+      <li>Rate limiting</li>
+      <li>Transaction logging</li>
+    </ul>
+    <p>Administrative support access creates another scenario. It may require privileged access management, approval workflows, session recording, and just-in-time privileges.</p>
+    <p>The security objective may be similar, but the appropriate control pattern can be very different. Good architecture recognises those differences before recommending the solution.</p>
+
+    <h2>Attackers Also Understand Best Practices</h2>
+    <p>Best practices are not secret. Sophisticated attackers study the same technologies, frameworks, and reference architectures used by defenders. They understand how organisations commonly implement MFA, VPNs, firewalls, endpoint protection, and identity systems.</p>
+    <p>They also know where organisations frequently stop.</p>
+    <p>The firewall has been deployed, but the rules are rarely reviewed. MFA has been enabled, but recovery procedures remain weak. The API gateway exists, but an alternative backend connection bypasses it. The VPN is protected, but it provides broader network access than necessary.</p>
+    <p>The organisation may believe it has followed best practice. The attacker looks for the assumptions surrounding that practice.</p>
+    <p>This does not mean established practices should be rejected. It means they must be adapted, layered, tested, and continuously challenged.</p>
+    <p>A control becomes valuable not because it appears in a framework, but because it remains effective against the threats facing the organisation.</p>
+
+    <h2>The Entire Access Path Must Be Examined</h2>
+    <p>Security architecture should examine the complete journey from the requester to the protected system. It should establish:</p>
+    <ul>
+      <li>Who or what is requesting access?</li>
+      <li>Where does the connection enter?</li>
+      <li>How is identity verified?</li>
+      <li>What device or system is initiating the request?</li>
+      <li>Where does the connection terminate?</li>
+      <li>What functions are permitted?</li>
+      <li>What information is inspected and recorded?</li>
+      <li>Can access be revoked immediately?</li>
+      <li>Is there another path that bypasses the control?</li>
+      <li>What happens if the control fails?</li>
+    </ul>
+    <p>This is more valuable than asking only whether MFA, SSO, or an API gateway has been implemented.</p>
+    <p>A control can exist and still fail to achieve its intended outcome. The presence of a control demonstrates implementation. Its ability to prevent, detect, and contain an attack demonstrates effectiveness.</p>
+
+    <h2>Consultants Should Present Options, Not Only Prescriptions</h2>
+    <p>Consultants provide valuable external experience. They can identify weaknesses, introduce new perspectives, and help organisations avoid mistakes observed elsewhere.</p>
+    <p>But “this is industry best practice” should not be the end of the recommendation.</p>
+    <p>A strong recommendation should explain:</p>
+    <ol>
+      <li>What specific risk is being addressed?</li>
+      <li>What security outcome must be achieved?</li>
+      <li>What architectural options were considered?</li>
+      <li>Why is the selected option suitable for this environment?</li>
+      <li>What assumptions must remain true?</li>
+      <li>How could the control be bypassed or misused?</li>
+      <li>What residual risks will remain?</li>
+      <li>How will effectiveness be tested and monitored?</li>
+    </ol>
+    <p>This allows management to evaluate risk reduction alongside cost, complexity, operational capability, and business impact.</p>
+    <p>The consultant may recommend the preferred option, but the organisation must retain ownership of the decision.</p>
+
+    <h2>Interim Controls Can Still Be Reasonable</h2>
+    <p>Not every organisation can implement the ideal architecture immediately. A legacy application may not support modern SSO. An API gateway may require significant redesign. A new access platform may take months to implement.</p>
+    <p>In such situations, native MFA or another compensating control may still be reasonable as an interim measure.</p>
+    <p>But the arrangement should have:</p>
+    <ul>
+      <li>A clearly defined security objective</li>
+      <li>Documented limitations</li>
+      <li>Supporting compensating controls</li>
+      <li>An accountable owner</li>
+      <li>A specific target date</li>
+      <li>A migration path to the strategic solution</li>
+    </ul>
+    <p>An interim control should reduce immediate exposure while the stronger architecture is being developed. It should not quietly become permanent simply because the original audit finding has been closed.</p>
+
+    <h2>Final Thought</h2>
+    <p>Best practices matter. They provide organisations with a baseline and help prevent known security mistakes. But they cannot replace threat modelling, architectural analysis, or professional judgement.</p>
+    <p>The question is not simply: “Are we following best practice?”</p>
+    <p>The better question is: <strong>Does this architecture achieve the required security outcome, and can we prove that it works?</strong></p>
+    <p>MFA may be the right control. An API gateway may be more appropriate. A termination point, middleware layer, privileged-access platform, or combination of controls may provide stronger protection.</p>
+    <p>The answer depends on the user, the system, the access path, the threat, and the business requirement.</p>
+    <p>Cybersecurity best practice tells us where to begin. It should never tell us where to stop thinking.</p>
+    <p><strong>Question assumptions.</strong></p>
+    <p><strong>Share knowledge.</strong></p>
+    <p><strong>Build trust.</strong></p>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+</body>
+</html>
