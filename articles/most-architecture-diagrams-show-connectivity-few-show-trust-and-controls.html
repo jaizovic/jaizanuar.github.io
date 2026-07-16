@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Most Architecture Diagrams Show Connectivity. Few Show Trust and Controls. | Jaiz Anuar</title>
+  <meta name="description" content="Connectivity and trust are not the same. Why security architecture must make trust boundaries and controls visible, not merely data flows." />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <a href="index.html" class="back-link">← Back to Articles</a>
+    <div class="article-meta">16 July 2026 · Cybersecurity · Security Architecture · 9 min read</div>
+    <a class="download-button article-download" href="../papers/pdf/most-architecture-diagrams-show-connectivity-few-show-trust-and-controls.pdf" download>Download PDF</a>
+    <h1>Most Architecture Diagrams Show Connectivity. Few Show Trust and Controls.</h1>
+    <p class="lead">Connectivity and trust are not the same. Good security architecture must explain why systems are allowed to communicate, not merely show that they can.</p>
+
+    <p>Walk into almost any architecture review meeting and you will see a familiar picture.</p>
+    <p>Applications connected to APIs. Users connecting to portals. Servers communicating with databases. Cloud platforms integrating with on-premise environments. Partners exchanging information with internal systems.</p>
+    <p>Arrows everywhere. Lines crossing each other in every direction.</p>
+    <p>The diagram looks impressive. The architecture appears complete. Everyone nods in agreement. The meeting moves on.</p>
+    <p>But often, one of the most important questions remains unanswered: <strong>Why is this connection trusted?</strong></p>
+    <p>Because connectivity and trust are not the same thing.</p>
+
+    <h2>Connectivity Does Not Equal Trust</h2>
+    <p>A firewall rule allowing communication between two systems is not trust. A VPN connection is not trust. An API endpoint exposed to another application is not trust. A network route between cloud and data centre is not trust.</p>
+    <p>Connectivity simply means traffic can flow. Trust determines whether that traffic should be allowed to flow.</p>
+    <p>Many cybersecurity incidents do not happen because systems can communicate. They happen because systems trust something they should not trust.</p>
+    <p>A compromised service account. A stolen API token. An overprivileged application identity. An administrator account reused across multiple systems. A third-party integration with excessive permissions.</p>
+    <p>The connection itself was never the problem. The trust behind the connection was.</p>
+
+    <h2>Every Arrow Represents A Trust Decision</h2>
+    <p>Consider a simple architecture diagram:</p>
+    <p><strong>User → Web Portal → API Gateway → Backend Application → Database</strong></p>
+    <p>Five components. Four arrows.</p>
+    <p>Most architecture discussions focus on the technical aspects: which protocol is being used, what the bandwidth requirement is, how many transactions per second are expected, and what the expected latency is.</p>
+    <p>These are important questions. But cybersecurity architecture often asks different questions:</p>
+    <ul>
+      <li>How is identity established?</li>
+      <li>How is authentication performed?</li>
+      <li>How is authorisation enforced?</li>
+      <li>How is the session protected?</li>
+      <li>How are credentials managed?</li>
+      <li>How is activity monitored?</li>
+      <li>What happens if one component becomes compromised?</li>
+    </ul>
+    <p>The arrow on the diagram may take one second to draw. The trust relationship behind that arrow may take months to design correctly.</p>
+
+    <h2>Most Architecture Diagrams Show Connectivity. Few Show Trust.</h2>
+    <p>Architecture diagrams are excellent at showing where traffic goes. Few explain why the receiving system should trust the sender.</p>
+    <h3>User to Application</h3>
+    <p>How does the application know the user is who they claim to be? Username and password? Multi-factor authentication? Federated identity? Conditional Access? Risk-based authentication?</p>
+    <h3>Application to API</h3>
+    <p>How does the API trust the application? API key? OAuth token? Mutual TLS? Certificate authentication? Managed identity?</p>
+    <h3>Application to Database</h3>
+    <p>How does the database trust the application? Shared credentials? Service accounts? Managed identities? Least-privilege access? Credential-vault integration?</p>
+    <h3>Third Party to Internal Systems</h3>
+    <p>How does the organisation trust the external party? Network whitelisting? Certificate authentication? Dedicated connectivity? Contractual assurance? Continuous monitoring?</p>
+    <p>The architecture diagram may show a single arrow. The security architecture behind that arrow may involve dozens of controls.</p>
+
+    <h2>Trust Boundaries Matter More Than Network Boundaries</h2>
+    <p>Traditional architecture focused heavily on network segmentation: Internet, DMZ, internal network, data centre, production environment, and development environment.</p>
+    <p>The assumption was simple. If traffic came from inside the network, it was generally trusted. If traffic came from outside, additional validation was required.</p>
+    <p>That assumption no longer holds.</p>
+    <p>Employees work remotely. Applications consume cloud services. Partners integrate directly through APIs. Developers deploy workloads across multiple environments. Software communicates with software. AI agents perform actions on behalf of users.</p>
+    <p>Machine identities now outnumber human identities in many organisations.</p>
+    <p>The modern security question is no longer: “Which network are you coming from?”</p>
+    <p>Increasingly, the question becomes: <strong>Who are you, what are you trying to do, and should you be allowed to do it?</strong></p>
+    <p>Trust boundaries are replacing network boundaries. Identity is replacing location.</p>
+
+    <h2>Every Trust Boundary Should Trigger Controls</h2>
+    <p>Crossing a trust boundary should activate controls.</p>
+    <h3>User to Application</h3>
+    <ul>
+      <li>Authentication</li>
+      <li>Multi-factor authentication</li>
+      <li>Conditional Access</li>
+      <li>Session management</li>
+    </ul>
+    <h3>Application to API</h3>
+    <ul>
+      <li>OAuth tokens</li>
+      <li>Certificate validation</li>
+      <li>API authentication</li>
+      <li>Rate limiting</li>
+    </ul>
+    <h3>Application to Database</h3>
+    <ul>
+      <li>Service identities</li>
+      <li>Least-privilege access</li>
+      <li>Credential rotation</li>
+      <li>Database activity monitoring</li>
+    </ul>
+    <h3>Cloud to On-Premise</h3>
+    <ul>
+      <li>Encryption</li>
+      <li>Network segmentation</li>
+      <li>Identity federation</li>
+      <li>Monitoring and logging</li>
+    </ul>
+    <h3>Third Party to Internal Systems</h3>
+    <ul>
+      <li>Vendor assurance</li>
+      <li>Dedicated trust zones</li>
+      <li>Activity monitoring</li>
+      <li>Access governance</li>
+    </ul>
+    <p>Trust without validation eventually becomes assumption. Assumption eventually becomes exposure.</p>
+
+    <h2>Shift Left Applies To Trust Design Too</h2>
+    <p>One of the most expensive moments to discuss trust is during User Acceptance Testing. Unfortunately, this happens more often than organisations realise.</p>
+    <p>The architecture is approved. The vendor is selected. Development is completed. The go-live date is approaching.</p>
+    <p>Then someone asks: “How will the API authenticate?” “Who owns the service account?” “How will privileged access be managed?” “How will the third-party connection be monitored?”</p>
+    <p>By then, options are limited. Controls become expensive. Projects become delayed. Business becomes frustrated.</p>
+    <p>This is why trust design belongs in architecture discussions—not penetration-testing discussions, production-readiness discussions, or go-live discussions.</p>
+    <p>Trust should be designed early, because retrofitting trust is significantly harder than designing trust from the beginning.</p>
+
+    <h2>Security Architecture Is The Design Of Trust</h2>
+    <p>There is a common misconception that cybersecurity architecture is about deploying controls: firewalls, MFA, SIEM, DLP, PAM, and CASB.</p>
+    <p>These controls are important. But controls are not the objective. Controls exist to support trust decisions.</p>
+    <p>At its core, security architecture is fundamentally about answering a few simple questions:</p>
+    <ul>
+      <li>Who should trust whom?</li>
+      <li>Under what conditions?</li>
+      <li>Using which controls?</li>
+      <li>With what level of assurance?</li>
+      <li>Who accepts the residual risk if that trust is abused?</li>
+    </ul>
+    <p>Those questions often become business discussions rather than technical discussions. Trust is ultimately a business decision supported by technology controls.</p>
+
+    <h2>Questions Every Architecture Review Should Ask</h2>
+    <p>Instead of asking, “Can these systems communicate?”, ask: <strong>Should these systems communicate?</strong></p>
+    <p>Instead of asking, “Which port needs to be opened?”, ask: <strong>What validates this trust relationship?</strong></p>
+    <p>Instead of asking, “Where is the firewall?”, ask: <strong>Where is the trust boundary?</strong></p>
+    <p>Instead of asking, “How does traffic flow?”, ask: <strong>How does trust flow?</strong></p>
+    <p>These questions often reveal more security value than another network diagram ever could.</p>
+
+    <h2>Final Thoughts</h2>
+    <p>Most architecture diagrams show where data moves. Few show why that movement should be trusted.</p>
+    <p>Connectivity explains how systems communicate. Trust explains why they are allowed to communicate. Controls explain how that trust is validated.</p>
+    <p>The difference between those three concepts is often the difference between a functional architecture and a resilient architecture.</p>
+    <p>Because ultimately, good architecture is not simply about designing connections. It is about designing trust.</p>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+</body>
+</html>
