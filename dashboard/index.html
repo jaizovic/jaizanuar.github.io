@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Visitor analytics for jaizanuar.com, including total visits and article readership." />
+  <title>Visitor Dashboard | Jaiz Anuar</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/dashboard.css" />
+</head>
+<body class="dashboard-page">
+  <header class="dashboard-header">
+    <a class="dashboard-brand" href="../index.html" aria-label="Jaiz Anuar home">
+      <span class="brand-mark">JA</span>
+      <span>Jaiz Anuar</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../articles/">Articles</a>
+      <a href="../about/">About</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-shell">
+    <section class="dashboard-intro">
+      <div>
+        <p class="eyebrow">Audience overview</p>
+        <h1>Visitor dashboard</h1>
+        <p class="dashboard-lead">A simple view of how readers discover and engage with jaizanuar.com.</p>
+      </div>
+      <div class="dashboard-actions">
+        <span class="live-status" id="liveStatus"><span class="status-dot"></span><span id="statusText">Loading live data</span></span>
+        <button type="button" id="refreshButton">Refresh</button>
+      </div>
+    </section>
+
+    <section class="metric-grid" aria-label="Visitor summary">
+      <article class="metric-card metric-primary">
+        <p>Total visits</p>
+        <strong id="totalVisits">—</strong>
+        <span>Since tracking began</span>
+      </article>
+      <article class="metric-card">
+        <p>Today</p>
+        <strong id="todayVisits">—</strong>
+        <span id="todayLabel">Visits today</span>
+      </article>
+      <article class="metric-card">
+        <p>Last 30 days</p>
+        <strong id="monthVisits">—</strong>
+        <span>Rolling 30-day window</span>
+      </article>
+      <article class="metric-card">
+        <p>Most-read article</p>
+        <strong class="top-article-value" id="topArticleVisits">—</strong>
+        <span id="topArticleTitle">Waiting for article data</span>
+      </article>
+    </section>
+
+    <section class="content-panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Content performance</p>
+          <h2>Visits by article</h2>
+        </div>
+        <span id="articleCount">18 articles</span>
+      </div>
+
+      <div class="article-table-wrap">
+        <table class="analytics-table">
+          <thead>
+            <tr>
+              <th scope="col">Article</th>
+              <th scope="col">Published</th>
+              <th scope="col" class="number-cell">Visits</th>
+            </tr>
+          </thead>
+          <tbody id="articleRows">
+            <tr><td colspan="3" class="loading-cell">Loading article visits…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="setup-panel" id="setupPanel" hidden>
+      <div class="setup-icon" aria-hidden="true">!</div>
+      <div>
+        <h2>One quick step to start collecting visits</h2>
+        <p>Create the <strong>jaizanuar</strong> site in GoatCounter, then enable <strong>Allow adding visitor counts on your website</strong>. The tracker and dashboard are already connected to that site code.</p>
+        <a href="https://www.goatcounter.com/signup" target="_blank" rel="noopener noreferrer">Set up GoatCounter →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dashboard-footer">© 2026 Jaiz Anuar · Privacy-friendly, aggregate visitor analytics.</footer>
+  <script src="../assets/dashboard.js"></script>
+</body>
+</html>

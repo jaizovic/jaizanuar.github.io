@@ -1,0 +1,223 @@
+:root {
+  --ink: #10233f;
+  --muted: #67758b;
+  --line: #dfe7ef;
+  --navy: #071c36;
+  --blue: #1775e5;
+  --cyan: #1ac5c9;
+}
+
+* { box-sizing: border-box; }
+
+.dashboard-page {
+  min-height: 100vh;
+  background: #f3f7fa;
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.dashboard-header {
+  min-height: 78px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--navy);
+}
+
+.dashboard-brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 750;
+  letter-spacing: .01em;
+}
+
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  font-size: 13px;
+}
+
+.dashboard-header nav a { margin-left: 26px; }
+
+.dashboard-shell {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+  padding: 58px 0 72px;
+}
+
+.dashboard-intro,
+.panel-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.dashboard-intro h1 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -.04em;
+}
+
+.dashboard-lead {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.dashboard-actions { display: flex; align-items: center; gap: 12px; }
+
+.live-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #287a68;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #20b589;
+  box-shadow: 0 0 0 4px rgba(32, 181, 137, .13);
+}
+
+.status-error { color: #a85720; }
+.status-error .status-dot { background: #e28a37; box-shadow: 0 0 0 4px rgba(226, 138, 55, .15); }
+
+#refreshButton {
+  padding: 10px 15px;
+  border: 1px solid #cad6e1;
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+#refreshButton:disabled { opacity: .55; cursor: wait; }
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 38px 0 24px;
+}
+
+.metric-card {
+  min-height: 174px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(16, 35, 63, .045);
+}
+
+.metric-card p { margin: 0; color: var(--muted); font-size: 13px; font-weight: 750; }
+.metric-card strong { margin: auto 0 2px; color: var(--ink); font-size: 38px; letter-spacing: -.04em; }
+.metric-card span { color: var(--muted); font-size: 12px; line-height: 1.35; }
+.metric-card .top-article-value { font-size: 31px; }
+
+.metric-primary {
+  border-color: transparent;
+  background: linear-gradient(135deg, #0b2d55, #0b4877);
+}
+
+.metric-primary p,
+.metric-primary span { color: #bcd5ea; }
+.metric-primary strong { color: #fff; }
+
+.content-panel {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(16, 35, 63, .045);
+}
+
+.panel-heading { padding: 26px 28px 22px; border-bottom: 1px solid var(--line); }
+.panel-heading h2 { margin: 0; color: var(--ink); font-size: 23px; }
+.panel-heading > span { color: var(--muted); font-size: 13px; font-weight: 700; }
+
+.article-table-wrap { overflow-x: auto; }
+.analytics-table { width: 100%; border-collapse: collapse; }
+.analytics-table th { padding: 14px 28px; background: #f8fafc; color: var(--muted); font-size: 11px; letter-spacing: .08em; text-align: left; text-transform: uppercase; }
+.analytics-table td { position: relative; padding: 19px 28px; border-top: 1px solid #edf1f5; color: var(--muted); font-size: 13px; }
+.analytics-table tbody tr:first-child td { border-top: 0; }
+.analytics-table td a { position: relative; z-index: 1; display: block; max-width: 680px; color: var(--ink); font-size: 14px; font-weight: 720; line-height: 1.4; text-decoration: none; }
+.analytics-table td a:hover { color: var(--blue); }
+.analytics-table .number-cell { text-align: right; }
+.analytics-table .count-value { color: var(--ink); font-size: 15px; font-weight: 800; }
+
+.visit-bar {
+  position: absolute;
+  inset: 7px auto 7px 0;
+  width: var(--bar-width);
+  max-width: 100%;
+  border-radius: 0 6px 6px 0;
+  background: linear-gradient(90deg, rgba(23, 117, 229, .07), rgba(26, 197, 201, .04));
+  pointer-events: none;
+}
+
+.loading-cell { padding: 38px !important; text-align: center; }
+
+.setup-panel {
+  margin-top: 24px;
+  padding: 25px 28px;
+  display: flex;
+  gap: 18px;
+  border: 1px solid #f1d5b5;
+  border-radius: 14px;
+  background: #fffaf4;
+}
+
+.setup-panel[hidden] { display: none; }
+.setup-icon { flex: 0 0 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: #f3a950; color: #fff; font-weight: 850; }
+.setup-panel h2 { margin: 0 0 7px; color: #673c18; font-size: 17px; }
+.setup-panel p { margin: 0 0 10px; color: #825a38; font-size: 14px; line-height: 1.55; }
+.setup-panel a { color: #a75717; font-weight: 800; text-decoration: none; }
+
+.dashboard-footer { padding: 26px 6%; background: var(--navy); color: #a9bed0; text-align: center; font-size: 13px; }
+
+@media (max-width: 960px) {
+  .metric-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 680px) {
+  .dashboard-header { padding: 16px 6%; align-items: flex-start; }
+  .dashboard-header nav { margin-top: 0; text-align: right; }
+  .dashboard-header nav a { display: block; margin: 0 0 8px; }
+  .dashboard-shell { width: 90%; padding-top: 38px; }
+  .dashboard-intro { align-items: flex-start; flex-direction: column; }
+  .metric-grid { grid-template-columns: 1fr; }
+  .metric-card { min-height: 150px; }
+  .analytics-table th, .analytics-table td { padding-left: 18px; padding-right: 18px; }
+  .date-cell { display: none; }
+  .setup-panel { padding: 22px; }
+}
