@@ -4,24 +4,26 @@
   var siteCode = 'jaizanuar';
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articles = [
-    ['The Biggest AI Deployment In Your Organisation May Already Be Happening Without You', '2026-07-17', '/articles/the-biggest-ai-deployment-in-your-organisation-may-already-be-happening-without-you.html'],
-    ['The New Security Perimeter Is No Longer The Network. It Is Identity.', '2026-07-17', '/articles/the-new-security-perimeter-is-no-longer-the-network-it-is-identity.html'],
-    ['Most Architecture Diagrams Show Connectivity. Few Show Trust and Controls.', '2026-07-16', '/articles/most-architecture-diagrams-show-connectivity-few-show-trust-and-controls.html'],
-    ['Enable Business Safely, Not Block Business Safely', '2026-07-15', '/articles/enable-business-safely-not-block-business-safely.html'],
-    ['Cybersecurity Best Practice Is a Baseline, Not a Blueprint', '2026-07-14', '/articles/cybersecurity-best-practice-baseline-not-blueprint.html'],
-    ['Not All Personal Data Can Be Anonymised — But All Personal Data Must Be Governed', '2026-07-10', '/articles/not-all-personal-data-can-be-anonymised.html'],
-    ['The Real Risk of AI Coding Agents Is Not Intelligence. It Is Permission.', '2026-07-10', '/articles/the-real-risk-of-ai-coding-agents-is-permission.html'],
-    ['Convenience Is an Attack Surface', '2026-07-09', '/articles/convenience-is-an-attack-surface.html'],
-    ['When Active Directory Works, But Is Not Resilient', '2026-07-07', '/articles/when-active-directory-works-but-is-not-resilient.html'],
-    ['Zero Trust Is Not About Trust. It Is About Reducing the Cost of Being Wrong.', '2026-07-04', '/articles/zero-trust-reducing-cost-of-being-wrong.html'],
-    ['The Most Dangerous Incidents Start as Normal Days', '2026-06-29', '/articles/the-most-dangerous-incidents-start-as-normal-days.html'],
-    ['Three Reasons You Haven’t Been Hacked... Yet. Only One Is Good News.', '2026-06-25', '/articles/three-reasons-you-havent-been-hacked.html'],
-    ['If the Cybersecurity Industry Profits from Cyberattacks, Can We Fully Trust Its Advice?', '2026-06-19', '/articles/cybersecurity-industry-profits.html'],
-    ['Three Types of Cybersecurity Confidence. Which One Does Your Organisation Have?', '2026-06-16', '/articles/three-types-of-cybersecurity-confidence.html'],
-    ["Cybersecurity Doesn't Fail Because We Don't Know Enough.", '2026-06-07', '/articles/cybersecurity-doesnt-fail-because-we-dont-know-enough.html'],
-    ['When Security Tools Become the Noise', '2025-04-12', '/articles/when-security-tools-become-the-noise.html'],
-    ['Behind Every Line of Code: The Human Element of Cybersecurity', '2025-03-19', '/articles/behind-every-line-of-code-human-element-cybersecurity.html'],
-    ['Real Data Breach vs Honeypot Data Breach', '2024-05-23', '/articles/real-data-breach-vs-honeypot-data-breach.html']
+    ["Attackers Are Becoming AI-Native. Deception Must Become AI-Native Too.", "2026-07-18", "/articles/attackers-are-becoming-ai-native-deception-must-become-ai-native-too.html"],
+    ["The New Security Perimeter Is No Longer The Network. It Is Identity.", "2026-07-17", "/articles/the-new-security-perimeter-is-no-longer-the-network-it-is-identity.html"],
+    ["The Biggest AI Deployment In Your Organisation May Already Be Happening Without You", "2026-07-17", "/articles/the-biggest-ai-deployment-in-your-organisation-may-already-be-happening-without-you.html"],
+    ["Employees Are Adopting AI Faster Than Organisations Can Govern It", "2026-07-17", "/articles/employees-are-adopting-ai-faster-than-organisations-can-govern-it.html"],
+    ["Most Architecture Diagrams Show Connectivity. Few Show Trust and Controls.", "2026-07-16", "/articles/most-architecture-diagrams-show-connectivity-few-show-trust-and-controls.html"],
+    ["Enable Business Safely, Not Block Business Safely", "2026-07-15", "/articles/enable-business-safely-not-block-business-safely.html"],
+    ["Cybersecurity Best Practice Is a Baseline, Not a Blueprint", "2026-07-14", "/articles/cybersecurity-best-practice-baseline-not-blueprint.html"],
+    ["The Real Risk of AI Coding Agents Is Not Intelligence. It Is Permission.", "2026-07-10", "/articles/the-real-risk-of-ai-coding-agents-is-permission.html"],
+    ["Not All Personal Data Can Be Anonymised; But All Personal Data Must Be Governed", "2026-07-10", "/articles/not-all-personal-data-can-be-anonymised.html"],
+    ["Convenience Is an Attack Surface", "2026-07-09", "/articles/convenience-is-an-attack-surface.html"],
+    ["When Active Directory Works, But Is Not Resilient", "2026-07-07", "/articles/when-active-directory-works-but-is-not-resilient.html"],
+    ["Zero Trust Is Not About Trust. It Is About Reducing the Cost of Being Wrong.", "2026-07-04", "/articles/zero-trust-reducing-cost-of-being-wrong.html"],
+    ["The Most Dangerous Incidents Start as Normal Days", "2026-06-29", "/articles/the-most-dangerous-incidents-start-as-normal-days.html"],
+    ["Three Reasons You Haven’t Been Hacked... Yet. Only One Is Good News.", "2026-06-25", "/articles/three-reasons-you-havent-been-hacked.html"],
+    ["If the Cybersecurity Industry Profits from Cyberattacks, Why Do We Rely on Its Vendors to Tell Us How Secure We Are?", "2026-06-19", "/articles/cybersecurity-industry-profits.html"],
+    ["Three Types of Cybersecurity Confidence. Which One Does Your Organisation Have?", "2026-06-16", "/articles/three-types-of-cybersecurity-confidence.html"],
+    ["Cybersecurity Doesn't Fail Because We Don't Know Enough. It Fails Because We Become Too Certain About What We Think We Know.", "2026-06-07", "/articles/cybersecurity-doesnt-fail-because-we-dont-know-enough.html"],
+    ["When Security Tools Become the Noise", "2025-04-12", "/articles/when-security-tools-become-the-noise.html"],
+    ["Behind Every Line of Code: The Human Element of Cybersecurity", "2025-03-19", "/articles/behind-every-line-of-code-human-element-cybersecurity.html"],
+    ["Real Data Breach vs Honeypot Data Breach", "2024-05-23", "/articles/real-data-breach-vs-honeypot-data-breach.html"]
   ];
 
   function dateString(date) {

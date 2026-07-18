@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Real Risk of AI Coding Agents Is Not Intelligence. It Is Permission. | Jaiz Anuar</title>
   <meta name="description" content="The real security risk of AI coding agents is not intelligence, but the permissions and access they inherit within developer environments." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/the-real-risk-of-ai-coding-agents-is-permission.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Real Risk of AI Coding Agents Is Not Intelligence. It Is Permission." />
+  <meta property="og:description" content="The real security risk of AI coding agents is not intelligence, but the permissions and access they inherit within developer environments." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/the-real-risk-of-ai-coding-agents-is-permission.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/the-real-risk-of-ai-coding-agents-is-permission.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="An AI coding agent operating across source code, credentials, terminal actions and cloud resources, with its permission scope made visible." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Real Risk of AI Coding Agents Is Not Intelligence. It Is Permission." />
+  <meta name="twitter:description" content="The real security risk of AI coding agents is not intelligence, but the permissions and access they inherit within developer environments." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/the-real-risk-of-ai-coding-agents-is-permission.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Real Risk of AI Coding Agents Is Not Intelligence. It Is Permission.", "description": "The real security risk of AI coding agents is not intelligence, but the permissions and access they inherit within developer environments.", "datePublished": "2026-07-10", "dateModified": "2026-07-10", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com"}, "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/the-real-risk-of-ai-coding-agents-is-permission.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/the-real-risk-of-ai-coding-agents-is-permission.html"}</script>
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body class="light-page">
@@ -14,6 +28,7 @@
       <a href="../index.html">Home</a>
       <a href="index.html">Articles</a>
       <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
     </nav>
   </header>
 
@@ -23,154 +38,146 @@
     <a class="download-button article-download" href="../papers/pdf/the-real-risk-of-ai-coding-agents-is-permission.pdf" download>Download PDF</a>
     <h1>The Real Risk of AI Coding Agents Is Not Intelligence. It Is Permission.</h1>
     <p class="lead">AI coding agents are becoming part of the modern developer workflow. From a security architecture perspective, the more important question is not how intelligent they are, but what they are allowed to do.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/the-real-risk-of-ai-coding-agents-is-permission.webp" width="1600" height="900" alt="An AI coding agent operating across source code, credentials, terminal actions and cloud resources, with its permission scope made visible." fetchpriority="high" decoding="async" />
+    </figure>
 
-    <p>They help write code. They troubleshoot errors. They install dependencies. They read documentation. They execute commands. They modify files. They retry when something fails.</p>
-    <p>At first glance, this looks like productivity.</p>
-    <p>But from a security architecture perspective, it introduces a more important question:</p>
-    <p><strong>What exactly is this agent allowed to do?</strong></p>
-    <p>That question matters more than whether the agent is intelligent, accurate, or useful.</p>
-    <p>Because the real risk of AI coding agents is not simply that they can generate poor code. It is not only that they may hallucinate. It is not even that they may introduce vulnerabilities into an application.</p>
-    <p>The deeper risk is that many of these agents operate inside trusted developer environments with access to files, credentials, browsers, command-line tools, repositories, secrets, local sessions and sometimes production-adjacent systems.</p>
-    <p>In other words, they do not just think.</p>
-    <p>They act.</p>
-    <p>And when a tool can act, security must stop treating it as a simple assistant.</p>
-    <p>It becomes part of the access model.</p>
-
-    <h2>When Benign Automation Looks Like an Attack</h2>
-    <p>A recent article from The Hacker News highlighted findings from Sophos showing that AI coding agents were triggering endpoint security rules originally designed to detect attackers. The behaviours included actions such as accessing browser credential stores, using built-in Windows tools to download files, and writing scripts into startup-related locations.</p>
-    <p>The important point is not that the agents were malicious.</p>
-    <p>They were not necessarily trying to steal credentials or establish persistence.</p>
-    <p>The important point is that the endpoint could not judge intention. It could only see behaviour.</p>
-    <p>And the behaviour looked risky.</p>
-    <p>This is where the discussion becomes interesting.</p>
-    <p>If an AI agent uses PowerShell, touches credential-related data, downloads binaries using legitimate operating system utilities, or modifies startup paths, should the security tool ignore it because the action came from a known coding assistant?</p>
-    <p>The answer should be no.</p>
-    <p>Security monitoring should not be based purely on the reputation of the tool. It should be based on what the tool is doing, what access it has, what context it is operating in, and whether the action is appropriate for the environment.</p>
-    <p>A trusted tool can still perform risky behaviour.</p>
-    <p>A benign agent can still create exposure.</p>
-    <p>A legitimate process can still become the path of compromise.</p>
-
-    <h2>The Problem Is Not the Agent Alone</h2>
-    <p>It is tempting to make AI the centre of the problem.</p>
-    <p>AI coding agents are new. AI coding agents are powerful. AI coding agents behave unpredictably. AI coding agents can execute commands.</p>
-    <p>All of that may be true.</p>
-    <p>But blaming the AI agent alone may be too simplistic.</p>
-    <p>A better way to look at it is this:</p>
-    <p><strong>AI coding agents are exposing weaknesses that already existed in developer endpoint security.</strong></p>
-    <p>If an agent can access local secrets, browser credentials, SSH keys, cloud tokens, environment variables, source code, internal documentation and command-line tools without strong boundaries, then the issue is not only the agent.</p>
-    <p>The issue is permission.</p>
-    <p>The issue is over-trusted endpoints.</p>
-    <p>The issue is excessive local access.</p>
-    <p>The issue is weak separation between human activity, automation activity and privileged activity.</p>
-    <p>The agent did not create those access paths.</p>
-    <p>It inherited them.</p>
-    <p>That is the part many organisations may miss.</p>
-
-    <h2>Intelligence Is Not the Control Boundary</h2>
-    <p>Many discussions about AI security focus heavily on intelligence.</p>
-    <p>How smart is the model? Can it reason? Can it understand context? Can it write secure code? Can it avoid hallucination?</p>
-    <p>These are valid questions.</p>
-    <p>But from a cyber risk perspective, intelligence is not the most important control boundary.</p>
-    <p>Permission is.</p>
-    <p>A less intelligent tool with broad access can still cause major damage. A highly intelligent tool with restricted access may be manageable. A useful agent with uncontrolled access can become a serious operational risk. A well-governed agent with limited scope can be a productivity enabler.</p>
-    <p>The risk is not determined by how impressive the model is.</p>
-    <p>The risk is determined by what the agent is allowed to access, execute, modify, approve, download, connect to and remember.</p>
-    <p>This is why organisations need to stop asking only, “Which AI coding tool should we allow?”</p>
-    <p>They should also ask:</p>
-    <p><strong>What should this AI agent be allowed to do?</strong></p>
-
-    <h2>Developer Endpoints Are Not Ordinary Endpoints</h2>
-    <p>Developer machines are sensitive.</p>
-    <p>They are not the same as normal office productivity endpoints.</p>
-    <p>A developer endpoint may contain source code, API keys, test credentials, package manager tokens, cloud access, CI/CD configuration, SSH keys, database connection strings and internal architecture references.</p>
-    <p>It may also have access to Git repositories, build pipelines, deployment scripts, infrastructure-as-code templates and internal systems.</p>
-    <p>That means an AI coding agent running on a developer machine may sit close to some of the organisation’s most valuable technology assets.</p>
-    <p>If the agent is given broad permission, then the organisation is not merely allowing a coding assistant.</p>
-    <p>It is allowing automation into a sensitive engineering environment.</p>
-    <p>That automation may be helpful.</p>
-    <p>But it must be governed.</p>
-    <p>The risk is not only that the agent may make a mistake. The risk is that the agent may act within an environment where too much trust has already been granted.</p>
-
-    <h2>False Positive or Real Risk?</h2>
-    <p>One of the easiest responses to these alerts is to call them false positives.</p>
-    <p>The agent was approved. The developer was using it. The command was part of troubleshooting. The detection was noisy.</p>
-    <p>Maybe.</p>
-    <p>But this thinking can be dangerous.</p>
-    <p>Credential access is still credential access. Persistence-like behaviour is still persistence-like behaviour. Suspicious use of legitimate system tools is still suspicious. Automated retries after a blocked command may still look like attacker behaviour.</p>
-    <p>The fact that the source is an AI agent does not automatically make the behaviour safe.</p>
-    <p>This is where SOC teams need discipline.</p>
-    <p>Some detections may need tuning. Some rules may need better context. Some alerts may need lower severity. Some known agent activities may need baselining.</p>
-    <p>But credential access, secret exposure, suspicious downloads and persistence-related activity should not be blindly whitelisted just because the parent process is a popular AI coding tool.</p>
-    <p>Attackers follow trust.</p>
-    <p>If organisations start trusting AI agent processes too broadly, those processes may become attractive paths for abuse.</p>
-
-    <h2>The Danger of Over-Whitelisting</h2>
-    <p>Security teams often respond to operational noise by suppressing alerts.</p>
-    <p>This is understandable.</p>
-    <p>SOC teams are already overloaded. Developers do not want productivity blocked. Management wants AI adoption to move fast. Security does not want to be seen as slowing innovation.</p>
-    <p>So the quick solution may be to whitelist known AI coding agents.</p>
-    <p>But that may create a new blind spot.</p>
-    <p>If an AI agent is allowed to run commands, access files and launch child processes with reduced monitoring, then attackers may try to operate through that same trusted path.</p>
-    <p>This is especially concerning in scenarios involving malicious repositories, poisoned dependencies, unsafe project instructions, compromised plugins, prompt injection, malicious MCP servers, or developer copy-paste behaviour.</p>
-    <p>The agent may not be malicious.</p>
-    <p>But the instruction source may be.</p>
-    <p>That distinction is important.</p>
-    <p>The security question is not only “Do we trust the AI agent?”</p>
-    <p>The better question is:</p>
-    <p><strong>Can the AI agent be manipulated into doing something we would not allow a human or script to do without control?</strong></p>
-    <p>If the answer is yes, then the control model needs to be revisited.</p>
-
-    <h2>AI Agents Need an Operating Model</h2>
-    <p>Organisations should not treat AI coding agents as casual desktop utilities.</p>
-    <p>They need an operating model.</p>
-    <p>That does not mean blocking innovation. It does not mean banning developers from using modern tools. It does not mean treating every AI-generated action as malicious.</p>
-    <p>It means defining boundaries.</p>
-    <p>Which AI coding agents are approved? Which environments can they run in? Can they access production code? Can they read secrets? Can they modify configuration files? Can they install packages? Can they execute shell commands? Can they interact with browsers? Can they access local credential stores? Can they push code? Can they create pull requests? Can they connect to internal systems?</p>
-    <p>These are not theoretical questions.</p>
-    <p>They are architecture questions. They are identity questions. They are endpoint governance questions. They are software supply chain questions. They are SOC monitoring questions.</p>
-    <p>Most importantly, they are accountability questions.</p>
-    <p>When an AI agent takes an action, who owns the risk?</p>
-    <p>The developer? The application owner? The platform team? The security team? The tool vendor? The organisation?</p>
-    <p>Without clear ownership, AI adoption can quickly become another form of shadow automation.</p>
-
-    <h2>What Good Governance Could Look Like</h2>
-    <p>A practical governance model for AI coding agents should be risk-based.</p>
-    <p>Low-risk use cases, such as code explanation, documentation drafting, unit test generation and local refactoring, may require lighter controls.</p>
-    <p>Higher-risk use cases, such as command execution, dependency installation, repository modification, CI/CD interaction, cloud access, secret handling and production troubleshooting, require stronger controls.</p>
-    <p>Organisations should consider several principles.</p>
-    <p>First, approved tools should be clearly defined. Developers should know which agents are allowed and under what conditions.</p>
-    <p>Second, agent permissions should be restricted by design. Dangerous modes that bypass approval or allow unrestricted execution should not be enabled casually.</p>
-    <p>Third, sensitive local data should be protected. Browser credentials, tokens, SSH keys, cloud secrets and environment variables should not be freely accessible to automation.</p>
-    <p>Fourth, monitoring should focus on behaviour, not just tool identity. Parent-child process chains, command patterns, credential access, file modifications and network activity should remain visible.</p>
-    <p>Fifth, alert tuning should be careful. Reduce noise where appropriate, but do not suppress the very behaviours that attackers also use.</p>
-    <p>Sixth, developers should be educated. They need to understand that an AI agent executing commands is not the same as an AI chatbot suggesting code.</p>
-    <p>Seventh, security architecture should define where agents can operate safely. In some cases, isolated development containers, sandboxed workspaces or controlled remote environments may be safer than running agents directly on highly privileged endpoints.</p>
-
-    <h2>The Bigger Lesson</h2>
-    <p>AI coding agents are forcing organisations to revisit an old assumption:</p>
-    <p><strong>If the user is trusted, the activity is trusted.</strong></p>
-    <p>That assumption is no longer sufficient.</p>
-    <p>The user may be trusted. The endpoint may be managed. The AI tool may be approved. The intention may be legitimate.</p>
-    <p>But the action can still be risky.</p>
-    <p>This is the new challenge.</p>
-    <p>Security teams must learn to distinguish between human activity, automated activity, agent-assisted activity and attacker-controlled activity. The boundaries between these categories are becoming less clear.</p>
-    <p>That is why the discussion should move beyond whether AI coding agents are good or bad.</p>
-    <p>They are tools. Useful tools. Powerful tools.</p>
-    <p>But powerful tools need control boundaries.</p>
-
-    <h2>Final Thought</h2>
-    <p>The real risk of AI coding agents is not intelligence.</p>
-    <p>It is permission.</p>
-    <p>An AI agent with limited access is a productivity tool. An AI agent with broad access is an automation risk. An AI agent with access to credentials, repositories, command execution and internal systems becomes part of the organisation’s security architecture.</p>
-    <p>The question is no longer whether AI can write code.</p>
-    <p>The question is whether we have designed the right boundaries for what AI is allowed to do.</p>
-    <p>Because in cybersecurity, the most dangerous capability is not always intelligence.</p>
-    <p>Sometimes, it is access without governance.</p>
-    <p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+<p>They help write code. They troubleshoot errors. They install dependencies. They read documentation. They execute commands. They modify files. They retry when something fails.</p>
+<p>At first glance, this looks like productivity.</p>
+<p>But from a security architecture perspective, it introduces a more important question:</p>
+<p><strong>What exactly is this agent allowed to do?</strong></p>
+<p>That question matters more than whether the agent is intelligent, accurate, or useful.</p>
+<p>Because the real risk of AI coding agents is not simply that they can generate poor code. It is not only that they may hallucinate. It is not even that they may introduce vulnerabilities into an application.</p>
+<p>The deeper risk is that many of these agents operate inside trusted developer environments with access to files, credentials, browsers, command-line tools, repositories, secrets, local sessions and sometimes production-adjacent systems.</p>
+<p>In other words, they do not just think.</p>
+<p>They act.</p>
+<p>And when a tool can act, security must stop treating it as a simple assistant.</p>
+<p>It becomes part of the access model.</p>
+<h2>When Benign Automation Looks Like an Attack</h2>
+<p>A recent article from The Hacker News highlighted findings from Sophos showing that AI coding agents were triggering endpoint security rules originally designed to detect attackers. The behaviours included actions such as accessing browser credential stores, using built-in Windows tools to download files, and writing scripts into startup-related locations.</p>
+<p>The important point is not that the agents were malicious.</p>
+<p>They were not necessarily trying to steal credentials or establish persistence.</p>
+<p>The important point is that the endpoint could not judge intention. It could only see behaviour.</p>
+<p>And the behaviour looked risky.</p>
+<p>This is where the discussion becomes interesting.</p>
+<p>If an AI agent uses PowerShell, touches credential-related data, downloads binaries using legitimate operating system utilities, or modifies startup paths, should the security tool ignore it because the action came from a known coding assistant?</p>
+<p>The answer should be no.</p>
+<p>Security monitoring should not be based purely on the reputation of the tool. It should be based on what the tool is doing, what access it has, what context it is operating in, and whether the action is appropriate for the environment.</p>
+<p>A trusted tool can still perform risky behaviour.</p>
+<p>A benign agent can still create exposure.</p>
+<p>A legitimate process can still become the path of compromise.</p>
+<h2>The Problem Is Not the Agent Alone</h2>
+<p>It is tempting to make AI the centre of the problem.</p>
+<p>AI coding agents are new. AI coding agents are powerful. AI coding agents behave unpredictably. AI coding agents can execute commands.</p>
+<p>All of that may be true.</p>
+<p>But blaming the AI agent alone may be too simplistic.</p>
+<p>A better way to look at it is this:</p>
+<p><strong>AI coding agents are exposing weaknesses that already existed in developer endpoint security.</strong></p>
+<p>If an agent can access local secrets, browser credentials, SSH keys, cloud tokens, environment variables, source code, internal documentation and command-line tools without strong boundaries, then the issue is not only the agent.</p>
+<p>The issue is permission.</p>
+<p>The issue is over-trusted endpoints.</p>
+<p>The issue is excessive local access.</p>
+<p>The issue is weak separation between human activity, automation activity and privileged activity.</p>
+<p>The agent did not create those access paths.</p>
+<p>It inherited them.</p>
+<p>That is the part many organisations may miss.</p>
+<h2>Intelligence Is Not the Control Boundary</h2>
+<p>Many discussions about AI security focus heavily on intelligence.</p>
+<p>How smart is the model? Can it reason? Can it understand context? Can it write secure code? Can it avoid hallucination?</p>
+<p>These are valid questions.</p>
+<p>But from a cyber risk perspective, intelligence is not the most important control boundary.</p>
+<p>Permission is.</p>
+<p>A less intelligent tool with broad access can still cause major damage. A highly intelligent tool with restricted access may be manageable. A useful agent with uncontrolled access can become a serious operational risk. A well-governed agent with limited scope can be a productivity enabler.</p>
+<p>The risk is not determined by how impressive the model is.</p>
+<p>The risk is determined by what the agent is allowed to access, execute, modify, approve, download, connect to and remember.</p>
+<p>This is why organisations need to stop asking only, “Which AI coding tool should we allow?”</p>
+<p>They should also ask:</p>
+<p><strong>What should this AI agent be allowed to do?</strong></p>
+<h2>Developer Endpoints Are Not Ordinary Endpoints</h2>
+<p>Developer machines are sensitive.</p>
+<p>They are not the same as normal office productivity endpoints.</p>
+<p>A developer endpoint may contain source code, API keys, test credentials, package manager tokens, cloud access, CI/CD configuration, SSH keys, database connection strings and internal architecture references.</p>
+<p>It may also have access to Git repositories, build pipelines, deployment scripts, infrastructure-as-code templates and internal systems.</p>
+<p>That means an AI coding agent running on a developer machine may sit close to some of the organisation’s most valuable technology assets.</p>
+<p>If the agent is given broad permission, then the organisation is not merely allowing a coding assistant.</p>
+<p>It is allowing automation into a sensitive engineering environment.</p>
+<p>That automation may be helpful.</p>
+<p>But it must be governed.</p>
+<p>The risk is not only that the agent may make a mistake. The risk is that the agent may act within an environment where too much trust has already been granted.</p>
+<h2>False Positive or Real Risk?</h2>
+<p>One of the easiest responses to these alerts is to call them false positives.</p>
+<p>The agent was approved. The developer was using it. The command was part of troubleshooting. The detection was noisy.</p>
+<p>Maybe.</p>
+<p>But this thinking can be dangerous.</p>
+<p>Credential access is still credential access. Persistence-like behaviour is still persistence-like behaviour. Suspicious use of legitimate system tools is still suspicious. Automated retries after a blocked command may still look like attacker behaviour.</p>
+<p>The fact that the source is an AI agent does not automatically make the behaviour safe.</p>
+<p>This is where SOC teams need discipline.</p>
+<p>Some detections may need tuning. Some rules may need better context. Some alerts may need lower severity. Some known agent activities may need baselining.</p>
+<p>But credential access, secret exposure, suspicious downloads and persistence-related activity should not be blindly whitelisted just because the parent process is a popular AI coding tool.</p>
+<p>Attackers follow trust.</p>
+<p>If organisations start trusting AI agent processes too broadly, those processes may become attractive paths for abuse.</p>
+<h2>The Danger of Over-Whitelisting</h2>
+<p>Security teams often respond to operational noise by suppressing alerts.</p>
+<p>This is understandable.</p>
+<p>SOC teams are already overloaded. Developers do not want productivity blocked. Management wants AI adoption to move fast. Security does not want to be seen as slowing innovation.</p>
+<p>So the quick solution may be to whitelist known AI coding agents.</p>
+<p>But that may create a new blind spot.</p>
+<p>If an AI agent is allowed to run commands, access files and launch child processes with reduced monitoring, then attackers may try to operate through that same trusted path.</p>
+<p>This is especially concerning in scenarios involving malicious repositories, poisoned dependencies, unsafe project instructions, compromised plugins, prompt injection, malicious MCP servers, or developer copy-paste behaviour.</p>
+<p>The agent may not be malicious.</p>
+<p>But the instruction source may be.</p>
+<p>That distinction is important.</p>
+<p>The security question is not only “Do we trust the AI agent?”</p>
+<p>The better question is:</p>
+<p><strong>Can the AI agent be manipulated into doing something we would not allow a human or script to do without control?</strong></p>
+<p>If the answer is yes, then the control model needs to be revisited.</p>
+<h2>AI Agents Need an Operating Model</h2>
+<p>Organisations should not treat AI coding agents as casual desktop utilities.</p>
+<p>They need an operating model.</p>
+<p>That does not mean blocking innovation. It does not mean banning developers from using modern tools. It does not mean treating every AI-generated action as malicious.</p>
+<p>It means defining boundaries.</p>
+<p>Which AI coding agents are approved? Which environments can they run in? Can they access production code? Can they read secrets? Can they modify configuration files? Can they install packages? Can they execute shell commands? Can they interact with browsers? Can they access local credential stores? Can they push code? Can they create pull requests? Can they connect to internal systems?</p>
+<p>These are not theoretical questions.</p>
+<p>They are architecture questions. They are identity questions. They are endpoint governance questions. They are software supply chain questions. They are SOC monitoring questions.</p>
+<p>Most importantly, they are accountability questions.</p>
+<p>When an AI agent takes an action, who owns the risk?</p>
+<p>The developer? The application owner? The platform team? The security team? The tool vendor? The organisation?</p>
+<p>Without clear ownership, AI adoption can quickly become another form of shadow automation.</p>
+<h2>What Good Governance Could Look Like</h2>
+<p>A practical governance model for AI coding agents should be risk-based.</p>
+<p>Low-risk use cases, such as code explanation, documentation drafting, unit test generation and local refactoring, may require lighter controls.</p>
+<p>Higher-risk use cases, such as command execution, dependency installation, repository modification, CI/CD interaction, cloud access, secret handling and production troubleshooting, require stronger controls.</p>
+<p>Organisations should consider several principles.</p>
+<p>First, approved tools should be clearly defined. Developers should know which agents are allowed and under what conditions.</p>
+<p>Second, agent permissions should be restricted by design. Dangerous modes that bypass approval or allow unrestricted execution should not be enabled casually.</p>
+<p>Third, sensitive local data should be protected. Browser credentials, tokens, SSH keys, cloud secrets and environment variables should not be freely accessible to automation.</p>
+<p>Fourth, monitoring should focus on behaviour, not just tool identity. Parent-child process chains, command patterns, credential access, file modifications and network activity should remain visible.</p>
+<p>Fifth, alert tuning should be careful. Reduce noise where appropriate, but do not suppress the very behaviours that attackers also use.</p>
+<p>Sixth, developers should be educated. They need to understand that an AI agent executing commands is not the same as an AI chatbot suggesting code.</p>
+<p>Seventh, security architecture should define where agents can operate safely. In some cases, isolated development containers, sandboxed workspaces or controlled remote environments may be safer than running agents directly on highly privileged endpoints.</p>
+<h2>The Bigger Lesson</h2>
+<p>AI coding agents are forcing organisations to revisit an old assumption:</p>
+<p><strong>If the user is trusted, the activity is trusted.</strong></p>
+<p>That assumption is no longer sufficient.</p>
+<p>The user may be trusted. The endpoint may be managed. The AI tool may be approved. The intention may be legitimate.</p>
+<p>But the action can still be risky.</p>
+<p>This is the new challenge.</p>
+<p>Security teams must learn to distinguish between human activity, automated activity, agent-assisted activity and attacker-controlled activity. The boundaries between these categories are becoming less clear.</p>
+<p>That is why the discussion should move beyond whether AI coding agents are good or bad.</p>
+<p>They are tools. Useful tools. Powerful tools.</p>
+<p>But powerful tools need control boundaries.</p>
+<h2>Final Thought</h2>
+<p>The real risk of AI coding agents is not intelligence.</p>
+<p>It is permission.</p>
+<p>An AI agent with limited access is a productivity tool. An AI agent with broad access is an automation risk. An AI agent with access to credentials, repositories, command execution and internal systems becomes part of the organisation’s security architecture.</p>
+<p>The question is no longer whether AI can write code.</p>
+<p>The question is whether we have designed the right boundaries for what AI is allowed to do.</p>
+<p>Because in cybersecurity, the most dangerous capability is not always intelligence.</p>
+<p>Sometimes, it is access without governance.</p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
   </main>
 
   <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
-  <script data-goatcounter="https://jaizanuar.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

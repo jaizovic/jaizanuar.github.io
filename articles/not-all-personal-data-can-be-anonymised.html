@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Not All Personal Data Can Be Anonymised; But All Personal Data Must Be Governed | Jaiz Anuar</title>
   <meta name="description" content="Anonymisation is not merely a privacy control. It is a governance and architecture decision about when personal data truly needs to remain identifiable." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/not-all-personal-data-can-be-anonymised.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Not All Personal Data Can Be Anonymised; But All Personal Data Must Be Governed" />
+  <meta property="og:description" content="Anonymisation is not merely a privacy control. It is a governance and architecture decision about when personal data truly needs to remain identifiable." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/not-all-personal-data-can-be-anonymised.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/not-all-personal-data-can-be-anonymised.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="Personal data moving through governed stages where identity is selectively minimised and retained only inside controlled boundaries." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Not All Personal Data Can Be Anonymised; But All Personal Data Must Be Governed" />
+  <meta name="twitter:description" content="Anonymisation is not merely a privacy control. It is a governance and architecture decision about when personal data truly needs to remain identifiable." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/not-all-personal-data-can-be-anonymised.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Not All Personal Data Can Be Anonymised; But All Personal Data Must Be Governed", "description": "Anonymisation is not merely a privacy control. It is a governance and architecture decision about when personal data truly needs to remain identifiable.", "datePublished": "2026-07-10", "dateModified": "2026-07-10", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com"}, "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/not-all-personal-data-can-be-anonymised.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/not-all-personal-data-can-be-anonymised.html"}</script>
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body class="light-page">
@@ -14,6 +28,7 @@
       <a href="../index.html">Home</a>
       <a href="index.html">Articles</a>
       <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
     </nav>
   </header>
 
@@ -21,34 +36,35 @@
     <a href="index.html" class="back-link">← Back to Articles</a>
     <div class="article-meta">10 July 2026 · Data Governance · Privacy · Security Architecture · 10 min read</div>
     <a class="download-button article-download" href="../papers/pdf/not-all-personal-data-can-be-anonymised.pdf" download>Download PDF</a>
-    <h1>Not All Personal Data Can Be Anonymised — But All Personal Data Must Be Governed</h1>
+    <h1>Not All Personal Data Can Be Anonymised; But All Personal Data Must Be Governed</h1>
     <p class="lead">Anonymisation is not only a privacy control. It is a governance and architecture decision about when personal data truly needs to remain identifiable.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/not-all-personal-data-can-be-anonymised.webp" width="1600" height="900" alt="Personal data moving through governed stages where identity is selectively minimised and retained only inside controlled boundaries." fetchpriority="high" decoding="async" />
+    </figure>
 
-    <p>“Just anonymise the data.”</p>
-    <p>It sounds simple. It sounds responsible. It sounds like the right answer in any privacy or data protection discussion.</p>
-    <p>But in real enterprise environments, anonymisation is rarely that simple.</p>
-    <p>Personal data does not sit quietly inside one application. It moves. It is copied. It is reported. It is extracted. It is shared. It is archived. It appears in dashboards, data warehouses, operational reports, audit trails, vendor support files, test environments, APIs, and sometimes even spreadsheets created outside formal system controls.</p>
-    <p>This is why anonymisation cannot be treated as a simple technical button.</p>
-    <p>It is not only a privacy control. It is a business, architecture, governance, and risk decision.</p>
-    <p>The difficult truth is this: <strong>not all personal data can be anonymised.</strong></p>
-    <p>Some data must remain identifiable because the organisation still needs to know who the customer is, who owns the account, who performed the transaction, who approved the request, who raised the complaint, or who is entitled to receive a service.</p>
-    <p>A bank cannot fully anonymise customer data that is still required for account servicing. An investment institution cannot anonymise investor records that are still needed for regulatory reporting, dispute handling, audit, tax, or legal retention. A human resource system cannot anonymise employee records that are still required for payroll, benefits, disciplinary records, or statutory obligations.</p>
-    <p>When data is truly anonymised, it should no longer be possible to identify the individual, directly or indirectly. That is the point—but it is also the challenge.</p>
-    <p>If the business still needs to re-identify the individual, then full anonymisation may not be appropriate for that specific use case.</p>
-
-    <h2>Ask the Better Question</h2>
-    <p>This is where many organisations make the mistake. They ask: “Can we anonymise this application?”</p>
-    <p>But the better question is: <strong>Where does the personal data go, who uses it, why do they need it, and does it still need to be identifiable at that point?</strong></p>
-    <p>That difference matters.</p>
-    <p>Anonymisation may not be feasible in the core production system because the business still requires identifiable data. But the same conclusion may not apply to downstream reporting, analytics, testing, development, research, external sharing, data lakes, archival, or vendor support activities.</p>
-    <p>A production system may need identifiable customer records. But does a management dashboard need names and identification numbers? A regulatory report may require traceability. But does every internal operational report require full personal identifiers?</p>
-    <p>A development team may need realistic data to test system behaviour. But does that mean it needs real customer data? A vendor may need data to troubleshoot an incident. But does that mean raw production data should be shared without masking, tokenisation, or controlled access?</p>
-    <p>This is why the conversation must move beyond anonymisation alone.</p>
-    <p>If full anonymisation is not feasible, that should not become permission to do nothing. It should trigger a deeper control discussion.</p>
-
-    <h2>Reduce Exposure Where Identifiability Is Not Needed</h2>
-    <p>There are practical ways to reduce exposure without forcing full anonymisation everywhere:</p>
-    <ul>
+<p>“Just anonymise the data.”</p>
+<p>It sounds simple. It sounds responsible. It sounds like the right answer in any privacy or data protection discussion.</p>
+<p>But in real enterprise environments, anonymisation is rarely that simple.</p>
+<p>Personal data does not sit quietly inside one application. It moves. It is copied. It is reported. It is extracted. It is shared. It is archived. It appears in dashboards, data warehouses, operational reports, audit trails, vendor support files, test environments, APIs, and sometimes even spreadsheets created outside formal system controls.</p>
+<p>This is why anonymisation cannot be treated as a simple technical button.</p>
+<p>It is not only a privacy control. It is a business, architecture, governance, and risk decision.</p>
+<p>The difficult truth is this: <strong>not all personal data can be anonymised.</strong></p>
+<p>Some data must remain identifiable because the organisation still needs to know who the customer is, who owns the account, who performed the transaction, who approved the request, who raised the complaint, or who is entitled to receive a service.</p>
+<p>A bank cannot fully anonymise customer data that is still required for account servicing. An investment institution cannot anonymise investor records that are still needed for regulatory reporting, dispute handling, audit, tax, or legal retention. A human resource system cannot anonymise employee records that are still required for payroll, benefits, disciplinary records, or statutory obligations.</p>
+<p>When data is truly anonymised, it should no longer be possible to identify the individual, directly or indirectly. That is the point—but it is also the challenge.</p>
+<p>If the business still needs to re-identify the individual, then full anonymisation may not be appropriate for that specific use case.</p>
+<h2>Ask the Better Question</h2>
+<p>This is where many organisations make the mistake. They ask: “Can we anonymise this application?”</p>
+<p>But the better question is: <strong>Where does the personal data go, who uses it, why do they need it, and does it still need to be identifiable at that point?</strong></p>
+<p>That difference matters.</p>
+<p>Anonymisation may not be feasible in the core production system because the business still requires identifiable data. But the same conclusion may not apply to downstream reporting, analytics, testing, development, research, external sharing, data lakes, archival, or vendor support activities.</p>
+<p>A production system may need identifiable customer records. But does a management dashboard need names and identification numbers? A regulatory report may require traceability. But does every internal operational report require full personal identifiers?</p>
+<p>A development team may need realistic data to test system behaviour. But does that mean it needs real customer data? A vendor may need data to troubleshoot an incident. But does that mean raw production data should be shared without masking, tokenisation, or controlled access?</p>
+<p>This is why the conversation must move beyond anonymisation alone.</p>
+<p>If full anonymisation is not feasible, that should not become permission to do nothing. It should trigger a deeper control discussion.</p>
+<h2>Reduce Exposure Where Identifiability Is Not Needed</h2>
+<p>There are practical ways to reduce exposure without forcing full anonymisation everywhere:</p>
+<ul>
       <li>Mask data at the user-interface layer.</li>
       <li>Tokenise identifiers before they are used for analytics.</li>
       <li>Use aggregated data instead of individual-level data in reports.</li>
@@ -58,53 +74,48 @@
       <li>Monitor data extracts and document data lineage.</li>
       <li>Limit re-identification access to a small group of authorised users.</li>
     </ul>
-    <p>These are not just privacy questions. They are security architecture questions.</p>
-    <p>From an architecture perspective, personal data must be governed across the full data lifecycle: the source application, database, integration layer, API, ETL pipeline, reporting platform, data warehouse, data lake, archive, backup, non-production environment, third-party connection, and manual export process.</p>
-    <p>A system can appear compliant at the application level while still leaking personal data through downstream channels. This is often where the real risk sits.</p>
-    <p>The source system may have proper access control, but the same data may later appear in an Excel extract with weaker protection. The database may be encrypted, but a report may expose full identifiers to too many users. The application may mask sensitive fields, but the API may still return raw values. Production may be well controlled, but test environments may contain copied personal data with broader access.</p>
-    <p>The organisation may have a data-retention policy, but no one may know whether retained data still needs to remain fully identifiable for the entire retention period.</p>
-
-    <h2>Retention Is Not the Same as Identifiability</h2>
-    <p>“Data retention” and “identifiability” should not be treated as the same thing.</p>
-    <p>A regulation may require a record to be retained. But that does not always mean every data element must remain visible to everyone throughout the entire retention period.</p>
-    <p>There may be a need to retain the record, but access can still be restricted. Certain fields can be masked. Some datasets can be pseudonymised. Some reports can be aggregated. Some older data can be moved into a controlled archive. Some secondary use cases can rely on anonymised or synthetic data.</p>
-    <p>The point is not to force anonymisation everywhere. The point is to ensure identifiability is justified.</p>
-    <p>Personal data should remain identifiable only where there is a valid business, legal, regulatory, operational, or audit reason. Where that reason does not exist, the organisation should reduce exposure.</p>
-
-    <h2>Governance Decides What Tools Cannot</h2>
-    <p>This is where governance becomes more important than the tool.</p>
-    <p>Tools can mask, tokenise, encrypt, discover, classify, and monitor data. But tools cannot decide the business purpose. They cannot define retention justification, approve data sharing, determine whether a report truly needs personal identifiers, or replace accountability.</p>
-    <p>Governance must answer the harder questions:</p>
-    <ul>
+<p>These are not just privacy questions. They are security architecture questions.</p>
+<p>From an architecture perspective, personal data must be governed across the full data lifecycle: the source application, database, integration layer, API, ETL pipeline, reporting platform, data warehouse, data lake, archive, backup, non-production environment, third-party connection, and manual export process.</p>
+<p>A system can appear compliant at the application level while still leaking personal data through downstream channels. This is often where the real risk sits.</p>
+<p>The source system may have proper access control, but the same data may later appear in an Excel extract with weaker protection. The database may be encrypted, but a report may expose full identifiers to too many users. The application may mask sensitive fields, but the API may still return raw values. Production may be well controlled, but test environments may contain copied personal data with broader access.</p>
+<p>The organisation may have a data-retention policy, but no one may know whether retained data still needs to remain fully identifiable for the entire retention period.</p>
+<h2>Retention Is Not the Same as Identifiability</h2>
+<p>“Data retention” and “identifiability” should not be treated as the same thing.</p>
+<p>A regulation may require a record to be retained. But that does not always mean every data element must remain visible to everyone throughout the entire retention period.</p>
+<p>There may be a need to retain the record, but access can still be restricted. Certain fields can be masked. Some datasets can be pseudonymised. Some reports can be aggregated. Some older data can be moved into a controlled archive. Some secondary use cases can rely on anonymised or synthetic data.</p>
+<p>The point is not to force anonymisation everywhere. The point is to ensure identifiability is justified.</p>
+<p>Personal data should remain identifiable only where there is a valid business, legal, regulatory, operational, or audit reason. Where that reason does not exist, the organisation should reduce exposure.</p>
+<h2>Governance Decides What Tools Cannot</h2>
+<p>This is where governance becomes more important than the tool.</p>
+<p>Tools can mask, tokenise, encrypt, discover, classify, and monitor data. But tools cannot decide the business purpose. They cannot define retention justification, approve data sharing, determine whether a report truly needs personal identifiers, or replace accountability.</p>
+<p>Governance must answer the harder questions:</p>
+<ul>
       <li>Who owns the data, and who is allowed to use it?</li>
       <li>For what purpose, for how long, and at what level of detail?</li>
       <li>Can it be shared externally, used for testing or analytics, copied into a data lake, or used to train AI models?</li>
       <li>Can it be re-identified, who can approve that action, and what evidence supports the decision?</li>
     </ul>
-    <p>Without these answers, anonymisation becomes a checkbox. Pseudonymisation becomes a vague recommendation. Masking becomes inconsistent. Tokenisation becomes application-specific. Data sharing becomes subjective. And privacy by design becomes a slogan rather than a working control.</p>
-
-    <h2>Make the Decision Part of the Operating Model</h2>
-    <p>The better approach is to embed anonymisation and pseudonymisation decisions into existing governance processes: solution architecture review, privacy impact assessment, data governance, secure software development lifecycle, cloud and SaaS onboarding, third-party risk review, API governance, data-sharing approval, reporting design, and non-production data management.</p>
-    <p>Each new use case involving personal data should ask a few basic questions:</p>
-    <ul>
+<p>Without these answers, anonymisation becomes a checkbox. Pseudonymisation becomes a vague recommendation. Masking becomes inconsistent. Tokenisation becomes application-specific. Data sharing becomes subjective. And privacy by design becomes a slogan rather than a working control.</p>
+<h2>Make the Decision Part of the Operating Model</h2>
+<p>The better approach is to embed anonymisation and pseudonymisation decisions into existing governance processes: solution architecture review, privacy impact assessment, data governance, secure software development lifecycle, cloud and SaaS onboarding, third-party risk review, API governance, data-sharing approval, reporting design, and non-production data management.</p>
+<p>Each new use case involving personal data should ask a few basic questions:</p>
+<ul>
       <li>Is identifiable data required, or can the purpose be achieved with less data?</li>
       <li>Can direct identifiers be removed, and can indirect identifiers still re-identify the person?</li>
       <li>Can the data be aggregated, masked, or tokenised to reduce exposure?</li>
       <li>Is re-identification required, who can perform it, and how will it be logged and monitored?</li>
       <li>When should the decision be reviewed?</li>
     </ul>
-    <p>This is how privacy control becomes operational: not by saying every application must anonymise everything, and not by saying anonymisation is impossible and moving on.</p>
-    <p>It happens by making every personal-data use case explain why the data needs to remain identifiable.</p>
-
-    <h2>Final Thought</h2>
-    <p>The goal is not to anonymise everything.</p>
-    <p>The goal is to ensure personal data is only identifiable when it has a valid reason to be identifiable.</p>
-    <p>Because not all personal data can be anonymised. But all personal data must be governed.</p>
-    <p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+<p>This is how privacy control becomes operational: not by saying every application must anonymise everything, and not by saying anonymisation is impossible and moving on.</p>
+<p>It happens by making every personal-data use case explain why the data needs to remain identifiable.</p>
+<h2>Final Thought</h2>
+<p>The goal is not to anonymise everything.</p>
+<p>The goal is to ensure personal data is only identifiable when it has a valid reason to be identifiable.</p>
+<p>Because not all personal data can be anonymised. But all personal data must be governed.</p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
   </main>
 
   <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
-  <script data-goatcounter="https://jaizanuar.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

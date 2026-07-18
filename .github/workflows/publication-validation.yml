@@ -1,0 +1,32 @@
+name: Validate article publication
+
+on:
+  pull_request:
+    paths:
+      - "content/articles.json"
+      - "articles/**"
+      - "assets/images/articles/**"
+      - "assets/dashboard.js"
+      - "assets/style.css"
+      - "tools/article_pipeline.py"
+      - "requirements-publishing.txt"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: pip install -r requirements-publishing.txt
+      - run: python tools/article_pipeline.py build
+      - run: node tools/check_inline_js.mjs
+      - name: Require generated pages to match structured content
+        run: git diff --exit-code -- articles assets/dashboard.js
+      - run: python tools/article_pipeline.py validate
