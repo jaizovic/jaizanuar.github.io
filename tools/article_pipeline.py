@@ -316,9 +316,7 @@ render(Number(new URLSearchParams(window.location.search).get('page')) || 1);
 def index_page(articles: list[dict]) -> str:
     cards = []
     for article in articles:
-        image = article["image"]
         cards.append(f'''    <article class="article-card" data-date="{article['date']}" data-categories="{escape(','.join(article['categories']), quote=True)}">
-      <a class="article-card-image" href="{article['slug']}.html" aria-label="Read {escape(article['title'], quote=True)}"><img src="../{image['path']}" width="{image['width']}" height="{image['height']}" alt="{escape(image['alt'], quote=True)}" loading="lazy" decoding="async" /></a>
       <div class="article-meta">{escape(meta_line(article))}</div>
       <h2><a href="{article['slug']}.html">{escape(article['title'])}</a></h2>
       <p>{escape(article['excerpt'])}</p>
@@ -403,6 +401,8 @@ def validate(data: dict) -> None:
     index = (ROOT / "articles" / "index.html").read_text(encoding="utf-8")
     if index.count('class="article-card"') != len(articles):
         errors.append("article listing card count does not match structured content")
+    if 'class="article-card-image"' in index:
+        errors.append("article listing must remain text-only")
     if errors:
         print("Publication validation failed:", file=sys.stderr)
         for error in errors:
