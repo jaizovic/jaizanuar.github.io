@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIEM Migration Checklist: How to Avoid Detection Gaps | Jaiz Anuar</title>
+  <meta name="description" content="A practical SIEM migration checklist for preserving detection coverage, investigation evidence, alert routing and monitoring readiness throughout cutover." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/siem-migration-checklist-how-to-avoid-detection-gaps.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="SIEM Migration Checklist: How to Avoid Detection Gaps" />
+  <meta property="og:description" content="A practical SIEM migration checklist for preserving detection coverage, investigation evidence, alert routing and monitoring readiness throughout cutover." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/siem-migration-checklist-how-to-avoid-detection-gaps.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/siem-migration-checklist-how-to-avoid-detection-gaps.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="Security analysts compare old and new SIEM platforms during parallel monitoring while an amber telemetry gap exposes a missing detection path." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SIEM Migration Checklist: How to Avoid Detection Gaps" />
+  <meta name="twitter:description" content="A practical SIEM migration checklist for preserving detection coverage, investigation evidence, alert routing and monitoring readiness throughout cutover." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/siem-migration-checklist-how-to-avoid-detection-gaps.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "SIEM Migration Checklist: How to Avoid Detection Gaps", "description": "A practical SIEM migration checklist for preserving detection coverage, investigation evidence, alert routing and monitoring readiness throughout cutover.", "datePublished": "2026-07-25", "dateModified": "2026-07-25", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com"}, "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/siem-migration-checklist-how-to-avoid-detection-gaps.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/siem-migration-checklist-how-to-avoid-detection-gaps.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <a href="index.html" class="back-link">← Back to Articles</a>
+    <div class="article-meta">25 July 2026 · Cybersecurity · Security Operations · 7 min read</div>
+    <a class="download-button article-download" href="../papers/pdf/siem-migration-checklist-how-to-avoid-detection-gaps.pdf" download>Download PDF</a>
+    <h1>SIEM Migration Checklist: How to Avoid Detection Gaps</h1>
+    <p class="lead">A SIEM migration is only successful when the organisation can demonstrate that meaningful threats will still be detected, investigated and escalated throughout the transition.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/siem-migration-checklist-how-to-avoid-detection-gaps.webp" width="1600" height="900" alt="Security analysts compare old and new SIEM platforms during parallel monitoring while an amber telemetry gap exposes a missing detection path." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>Migrating a Security Information and Event Management platform is often treated as a technology replacement.</p>
+<p>The organisation selects a new platform, connects the log sources, rebuilds the dashboards and plans a cutover date.</p>
+<p>But a SIEM migration is not complete simply because logs are visible in the new system.</p>
+<p>The real question is whether the organisation can still detect, investigate and respond to threats throughout the transition.</p>
+<p>A migration may look successful from a project perspective while silently creating detection gaps. Critical logs may be missing. Correlation rules may not behave as expected. Alerts may not reach the right team. Historical evidence may become inaccessible just when investigators need it.</p>
+<p>This is why a SIEM migration checklist should focus on security outcomes, not only technical activities. As discussed in <a href="a-siem-migration-is-not-just-a-technology-refresh-it-is-a-security-risk-event.html">A SIEM Migration Is Not Just a Technology Refresh. It Is a Security Risk Event.</a>, the transition itself creates risk that must be identified, controlled and formally governed.</p>
+
+<h2>1. Define What “Ready” Means</h2>
+<p>Before migration begins, establish measurable readiness criteria.</p>
+<p>“Logs are flowing” is not enough.</p>
+<p>The new SIEM should only be considered operationally ready when:</p>
+<ul>
+  <li>Critical log sources are connected and stable.</li>
+  <li>Priority detection use cases have been tested.</li>
+  <li>Alerts reach the correct monitoring team.</li>
+  <li>Investigation procedures are documented.</li>
+  <li>Escalation paths are working.</li>
+  <li>Analysts can access sufficient historical data.</li>
+  <li>Response teams understand their responsibilities.</li>
+</ul>
+<p>Without clear acceptance criteria, project pressure may cause the organisation to declare success too early.</p>
+<p>A platform can be technically available but operationally unready.</p>
+
+<h2>2. Identify Critical Log Sources</h2>
+<p>Not every log source carries the same security value.</p>
+<p>Start by identifying the systems that are most important for detecting high-impact attacks. These commonly include:</p>
+<ul>
+  <li>Identity and authentication platforms.</li>
+  <li>Privileged access systems.</li>
+  <li>Domain controllers.</li>
+  <li>Firewalls and internet gateways.</li>
+  <li>Endpoint detection platforms.</li>
+  <li>Cloud environments.</li>
+  <li>Critical applications.</li>
+  <li>Databases containing sensitive information.</li>
+  <li>Email and collaboration platforms.</li>
+  <li>Vulnerability management systems.</li>
+</ul>
+<p>Each critical source should have an owner, expected event volume, retention requirement and validation method.</p>
+<p>A connector showing a green status does not prove that the correct security events are being received. Sample events should be examined to confirm that timestamps, usernames, source addresses, event categories and other important fields are correctly parsed.</p>
+
+<h2>3. Prioritise Detection Use Cases</h2>
+<p>Many organisations attempt to migrate every existing detection rule at once.</p>
+<p>This may not be realistic.</p>
+<p>Instead, classify use cases according to risk and business importance. Priority should be given to scenarios such as:</p>
+<ul>
+  <li>Privileged account misuse.</li>
+  <li>Multiple failed authentication attempts.</li>
+  <li>Suspicious administrative changes.</li>
+  <li>Malware or ransomware activity.</li>
+  <li>Endpoint isolation events.</li>
+  <li>Unusual outbound traffic.</li>
+  <li>Data exfiltration indicators.</li>
+  <li>Disabled security controls.</li>
+  <li>New accounts added to privileged groups.</li>
+  <li>Access from unexpected locations.</li>
+  <li>Critical application attacks.</li>
+</ul>
+<p>The objective is not immediate rule-for-rule duplication. The objective is to preserve the ability to identify the organisation’s most serious threat scenarios.</p>
+<p>Each migrated rule should be tested using known events, controlled simulations or previously observed incidents.</p>
+<p>A rule that exists but has never been triggered during testing should not automatically be assumed to work.</p>
+
+<h2>4. Compare Detection Coverage</h2>
+<p>Different SIEM platforms process data differently.</p>
+<p>Field names, correlation logic, enrichment sources, query languages and alert thresholds may change. An identical-looking rule may therefore produce different results.</p>
+<p>Create a detection coverage matrix that records:</p>
+<ul>
+  <li>Existing use case.</li>
+  <li>Threat scenario addressed.</li>
+  <li>Required log sources.</li>
+  <li>Status in the new SIEM.</li>
+  <li>Test evidence.</li>
+  <li>Known limitations.</li>
+  <li>Compensating controls.</li>
+  <li>Responsible owner.</li>
+</ul>
+<p>This makes detection gaps visible and allows management to understand what remains incomplete.</p>
+<p>The comparison should focus on coverage, not simply the number of rules. Hundreds of low-value rules cannot compensate for a missing high-risk detection scenario. As explored in <a href="when-security-tools-become-the-noise.html">When Security Tools Become the Noise</a>, alert volume is not the same as useful visibility; noise can hide the events that matter.</p>
+
+<h2>5. Maintain Parallel Monitoring</h2>
+<p>Where possible, operate the old and new SIEM platforms in parallel for an agreed period.</p>
+<p>Parallel monitoring allows the security team to compare:</p>
+<ul>
+  <li>Alert volumes.</li>
+  <li>Detection accuracy.</li>
+  <li>Missed events.</li>
+  <li>False positives.</li>
+  <li>Processing delays.</li>
+  <li>Analyst workflows.</li>
+  <li>Escalation performance.</li>
+</ul>
+<p>Differences should be investigated before the old platform is retired.</p>
+<p>When parallel operation is not possible, stronger compensating controls are required. These may include direct monitoring from endpoint, network, identity and cloud security platforms, supported by manual correlation and clearly assigned alert ownership.</p>
+<p>The transition risk should be formally acknowledged rather than hidden behind the migration schedule.</p>
+
+<h2>6. Protect Historical Investigation Data</h2>
+<p>Security incidents are not always discovered immediately.</p>
+<p>An investigation may require authentication records, network activity or application logs from several months earlier. <a href="the-most-dangerous-incidents-start-as-normal-days.html">The Most Dangerous Incidents Start as Normal Days</a>, and evidence from an apparently routine period may later become essential to understanding an attack. If historical data becomes unavailable during migration, the organisation may lose the ability to determine what happened.</p>
+<p>Confirm:</p>
+<ul>
+  <li>How long historical logs remain accessible.</li>
+  <li>Whether data will be migrated or archived.</li>
+  <li>Who can retrieve archived evidence.</li>
+  <li>How quickly it can be restored.</li>
+  <li>Whether timestamps and integrity are preserved.</li>
+  <li>Whether retention meets legal, regulatory and investigation requirements.</li>
+</ul>
+<p>Historical access should be tested before the previous SIEM is decommissioned.</p>
+<p>A written statement that logs have been retained is less valuable than proof that investigators can retrieve and use them.</p>
+
+<h2>7. Confirm Monitoring Team Readiness</h2>
+<p>A new platform also creates a new operating model.</p>
+<p>Internal analysts and managed security service providers must understand:</p>
+<ul>
+  <li>Alert ownership.</li>
+  <li>Triage expectations.</li>
+  <li>Severity classification.</li>
+  <li>Escalation timeframes.</li>
+  <li>Incident declaration criteria.</li>
+  <li>After-hours responsibilities.</li>
+  <li>Communication channels.</li>
+  <li>Regulatory notification processes.</li>
+</ul>
+<p>Runbooks should reflect the actual platform and team structure.</p>
+<p>If a new service provider is involved, mobilisation should include access provisioning, platform training, environment familiarisation, use-case walkthroughs and live escalation exercises.</p>
+<p>Contract commencement does not automatically mean monitoring readiness.</p>
+
+<h2>8. Monitor the Monitoring Platform</h2>
+<p>The SIEM itself must be monitored.</p>
+<p>The organisation should detect when:</p>
+<ul>
+  <li>A critical connector stops sending logs.</li>
+  <li>Event volume drops unexpectedly.</li>
+  <li>Parsing fails.</li>
+  <li>Processing is delayed.</li>
+  <li>Storage limits are reached.</li>
+  <li>A detection rule is disabled.</li>
+  <li>Alert forwarding fails.</li>
+  <li>Administrative configurations are changed.</li>
+</ul>
+<p>Without platform health monitoring, a detection capability can fail silently.</p>
+<p>Log-source health should be reviewed continuously, with critical failures escalated like other security incidents.</p>
+
+<h2>9. Establish a Cutover and Fallback Plan</h2>
+<p>The final cutover should include clear decision points.</p>
+<p>The plan should state:</p>
+<ul>
+  <li>Who authorises the cutover.</li>
+  <li>Which readiness conditions must be met.</li>
+  <li>What unresolved gaps are accepted.</li>
+  <li>Which compensating controls remain active.</li>
+  <li>When the old platform will be switched off.</li>
+  <li>What will trigger rollback or fallback.</li>
+  <li>Who makes the final risk decision.</li>
+</ul>
+<p>Fallback planning is particularly important when contracts, licences or infrastructure dependencies limit access to the previous SIEM.</p>
+<p>The organisation should know what monitoring capability remains available if the new platform becomes unstable immediately after cutover.</p>
+
+<h2>10. Continue Tuning After Go-Live</h2>
+<p>Go-live is not the end of the migration.</p>
+<p>Detection logic must be tuned using actual operational data. Analysts should review false positives, missed activity, parsing problems, event delays and investigation difficulties.</p>
+<p>The first weeks after implementation should include frequent reviews of:</p>
+<ul>
+  <li>Critical alerts generated.</li>
+  <li>Use cases that have not triggered.</li>
+  <li>Failed log sources.</li>
+  <li>Escalation performance.</li>
+  <li>Analyst feedback.</li>
+  <li>New threat scenarios.</li>
+  <li>Outstanding detection gaps.</li>
+</ul>
+<p>The migration should only be considered complete when the new operating model is stable and security coverage has been demonstrated.</p>
+
+<h2>The Migration Checklist</h2>
+<p>Before retiring the previous SIEM, confirm that:</p>
+<ul>
+  <li>Critical log sources are connected and validated.</li>
+  <li>Priority detection use cases are operational.</li>
+  <li>Detection coverage has been compared.</li>
+  <li>Alert routing and escalation have been tested.</li>
+  <li>Monitoring teams are fully onboarded.</li>
+  <li>Historical evidence remains accessible.</li>
+  <li>Log-source failures can be detected.</li>
+  <li>Compensating controls cover known gaps.</li>
+  <li>Cutover and fallback decisions are documented.</li>
+  <li>Post-go-live tuning has clear ownership.</li>
+</ul>
+<p>A SIEM migration is not just the movement of logs from one platform to another.</p>
+<p>It is the transfer of an organisation’s ability to see threats.</p>
+<p>The migration is successful only when the organisation can demonstrate that meaningful threats will still be detected, investigated and escalated without interruption.</p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

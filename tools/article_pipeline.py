@@ -358,7 +358,11 @@ def update_dashboard(articles: list[dict]) -> None:
 
 
 def build(data: dict) -> None:
-    articles = sorted(data["articles"], key=lambda item: (item["date"], item["slug"]), reverse=True)
+    articles = sorted(
+        data["articles"],
+        key=lambda item: (item["date"], item.get("published_at", ""), item["slug"]),
+        reverse=True,
+    )
     for article in articles:
         (ROOT / "articles" / f"{article['slug']}.html").write_text(article_page(article), encoding="utf-8")
     (ROOT / "articles" / "index.html").write_text(index_page(articles), encoding="utf-8")
