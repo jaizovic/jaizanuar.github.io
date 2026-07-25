@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["SIEM Migration Checklist: How to Avoid Detection Gaps", "2026-07-25", "/articles/siem-migration-checklist-how-to-avoid-detection-gaps.html"],
     ["The Next Insider Threat May Not Be Human. It May Be an AI Agent.", "2026-07-25", "/articles/the-next-insider-threat-may-not-be-human-it-may-be-an-ai-agent.html"],
     ["Good Security Architecture Begins With Better Questions", "2026-07-24", "/articles/good-security-architecture-begins-with-better-questions.html"],
     ["Security Architecture Is Where Trust, Controls and Resilience Come Together", "2026-07-23", "/articles/security-architecture-is-where-trust-controls-and-resilience-come-together.html"],
