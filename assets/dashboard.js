@@ -4,6 +4,14 @@
   var siteCode = 'jaizanuar';
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articles = [
+    ["The Next Insider Threat May Not Be Human. It May Be an AI Agent.", "2026-07-25", "/articles/the-next-insider-threat-may-not-be-human-it-may-be-an-ai-agent.html"],
+    ["Good Security Architecture Begins With Better Questions", "2026-07-24", "/articles/good-security-architecture-begins-with-better-questions.html"],
+    ["Security Architecture Is Where Trust, Controls and Resilience Come Together", "2026-07-23", "/articles/security-architecture-is-where-trust-controls-and-resilience-come-together.html"],
+    ["A SIEM Migration Is Not Just a Technology Refresh. It Is a Security Risk Event.", "2026-07-23", "/articles/a-siem-migration-is-not-just-a-technology-refresh-it-is-a-security-risk-event.html"],
+    ["Security Architecture Protects The Business; Security Controls Protect The Technology", "2026-07-22", "/articles/security-architecture-protects-the-business-security-controls-protect-the-technology.html"],
+    ["The Best Security Architects Know How Systems Break", "2026-07-21", "/articles/the-best-security-architects-know-how-systems-break.html"],
+    ["The Next Generation Cyber Community Must Learn More Than How to Hack", "2026-07-20", "/articles/the-next-generation-cyber-community-must-learn-more-than-how-to-hack.html"],
+    ["Cybersecurity Is Becoming A Trust Engineering Discipline", "2026-07-19", "/articles/cybersecurity-is-becoming-a-trust-engineering-discipline.html"],
     ["Attackers Are Becoming AI-Native. Deception Must Become AI-Native Too.", "2026-07-18", "/articles/attackers-are-becoming-ai-native-deception-must-become-ai-native-too.html"],
     ["The New Security Perimeter Is No Longer The Network. It Is Identity.", "2026-07-17", "/articles/the-new-security-perimeter-is-no-longer-the-network-it-is-identity.html"],
     ["The Biggest AI Deployment In Your Organisation May Already Be Happening Without You", "2026-07-17", "/articles/the-biggest-ai-deployment-in-your-organisation-may-already-be-happening-without-you.html"],
@@ -21,6 +29,8 @@
     ["If the Cybersecurity Industry Profits from Cyberattacks, Why Do We Rely on Its Vendors to Tell Us How Secure We Are?", "2026-06-19", "/articles/cybersecurity-industry-profits.html"],
     ["Three Types of Cybersecurity Confidence. Which One Does Your Organisation Have?", "2026-06-16", "/articles/three-types-of-cybersecurity-confidence.html"],
     ["Cybersecurity Doesn't Fail Because We Don't Know Enough. It Fails Because We Become Too Certain About What We Think We Know.", "2026-06-07", "/articles/cybersecurity-doesnt-fail-because-we-dont-know-enough.html"],
+    ["You Cannot Report a Data Breach You Cannot See", "2025-09-19", "/articles/you-cannot-report-a-data-breach-you-cannot-see.html"],
+    ["The Best Cybersecurity Candidate May Not Have the Certification You Asked For", "2025-08-31", "/articles/the-best-cybersecurity-candidate-may-not-have-the-certification-you-asked-for.html"],
     ["When Security Tools Become the Noise", "2025-04-12", "/articles/when-security-tools-become-the-noise.html"],
     ["Behind Every Line of Code: The Human Element of Cybersecurity", "2025-03-19", "/articles/behind-every-line-of-code-human-element-cybersecurity.html"],
     ["Real Data Breach vs Honeypot Data Breach", "2024-05-23", "/articles/real-data-breach-vs-honeypot-data-breach.html"]
