@@ -3,6 +3,7 @@
 
   var siteCode = 'jaizanuar';
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
+  var articleLimit = 20;
   var articles = [
     ["The Next Insider Threat May Not Be Human. It May Be an AI Agent.", "2026-07-25", "/articles/the-next-insider-threat-may-not-be-human-it-may-be-an-ai-agent.html"],
     ["Good Security Architecture Begins With Better Questions", "2026-07-24", "/articles/good-security-architecture-begins-with-better-questions.html"],
@@ -132,6 +133,7 @@
       var data = await Promise.all([summaryPromise, articlePromise]);
       var summary = data[0];
       var articleResults = data[1].sort(function (a, b) { return b.count - a.count || b.date.localeCompare(a.date); });
+      var topArticleResults = articleResults.slice(0, articleLimit);
       var topArticle = articleResults[0];
 
       document.getElementById('totalVisits').textContent = formatNumber(summary[0]);
@@ -140,7 +142,8 @@
       document.getElementById('topArticleVisits').textContent = formatNumber(topArticle.count);
       document.getElementById('topArticleTitle').textContent = topArticle.title;
       document.getElementById('todayLabel').textContent = new Intl.DateTimeFormat('en-MY', { day: 'numeric', month: 'long' }).format(today);
-      renderRows(articleResults);
+      renderRows(topArticleResults);
+      document.getElementById('articleCount').textContent = 'Top ' + topArticleResults.length + ' articles';
       document.getElementById('statusText').textContent = 'Live data';
     } catch (error) {
       document.getElementById('totalVisits').textContent = '—';
@@ -157,7 +160,7 @@
     }
   }
 
-  document.getElementById('articleCount').textContent = articles.length + ' articles';
+  document.getElementById('articleCount').textContent = 'Top ' + Math.min(articleLimit, articles.length) + ' articles';
   document.getElementById('refreshButton').addEventListener('click', loadDashboard);
   loadDashboard();
 }());

@@ -9,25 +9,24 @@
   <link rel="stylesheet" href="../assets/dashboard.css" />
 </head>
 <body class="dashboard-page">
-  <header class="dashboard-header">
-    <a class="dashboard-brand" href="../index.html" aria-label="Jaiz Anuar home">
-      <span class="brand-mark">JA</span>
-      <span>Jaiz Anuar</span>
-    </a>
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
     <nav aria-label="Primary navigation">
-      <a href="../index.html">Home</a>
+      <a href="../">Home</a>
       <a href="../articles/">Articles</a>
       <a href="../about/">About</a>
+      <a href="./" aria-current="page">Dashboard</a>
     </nav>
   </header>
 
+  <section class="article-hero">
+    <h1>Visitor dashboard</h1>
+    <p>A simple view of how readers discover and engage with jaizanuar.com.</p>
+  </section>
+
   <main class="dashboard-shell">
-    <section class="dashboard-intro">
-      <div>
-        <p class="eyebrow">Audience overview</p>
-        <h1>Visitor dashboard</h1>
-        <p class="dashboard-lead">A simple view of how readers discover and engage with jaizanuar.com.</p>
-      </div>
+    <section class="dashboard-toolbar" aria-label="Dashboard controls">
+      <p class="eyebrow">Audience overview</p>
       <div class="dashboard-actions">
         <span class="live-status" id="liveStatus"><span class="status-dot"></span><span id="statusText">Loading live data</span></span>
         <button type="button" id="refreshButton">Refresh</button>
@@ -63,7 +62,7 @@
           <p class="eyebrow">Content performance</p>
           <h2>Visits by article</h2>
         </div>
-        <span id="articleCount">18 articles</span>
+        <span id="articleCount">Top 20 articles</span>
       </div>
 
       <div class="article-table-wrap">

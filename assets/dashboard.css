@@ -13,52 +13,29 @@
   min-height: 100vh;
   background: #f3f7fa;
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-.dashboard-header {
-  min-height: 78px;
-  padding: 0 6%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--navy);
-}
-
-.dashboard-brand {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 750;
-  letter-spacing: .01em;
-}
-
-.brand-mark {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--blue), var(--cyan));
-  font-size: 13px;
-}
-
-.dashboard-header nav a { margin-left: 26px; }
 
 .dashboard-shell {
   width: min(1180px, 88%);
   margin: 0 auto;
-  padding: 58px 0 72px;
+  padding: 38px 0 72px;
 }
 
-.dashboard-intro,
+.dashboard-toolbar,
 .panel-heading {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 24px;
+}
+
+.dashboard-toolbar {
+  min-height: 42px;
+}
+
+.dashboard-toolbar .eyebrow {
+  margin-bottom: 0;
 }
 
 .eyebrow {
@@ -68,20 +45,6 @@
   font-weight: 800;
   letter-spacing: .14em;
   text-transform: uppercase;
-}
-
-.dashboard-intro h1 {
-  margin: 0;
-  color: var(--ink);
-  font-size: clamp(36px, 5vw, 58px);
-  line-height: 1.05;
-  letter-spacing: -.04em;
-}
-
-.dashboard-lead {
-  margin: 14px 0 0;
-  color: var(--muted);
-  font-size: 17px;
 }
 
 .dashboard-actions { display: flex; align-items: center; gap: 12px; }
@@ -125,7 +88,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  margin: 38px 0 24px;
+  margin: 24px 0;
 }
 
 .metric-card {
@@ -210,11 +173,8 @@
 }
 
 @media (max-width: 680px) {
-  .dashboard-header { padding: 16px 6%; align-items: flex-start; }
-  .dashboard-header nav { margin-top: 0; text-align: right; }
-  .dashboard-header nav a { display: block; margin: 0 0 8px; }
   .dashboard-shell { width: 90%; padding-top: 38px; }
-  .dashboard-intro { align-items: flex-start; flex-direction: column; }
+  .dashboard-toolbar { align-items: flex-start; flex-direction: column; }
   .metric-grid { grid-template-columns: 1fr; }
   .metric-card { min-height: 150px; }
   .analytics-table th, .analytics-table td { padding-left: 18px; padding-right: 18px; }
