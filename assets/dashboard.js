@@ -35,6 +35,7 @@
     ["The Best Cybersecurity Candidate May Not Have the Certification You Asked For", "2025-08-31", "/articles/the-best-cybersecurity-candidate-may-not-have-the-certification-you-asked-for.html"],
     ["When Security Tools Become the Noise", "2025-04-12", "/articles/when-security-tools-become-the-noise.html"],
     ["Behind Every Line of Code: The Human Element of Cybersecurity", "2025-03-19", "/articles/behind-every-line-of-code-human-element-cybersecurity.html"],
+    ["A CISO Cannot Lead Every Operating Model the Same Way", "2025-02-18", "/articles/a-ciso-cannot-lead-every-operating-model-the-same-way.html"],
     ["Real Data Breach vs Honeypot Data Breach", "2024-05-23", "/articles/real-data-breach-vs-honeypot-data-breach.html"]
   ];
 
