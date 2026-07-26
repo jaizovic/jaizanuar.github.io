@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The Next CISO Will Lead Humans, Machines and AI Agents; Not Just People", "2026-07-27", "/articles/the-next-ciso-will-lead-humans-machines-and-ai-agents-not-just-people.html"],
     ["SIEM Migration Checklist: How to Avoid Detection Gaps", "2026-07-25", "/articles/siem-migration-checklist-how-to-avoid-detection-gaps.html"],
     ["The Next Insider Threat May Not Be Human. It May Be an AI Agent.", "2026-07-25", "/articles/the-next-insider-threat-may-not-be-human-it-may-be-an-ai-agent.html"],
     ["Good Security Architecture Begins With Better Questions", "2026-07-24", "/articles/good-security-architecture-begins-with-better-questions.html"],
