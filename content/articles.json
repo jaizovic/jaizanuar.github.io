@@ -963,6 +963,37 @@
         "width": 1600,
         "height": 900
       }
+    },
+    {
+      "slug": "the-next-ciso-will-lead-humans-machines-and-ai-agents-not-just-people",
+      "title": "The Next CISO Will Lead Humans, Machines and AI Agents; Not Just People",
+      "description": "How CISOs must govern humans, machines and autonomous AI agents through identity, architecture, accountability and digital trust.",
+      "lead": "The next CISO will not only lead people. They will govern intelligent machines and AI agents acting across the enterprise.",
+      "date": "2026-07-27",
+      "published_at": "2026-07-27T06:47:00+08:00",
+      "display_date": "27 July 2026",
+      "categories": [
+        "Cybersecurity",
+        "Leadership"
+      ],
+      "reading_time": "5 min read",
+      "excerpt": "Cybersecurity leadership is expanding from managing people and technology to governing humans, machines and AI agents under one framework of trust.",
+      "pdf": "papers/pdf/the-next-ciso-will-lead-humans-machines-and-ai-agents-not-just-people.pdf",
+      "body_html": "<p>For many years, cybersecurity leadership has been about leading people.</p>\n<p>Building capable teams. Defining governance. Managing technology. Influencing executives. Responding to incidents.</p>\n<p>Those responsibilities are not disappearing. But something significant is changing.</p>\n<p>The workforce is no longer made up of only humans.</p>\n<p>Every day, organisations are introducing AI coding assistants, autonomous security analysts, intelligent workflow automation and AI agents capable of making decisions within predefined boundaries. They can write software, analyse logs, review configurations, draft reports and even initiate operational actions.</p>\n<p>The next CISO will not only lead people. They will also be responsible for governing intelligent machines.</p>\n<p>This is not a future prediction. It is already happening.</p>\n<p>In a previous article, <strong><a href=\"/articles/a-ciso-cannot-lead-every-operating-model-the-same-way.html\">A CISO Cannot Lead Every Operating Model the Same Way</a></strong>, I discussed how leadership must adapt to different organisational operating models. The emergence of AI introduces another shift; one where the operating model itself begins to include non-human participants.</p>\n<p>That changes cybersecurity leadership in fundamental ways.</p>\n<h2>AI agents are becoming operational users</h2>\n<p>Traditional governance assumes that every action can be traced back to an employee.</p>\n<p>Tomorrow, many actions will be initiated by software.</p>\n<p>An AI agent may:</p>\n<ul>\n  <li>create infrastructure;</li>\n  <li>generate application code;</li>\n  <li>analyse security events;</li>\n  <li>approve low-risk operational requests;</li>\n  <li>investigate alerts; or</li>\n  <li>coordinate remediation activities.</li>\n</ul>\n<p>Each action still carries business risk.</p>\n<p>The question is no longer whether AI can perform these tasks.</p>\n<p>The question becomes:</p>\n<p><strong>Who is accountable when an AI agent performs them?</strong></p>\n<h2>Identity is becoming more important than workforce size</h2>\n<p>As organisations deploy more AI agents, the number of non-human identities may eventually exceed the number of employees.</p>\n<p>Each AI agent requires:</p>\n<ul>\n  <li>an identity;</li>\n  <li>permissions;</li>\n  <li>authentication;</li>\n  <li>activity logging;</li>\n  <li>behavioural monitoring; and</li>\n  <li>lifecycle management.</li>\n</ul>\n<p>An AI agent with excessive privileges creates the same security risk as an over-privileged administrator.</p>\n<p>Perhaps an even greater one, because it can operate continuously at machine speed.</p>\n<p>Cybersecurity teams have spent years managing privileged human accounts.</p>\n<p>Soon, they will need to manage thousands of privileged AI identities.</p>\n<h2>Security governance must become machine-readable</h2>\n<p>Policies written as PDF documents are useful for auditors.</p>\n<p>They are less useful for machines.</p>\n<p>AI agents cannot reliably interpret lengthy policy documents before making operational decisions.</p>\n<p>Increasingly, governance will need to become executable.</p>\n<p>Security policies, architectural guardrails and approval requirements will be expressed as code, APIs and automated control logic.</p>\n<p>Instead of asking whether employees followed policy, organisations will increasingly ask whether AI systems were technically prevented from violating it.</p>\n<p>That represents a significant shift in governance.</p>\n<h2>Security architecture becomes the operating system for AI</h2>\n<p>AI agents cannot rely on judgement alone.</p>\n<p>They rely on the environment that humans design.</p>\n<p>That makes security architecture even more important.</p>\n<p>A well-designed architecture determines:</p>\n<ul>\n  <li>what AI agents can access;</li>\n  <li>where trust boundaries exist;</li>\n  <li>how permissions are enforced;</li>\n  <li>what activities are monitored; and</li>\n  <li>when human approval becomes mandatory.</li>\n</ul>\n<p>In many ways, architecture becomes the operating system that governs autonomous decision making.</p>\n<p>The better the architecture, the safer the AI.</p>\n<h2>The CISO's leadership is expanding</h2>\n<p>Historically, cybersecurity leaders managed people, budgets and technology.</p>\n<p>Tomorrow they will also govern autonomous digital workers.</p>\n<p>Success will depend less on supervising every action and more on designing systems that consistently make safe decisions.</p>\n<p>That requires a broader combination of skills.</p>\n<p>Security architecture.</p>\n<p>Identity governance.</p>\n<p>AI governance.</p>\n<p>Risk management.</p>\n<p>Automation.</p>\n<p>Digital trust.</p>\n<p>These disciplines are becoming increasingly interconnected.</p>\n<p>The role of the CISO is evolving from managing cybersecurity operations to governing secure digital ecosystems where humans and AI work together.</p>\n<h2>Final thought</h2>\n<p>The organisations that succeed with AI will not necessarily deploy the most intelligent models.</p>\n<p>They will deploy the best-governed ones.</p>\n<p>The next generation of cybersecurity leadership will not be measured only by how well people are managed.</p>\n<p>It will also be measured by how safely machines are trusted to act on the organisation's behalf.</p>\n<p>Because the next CISO will not simply lead a cybersecurity team.</p>\n<p>They will lead an enterprise where humans, machines and AI agents operate together under a single framework of trust.</p>",
+      "image": {
+        "path": "assets/images/articles/the-next-ciso-will-lead-humans-machines-and-ai-agents-not-just-people.webp",
+        "alt": "A CISO governs human security teams, machine-operated infrastructure and autonomous AI agents through a shared framework of trust.",
+        "visual_concept": "One cybersecurity leader coordinating humans, machines and AI agents through visible identity, permission and accountability paths.",
+        "relevance_terms": [
+          "CISO leadership",
+          "AI agents",
+          "non-human identities",
+          "digital trust"
+        ],
+        "status": "approved",
+        "width": 1600,
+        "height": 900
+      }
     }
   ]
 }
