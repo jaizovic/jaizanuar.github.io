@@ -111,6 +111,53 @@
     });
   }
 
+  function countryFlag(code) {
+    return String.fromCodePoint.apply(null, code.toUpperCase().split('').map(function (letter) {
+      return 127397 + letter.charCodeAt(0);
+    }));
+  }
+
+  function renderReaderCountries(countries) {
+    var list = document.getElementById('countryList');
+    list.replaceChildren();
+
+    if (!countries.length) {
+      var empty = document.createElement('li');
+      empty.className = 'country-loading';
+      empty.textContent = 'Reader locations will appear after the country feed is updated.';
+      list.appendChild(empty);
+      return;
+    }
+
+    countries.slice(0, 25).forEach(function (country) {
+      var item = document.createElement('li');
+      var flag = document.createElement('span');
+      var name = document.createElement('span');
+
+      flag.className = 'country-flag';
+      flag.textContent = countryFlag(country.code);
+      flag.setAttribute('aria-hidden', 'true');
+      name.className = 'country-name';
+      name.textContent = country.name;
+      item.append(flag, name);
+      list.appendChild(item);
+    });
+  }
+
+  async function loadReaderCountries() {
+    try {
+      var response = await fetch('../data/reader-countries.json', { cache: 'no-cache' });
+      if (!response.ok) throw new Error('Country feed is not available');
+      var data = await response.json();
+      var countries = Array.isArray(data.countries) ? data.countries.filter(function (country) {
+        return country && /^[A-Z]{2}$/.test(country.code) && typeof country.name === 'string';
+      }) : [];
+      renderReaderCountries(countries);
+    } catch (error) {
+      renderReaderCountries([]);
+    }
+  }
+
   async function loadDashboard() {
     setLoading(true);
     document.getElementById('setupPanel').hidden = true;
@@ -165,6 +212,10 @@
   }
 
   document.getElementById('articleCount').textContent = 'Top ' + Math.min(articleLimit, articles.length) + ' articles';
-  document.getElementById('refreshButton').addEventListener('click', loadDashboard);
+  document.getElementById('refreshButton').addEventListener('click', function () {
+    loadReaderCountries();
+    loadDashboard();
+  });
+  loadReaderCountries();
   loadDashboard();
 }());

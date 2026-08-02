@@ -1,0 +1,42 @@
+name: Update reader countries
+
+on:
+  schedule:
+    - cron: "10 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-reader-countries
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Publish recent reader countries
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the published site
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Read country statistics from GoatCounter
+        env:
+          GOATCOUNTER_API_TOKEN: ${{ secrets.GOATCOUNTER_API_TOKEN }}
+          GOATCOUNTER_SITE_CODE: jaizanuar
+        run: python3 tools/update_reader_countries.py
+
+      - name: Publish the sanitised country feed
+        run: |
+          if git diff --quiet -- data/reader-countries.json; then
+            echo "Country order is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/reader-countries.json
+          git commit -m "Update reader countries"
+          git push

@@ -124,6 +124,56 @@
   box-shadow: 0 8px 30px rgba(16, 35, 63, .045);
 }
 
+.reader-countries-panel {
+  margin-bottom: 24px;
+}
+
+.country-list {
+  margin: 0;
+  padding: 12px 28px 24px 70px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 42px;
+}
+
+.country-list li {
+  min-height: 54px;
+  padding: 12px 4px 12px 8px;
+  border-bottom: 1px solid #edf1f5;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.country-list li::marker {
+  color: #8b9aaf;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.country-list li:not(.country-loading) {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.country-flag {
+  font-size: 25px;
+  line-height: 1;
+}
+
+.country-name {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.country-loading {
+  grid-column: 1 / -1;
+  list-style: none;
+  padding: 22px 0 !important;
+}
+
 .panel-heading { padding: 26px 28px 22px; border-bottom: 1px solid var(--line); }
 .panel-heading h2 { margin: 0; color: var(--ink); font-size: 23px; }
 .panel-heading > span { color: var(--muted); font-size: 13px; font-weight: 700; }
@@ -170,6 +220,7 @@
 
 @media (max-width: 960px) {
   .metric-grid { grid-template-columns: repeat(2, 1fr); }
+  .country-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 680px) {
@@ -177,6 +228,7 @@
   .dashboard-toolbar { align-items: flex-start; flex-direction: column; }
   .metric-grid { grid-template-columns: 1fr; }
   .metric-card { min-height: 150px; }
+  .country-list { grid-template-columns: 1fr; padding-left: 54px; padding-right: 18px; }
   .analytics-table th, .analytics-table td { padding-left: 18px; padding-right: 18px; }
   .date-cell { display: none; }
   .setup-panel { padding: 22px; }
