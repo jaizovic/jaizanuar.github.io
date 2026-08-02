@@ -1,3 +1,40 @@
 {
-  "countries": []
+  "countries": [
+    {
+      "code": "MY",
+      "name": "Malaysia"
+    },
+    {
+      "code": "US",
+      "name": "United States"
+    },
+    {
+      "code": "DK",
+      "name": "Denmark"
+    },
+    {
+      "code": "IN",
+      "name": "India"
+    },
+    {
+      "code": "BE",
+      "name": "Belgium"
+    },
+    {
+      "code": "PK",
+      "name": "Pakistan"
+    },
+    {
+      "code": "IT",
+      "name": "Italy"
+    },
+    {
+      "code": "SE",
+      "name": "Sweden"
+    },
+    {
+      "code": "NZ",
+      "name": "New Zealand"
+    }
+  ]
 }
