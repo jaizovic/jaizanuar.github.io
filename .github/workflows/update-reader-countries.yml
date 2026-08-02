@@ -27,6 +27,7 @@ jobs:
         env:
           GOATCOUNTER_API_TOKEN: ${{ secrets.GOATCOUNTER_API_TOKEN }}
           GOATCOUNTER_SITE_CODE: jaizanuar
+          GOATCOUNTER_FIRST_COUNT_DATE: "2026-07-17"
         run: python3 tools/update_reader_countries.py
 
       - name: Publish the sanitised country feed
