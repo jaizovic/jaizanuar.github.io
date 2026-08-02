@@ -17,8 +17,13 @@ from typing import Optional
 
 SITE_CODE = os.environ.get("GOATCOUNTER_SITE_CODE", "jaizanuar")
 API_TOKEN = os.environ.get("GOATCOUNTER_API_TOKEN", "")
+FIRST_COUNT_DATE = dt.date.fromisoformat(os.environ.get("GOATCOUNTER_FIRST_COUNT_DATE", "2026-07-17"))
 OUTPUT_PATH = pathlib.Path("data/reader-countries.json")
 MAX_COUNTRIES = 25
+
+
+class GoatCounterAPIError(RuntimeError):
+    pass
 
 
 def iso_hour(value: dt.datetime) -> str:
@@ -35,20 +40,11 @@ def api_get(path: str, query: Optional[dict[str, object]] = None) -> dict:
         "User-Agent": "jaizanuar.com-country-feed/1.0",
     })
 
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return json.load(response)
-
-
-def first_hit_date(today: dt.date) -> dt.date:
-    payload = api_get("sites")
-    site = next((item for item in payload.get("sites", []) if item.get("code") == SITE_CODE), None)
-    if not site:
-        raise RuntimeError(f"GoatCounter site {SITE_CODE!r} was not found")
-
-    timestamp = site.get("first_hit_at") or site.get("created_at")
-    if not timestamp:
-        return today
-    return dt.datetime.fromisoformat(str(timestamp).replace("Z", "+00:00")).date()
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return json.load(response)
+    except urllib.error.HTTPError as error:
+        raise GoatCounterAPIError(f"{path} returned HTTP {error.code}") from error
 
 
 def day_locations(day: dt.date, now: dt.datetime) -> list[dict[str, str]]:
@@ -77,7 +73,7 @@ def collect_recent_countries(now: dt.datetime) -> list[dict[str, str]]:
     countries: list[dict[str, str]] = []
     seen: set[str] = set()
 
-    earliest_day = first_hit_date(now.date())
+    earliest_day = FIRST_COUNT_DATE
     day = now.date()
     while day >= earliest_day:
         for country in day_locations(day, now):
@@ -99,14 +95,11 @@ def main() -> int:
 
     try:
         countries = collect_recent_countries(dt.datetime.now(dt.timezone.utc))
-    except urllib.error.HTTPError as error:
-        print(f"GoatCounter API returned HTTP {error.code}", file=sys.stderr)
-        return 1
     except (urllib.error.URLError, TimeoutError) as error:
         print(f"Could not reach GoatCounter: {error}", file=sys.stderr)
         return 1
-    except (RuntimeError, ValueError) as error:
-        print(f"Could not determine GoatCounter history: {error}", file=sys.stderr)
+    except (GoatCounterAPIError, ValueError) as error:
+        print(f"Could not read GoatCounter history: {error}", file=sys.stderr)
         return 1
 
     current = {}
