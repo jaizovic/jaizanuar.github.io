@@ -3,7 +3,6 @@
 
 from __future__ import annotations
 
-import calendar
 import datetime as dt
 import json
 import os
@@ -13,6 +12,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from typing import Optional
 
 
 SITE_CODE = os.environ.get("GOATCOUNTER_SITE_CODE", "jaizanuar")
@@ -25,19 +25,10 @@ def iso_hour(value: dt.datetime) -> str:
     return value.astimezone(dt.timezone.utc).replace(minute=0, second=0, microsecond=0).isoformat().replace("+00:00", "Z")
 
 
-def day_locations(day: dt.date, now: dt.datetime) -> list[dict[str, str]]:
-    start = dt.datetime.combine(day, dt.time.min, tzinfo=dt.timezone.utc)
-    next_day = start + dt.timedelta(days=1)
-    end = min(next_day, now)
-    if end <= start:
-        return []
-
-    query = urllib.parse.urlencode({
-        "start": iso_hour(start),
-        "end": iso_hour(end),
-        "limit": 100,
-    })
-    url = f"https://{SITE_CODE}.goatcounter.com/api/v0/stats/locations?{query}"
+def api_get(path: str, query: Optional[dict[str, object]] = None) -> dict:
+    url = f"https://{SITE_CODE}.goatcounter.com/api/v0/{path}"
+    if query:
+        url += "?" + urllib.parse.urlencode(query)
     request = urllib.request.Request(url, headers={
         "Authorization": f"Bearer {API_TOKEN}",
         "Content-Type": "application/json",
@@ -45,7 +36,33 @@ def day_locations(day: dt.date, now: dt.datetime) -> list[dict[str, str]]:
     })
 
     with urllib.request.urlopen(request, timeout=30) as response:
-        payload = json.load(response)
+        return json.load(response)
+
+
+def first_hit_date(today: dt.date) -> dt.date:
+    payload = api_get("sites")
+    site = next((item for item in payload.get("sites", []) if item.get("code") == SITE_CODE), None)
+    if not site:
+        raise RuntimeError(f"GoatCounter site {SITE_CODE!r} was not found")
+
+    timestamp = site.get("first_hit_at") or site.get("created_at")
+    if not timestamp:
+        return today
+    return dt.datetime.fromisoformat(str(timestamp).replace("Z", "+00:00")).date()
+
+
+def day_locations(day: dt.date, now: dt.datetime) -> list[dict[str, str]]:
+    start = dt.datetime.combine(day, dt.time.min, tzinfo=dt.timezone.utc)
+    next_day = start + dt.timedelta(days=1)
+    end = min(next_day, now)
+    if end <= start:
+        return []
+
+    payload = api_get("stats/locations", {
+        "start": iso_hour(start),
+        "end": iso_hour(end),
+        "limit": 100,
+    })
 
     locations = []
     for location in payload.get("stats", []):
@@ -56,19 +73,11 @@ def day_locations(day: dt.date, now: dt.datetime) -> list[dict[str, str]]:
     return locations
 
 
-def six_months_ago(value: dt.date) -> dt.date:
-    month_index = value.year * 12 + value.month - 1 - 6
-    year, zero_based_month = divmod(month_index, 12)
-    month = zero_based_month + 1
-    day = min(value.day, calendar.monthrange(year, month)[1])
-    return dt.date(year, month, day)
-
-
 def collect_recent_countries(now: dt.datetime) -> list[dict[str, str]]:
     countries: list[dict[str, str]] = []
     seen: set[str] = set()
 
-    earliest_day = six_months_ago(now.date())
+    earliest_day = first_hit_date(now.date())
     day = now.date()
     while day >= earliest_day:
         for country in day_locations(day, now):
@@ -95,6 +104,9 @@ def main() -> int:
         return 1
     except (urllib.error.URLError, TimeoutError) as error:
         print(f"Could not reach GoatCounter: {error}", file=sys.stderr)
+        return 1
+    except (RuntimeError, ValueError) as error:
+        print(f"Could not determine GoatCounter history: {error}", file=sys.stderr)
         return 1
 
     current = {}
