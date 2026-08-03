@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["Shadow IT Is Not the Problem. Invisible Risk Is.", "2026-08-03", "/articles/shadow-it-is-not-the-problem-invisible-risk-is.html"],
     ["Risk Acceptance Is Not Risk Transfer", "2026-08-02", "/articles/risk-acceptance-is-not-risk-transfer.html"],
     ["The Next CISO Will Lead Humans, Machines and AI Agents; Not Just People", "2026-07-27", "/articles/the-next-ciso-will-lead-humans-machines-and-ai-agents-not-just-people.html"],
     ["SIEM Migration Checklist: How to Avoid Detection Gaps", "2026-07-25", "/articles/siem-migration-checklist-how-to-avoid-detection-gaps.html"],
