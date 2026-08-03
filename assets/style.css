@@ -324,6 +324,71 @@ nav a:hover {
   font-weight: bold;
 }
 
+.article-share {
+  margin-top: 52px;
+  padding-top: 30px;
+  border-top: 1px solid #dbe3ee;
+}
+
+.reader .article-share h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.reader .article-share p {
+  margin: 0 0 18px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.share-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  font: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 160ms ease, box-shadow 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.share-button:hover,
+.share-button:focus-visible {
+  border-color: #2563eb;
+  color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+  transform: translateY(-1px);
+}
+
+.share-button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 2px;
+}
+
+.share-status {
+  display: block;
+  min-height: 18px;
+  margin-top: 10px;
+  color: #166534;
+  font-size: 13px;
+  font-weight: bold;
+}
+
 footer {
   text-align: center;
   padding: 24px;
@@ -369,5 +434,9 @@ footer {
   .article-filters select {
     max-width: none;
     box-sizing: border-box;
+  }
+
+  .share-button {
+    flex: 1 1 calc(50% - 10px);
   }
 }
