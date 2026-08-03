@@ -15,11 +15,11 @@ document.querySelectorAll('.share-copy').forEach((button) => {
   button.addEventListener('click', async () => {
     const panel = button.closest('.article-share');
     const status = panel.querySelector('.share-status');
+    let copied = false;
 
     try {
       await navigator.clipboard.writeText(button.dataset.shareUrl);
-      button.textContent = 'Copied';
-      status.textContent = 'Article link copied to your clipboard.';
+      copied = true;
     } catch (_error) {
       const field = document.createElement('textarea');
       field.value = button.dataset.shareUrl;
@@ -28,17 +28,19 @@ document.querySelectorAll('.share-copy').forEach((button) => {
       field.style.opacity = '0';
       document.body.appendChild(field);
       field.select();
-      const copied = document.execCommand('copy');
+      copied = document.execCommand('copy');
       field.remove();
-
-      button.textContent = copied ? 'Copied' : 'Copy failed';
-      status.textContent = copied
-        ? 'Article link copied to your clipboard.'
-        : 'Select the address in your browser to copy this article link.';
     }
 
+    button.classList.toggle('is-copied', copied);
+    button.title = copied ? 'Link copied' : 'Copy article link';
+    status.textContent = copied
+      ? 'Article link copied to your clipboard.'
+      : 'Select the address in your browser to copy this article link.';
+
     window.setTimeout(() => {
-      button.textContent = 'Copy link';
+      button.classList.remove('is-copied');
+      button.title = 'Copy article link';
       status.textContent = '';
     }, 3000);
   });
