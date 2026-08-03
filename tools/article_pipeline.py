@@ -13,6 +13,7 @@ import re
 import sys
 import urllib.error
 import urllib.request
+from urllib.parse import quote
 from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
@@ -188,6 +189,8 @@ def article_page(article: dict) -> str:
     image_rel = f"../{image['path']}"
     image_abs = f"{SITE_URL}/{image['path']}"
     page_url = f"{SITE_URL}/articles/{article['slug']}.html"
+    encoded_url = quote(page_url, safe="")
+    encoded_title = quote(article["title"], safe="")
     structured = {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -245,9 +248,23 @@ def article_page(article: dict) -> str:
     </figure>
 
 {article['body_html']}
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={encoded_url}" target="_blank" rel="noopener noreferrer" aria-label="Share {title} on LinkedIn">LinkedIn</a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={encoded_url}" target="_blank" rel="noopener noreferrer" aria-label="Share {title} on Facebook">Facebook</a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url={encoded_url}&amp;text={encoded_title}" target="_blank" rel="noopener noreferrer" aria-label="Share {title} on X">X</a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text={encoded_title}%20{encoded_url}" target="_blank" rel="noopener noreferrer" aria-label="Share {title} on WhatsApp">WhatsApp</a>
+        <button class="share-button share-copy" type="button" data-share-url="{page_url}">Copy link</button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
   </main>
 
   <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
   <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
@@ -399,7 +416,7 @@ def validate(data: dict) -> None:
             errors.append(f"{slug}: generated article page is missing")
         else:
             page_text = page.read_text(encoding="utf-8")
-            for marker in [f'../{image["path"]}', 'property="og:image"', 'name="twitter:image"', 'application/ld+json']:
+            for marker in [f'../{image["path"]}', 'property="og:image"', 'name="twitter:image"', 'application/ld+json', 'class="article-share"', '../assets/share.js']:
                 if marker not in page_text:
                     errors.append(f"{slug}: generated page is missing {marker}")
     index = (ROOT / "articles" / "index.html").read_text(encoding="utf-8")
