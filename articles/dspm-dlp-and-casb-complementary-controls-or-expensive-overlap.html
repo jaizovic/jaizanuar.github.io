@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSPM, DLP and CASB: Complementary Controls or Expensive Overlap? | Jaiz Anuar</title>
+  <meta name="description" content="DSPM, DLP and CASB overlap in discovery, classification and monitoring. Investment should begin with a proven control gap, measurable value and total cost." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/dspm-dlp-and-casb-complementary-controls-or-expensive-overlap.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="DSPM, DLP and CASB: Complementary Controls or Expensive Overlap?" />
+  <meta property="og:description" content="DSPM, DLP and CASB overlap in discovery, classification and monitoring. Investment should begin with a proven control gap, measurable value and total cost." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/dspm-dlp-and-casb-complementary-controls-or-expensive-overlap.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/dspm-dlp-and-casb-complementary-controls-or-expensive-overlap.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="Three overlapping data-security control planes map sensitive repositories, govern data movement and control cloud usage around a shared data estate." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DSPM, DLP and CASB: Complementary Controls or Expensive Overlap?" />
+  <meta name="twitter:description" content="DSPM, DLP and CASB overlap in discovery, classification and monitoring. Investment should begin with a proven control gap, measurable value and total cost." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/dspm-dlp-and-casb-complementary-controls-or-expensive-overlap.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "DSPM, DLP and CASB: Complementary Controls or Expensive Overlap?", "description": "DSPM, DLP and CASB overlap in discovery, classification and monitoring. Investment should begin with a proven control gap, measurable value and total cost.", "datePublished": "2026-08-31", "dateModified": "2026-08-31", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com"}, "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/dspm-dlp-and-casb-complementary-controls-or-expensive-overlap.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/dspm-dlp-and-casb-complementary-controls-or-expensive-overlap.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <a href="index.html" class="back-link">← Back to Articles</a>
+    <div class="article-meta">31 August 2026 · Data Security · Security Architecture · 7 min read</div>
+    <h1>DSPM, DLP and CASB: Complementary Controls or Expensive Overlap?</h1>
+    <p class="lead">DSPM can complement DLP and CASB—but only when it closes a demonstrated control gap rather than adding another dashboard, policy engine and alert queue.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/dspm-dlp-and-casb-complementary-controls-or-expensive-overlap.webp" width="1600" height="900" alt="Three overlapping data-security control planes map sensitive repositories, govern data movement and control cloud usage around a shared data estate." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>Every new security category arrives with a compelling explanation of why existing controls are no longer enough.</p>
+<p>Data Security Posture Management, or DSPM, is no exception. Its value proposition is reasonable: organisations cannot protect sensitive data if they do not know what they have, where it is stored, who can access it and how it is being exposed.</p>
+<p>DSPM platforms promise to discover and classify sensitive data across cloud platforms, databases, collaboration tools and on-premises repositories. They may identify duplicate files, excessive permissions, inappropriate sharing and data retained beyond its required period.</p>
+<p>The capabilities are attractive. However, organisations may already have Data Loss Prevention, Cloud Access Security Broker, identity governance, data classification and SIEM platforms providing similar functions.</p>
+<p>This creates an important management question:</p>
+<blockquote><p>Is DSPM closing a genuine security gap, or are we purchasing another platform to rediscover what our existing controls should already know?</p></blockquote>
+<h2>The three controls have different starting points</h2>
+<p>DSPM, DLP and CASB may examine the same data, but they approach it from different perspectives.</p>
+<p>DSPM begins with the data itself. It asks:</p>
+<ul>
+  <li>What sensitive data exists?</li>
+  <li>Where is it stored?</li>
+  <li>How many copies exist?</li>
+  <li>Who can access it?</li>
+  <li>Is it stored or shared appropriately?</li>
+</ul>
+<p>DLP focuses primarily on movement and use. It asks:</p>
+<ul>
+  <li>Is sensitive data being emailed externally?</li>
+  <li>Is someone uploading it to a website?</li>
+  <li>Is it being copied to removable storage?</li>
+  <li>Should the transfer be blocked, encrypted or recorded?</li>
+</ul>
+<p>CASB begins with cloud applications and user activity. It asks:</p>
+<ul>
+  <li>Which cloud services are employees using?</li>
+  <li>Are those services approved?</li>
+  <li>Is sensitive data being shared publicly?</li>
+  <li>Should a cloud session or transaction be restricted?</li>
+</ul>
+<p>In a well-designed operating model, DSPM provides understanding and context; DLP controls sensitive-data movement; CASB governs cloud usage and sharing.</p>
+<h2>The overlap is real</h2>
+<p>The boundaries are becoming less distinct.</p>
+<p>Modern DLP products can discover data at rest, apply classifications and inspect cloud channels. CASB platforms can identify sensitive files, analyse sharing permissions and apply session controls. DSPM products are adding DLP enforcement, GenAI guardrails, access governance, retention management and incident investigation.</p>
+<p>All three may claim that they can:</p>
+<ul>
+  <li>Discover sensitive data</li>
+  <li>Detect personal information</li>
+  <li>Monitor file activity</li>
+  <li>Identify external sharing</li>
+  <li>Apply classifications</li>
+  <li>Generate risk alerts</li>
+  <li>Block or remediate policy violations</li>
+</ul>
+<p>This does not mean DSPM has no value. It means product features alone cannot justify the investment.</p>
+<p>A feature comparison may show that DSPM has 20 capabilities while another platform has 15. That does not reveal whether the additional capabilities address an important organisational risk, operate more accurately or reduce meaningful operational effort.</p>
+<p>Security architecture should bring trust, controls and resilience together as one coherent system. It should not become a collection of individually capable platforms performing the same task in isolation. This is explored further in <a href="security-architecture-is-where-trust-controls-and-resilience-come-together.html">Security Architecture Is Where Trust, Controls and Resilience Come Together</a>.</p>
+<h2>Where DSPM can provide complementary value</h2>
+<p>DSPM can add value when existing controls cannot provide a reliable, continuously updated view of sensitive-data exposure across the organisation.</p>
+<p>For example, a DSPM platform may discover that a confidential merger document:</p>
+<ul>
+  <li>Exists in several cloud and on-premises repositories</li>
+  <li>Contains personal and commercially sensitive information</li>
+  <li>Has multiple duplicate and near-duplicate copies</li>
+  <li>Is accessible to a broad internal group</li>
+  <li>Has been shared with an external party</li>
+  <li>Does not carry the correct sensitivity label</li>
+</ul>
+<p>DLP may prevent that document from being emailed or uploaded externally. CASB may block public sharing through a cloud service. Identity governance may remove inappropriate access.</p>
+<p>DSPM can connect these observations around the data object itself. It can show where the document exists, how sensitive it is and where its exposure must be reduced.</p>
+<p>This can be particularly valuable for business-confidential information that does not follow a predictable pattern. An NRIC or credit card number can be identified using established formats. Investment strategies, Board papers, legal opinions and merger documents require greater understanding of business context.</p>
+<p>DSPM may therefore provide value through better contextual classification, cross-repository visibility and exposure prioritisation. But these advantages must be demonstrated, not assumed.</p>
+<h2>A new dashboard is not automatically a new control</h2>
+<p>Discovery creates visibility, but visibility alone does not reduce risk.</p>
+<p>Once DSPM identifies thousands of overexposed files, someone must determine:</p>
+<ul>
+  <li>Whether the finding is accurate</li>
+  <li>Who owns the data</li>
+  <li>Whether the access is genuinely excessive</li>
+  <li>Whether the file can be deleted</li>
+  <li>Whether regulatory retention applies</li>
+  <li>Whether legal hold prevents remediation</li>
+  <li>Which team must correct the exposure</li>
+  <li>How failed remediation will be escalated</li>
+</ul>
+<p>Data owners, privacy teams, technology teams, security operations and risk functions may all become involved.</p>
+<p>The platform may be technically agentless, but its operating model is not effort-free.</p>
+<p>This is especially important for personal data. Discovery does not remove the organisation’s responsibility to define purpose, ownership, retention and permitted use. As discussed in <a href="not-all-personal-data-can-be-anonymised.html">Not All Personal Data Can Be Anonymised; But All Personal Data Must Be Governed</a>, the real requirement is disciplined governance throughout the data lifecycle.</p>
+<h2>Management should consider the complete TCO</h2>
+<p>The cost of DSPM is not limited to its licence.</p>
+<p>Total cost of ownership may include:</p>
+<ul>
+  <li>Platform subscription and data-volume charges</li>
+  <li>Connectors and supporting infrastructure</li>
+  <li>Implementation and integration</li>
+  <li>Data classification design and tuning</li>
+  <li>Integration with DLP, CASB, IGA, SIEM and ticketing platforms</li>
+  <li>Additional storage and log-ingestion costs</li>
+  <li>Investigation and remediation resources</li>
+  <li>Training and operational support</li>
+  <li>Privacy, legal and compliance reviews</li>
+  <li>Product upgrades and ongoing connector maintenance</li>
+  <li>Renewal costs and potential vendor lock-in</li>
+</ul>
+<p>There is also an opportunity cost. Every additional platform requires attention from security teams that could otherwise be improving controls already owned by the organisation.</p>
+<p>If the DSPM platform produces another queue of alerts, another classification scheme and another policy engine, the organisation may increase its operational complexity without reducing its data risk.</p>
+<h2>Prove the value with organisational data</h2>
+<p>The strongest business case should come from a controlled proof of value, not a generic demonstration.</p>
+<p>DSPM and existing controls should be tested against the same representative dataset. The evaluation should measure:</p>
+<ul>
+  <li>Sensitive files uniquely discovered by DSPM</li>
+  <li>Classification precision and confidence</li>
+  <li>False-positive and false-negative rates</li>
+  <li>Performance with local languages and business terminology</li>
+  <li>Excessive permissions correctly identified</li>
+  <li>Duplicate and near-duplicate accuracy</li>
+  <li>Cross-platform coverage</li>
+  <li>Successful remediation rate</li>
+  <li>Investigation time saved</li>
+  <li>Measurable reduction in exposed sensitive data</li>
+</ul>
+<p>Management should also ask a simple question for every proposed capability:</p>
+<blockquote><p>What important risk will remain unresolved if we do not acquire this platform?</p></blockquote>
+<p>If the answer is already addressed by DLP, CASB, data classification or identity governance, the organisation may have an implementation or operating-model problem rather than a technology gap.</p>
+<h2>Investment should begin with the gap</h2>
+<p>DSPM can complement DLP and CASB. It can improve understanding of sensitive data at rest, identify exposure across repositories and provide better context to existing enforcement controls.</p>
+<p>But complementary architecture does not mean accumulating platforms with similar capabilities.</p>
+<p>The decision should begin with a clearly defined control gap, followed by measurable evidence that DSPM can close it more accurately, efficiently or comprehensively than the existing stack.</p>
+<p>The value of DSPM is not determined by the number of features displayed in a demonstration. It is determined by the risks it uniquely identifies, the exposure it measurably reduces and the operational complexity it removes.</p>
+<p>Before purchasing another data-security platform, organisations should prove that it will create better protection; not merely another view of the same problem.</p>
+<p><em>Question assumptions. Share knowledge. Build trust.</em></p>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fdspm-dlp-and-casb-complementary-controls-or-expensive-overlap.html" target="_blank" rel="noopener noreferrer" aria-label="Share DSPM, DLP and CASB: Complementary Controls or Expensive Overlap? on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fdspm-dlp-and-casb-complementary-controls-or-expensive-overlap.html" target="_blank" rel="noopener noreferrer" aria-label="Share DSPM, DLP and CASB: Complementary Controls or Expensive Overlap? on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fdspm-dlp-and-casb-complementary-controls-or-expensive-overlap.html&amp;text=DSPM%2C%20DLP%20and%20CASB%3A%20Complementary%20Controls%20or%20Expensive%20Overlap%3F" target="_blank" rel="noopener noreferrer" aria-label="Share DSPM, DLP and CASB: Complementary Controls or Expensive Overlap? on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=DSPM%2C%20DLP%20and%20CASB%3A%20Complementary%20Controls%20or%20Expensive%20Overlap%3F%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fdspm-dlp-and-casb-complementary-controls-or-expensive-overlap.html" target="_blank" rel="noopener noreferrer" aria-label="Share DSPM, DLP and CASB: Complementary Controls or Expensive Overlap? on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/dspm-dlp-and-casb-complementary-controls-or-expensive-overlap.html" aria-label="Copy link to DSPM, DLP and CASB: Complementary Controls or Expensive Overlap?" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

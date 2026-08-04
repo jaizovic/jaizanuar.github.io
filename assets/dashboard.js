@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["DSPM, DLP and CASB: Complementary Controls or Expensive Overlap?", "2026-08-31", "/articles/dspm-dlp-and-casb-complementary-controls-or-expensive-overlap.html"],
     ["Good Security Architecture Assumes Every Control Will Eventually Fail", "2026-08-04", "/articles/good-security-architecture-assumes-every-control-will-eventually-fail.html"],
     ["Shadow IT Is Not the Problem. Invisible Risk Is.", "2026-08-03", "/articles/shadow-it-is-not-the-problem-invisible-risk-is.html"],
     ["Risk Acceptance Is Not Risk Transfer", "2026-08-02", "/articles/risk-acceptance-is-not-risk-transfer.html"],
