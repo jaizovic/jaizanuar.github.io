@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Good Security Architecture Assumes Every Control Will Eventually Fail | Jaiz Anuar</title>
+  <meta name="description" content="Every security control has a failure mode. Good security architecture uses independent layers to keep one failed control from becoming a business failure." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/good-security-architecture-assumes-every-control-will-eventually-fail.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Good Security Architecture Assumes Every Control Will Eventually Fail" />
+  <meta property="og:description" content="Every security control has a failure mode. Good security architecture uses independent layers to keep one failed control from becoming a business failure." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/good-security-architecture-assumes-every-control-will-eventually-fail.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/good-security-architecture-assumes-every-control-will-eventually-fail.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="Independent blue security layers contain two amber control failures while a critical business core remains protected and operational." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Good Security Architecture Assumes Every Control Will Eventually Fail" />
+  <meta name="twitter:description" content="Every security control has a failure mode. Good security architecture uses independent layers to keep one failed control from becoming a business failure." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/good-security-architecture-assumes-every-control-will-eventually-fail.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Good Security Architecture Assumes Every Control Will Eventually Fail", "description": "Every security control has a failure mode. Good security architecture uses independent layers to keep one failed control from becoming a business failure.", "datePublished": "2026-08-04", "dateModified": "2026-08-04", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com"}, "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/good-security-architecture-assumes-every-control-will-eventually-fail.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/good-security-architecture-assumes-every-control-will-eventually-fail.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <a href="index.html" class="back-link">← Back to Articles</a>
+    <div class="article-meta">4 August 2026 · Cybersecurity · Security Architecture · 4 min read</div>
+    <h1>Good Security Architecture Assumes Every Control Will Eventually Fail</h1>
+    <p class="lead">Every security control has a failure mode. Good security architecture ensures that when one fails, independent controls continue protecting the business.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/good-security-architecture-assumes-every-control-will-eventually-fail.webp" width="1600" height="900" alt="Independent blue security layers contain two amber control failures while a critical business core remains protected and operational." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>One of the biggest lessons from cybersecurity is that every security control has a failure mode.</p>
+<p>Firewalls are misconfigured.</p>
+<p>Identity providers become unavailable.</p>
+<p>Certificates expire.</p>
+<p>Authentication systems are bypassed.</p>
+<p>Hardware Security Modules develop firmware vulnerabilities.</p>
+<p>Even hardware wallets designed to protect digital assets can fail. The recent <a href="https://www.tradingview.com/news/newsbtc%3A105b214f2094b%3A0-coldcard-security-notice-puts-bitcoin-wallet-entropy-risk-back-in-focus/" target="_blank" rel="noopener noreferrer">Coldcard entropy vulnerability</a> serves as a reminder that no individual security control should ever be considered infallible.</p>
+<p>The important lesson is not about Bitcoin.</p>
+<p>It is about architecture.</p>
+<p>Because good security architecture never assumes that a single control will protect the business forever.</p>
+<h2>Security Controls Fail. Architecture Should Not.</h2>
+<p>A common mistake is to equate security with security products.</p>
+<p>Deploy Multi-Factor Authentication.</p>
+<p>Install Endpoint Detection and Response.</p>
+<p>Use a Hardware Security Module.</p>
+<p>Purchase a hardware wallet.</p>
+<p>Each of these controls strengthens security.</p>
+<p>None of them guarantees it.</p>
+<p>Every control is designed to reduce risk.</p>
+<p>No control eliminates risk.</p>
+<p>The role of security architecture is therefore not to find the perfect control.</p>
+<p>It is to ensure that when one control fails, the organisation continues to remain secure.</p>
+<h2>Layered Controls Matter More Than Perfect Controls</h2>
+<p>Consider the recent discussion surrounding hardware wallet security.</p>
+<p>If an organisation relies on a single hardware wallet to protect high-value digital assets, a flaw in that device could have catastrophic consequences.</p>
+<p>A well-designed institutional custody platform would never rely on one control alone.</p>
+<p>Instead, it would implement:</p>
+<ul>
+  <li>Multi-signature or Multi-Party Computation (MPC)</li>
+  <li>Independent key custodians</li>
+  <li>Hardware Security Modules</li>
+  <li>Transaction approval workflows</li>
+  <li>Separation of duties</li>
+  <li>Continuous monitoring</li>
+  <li>Recovery procedures</li>
+</ul>
+<p>The hardware wallet becomes one control among many.</p>
+<p>Not the final line of defence.</p>
+<p>The same principle applies far beyond cryptocurrency.</p>
+<h2>Banking Has Applied This Principle For Years</h2>
+<p>Banks have long recognised that individual controls can fail.</p>
+<p>That is why large-value fund transfers rarely depend on a single approval.</p>
+<p>One person prepares the transaction.</p>
+<p>Another reviews it.</p>
+<p>Different individuals approve it.</p>
+<p>Independent systems verify it.</p>
+<p>Monitoring continues even after the transaction is completed.</p>
+<p>The objective is simple.</p>
+<p>A single mistake—or a single compromised control—should never result in a successful fraud.</p>
+<p>This philosophy should guide cybersecurity architecture as well.</p>
+<h2>Security Architecture Designs For Failure</h2>
+<p>Security architecture is often misunderstood as designing secure environments.</p>
+<p>In reality, it is about designing resilient environments.</p>
+<p>Resilience begins with an uncomfortable assumption:</p>
+<p><em>"This control may fail one day."</em></p>
+<p>What happens if the firewall is bypassed?</p>
+<p>What happens if an administrator account is compromised?</p>
+<p>What happens if an API key is exposed?</p>
+<p>What happens if an identity provider becomes unavailable?</p>
+<p>What happens if an AI agent receives excessive permissions?</p>
+<p>Good architecture asks these questions before an incident occurs.</p>
+<p>Because architecture is not about preventing every failure.</p>
+<p>It is about limiting the consequences of failure.</p>
+<h2>Independent Controls Reduce Systemic Risk</h2>
+<p>One of the strongest principles in security architecture is independence.</p>
+<p>When every security control depends on the same technology, vendor or identity provider, a single weakness can affect the entire environment.</p>
+<p>Independence creates resilience.</p>
+<p>Different authentication factors.</p>
+<p>Independent approval workflows.</p>
+<p>Separate administrative accounts.</p>
+<p>Multiple verification mechanisms.</p>
+<p>Defence in depth is not simply about adding more controls.</p>
+<p>It is about ensuring those controls fail independently.</p>
+<p>That distinction is often overlooked.</p>
+<h2>Security Architecture Protects The Business</h2>
+<p>This is why security architecture should always be discussed at the business level rather than the technology level.</p>
+<p>Business disruption rarely occurs because one control failed.</p>
+<p>It occurs because the architecture allowed a single control failure to become a business failure.</p>
+<p>Good architecture limits blast radius.</p>
+<p>Protects critical assets.</p>
+<p>Maintains business operations.</p>
+<p>And gives organisations time to detect, respond and recover.</p>
+<p>Technology protects systems.</p>
+<p>Architecture protects outcomes.</p>
+<h2>Final Thoughts</h2>
+<p>The question is not whether a security control will fail.</p>
+<p>History tells us that eventually, one will.</p>
+<p>The better question is:</p>
+<p><em>"When it does, what happens next?"</em></p>
+<p>If the answer is immediate business disruption, the problem is not the control.</p>
+<p>It is the architecture.</p>
+<p>Whether protecting digital assets, payment systems, customer identities or cloud platforms, the principle remains the same.</p>
+<p>Never build security on the assumption that one control will never fail.</p>
+<p>Because good security architecture is not built on perfect controls.</p>
+<p>It is built on independent controls that continue protecting the business when one of them eventually does.</p>
+<p>For a deeper discussion on designing resilient architectures, you may also enjoy <strong><a href="the-best-security-architects-know-how-systems-break.html">The Best Security Architects Know How Systems Break</a></strong> and <strong><a href="security-architecture-protects-the-business-security-controls-protect-the-technology.html">Security Architecture Protects The Business; Security Controls Protect The Technology</a></strong>.</p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fgood-security-architecture-assumes-every-control-will-eventually-fail.html" target="_blank" rel="noopener noreferrer" aria-label="Share Good Security Architecture Assumes Every Control Will Eventually Fail on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fgood-security-architecture-assumes-every-control-will-eventually-fail.html" target="_blank" rel="noopener noreferrer" aria-label="Share Good Security Architecture Assumes Every Control Will Eventually Fail on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fgood-security-architecture-assumes-every-control-will-eventually-fail.html&amp;text=Good%20Security%20Architecture%20Assumes%20Every%20Control%20Will%20Eventually%20Fail" target="_blank" rel="noopener noreferrer" aria-label="Share Good Security Architecture Assumes Every Control Will Eventually Fail on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=Good%20Security%20Architecture%20Assumes%20Every%20Control%20Will%20Eventually%20Fail%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fgood-security-architecture-assumes-every-control-will-eventually-fail.html" target="_blank" rel="noopener noreferrer" aria-label="Share Good Security Architecture Assumes Every Control Will Eventually Fail on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/good-security-architecture-assumes-every-control-will-eventually-fail.html" aria-label="Copy link to Good Security Architecture Assumes Every Control Will Eventually Fail" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
