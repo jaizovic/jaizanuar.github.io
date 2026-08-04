@@ -9,6 +9,7 @@
     ["Shadow IT Is Not the Problem. Invisible Risk Is.", "2026-08-03", "/articles/shadow-it-is-not-the-problem-invisible-risk-is.html"],
     ["Risk Acceptance Is Not Risk Transfer", "2026-08-02", "/articles/risk-acceptance-is-not-risk-transfer.html"],
     ["DSPM, DLP and CASB: Complementary Controls or Expensive Overlap?", "2026-07-31", "/articles/dspm-dlp-and-casb-complementary-controls-or-expensive-overlap.html"],
+    ["Don't Chase Cybersecurity Certifications. Chase A Career Strategy.", "2026-07-29", "/articles/dont-chase-cybersecurity-certifications-chase-a-career-strategy.html"],
     ["The Next CISO Will Lead Humans, Machines and AI Agents; Not Just People", "2026-07-27", "/articles/the-next-ciso-will-lead-humans-machines-and-ai-agents-not-just-people.html"],
     ["SIEM Migration Checklist: How to Avoid Detection Gaps", "2026-07-25", "/articles/siem-migration-checklist-how-to-avoid-detection-gaps.html"],
     ["The Next Insider Threat May Not Be Human. It May Be an AI Agent.", "2026-07-25", "/articles/the-next-insider-threat-may-not-be-human-it-may-be-an-ai-agent.html"],
