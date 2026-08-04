@@ -181,6 +181,14 @@ def meta_line(article: dict) -> str:
     return " · ".join([article["display_date"], *article["categories"], article["reading_time"]])
 
 
+def pdf_download(article: dict, prefix: str) -> str:
+    """Render a PDF download only for legacy articles that provide one."""
+    pdf = article.get("pdf")
+    if not pdf:
+        return ""
+    return f'<a class="download-button article-download" href="{prefix}{escape(pdf, quote=True)}" download>Download PDF</a>'
+
+
 def article_page(article: dict) -> str:
     title = escape(article["title"])
     description = escape(article["description"], quote=True)
@@ -191,6 +199,8 @@ def article_page(article: dict) -> str:
     page_url = f"{SITE_URL}/articles/{article['slug']}.html"
     encoded_url = quote(page_url, safe="")
     encoded_title = quote(article["title"], safe="")
+    download = pdf_download(article, "../")
+    download_line = f"    {download}\n" if download else ""
     structured = {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -240,8 +250,7 @@ def article_page(article: dict) -> str:
   <main class="reader">
     <a href="index.html" class="back-link">← Back to Articles</a>
     <div class="article-meta">{escape(meta_line(article))}</div>
-    <a class="download-button article-download" href="../{escape(article['pdf'], quote=True)}" download>Download PDF</a>
-    <h1>{title}</h1>
+{download_line}    <h1>{title}</h1>
     <p class="lead">{lead}</p>
     <figure class="article-featured-image">
       <img src="{image_rel}" width="{image['width']}" height="{image['height']}" alt="{escape(image['alt'], quote=True)}" fetchpriority="high" decoding="async" />
@@ -348,11 +357,12 @@ render(Number(new URLSearchParams(window.location.search).get('page')) || 1);
 def index_page(articles: list[dict]) -> str:
     cards = []
     for article in articles:
+        download = pdf_download(article, "../")
         cards.append(f'''    <article class="article-card" data-date="{article['date']}" data-categories="{escape(','.join(article['categories']), quote=True)}">
       <div class="article-meta">{escape(meta_line(article))}</div>
       <h2><a href="{article['slug']}.html">{escape(article['title'])}</a></h2>
       <p>{escape(article['excerpt'])}</p>
-      <div class="article-actions"><a class="read-more" href="{article['slug']}.html">Read article →</a><a class="download-button article-download" href="../{escape(article['pdf'], quote=True)}" download>Download PDF</a></div>
+      <div class="article-actions"><a class="read-more" href="{article['slug']}.html">Read article →</a>{download}</div>
     </article>''')
     return f'''<!DOCTYPE html>
 <html lang="en">
