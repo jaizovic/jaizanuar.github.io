@@ -5,10 +5,10 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
-    ["DSPM, DLP and CASB: Complementary Controls or Expensive Overlap?", "2026-08-31", "/articles/dspm-dlp-and-casb-complementary-controls-or-expensive-overlap.html"],
     ["Good Security Architecture Assumes Every Control Will Eventually Fail", "2026-08-04", "/articles/good-security-architecture-assumes-every-control-will-eventually-fail.html"],
     ["Shadow IT Is Not the Problem. Invisible Risk Is.", "2026-08-03", "/articles/shadow-it-is-not-the-problem-invisible-risk-is.html"],
     ["Risk Acceptance Is Not Risk Transfer", "2026-08-02", "/articles/risk-acceptance-is-not-risk-transfer.html"],
+    ["DSPM, DLP and CASB: Complementary Controls or Expensive Overlap?", "2026-07-31", "/articles/dspm-dlp-and-casb-complementary-controls-or-expensive-overlap.html"],
     ["The Next CISO Will Lead Humans, Machines and AI Agents; Not Just People", "2026-07-27", "/articles/the-next-ciso-will-lead-humans-machines-and-ai-agents-not-just-people.html"],
     ["SIEM Migration Checklist: How to Avoid Detection Gaps", "2026-07-25", "/articles/siem-migration-checklist-how-to-avoid-detection-gaps.html"],
     ["The Next Insider Threat May Not Be Human. It May Be an AI Agent.", "2026-07-25", "/articles/the-next-insider-threat-may-not-be-human-it-may-be-an-ai-agent.html"],
