@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The Best Cybersecurity Leaders Build More Leaders, Not More Followers", "2026-08-05", "/articles/the-best-cybersecurity-leaders-build-more-leaders-not-more-followers.html"],
     ["Good Security Architecture Assumes Every Control Will Eventually Fail", "2026-08-04", "/articles/good-security-architecture-assumes-every-control-will-eventually-fail.html"],
     ["Shadow IT Is Not the Problem. Invisible Risk Is.", "2026-08-03", "/articles/shadow-it-is-not-the-problem-invisible-risk-is.html"],
     ["Risk Acceptance Is Not Risk Transfer", "2026-08-02", "/articles/risk-acceptance-is-not-risk-transfer.html"],
