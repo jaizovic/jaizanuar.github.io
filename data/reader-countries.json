@@ -5,16 +5,20 @@
       "name": "Malaysia"
     },
     {
+      "code": "IN",
+      "name": "India"
+    },
+    {
       "code": "US",
       "name": "United States"
     },
     {
-      "code": "DK",
-      "name": "Denmark"
+      "code": "SE",
+      "name": "Sweden"
     },
     {
-      "code": "IN",
-      "name": "India"
+      "code": "DK",
+      "name": "Denmark"
     },
     {
       "code": "BE",
@@ -27,10 +31,6 @@
     {
       "code": "IT",
       "name": "Italy"
-    },
-    {
-      "code": "SE",
-      "name": "Sweden"
     },
     {
       "code": "NZ",
