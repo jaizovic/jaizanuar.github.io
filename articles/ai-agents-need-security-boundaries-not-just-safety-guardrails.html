@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Agents Need Security Boundaries, Not Just Safety Guardrails | Jaiz Anuar</title>
+  <meta name="description" content="AI safety guardrails influence behaviour, but enforceable security boundaries limit what autonomous agents can access, authorise and execute." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/ai-agents-need-security-boundaries-not-just-safety-guardrails.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="AI Agents Need Security Boundaries, Not Just Safety Guardrails" />
+  <meta property="og:description" content="AI safety guardrails influence behaviour, but enforceable security boundaries limit what autonomous agents can access, authorise and execute." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/ai-agents-need-security-boundaries-not-just-safety-guardrails.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/ai-agents-need-security-boundaries-not-just-safety-guardrails.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="An autonomous AI agent moves through separated information, decision, identity, approval and execution zones while architectural boundaries limit access to enterprise systems." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Agents Need Security Boundaries, Not Just Safety Guardrails" />
+  <meta name="twitter:description" content="AI safety guardrails influence behaviour, but enforceable security boundaries limit what autonomous agents can access, authorise and execute." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/ai-agents-need-security-boundaries-not-just-safety-guardrails.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI Agents Need Security Boundaries, Not Just Safety Guardrails", "description": "AI safety guardrails influence behaviour, but enforceable security boundaries limit what autonomous agents can access, authorise and execute.", "datePublished": "2026-08-07", "dateModified": "2026-08-07", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com"}, "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/ai-agents-need-security-boundaries-not-just-safety-guardrails.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/ai-agents-need-security-boundaries-not-just-safety-guardrails.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <a href="index.html" class="back-link">← Back to Articles</a>
+    <div class="article-meta">7 August 2026 · AI Security · Security Architecture · 5 min read</div>
+    <h1>AI Agents Need Security Boundaries, Not Just Safety Guardrails</h1>
+    <p class="lead">As AI agents gain the ability to act across enterprise systems, organisations must constrain capability—not rely solely on instructions about behaviour.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/ai-agents-need-security-boundaries-not-just-safety-guardrails.webp" width="1600" height="900" alt="An autonomous AI agent moves through separated information, decision, identity, approval and execution zones while architectural boundaries limit access to enterprise systems." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>Artificial Intelligence is moving beyond answering questions.</p>
+<p>AI agents can now browse websites, read documents, access repositories, call APIs, execute code and perform actions on behalf of users.</p>
+<p>That changes the security conversation.</p>
+<p>For traditional Generative AI, organisations often focused on safety guardrails.</p>
+<p>What should the model be allowed to say?</p>
+<p>Which prompts should it reject?</p>
+<p>How should harmful requests be handled?</p>
+<p>Those questions still matter.</p>
+<p>But once an AI agent can take actions, safety guardrails are no longer enough.</p>
+<p>The more important architectural question becomes:</p>
+<p><strong>What can the agent technically reach, access and execute if the guardrail fails?</strong></p>
+<p>That is the difference between safety and security.</p>
+<h2>Guardrails Influence Behaviour. Boundaries Limit Capability.</h2>
+<p>A safety guardrail attempts to influence what an AI system should do.</p>
+<p>A security boundary determines what it <strong>can</strong> do.</p>
+<p>The distinction is important.</p>
+<p>An AI agent may be instructed:</p>
+<p><em>“Do not access confidential information unless required.”</em></p>
+<p>That is a behavioural expectation.</p>
+<p>A security architect should ask a different question:</p>
+<p><em>“Why does this agent have permission to access confidential information in the first place?”</em></p>
+<p>If the agent does not require access, the permission should not exist.</p>
+<p>The same principle applies to APIs, databases, cloud services, source-code repositories and administrative functions.</p>
+<p>Good security architecture should never depend entirely on an intelligent system deciding to behave correctly.</p>
+<h2>Recent Incidents Make This Less Theoretical</h2>
+<p>In July 2026, <a href="https://huggingface.co/blog/security-incident-july-2026" target="_blank" rel="noopener noreferrer">Hugging Face</a> disclosed an intrusion into part of its production infrastructure that it described as being driven end-to-end by an autonomous AI agent system. The campaign involved thousands of automated actions, credential harvesting and lateral movement across infrastructure. Hugging Face concluded that autonomous AI-driven offensive tooling was no longer merely theoretical.</p>
+<p>The broader lesson is more important than the individual incident.</p>
+<p>As AI agents gain more autonomy, organisations must assume that agents can behave unexpectedly, be manipulated or operate beyond what their designers originally intended.</p>
+<p>An agent does not need malicious intent to create a security problem.</p>
+<p>It only needs capability combined with the wrong objective, compromised context or excessive permission.</p>
+<h2>Treat Every AI Agent As An Identity</h2>
+<p>An AI agent accessing enterprise systems should not be treated as invisible automation.</p>
+<p>It is effectively another identity.</p>
+<p>It needs credentials.</p>
+<p>Permissions.</p>
+<p>Roles.</p>
+<p>Access policies.</p>
+<p>Audit trails.</p>
+<p>Ownership.</p>
+<p>And eventually, revocation.</p>
+<p>This extends an argument I made previously in <a href="the-new-security-perimeter-is-no-longer-the-network-it-is-identity.html">The New Security Perimeter Is No Longer The Network. It Is Identity.</a>: modern trust increasingly depends on <strong>who or what is requesting an action and whether that identity should be allowed to perform it</strong>.</p>
+<p>An AI agent with unrestricted access is therefore not simply an AI risk.</p>
+<p>It is a privileged-access risk.</p>
+<h2>Least Privilege Must Apply To Agents Too</h2>
+<p>AI agents should receive only the capabilities required for a specific task.</p>
+<p>An agent that summarises documents does not need administrative access.</p>
+<p>An agent that creates service tickets does not necessarily need permission to close them.</p>
+<p>An agent that reviews code does not automatically require production deployment rights.</p>
+<p>An agent assisting with financial analysis should not automatically be capable of executing transactions.</p>
+<p><a href="https://cornucopia.owasp.org/edition/companion/AAI2/1.0/en" target="_blank" rel="noopener noreferrer">OWASP’s current guidance for AI-agent security</a> similarly emphasises least-privilege tool access, human approval for high-impact actions, sandboxing, monitoring and separation between decision-making and irreversible execution.</p>
+<p>That is not unique to AI.</p>
+<p>It is traditional security architecture applied to a new form of identity.</p>
+<h2>Separate Thinking From Doing</h2>
+<p>One architectural principle may become increasingly important:</p>
+<p><strong>Separate an agent’s ability to recommend an action from its ability to execute that action.</strong></p>
+<p>An AI agent may analyse a transaction.</p>
+<p>Another control approves it.</p>
+<p>An AI agent may recommend a configuration change.</p>
+<p>A controlled workflow implements it.</p>
+<p>An AI agent may identify a suspicious account.</p>
+<p>A human or independent policy engine disables it.</p>
+<p>The more consequential the action, the stronger that separation should become.</p>
+<p>This is simply separation of duties applied to agentic systems.</p>
+<p>We should not abandon decades of security principles simply because the actor is now Artificial Intelligence.</p>
+<h2>Assume The Agent Can Be Manipulated</h2>
+<p>AI agents increasingly consume information from untrusted environments.</p>
+<p>Websites.</p>
+<p>Emails.</p>
+<p>Documents.</p>
+<p>API responses.</p>
+<p>Search results.</p>
+<p>External datasets.</p>
+<p>That information may contain instructions designed to manipulate the agent. <a href="https://openai.com/index/designing-agents-to-resist-prompt-injection/" target="_blank" rel="noopener noreferrer">OpenAI has described modern prompt-injection attacks</a> as increasingly resembling social engineering against AI agents rather than simple prompt tricks.</p>
+<p>Architecturally, this means external content should never automatically become trusted authority.</p>
+<p>The agent may read something.</p>
+<p>That does not mean the organisation should allow it to act on everything it reads.</p>
+<p>There must be boundaries between:</p>
+<p><strong>Information → Decision → Authorisation → Execution</strong></p>
+<p>Collapsing those stages into one autonomous workflow increases risk significantly.</p>
+<h2>Human Oversight Still Matters</h2>
+<p>Human approval is sometimes dismissed as reducing the efficiency of AI automation.</p>
+<p>For low-risk activities, that may be true.</p>
+<p>But high-impact actions deserve friction.</p>
+<p>Changing privileged access.</p>
+<p>Deleting information.</p>
+<p>Deploying production code.</p>
+<p>Approving financial transactions.</p>
+<p>Modifying security policies.</p>
+<p>These are situations where a deliberate verification point may be valuable.</p>
+<p>Convenience should not automatically override risk.</p>
+<p>As I discussed in <a href="convenience-is-an-attack-surface.html">Convenience Is an Attack Surface</a>, friction is sometimes an intentional security control rather than a design failure.</p>
+<h2>Final Thoughts</h2>
+<p>AI safety and AI security are related.</p>
+<p>But they are not the same thing.</p>
+<p>Safety guardrails attempt to influence behaviour.</p>
+<p>Security boundaries constrain capability.</p>
+<p>As AI agents become more autonomous, organisations need both.</p>
+<p>Tell the agent what it should do.</p>
+<p>But architecture must also determine what it <strong>cannot do</strong>.</p>
+<p>Limit its identity.</p>
+<p>Limit its permissions.</p>
+<p>Limit its network reach.</p>
+<p>Separate recommendations from execution.</p>
+<p>Require independent approval for high-impact actions.</p>
+<p>Monitor what it actually does.</p>
+<p>Because eventually, a guardrail will fail.</p>
+<p>A prompt will be misunderstood.</p>
+<p>An agent will encounter malicious content.</p>
+<p>An objective will produce an unexpected path.</p>
+<p>When that happens, the organisation should not be relying on the AI to make the right decision.</p>
+<p>The architecture should already have limited the wrong one.</p>
+<p><strong>AI agents need safety guardrails.</strong></p>
+<p><strong>But security boundaries are what protect the business when those guardrails fail.</strong></p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fai-agents-need-security-boundaries-not-just-safety-guardrails.html" target="_blank" rel="noopener noreferrer" aria-label="Share AI Agents Need Security Boundaries, Not Just Safety Guardrails on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fai-agents-need-security-boundaries-not-just-safety-guardrails.html" target="_blank" rel="noopener noreferrer" aria-label="Share AI Agents Need Security Boundaries, Not Just Safety Guardrails on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fai-agents-need-security-boundaries-not-just-safety-guardrails.html&amp;text=AI%20Agents%20Need%20Security%20Boundaries%2C%20Not%20Just%20Safety%20Guardrails" target="_blank" rel="noopener noreferrer" aria-label="Share AI Agents Need Security Boundaries, Not Just Safety Guardrails on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=AI%20Agents%20Need%20Security%20Boundaries%2C%20Not%20Just%20Safety%20Guardrails%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fai-agents-need-security-boundaries-not-just-safety-guardrails.html" target="_blank" rel="noopener noreferrer" aria-label="Share AI Agents Need Security Boundaries, Not Just Safety Guardrails on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/ai-agents-need-security-boundaries-not-just-safety-guardrails.html" aria-label="Copy link to AI Agents Need Security Boundaries, Not Just Safety Guardrails" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
