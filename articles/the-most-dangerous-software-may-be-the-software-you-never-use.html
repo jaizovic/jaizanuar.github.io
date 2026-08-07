@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Most Dangerous Software May Be the Software You Never Use | Jaiz Anuar</title>
+  <meta name="description" content="Unused packages, dormant services and loadable kernel modules can expand the attack surface even when organisations never intended to deploy them." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/the-most-dangerous-software-may-be-the-software-you-never-use.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Most Dangerous Software May Be the Software You Never Use" />
+  <meta property="og:description" content="Unused packages, dormant services and loadable kernel modules can expand the attack surface even when organisations never intended to deploy them." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/the-most-dangerous-software-may-be-the-software-you-never-use.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/the-most-dangerous-software-may-be-the-software-you-never-use.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="A monitored blue layer of active enterprise systems sits above dormant software components, where an amber attack path reaches a forgotten executable module below." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Most Dangerous Software May Be the Software You Never Use" />
+  <meta name="twitter:description" content="Unused packages, dormant services and loadable kernel modules can expand the attack surface even when organisations never intended to deploy them." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/the-most-dangerous-software-may-be-the-software-you-never-use.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Most Dangerous Software May Be the Software You Never Use", "description": "Unused packages, dormant services and loadable kernel modules can expand the attack surface even when organisations never intended to deploy them.", "datePublished": "2026-08-07", "dateModified": "2026-08-07", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com"}, "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/the-most-dangerous-software-may-be-the-software-you-never-use.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/the-most-dangerous-software-may-be-the-software-you-never-use.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <a href="index.html" class="back-link">← Back to Articles</a>
+    <div class="article-meta">7 August 2026 · Cybersecurity · Security Architecture · 5 min read</div>
+    <h1>The Most Dangerous Software May Be the Software You Never Use</h1>
+    <p class="lead">Software that sits installed but unused can still become executable attack surface. Security architecture must account for what exists, not only what teams intend to operate.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/the-most-dangerous-software-may-be-the-software-you-never-use.webp" width="1600" height="900" alt="A monitored blue layer of active enterprise systems sits above dormant software components, where an amber attack path reaches a forgotten executable module below." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>When organisations assess cyber risk, the conversation usually begins with an inventory.</p>
+<p>Which applications are running?</p>
+<p>Which services are internet-facing?</p>
+<p>Which software versions need patching?</p>
+<p>Which systems are considered critical?</p>
+<p>That approach makes sense.</p>
+<p>After all, you cannot secure what you do not know exists.</p>
+<p>But there is another category of software that often receives far less attention.</p>
+<p>Software that is installed, present and potentially executable, but never intentionally used.</p>
+<p>The recently disclosed <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-64531" target="_blank" rel="noopener noreferrer">OVSwrap vulnerability, CVE-2026-64531</a>, is a useful reminder that forgotten software can still become part of the attack surface.</p>
+<h2>“We Don’t Use It” Is Not Always A Security Answer</h2>
+<p>When the OVSwrap issue became public, one understandable reaction was:</p>
+<p><em>“We don't use Open vSwitch, so this should not affect us.”</em></p>
+<p>Unfortunately, security is rarely that simple.</p>
+<p>OVSwrap is a local privilege escalation vulnerability involving the Linux kernel's Open vSwitch datapath. Open vSwitch is normally associated with virtualisation, cloud networking and software-defined networking.</p>
+<p>The important detail is that the vulnerable component may exist on Linux systems even where administrators never intentionally deployed or configured Open vSwitch.</p>
+<p>The <a href="https://thehackernews.com/2026/08/new-ovswrap-linux-kernel-flaw-lets.html" target="_blank" rel="noopener noreferrer">technical reporting on OVSwrap</a> highlights exactly why this matters.</p>
+<p>Attackers are not interested in whether an organisation intended to use a component.</p>
+<p>They are interested in whether that component exists and whether vulnerable code can be reached.</p>
+<p>That distinction changes how we should think about attack surface.</p>
+<h2>Installed Software Is Still Software</h2>
+<p>Security teams naturally focus on systems they know are active.</p>
+<p>Web servers.</p>
+<p>Databases.</p>
+<p>Identity platforms.</p>
+<p>APIs.</p>
+<p>Remote access gateways.</p>
+<p>These systems are visible.</p>
+<p>They appear in inventories.</p>
+<p>They appear in architecture diagrams.</p>
+<p>They are monitored, patched and regularly reviewed.</p>
+<p>But modern operating systems contain much more than the applications organisations actively use.</p>
+<p>There may also be:</p>
+<ul>
+  <li>optional kernel modules</li>
+  <li>dormant services</li>
+  <li>compatibility components</li>
+  <li>legacy packages</li>
+  <li>debugging utilities</li>
+  <li>automatically loadable drivers</li>
+  <li>software installed as dependencies</li>
+</ul>
+<p>Many of these components may remain untouched for years.</p>
+<p>Until someone discovers a vulnerability.</p>
+<p>At that point, something the organisation never considered part of its technology landscape suddenly becomes part of its security problem.</p>
+<h2>The Attack Surface Is Bigger Than The Application Inventory</h2>
+<p>Security architecture often talks about attack surface reduction.</p>
+<p>But many organisations still define attack surface around what they intentionally deploy.</p>
+<p>The real attack surface is broader.</p>
+<p>It includes anything that can potentially execute or become reachable.</p>
+<p>A package installed by default.</p>
+<p>A driver that can load automatically.</p>
+<p>A service disabled today but easily enabled tomorrow.</p>
+<p>A dependency inherited from another software package.</p>
+<p>A component that nobody remembers installing.</p>
+<p>These things may never appear in a project architecture diagram.</p>
+<p>Yet they remain part of the environment.</p>
+<p>That is why software inventory and attack surface inventory are not exactly the same thing.</p>
+<p>An application inventory tells you what you believe you operate.</p>
+<p>An attack surface inventory should tell you what an attacker may be able to use.</p>
+<p>That is a much more important question.</p>
+<h2>Local Access Should Not Be Dismissed</h2>
+<p>Local privilege escalation vulnerabilities are sometimes treated as lower priority because the attacker must already have some level of access.</p>
+<p>That assumption deserves more scrutiny today.</p>
+<p>Low-privileged execution environments exist almost everywhere.</p>
+<p>Containers.</p>
+<p>CI/CD runners.</p>
+<p>Developer workstations.</p>
+<p>Application service accounts.</p>
+<p>Automation platforms.</p>
+<p>AI agents.</p>
+<p>Compromised workloads.</p>
+<p>Initial access is often only the first step.</p>
+<p>Once an attacker reaches a low-privileged environment, the next objective is usually straightforward:</p>
+<p>Gain more privilege.</p>
+<p>The <a href="https://kb.ciq.com/article/security-advisories/cve-ovswrap-mitigation" target="_blank" rel="noopener noreferrer">OVSwrap discussion</a> is therefore relevant even though the vulnerability is not simply a remote internet exploit.</p>
+<p>Local privilege escalation matters because attackers rarely stop after gaining the first foothold.</p>
+<p>They look for the next trust boundary they can cross.</p>
+<h2>Security Architecture Is About Challenging Assumptions</h2>
+<p>The most important lesson from OVSwrap is not the vulnerability itself.</p>
+<p>It is the assumption behind it.</p>
+<p>We don't use that feature.</p>
+<p>That module is not enabled.</p>
+<p>Nobody should have access there.</p>
+<p>That service is only available to administrators.</p>
+<p>Those statements may all be true today.</p>
+<p>But security architecture cannot rely entirely on today's assumptions remaining true forever.</p>
+<p>Good architecture asks a different question:</p>
+<p><em>“What happens if this component becomes reachable?”</em></p>
+<p>That mindset is closely related to another principle I discussed in <a href="good-security-architecture-assumes-every-control-will-eventually-fail.html">Good Security Architecture Assumes Every Control Will Eventually Fail</a>.</p>
+<p>The objective is not to assume that every component is dangerous.</p>
+<p>It is to avoid building security around assumptions that have never been challenged.</p>
+<h2>Reduce What You Do Not Need</h2>
+<p>One of the simplest security architecture principles is also one of the oldest.</p>
+<p>If something is not required, remove it.</p>
+<p>If a service does not need to run, disable it.</p>
+<p>If a package is unnecessary, uninstall it.</p>
+<p>If a kernel module is not required, prevent it from loading where practical.</p>
+<p>If an administrative interface serves no business purpose, do not expose it.</p>
+<p>This is not glamorous cybersecurity.</p>
+<p>There may be no new security product involved.</p>
+<p>No dashboard.</p>
+<p>No AI.</p>
+<p>No sophisticated detection capability.</p>
+<p>It is simply attack surface reduction.</p>
+<p>And sometimes reducing what exists is more valuable than adding another control to protect it.</p>
+<p>This also reinforces a broader theme from <a href="shadow-it-is-not-the-problem-invisible-risk-is.html">Shadow IT Is Not the Problem. Invisible Risk Is</a>: risk becomes harder to manage when organisations do not know something exists.</p>
+<p>The same principle applies to software buried deep inside operating systems.</p>
+<h2>Final Thoughts</h2>
+<p>Every vulnerability eventually disappears from the headlines.</p>
+<p>The architectural lesson should remain.</p>
+<p>The most dangerous software is not always the software everyone uses.</p>
+<p>Sometimes it is the software nobody remembers installing.</p>
+<p>Security is therefore not only about protecting active systems.</p>
+<p>It is also about understanding everything within the environment that could unexpectedly become active, reachable or useful to an attacker.</p>
+<p>Because attackers do not care what the organisation intended to use.</p>
+<p>They care about what is available.</p>
+<p>And sometimes the attack surface begins with software you never realised you had.</p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-most-dangerous-software-may-be-the-software-you-never-use.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Most Dangerous Software May Be the Software You Never Use on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-most-dangerous-software-may-be-the-software-you-never-use.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Most Dangerous Software May Be the Software You Never Use on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-most-dangerous-software-may-be-the-software-you-never-use.html&amp;text=The%20Most%20Dangerous%20Software%20May%20Be%20the%20Software%20You%20Never%20Use" target="_blank" rel="noopener noreferrer" aria-label="Share The Most Dangerous Software May Be the Software You Never Use on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=The%20Most%20Dangerous%20Software%20May%20Be%20the%20Software%20You%20Never%20Use%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-most-dangerous-software-may-be-the-software-you-never-use.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Most Dangerous Software May Be the Software You Never Use on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/the-most-dangerous-software-may-be-the-software-you-never-use.html" aria-label="Copy link to The Most Dangerous Software May Be the Software You Never Use" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
