@@ -5,12 +5,20 @@
       "name": "Malaysia"
     },
     {
-      "code": "IN",
-      "name": "India"
-    },
-    {
       "code": "US",
       "name": "United States"
+    },
+    {
+      "code": "FR",
+      "name": "France"
+    },
+    {
+      "code": "CA",
+      "name": "Canada"
+    },
+    {
+      "code": "IN",
+      "name": "India"
     },
     {
       "code": "SE",
