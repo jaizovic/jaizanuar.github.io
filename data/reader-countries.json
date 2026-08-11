@@ -5,6 +5,14 @@
       "name": "Malaysia"
     },
     {
+      "code": "SG",
+      "name": "Singapore"
+    },
+    {
+      "code": "CO",
+      "name": "Colombia"
+    },
+    {
       "code": "US",
       "name": "United States"
     },
