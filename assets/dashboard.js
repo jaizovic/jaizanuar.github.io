@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["More Accounts, Less Trust: The Slow Decline of Social Media", "2026-08-12", "/articles/more-accounts-less-trust-the-slow-decline-of-social-media.html"],
     ["The Most Dangerous Software May Be the Software You Never Use", "2026-08-07", "/articles/the-most-dangerous-software-may-be-the-software-you-never-use.html"],
     ["AI Agents Need Security Boundaries, Not Just Safety Guardrails", "2026-08-07", "/articles/ai-agents-need-security-boundaries-not-just-safety-guardrails.html"],
     ["Technical Skills Get You Hired. Judgement Gets You Promoted.", "2026-08-06", "/articles/technical-skills-get-you-hired-judgement-gets-you-promoted.html"],
