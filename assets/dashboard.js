@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The Security Tools We Forgot to Retire", "2026-08-13", "/articles/the-security-tools-we-forgot-to-retire.html"],
     ["More Accounts, Less Trust: The Slow Decline of Social Media", "2026-08-12", "/articles/more-accounts-less-trust-the-slow-decline-of-social-media.html"],
     ["The Most Dangerous Software May Be the Software You Never Use", "2026-08-07", "/articles/the-most-dangerous-software-may-be-the-software-you-never-use.html"],
     ["AI Agents Need Security Boundaries, Not Just Safety Guardrails", "2026-08-07", "/articles/ai-agents-need-security-boundaries-not-just-safety-guardrails.html"],
