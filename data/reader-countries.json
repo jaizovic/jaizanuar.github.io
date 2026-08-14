@@ -1,6 +1,10 @@
 {
   "countries": [
     {
+      "code": "US",
+      "name": "United States"
+    },
+    {
       "code": "MY",
       "name": "Malaysia"
     },
@@ -11,10 +15,6 @@
     {
       "code": "CO",
       "name": "Colombia"
-    },
-    {
-      "code": "US",
-      "name": "United States"
     },
     {
       "code": "FR",
