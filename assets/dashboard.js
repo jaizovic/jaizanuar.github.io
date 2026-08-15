@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The Most Dangerous Attacker Is The One Who Does Not Need To Rush", "2026-08-16", "/articles/the-most-dangerous-attacker-is-the-one-who-does-not-need-to-rush.html"],
     ["AI Is Not Creating New Attack Techniques. It Is Removing The Time Between Them.", "2026-08-15", "/articles/ai-is-not-creating-new-attack-techniques-it-is-removing-the-time-between-them.html"],
     ["The Security Tools We Forgot to Retire", "2026-08-13", "/articles/the-security-tools-we-forgot-to-retire.html"],
     ["More Accounts, Less Trust: The Slow Decline of Social Media", "2026-08-12", "/articles/more-accounts-less-trust-the-slow-decline-of-social-media.html"],
