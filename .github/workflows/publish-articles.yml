@@ -42,6 +42,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/articles.json articles assets/images/articles assets/dashboard.js
+          git add content/articles.json articles topics assets/images/articles assets/dashboard.js sitemap.xml
           git commit -m "Publish structured articles"
           git push

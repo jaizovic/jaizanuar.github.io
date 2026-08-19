@@ -181,6 +181,32 @@ def meta_line(article: dict) -> str:
     return " · ".join([article["display_date"], *article["categories"], article["reading_time"]])
 
 
+def topic_slug(category: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", category.casefold()).strip("-")
+
+
+def topics_for(articles: list[dict]) -> dict[str, list[dict]]:
+    topics: dict[str, list[dict]] = {}
+    for article in articles:
+        for category in article["categories"]:
+            topics.setdefault(category, []).append(article)
+    return dict(sorted(topics.items()))
+
+
+def related_articles(article: dict, articles: list[dict], limit: int = 4) -> list[dict]:
+    categories = set(article["categories"])
+    candidates = [candidate for candidate in articles if candidate["slug"] != article["slug"]]
+    candidates.sort(
+        key=lambda candidate: (
+            len(categories.intersection(candidate["categories"])),
+            candidate["date"],
+            candidate["slug"],
+        ),
+        reverse=True,
+    )
+    return candidates[:limit]
+
+
 def pdf_download(article: dict, prefix: str) -> str:
     """Render a PDF download only for legacy articles that provide one."""
     pdf = article.get("pdf")
@@ -189,7 +215,7 @@ def pdf_download(article: dict, prefix: str) -> str:
     return f'<a class="download-button article-download" href="{prefix}{escape(pdf, quote=True)}" download>Download PDF</a>'
 
 
-def article_page(article: dict) -> str:
+def article_page(article: dict, articles: list[dict]) -> str:
     title = escape(article["title"])
     description = escape(article["description"], quote=True)
     lead = escape(article["lead"])
@@ -208,11 +234,20 @@ def article_page(article: dict) -> str:
         "description": article["description"],
         "datePublished": article["date"],
         "dateModified": article["date"],
-        "author": {"@type": "Person", "name": "Jaiz Anuar", "url": SITE_URL},
+        "author": {"@type": "Person", "name": "Jaiz Anuar", "url": f"{SITE_URL}/about/"},
+        "articleSection": article["categories"],
+        "keywords": article["categories"],
+        "inLanguage": "en",
         "image": {"@type": "ImageObject", "url": image_abs, "width": image["width"], "height": image["height"]},
         "mainEntityOfPage": page_url,
     }
     structured_json = json.dumps(structured, ensure_ascii=False).replace("</", "<\\/")
+    primary_topic = article["categories"][0]
+    primary_topic_slug = topic_slug(primary_topic)
+    related_markup = "\n".join(
+        f'''        <li><a href="{escape(item['slug'], quote=True)}.html">{escape(item['title'])}</a><span>{escape(item['display_date'])}</span></li>'''
+        for item in related_articles(article, articles)
+    )
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -248,8 +283,11 @@ def article_page(article: dict) -> str:
   </header>
 
   <main class="reader">
-    <a href="index.html" class="back-link">← Back to Articles</a>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/{primary_topic_slug}/">{escape(primary_topic)}</a><span aria-hidden="true">›</span><span aria-current="page">{title}</span>
+    </nav>
     <div class="article-meta">{escape(meta_line(article))}</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
 {download_line}    <h1>{title}</h1>
     <p class="lead">{lead}</p>
     <figure class="article-featured-image">
@@ -257,6 +295,19 @@ def article_page(article: dict) -> str:
     </figure>
 
 {article['body_html']}
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+{related_markup}
+      </ul>
+    </section>
 
     <section class="article-share" aria-labelledby="shareArticleTitle">
       <h2 id="shareArticleTitle">Share this article</h2>
@@ -399,6 +450,93 @@ def update_dashboard(articles: list[dict]) -> None:
     path.write_text(updated, encoding="utf-8")
 
 
+def topics_index_page(topics: dict[str, list[dict]]) -> str:
+    cards = "\n".join(
+        f'''      <article class="topic-card"><h2><a href="{topic_slug(category)}/">{escape(category)}</a></h2><p>{len(items)} article{"s" if len(items) != 1 else ""}</p></article>'''
+        for category, items in topics.items()
+    )
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Topics | Jaiz Anuar</title>
+  <meta name="description" content="Browse Jaiz Anuar's articles by cybersecurity, digital trust, governance, architecture, identity, privacy, and leadership topic." />
+  <link rel="canonical" href="{SITE_URL}/topics/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cybersecurity Topics | Jaiz Anuar" />
+  <meta property="og:description" content="Browse independent perspectives by cybersecurity and digital trust topic." />
+  <meta property="og:url" content="{SITE_URL}/topics/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body class="light-page">
+<header class="page-header"><div class="logo">Jaiz Anuar</div><nav><a href="../">Home</a><a href="../articles/">Articles</a><a href="../about/">About</a><a href="./">Topics</a></nav></header>
+<section class="article-hero"><h1>Topics</h1><p>Explore articles grouped by their main cybersecurity and digital-trust themes.</p></section>
+<main class="topic-list"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Home</a><span aria-hidden="true">›</span><span aria-current="page">Topics</span></nav><section class="topic-grid">
+{cards}
+    </section></main>
+<footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+<script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+'''
+
+
+def topic_page(category: str, articles: list[dict]) -> str:
+    slug = topic_slug(category)
+    description = f"Articles and practical perspectives from Jaiz Anuar on {category}, cybersecurity, governance, and digital trust."
+    cards = "\n".join(
+        f'''    <article class="article-card"><div class="article-meta">{escape(meta_line(article))}</div><h2><a href="../../articles/{escape(article['slug'], quote=True)}.html">{escape(article['title'])}</a></h2><p>{escape(article['excerpt'])}</p><a class="read-more" href="../../articles/{escape(article['slug'], quote=True)}.html">Read article →</a></article>'''
+        for article in articles
+    )
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{escape(category)} Articles | Jaiz Anuar</title>
+  <meta name="description" content="{escape(description, quote=True)}" />
+  <link rel="canonical" href="{SITE_URL}/topics/{slug}/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{escape(category)} Articles | Jaiz Anuar" />
+  <meta property="og:description" content="{escape(description, quote=True)}" />
+  <meta property="og:url" content="{SITE_URL}/topics/{slug}/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body class="light-page">
+<header class="page-header"><div class="logo">Jaiz Anuar</div><nav><a href="../../">Home</a><a href="../../articles/">Articles</a><a href="../../about/">About</a><a href="../">Topics</a></nav></header>
+<section class="article-hero"><h1>{escape(category)}</h1><p>{escape(description)}</p></section>
+<main class="article-list"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span aria-hidden="true">›</span><a href="../">Topics</a><span aria-hidden="true">›</span><span aria-current="page">{escape(category)}</span></nav><section>
+{cards}
+  </section></main>
+<footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+<script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+'''
+
+
+def sitemap_page(articles: list[dict]) -> str:
+    urls = [
+        f"  <url><loc>{SITE_URL}/</loc></url>",
+        f"  <url><loc>{SITE_URL}/about/</loc></url>",
+        f"  <url><loc>{SITE_URL}/articles/</loc></url>",
+        f"  <url><loc>{SITE_URL}/topics/</loc></url>",
+    ]
+    urls.extend(
+        f"  <url><loc>{SITE_URL}/articles/{article['slug']}.html</loc><lastmod>{article['date']}</lastmod></url>"
+        for article in articles
+    )
+    for category, topic_articles in topics_for(articles).items():
+        latest = max(article["date"] for article in topic_articles)
+        urls.append(f"  <url><loc>{SITE_URL}/topics/{topic_slug(category)}/</loc><lastmod>{latest}</lastmod></url>")
+    return '<?xml version="1.0" encoding="UTF-8"?>\n' \
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' \
+        + "\n".join(urls) + '\n</urlset>\n'
+
+
 def build(data: dict) -> None:
     articles = sorted(
         data["articles"],
@@ -406,10 +544,19 @@ def build(data: dict) -> None:
         reverse=True,
     )
     for article in articles:
-        (ROOT / "articles" / f"{article['slug']}.html").write_text(article_page(article), encoding="utf-8")
+        (ROOT / "articles" / f"{article['slug']}.html").write_text(article_page(article, articles), encoding="utf-8")
     (ROOT / "articles" / "index.html").write_text(index_page(articles), encoding="utf-8")
+    topics = topics_for(articles)
+    topics_root = ROOT / "topics"
+    topics_root.mkdir(exist_ok=True)
+    (topics_root / "index.html").write_text(topics_index_page(topics), encoding="utf-8")
+    for category, topic_articles in topics.items():
+        topic_root = topics_root / topic_slug(category)
+        topic_root.mkdir(exist_ok=True)
+        (topic_root / "index.html").write_text(topic_page(category, topic_articles), encoding="utf-8")
     update_dashboard(articles)
-    print(f"Built {len(articles)} article pages, listing and dashboard index")
+    (ROOT / "sitemap.xml").write_text(sitemap_page(articles), encoding="utf-8")
+    print(f"Built {len(articles)} article pages, {len(topics)} topic pages, listings, dashboard index and sitemap")
 
 
 def validate(data: dict) -> None:
@@ -441,7 +588,7 @@ def validate(data: dict) -> None:
             errors.append(f"{slug}: generated article page is missing")
         else:
             page_text = page.read_text(encoding="utf-8")
-            for marker in [f'../{image["path"]}', 'property="og:image"', 'name="twitter:image"', 'application/ld+json', 'class="article-share"', '../assets/share.js']:
+            for marker in [f'../{image["path"]}', 'property="og:image"', 'name="twitter:image"', 'application/ld+json', 'class="article-share"', '../assets/share.js', 'Written by <a rel="author"', 'class="breadcrumbs"', 'class="related-articles"']:
                 if marker not in page_text:
                     errors.append(f"{slug}: generated page is missing {marker}")
     index = (ROOT / "articles" / "index.html").read_text(encoding="utf-8")
@@ -449,6 +596,19 @@ def validate(data: dict) -> None:
         errors.append("article listing card count does not match structured content")
     if 'class="article-card-image"' in index:
         errors.append("article listing must remain text-only")
+    topics = topics_for(articles)
+    for category in topics:
+        page = ROOT / "topics" / topic_slug(category) / "index.html"
+        if not page.is_file() or f'<h1>{escape(category)}</h1>' not in page.read_text(encoding="utf-8"):
+            errors.append(f"{category}: generated topic page is missing or invalid")
+    expected_sitemap = sitemap_page(sorted(
+        articles,
+        key=lambda item: (item["date"], item.get("published_at", ""), item["slug"]),
+        reverse=True,
+    ))
+    sitemap = ROOT / "sitemap.xml"
+    if not sitemap.is_file() or sitemap.read_text(encoding="utf-8") != expected_sitemap:
+        errors.append("sitemap.xml is missing or does not match structured content")
     if errors:
         print("Publication validation failed:", file=sys.stderr)
         for error in errors:
