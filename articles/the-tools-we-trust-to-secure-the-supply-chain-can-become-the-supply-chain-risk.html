@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk | Jaiz Anuar</title>
+  <meta name="description" content="Security scanners and CI/CD platforms may reduce software supply-chain risk while concentrating privileged access that can amplify compromise." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk" />
+  <meta property="og:description" content="Security scanners and CI/CD platforms may reduce software supply-chain risk while concentrating privileged access that can amplify compromise." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="A trusted central security scanner connects to repositories, build pipelines, registries and cloud environments while an amber compromise begins using one of its privileged integration paths." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk" />
+  <meta name="twitter:description" content="Security scanners and CI/CD platforms may reduce software supply-chain risk while concentrating privileged access that can amplify compromise." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk", "description": "Security scanners and CI/CD platforms may reduce software supply-chain risk while concentrating privileged access that can amplify compromise.", "datePublished": "2026-08-23", "dateModified": "2026-08-23", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Software Supply Chain", "Security Architecture"], "keywords": ["Software Supply Chain", "Security Architecture"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/software-supply-chain/">Software Supply Chain</a><span aria-hidden="true">›</span><span aria-current="page">The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">23 August 2026 · Software Supply Chain · Security Architecture · 5 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk</h1>
+    <p class="lead">The platforms used to scan, build, sign and deploy software often hold access to repositories, credentials and production paths. Their privileges make them part of the supply-chain threat model.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.webp" width="1600" height="900" alt="A trusted central security scanner connects to repositories, build pipelines, registries and cloud environments while an amber compromise begins using one of its privileged integration paths." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>Software supply chain security has become a major cybersecurity priority.</p>
+<p>Organisations now scan dependencies.</p>
+<p>Validate packages.</p>
+<p>Monitor repositories.</p>
+<p>Inspect containers.</p>
+<p>Review open-source components.</p>
+<p>Automate checks inside CI/CD pipelines.</p>
+<p>The objective is simple.</p>
+<p>Find weaknesses before attackers do.</p>
+<p>That makes sense.</p>
+<p>But there is an uncomfortable problem hiding inside this model.</p>
+<p>The tools we trust to secure the software supply chain often have deep access to the very environments they are supposed to protect.</p>
+<p>And that means they can become part of the supply chain risk themselves.</p>
+<h2>Security Tools Are Highly Trusted By Design</h2>
+<p>A modern security scanner may need access to:</p>
+<ul>
+  <li>source-code repositories</li>
+  <li>container registries</li>
+  <li>cloud environments</li>
+  <li>CI/CD pipelines</li>
+  <li>build systems</li>
+  <li>package managers</li>
+  <li>Kubernetes clusters</li>
+  <li>secrets stores</li>
+</ul>
+<p>This level of access is necessary for the tool to do its job.</p>
+<p>But it also creates concentration of trust.</p>
+<p>If the tool is compromised, the attacker may inherit the same visibility and privileges that the organisation deliberately gave to the security platform.</p>
+<p>The stronger the integration, the larger the potential blast radius.</p>
+<p>That is the paradox.</p>
+<p>A security tool can reduce one form of risk while creating another.</p>
+<h2>The Supply Chain Is More Than The Software You Ship</h2>
+<p>When people talk about software supply chain risk, the focus often goes to dependencies.</p>
+<p>Libraries.</p>
+<p>Packages.</p>
+<p>Open-source modules.</p>
+<p>Third-party code.</p>
+<p>But the supply chain is broader than that.</p>
+<p>It also includes everything used to build, test, scan, sign and release software.</p>
+<p>Build servers.</p>
+<p>Repositories.</p>
+<p>CI/CD platforms.</p>
+<p>Security scanners.</p>
+<p>Package registries.</p>
+<p>Artifact repositories.</p>
+<p>Developer plugins.</p>
+<p>AI coding assistants.</p>
+<p>These components are not simply supporting tools anymore.</p>
+<p>They are part of the production path.</p>
+<p>And anything inside the production path becomes part of the trust model.</p>
+<h2>Privilege Is The Real Issue</h2>
+<p>The biggest concern is not whether the tool is labelled as a security product.</p>
+<p>The real concern is privilege.</p>
+<p>What can the tool see?</p>
+<p>What can it modify?</p>
+<p>Which credentials does it hold?</p>
+<p>Which environments can it reach?</p>
+<p>Can it access production?</p>
+<p>Can it read secrets?</p>
+<p>Can it trigger deployments?</p>
+<p>Can it modify policies?</p>
+<p>These are the same questions security architects ask about users and applications.</p>
+<p>They should also be asked about security platforms.</p>
+<p>Because a vulnerability scanner with broad cloud access is effectively a privileged identity.</p>
+<p>A CI/CD platform with deployment permissions is effectively an administrative control plane.</p>
+<p>A code-analysis service with repository access may have visibility into intellectual property and embedded credentials.</p>
+<p>The product category does not reduce the risk.</p>
+<p>The permissions define the risk.</p>
+<h2>Centralisation Creates Efficiency And Concentration</h2>
+<p>Organisations increasingly centralise security.</p>
+<p>One platform scans every repository.</p>
+<p>One identity provider authenticates everyone.</p>
+<p>One cloud-management platform controls multiple environments.</p>
+<p>One CI/CD platform deploys hundreds of applications.</p>
+<p>One security console monitors the enterprise.</p>
+<p>Centralisation improves consistency.</p>
+<p>It simplifies governance.</p>
+<p>It reduces operational overhead.</p>
+<p>But it also creates concentrated trust.</p>
+<p>If the central platform fails, the impact may spread far beyond one system.</p>
+<p>This is why highly trusted platforms deserve stronger protection than ordinary applications.</p>
+<p>The question should not be:</p>
+<p><em>&quot;Is this a security tool?&quot;</em></p>
+<p>The question should be:</p>
+<p><em>&quot;What happens to the organisation if this security tool is compromised?&quot;</em></p>
+<h2>Security Architecture Must Assume The Scanner Can Fail Too</h2>
+<p>Security teams sometimes evaluate tools based on what they protect.</p>
+<p>Good architecture also evaluates what happens when the tool itself fails.</p>
+<p>What if the scanner is compromised?</p>
+<p>What if its update mechanism is poisoned?</p>
+<p>What if a plugin becomes malicious?</p>
+<p>What if credentials stored inside the platform are exposed?</p>
+<p>What if its integration token has more privileges than necessary?</p>
+<p>The answer should not be:</p>
+<p><em>&quot;We trust the vendor.&quot;</em></p>
+<p>Vendor trust is important.</p>
+<p>But trust should never replace architecture.</p>
+<p>Least privilege still matters.</p>
+<p>Network isolation still matters.</p>
+<p>Credential rotation still matters.</p>
+<p>Independent monitoring still matters.</p>
+<p>Segregation of duties still matters.</p>
+<p>Security controls do not become exempt from security principles simply because they are security controls.</p>
+<h2>CI/CD Has Become Security Infrastructure</h2>
+<p>This is especially important for CI/CD environments.</p>
+<p>A compromised production server may affect one application.</p>
+<p>A compromised CI/CD platform may affect every application deployed through it.</p>
+<p>That changes the scale of the risk.</p>
+<p>Build pipelines can contain:</p>
+<ul>
+  <li>cloud credentials</li>
+  <li>signing keys</li>
+  <li>deployment tokens</li>
+  <li>API secrets</li>
+  <li>package credentials</li>
+  <li>infrastructure configuration</li>
+</ul>
+<p>If an attacker gains control of the pipeline, they may not need to attack production directly.</p>
+<p>They can modify what production trusts.</p>
+<p>That is a much more powerful position.</p>
+<p>The pipeline therefore deserves the same level of protection as other critical infrastructure.</p>
+<p>Perhaps more.</p>
+<h2>Visibility Must Include The Tools That Provide Visibility</h2>
+<p>There is another irony.</p>
+<p>Security teams rely on monitoring platforms to tell them when something is wrong.</p>
+<p>But who monitors the monitoring platform?</p>
+<p>Who validates the integrity of the scanner?</p>
+<p>Who watches the deployment system?</p>
+<p>Who detects misuse of the tool that is supposed to detect misuse?</p>
+<p>This is where independent controls become important.</p>
+<p>No critical security capability should become completely self-validating.</p>
+<p>Logs should be protected independently.</p>
+<p>Privileged access should be reviewed independently.</p>
+<p>Critical actions should generate external alerts.</p>
+<p>Administrative activity should be monitored outside the platform where practical.</p>
+<p>The goal is not distrust for the sake of distrust.</p>
+<p>It is avoiding a single point of invisible failure.</p>
+<h2>Final Thoughts</h2>
+<p>Software supply chain security is often described as a problem of untrusted code.</p>
+<p>That is only part of the story.</p>
+<p>The supply chain also contains highly trusted tools.</p>
+<p>Scanners.</p>
+<p>Pipelines.</p>
+<p>Registries.</p>
+<p>Repositories.</p>
+<p>Automation platforms.</p>
+<p>Security products.</p>
+<p>These systems often sit at the centre of modern technology delivery.</p>
+<p>That makes them valuable.</p>
+<p>It also makes them attractive targets.</p>
+<p>The lesson is not to trust security tools less.</p>
+<p>It is to understand exactly how much trust we place in them.</p>
+<p>Because the tool that protects every application may also have access to every application.</p>
+<p>The platform that scans every secret may also be able to see every secret.</p>
+<p>And the system that secures the supply chain can, if compromised, become the shortest path through it.</p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="critical-infrastructure-was-designed-to-be-reliable-now-it-must-be-designed-to-survive-ai-assisted-attacks.html">Critical Infrastructure Was Designed To Be Reliable. Now It Must Be Designed To Survive AI-Assisted Attacks.</a><span>22 August 2026</span></li>
+        <li><a href="tomorrows-technology-cannot-be-protected-with-yesterdays-security-architecture.html">Tomorrow’s Technology Cannot Be Protected With Yesterday’s Security Architecture</a><span>19 August 2026</span></li>
+        <li><a href="the-security-tools-we-forgot-to-retire.html">The Security Tools We Forgot to Retire</a><span>13 August 2026</span></li>
+        <li><a href="the-most-dangerous-software-may-be-the-software-you-never-use.html">The Most Dangerous Software May Be the Software You Never Use</a><span>7 August 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html&amp;text=The%20Tools%20We%20Trust%20To%20Secure%20The%20Supply%20Chain%20Can%20Become%20The%20Supply%20Chain%20Risk" target="_blank" rel="noopener noreferrer" aria-label="Share The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=The%20Tools%20We%20Trust%20To%20Secure%20The%20Supply%20Chain%20Can%20Become%20The%20Supply%20Chain%20Risk%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html" aria-label="Copy link to The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
