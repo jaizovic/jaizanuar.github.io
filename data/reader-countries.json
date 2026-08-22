@@ -5,6 +5,10 @@
       "name": "Malaysia"
     },
     {
+      "code": "NZ",
+      "name": "New Zealand"
+    },
+    {
       "code": "US",
       "name": "United States"
     },
@@ -47,10 +51,6 @@
     {
       "code": "IT",
       "name": "Italy"
-    },
-    {
-      "code": "NZ",
-      "name": "New Zealand"
     }
   ]
 }
