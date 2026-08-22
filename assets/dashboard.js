@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["Critical Infrastructure Was Designed To Be Reliable. Now It Must Be Designed To Survive AI-Assisted Attacks.", "2026-08-22", "/articles/critical-infrastructure-was-designed-to-be-reliable-now-it-must-be-designed-to-survive-ai-assisted-attacks.html"],
     ["Tomorrow’s Technology Cannot Be Protected With Yesterday’s Security Architecture", "2026-08-19", "/articles/tomorrows-technology-cannot-be-protected-with-yesterdays-security-architecture.html"],
     ["The Most Dangerous Attacker Is The One Who Does Not Need To Rush", "2026-08-16", "/articles/the-most-dangerous-attacker-is-the-one-who-does-not-need-to-rush.html"],
     ["AI Is Not Creating New Attack Techniques. It Is Removing The Time Between Them.", "2026-08-15", "/articles/ai-is-not-creating-new-attack-techniques-it-is-removing-the-time-between-them.html"],

@@ -286,6 +286,7 @@ def article_page(article: dict, articles: list[dict]) -> str:
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/{primary_topic_slug}/">{escape(primary_topic)}</a><span aria-hidden="true">›</span><span aria-current="page">{title}</span>
     </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
     <div class="article-meta">{escape(meta_line(article))}</div>
     <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
 {download_line}    <h1>{title}</h1>
@@ -588,7 +589,7 @@ def validate(data: dict) -> None:
             errors.append(f"{slug}: generated article page is missing")
         else:
             page_text = page.read_text(encoding="utf-8")
-            for marker in [f'../{image["path"]}', 'property="og:image"', 'name="twitter:image"', 'application/ld+json', 'class="article-share"', '../assets/share.js', 'Written by <a rel="author"', 'class="breadcrumbs"', 'class="related-articles"']:
+            for marker in [f'../{image["path"]}', 'property="og:image"', 'name="twitter:image"', 'application/ld+json', 'class="article-share"', '../assets/share.js', 'Written by <a rel="author"', 'class="breadcrumbs"', 'class="back-link" href="index.html">← Back to Articles</a>', 'class="related-articles"']:
                 if marker not in page_text:
                     errors.append(f"{slug}: generated page is missing {marker}")
     index = (ROOT / "articles" / "index.html").read_text(encoding="utf-8")
