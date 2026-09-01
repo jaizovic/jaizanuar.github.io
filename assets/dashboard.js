@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["Too Experienced to Hire, Too Young to Retire: The Cybersecurity Career Trap for Gen X", "2026-09-01", "/articles/too-experienced-to-hire-too-young-to-retire-the-cybersecurity-career-trap-for-gen-x.html"],
     ["Your Employer Manages Your Increment. You Manage Your Career.", "2026-08-25", "/articles/your-employer-manages-your-increment-you-manage-your-career.html"],
     ["The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk", "2026-08-23", "/articles/the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html"],
     ["Critical Infrastructure Was Designed To Be Reliable. Now It Must Be Designed To Survive AI-Assisted Attacks.", "2026-08-22", "/articles/critical-infrastructure-was-designed-to-be-reliable-now-it-must-be-designed-to-survive-ai-assisted-attacks.html"],
