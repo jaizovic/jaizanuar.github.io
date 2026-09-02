@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The SOC Detected the Attack. The Organisation Still Lost the Domain.", "2026-09-02", "/articles/the-soc-detected-the-attack-the-organisation-still-lost-the-domain.html"],
     ["Too Experienced to Hire, Too Young to Retire: The Cybersecurity Career Trap for Gen X", "2026-09-01", "/articles/too-experienced-to-hire-too-young-to-retire-the-cybersecurity-career-trap-for-gen-x.html"],
     ["Your Employer Manages Your Increment. You Manage Your Career.", "2026-08-25", "/articles/your-employer-manages-your-increment-you-manage-your-career.html"],
     ["The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk", "2026-08-23", "/articles/the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html"],
