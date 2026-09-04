@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Certificate Was Valid. The Software Update Was Malicious. | Jaiz Anuar</title>
+  <meta name="description" content="A valid certificate can protect an encrypted connection while malicious software travels through it. Secure update architecture must independently verify transport, publisher, package integrity and post-installation behaviour." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/the-certificate-was-valid-the-software-update-was-malicious.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Certificate Was Valid. The Software Update Was Malicious." />
+  <meta property="og:description" content="A valid certificate can protect an encrypted connection while malicious software travels through it. Secure update architecture must independently verify transport, publisher, package integrity and post-installation behaviour." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/the-certificate-was-valid-the-software-update-was-malicious.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/the-certificate-was-valid-the-software-update-was-malicious.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="A malicious software package with a red core travels through a verified encrypted update channel toward protected critical infrastructure." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Certificate Was Valid. The Software Update Was Malicious." />
+  <meta name="twitter:description" content="A valid certificate can protect an encrypted connection while malicious software travels through it. Secure update architecture must independently verify transport, publisher, package integrity and post-installation behaviour." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/the-certificate-was-valid-the-software-update-was-malicious.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Certificate Was Valid. The Software Update Was Malicious.", "description": "A valid certificate can protect an encrypted connection while malicious software travels through it. Secure update architecture must independently verify transport, publisher, package integrity and post-installation behaviour.", "datePublished": "2026-09-04", "dateModified": "2026-09-04", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Software Supply Chain", "Digital Trust"], "keywords": ["Software Supply Chain", "Digital Trust"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/the-certificate-was-valid-the-software-update-was-malicious.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/the-certificate-was-valid-the-software-update-was-malicious.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/software-supply-chain/">Software Supply Chain</a><span aria-hidden="true">›</span><span aria-current="page">The Certificate Was Valid. The Software Update Was Malicious.</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">4 September 2026 · Software Supply Chain · Digital Trust · 7 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>The Certificate Was Valid. The Software Update Was Malicious.</h1>
+    <p class="lead">The Virtualizor incident demonstrates why secure transport cannot substitute for software integrity. A valid certificate may authenticate the connection while a compromised update channel delivers malicious code.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/the-certificate-was-valid-the-software-update-was-malicious.webp" width="1600" height="900" alt="A malicious software package with a red core travels through a verified encrypted update channel toward protected critical infrastructure." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>A secure connection does not guarantee secure software.</p>
+<p>In late August 2026, attackers reportedly used a Border Gateway Protocol hijack to divert internet traffic intended for Softaculous infrastructure. The affected addresses included the update service used by Virtualizor, a platform for managing virtual private servers.</p>
+<p>The attackers did not simply create a convincing imitation of the vendor’s website.</p>
+<p>They obtained a valid TLS certificate for the diverted infrastructure. Systems connecting through HTTPS therefore received no certificate warning. During the incident window, some Virtualizor installations reportedly downloaded a modified software package from the attacker-controlled server.</p>
+<p>The connection was encrypted.</p>
+<p>The certificate was valid.</p>
+<p>The software update was malicious.</p>
+<p>According to <a href="https://www.virtualizor.com/blog/security-incident-bgp-hijacking/" target="_blank" rel="noopener noreferrer">Virtualizor’s incident disclosure</a>, only a small number of installations were confirmed to have received the malicious package. However, the company could not produce a definitive list of affected systems because requests diverted to the attacker never reached its own infrastructure or logs.</p>
+<p>The incident exposes an important weakness in how organisations think about digital trust.</p>
+<h2>HTTPS Protected the Wrong Thing</h2>
+<p>TLS performs an essential function.</p>
+<p>It encrypts communication between a client and a server. It also helps the client confirm that the server controls the expected domain.</p>
+<p>But TLS does not prove that every file delivered by that server is safe.</p>
+<p>In this incident, the attacker allegedly manipulated internet routing so traffic was directed somewhere it was never supposed to go. A valid certificate then made that diverted connection appear legitimate.</p>
+<p>The certificate did what it was designed to do.</p>
+<p>The security failure occurred because too much trust was placed in what the certificate represented.</p>
+<p>A valid certificate confirmed that the connection was encrypted and associated with the requested domain at that moment. It did not prove that the software package came from the vendor’s authorised build process.</p>
+<p>It did not prove that the package had not been modified.</p>
+<p>It did not prove that the code was safe to execute.</p>
+<p>Most importantly, it did not prove that the system at the other end of the connection was still under the vendor’s control.</p>
+<h2>Transport Security Is Not Software Integrity</h2>
+<p>Secure software distribution requires at least two different forms of trust.</p>
+<p>The first is transport security.</p>
+<p>This protects the connection used to retrieve the software.</p>
+<p>The second is software integrity.</p>
+<p>This verifies that the package was produced or approved by the expected publisher and has not been altered since it was released.</p>
+<p>These controls address different risks.</p>
+<p>If software integrity depends only on HTTPS, the update process is effectively saying:</p>
+<blockquote><p>If the connection looks legitimate, trust whatever arrives through it.</p></blockquote>
+<p>That assumption becomes dangerous when DNS, routing, certificate issuance, hosting infrastructure or the update server itself can be compromised.</p>
+<p>A stronger update mechanism cryptographically signs the package. The client then verifies that signature using a trusted public key before installation.</p>
+<p>If the signature is missing, invalid or associated with an unapproved publisher, the update must be rejected even when it was downloaded through a perfectly valid HTTPS connection.</p>
+<p>Encryption protects the journey.</p>
+<p>Digital signing protects the package.</p>
+<p>A mature architecture needs both.</p>
+<h2>Automatic Updates Create Privileged Trust</h2>
+<p>Automatic updates are usually treated as good security practice.</p>
+<p>They reduce the time between vulnerability disclosure and remediation. They help organisations remove known weaknesses without waiting for administrators to perform every installation manually.</p>
+<p>But an update mechanism also possesses significant privilege.</p>
+<p>It can download software.</p>
+<p>It can replace trusted files.</p>
+<p>It can modify configurations.</p>
+<p>It may execute code as root or another highly privileged account.</p>
+<p>That makes the update channel part of the privileged security architecture.</p>
+<p>An attacker who controls it may not need to bypass endpoint protection, exploit an application or steal an administrator’s password. The trusted update process can deliver and execute the attacker’s code for them.</p>
+<p>This is why software distribution infrastructure must be protected with the same seriousness as identity systems, privileged-access platforms and deployment pipelines.</p>
+<p>As discussed previously in <a href="the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html">The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk</a>, concentrated trust creates concentrated consequences. A tool connected to many systems can become an efficient path into all of them when that trust is compromised.</p>
+<h2>A Trusted Source Is Not a Permanent Condition</h2>
+<p>Organisations often approve software sources once.</p>
+<p>The vendor is assessed.</p>
+<p>The domain is allowlisted.</p>
+<p>The certificate is valid.</p>
+<p>The update service is permitted through the firewall.</p>
+<p>From that point onward, the source may be treated as permanently trusted.</p>
+<p>But trust is not a permanent attribute.</p>
+<p>A legitimate vendor can be compromised.</p>
+<p>A valid domain can be redirected.</p>
+<p>A trusted certificate can be issued during an infrastructure attack.</p>
+<p>A genuine update service can distribute a malicious package.</p>
+<p>A previously approved supplier can become the path through which an attacker enters.</p>
+<p>Trust should therefore be continuously verified at multiple layers. The identity of the server, integrity of the package, authority of the publisher and behaviour of the installed software should not depend on one shared assumption.</p>
+<h2>What Security Architecture Should Require</h2>
+<p>Critical software update processes should include several independent controls:</p>
+<ul>
+  <li>Cryptographic signing of every package</li>
+  <li>Mandatory signature verification before installation</li>
+  <li>Protection of signing keys through tightly controlled hardware or services</li>
+  <li>Separation between build, signing and distribution environments</li>
+  <li>Approved publisher and version policies</li>
+  <li>Tamper-resistant logging of update activity</li>
+  <li>Monitoring for unexpected routing, DNS and certificate changes</li>
+  <li>Staged deployment before updates reach critical systems</li>
+  <li>Behavioural monitoring after installation</li>
+  <li>A tested method to revoke compromised signing keys and packages</li>
+</ul>
+<p>For highly privileged infrastructure, organisations should also determine whether an update can be installed automatically or requires additional validation.</p>
+<p>A hypervisor management platform, identity system, security appliance or orchestration tool should not necessarily inherit the same update policy as an ordinary desktop application.</p>
+<p>The greater the privilege of the software, the stronger the verification required before new code is allowed to execute.</p>
+<h2>Detection Must Extend Beyond the Vendor</h2>
+<p>This incident also demonstrates the limitation of relying entirely on a supplier’s telemetry.</p>
+<p>If traffic is diverted before it reaches the legitimate service, the vendor may never see the affected request. Its logs can appear normal while customers are communicating with attacker-controlled infrastructure.</p>
+<p>Customers therefore need their own evidence.</p>
+<p>Which systems checked for updates?</p>
+<p>What packages were downloaded?</p>
+<p>What hashes were installed?</p>
+<p>Which processes were created afterward?</p>
+<p>Were privileged accounts, SSH keys, services or scheduled tasks changed?</p>
+<p>Did affected systems establish unexpected outbound connections?</p>
+<p>Supplier assurance cannot replace customer visibility.</p>
+<p>The vendor may investigate the source of the incident, but each organisation must determine whether its own systems were exposed and whether trust can still be restored.</p>
+<h2>Removing the Malware May Not Restore Trust</h2>
+<p>When malicious code gains root-level access, deleting the known files is not necessarily enough.</p>
+<p>The attacker may have created additional accounts, installed alternative persistence, captured credentials or modified other trusted components.</p>
+<p>A scanner can identify known indicators.</p>
+<p>It cannot prove that an attacker with complete administrative control made no other changes.</p>
+<p>For systems confirmed to have suffered root compromise, rebuilding from a known-good source may be more reliable than attempting to clean the existing installation. Credentials, API keys and administrative secrets accessible from the affected system should also be treated as potentially exposed.</p>
+<p>Containment removes known malicious activity.</p>
+<p>Recovery must restore confidence in the system.</p>
+<p>Those are not the same outcome.</p>
+<h2>Final Thought</h2>
+<p>The lesson from the Virtualizor incident is not that TLS has failed.</p>
+<p>TLS remains necessary.</p>
+<p>The lesson is that one valid security control should never be mistaken for complete trust.</p>
+<p>A certificate can confirm an encrypted connection without confirming the integrity of the software travelling through it.</p>
+<p>An approved vendor can remain legitimate while part of its delivery path is compromised.</p>
+<p>An automatic update can close vulnerabilities while also possessing enough privilege to create a much larger breach.</p>
+<p>Security architecture must verify the connection, the publisher, the package and the behaviour that follows installation.</p>
+<p>The certificate was valid.</p>
+<p>The software update was malicious.</p>
+<p>Between those two facts lies the difference between trusting a connection and engineering digital trust.</p>
+<p>Question assumptions. Share knowledge. Build trust.</p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="your-vendor-passed-the-security-assessment-the-breach-still-came-through-them.html">Your Vendor Passed the Security Assessment. The Breach Still Came Through Them.</a><span>29 August 2026</span></li>
+        <li><a href="the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html">The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk</a><span>23 August 2026</span></li>
+        <li><a href="more-accounts-less-trust-the-slow-decline-of-social-media.html">More Accounts, Less Trust: The Slow Decline of Social Media</a><span>12 August 2026</span></li>
+        <li><a href="cybersecurity-is-becoming-a-trust-engineering-discipline.html">Cybersecurity Is Becoming A Trust Engineering Discipline</a><span>19 July 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-certificate-was-valid-the-software-update-was-malicious.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Certificate Was Valid. The Software Update Was Malicious. on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-certificate-was-valid-the-software-update-was-malicious.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Certificate Was Valid. The Software Update Was Malicious. on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-certificate-was-valid-the-software-update-was-malicious.html&amp;text=The%20Certificate%20Was%20Valid.%20The%20Software%20Update%20Was%20Malicious." target="_blank" rel="noopener noreferrer" aria-label="Share The Certificate Was Valid. The Software Update Was Malicious. on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=The%20Certificate%20Was%20Valid.%20The%20Software%20Update%20Was%20Malicious.%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-certificate-was-valid-the-software-update-was-malicious.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Certificate Was Valid. The Software Update Was Malicious. on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/the-certificate-was-valid-the-software-update-was-malicious.html" aria-label="Copy link to The Certificate Was Valid. The Software Update Was Malicious." title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
