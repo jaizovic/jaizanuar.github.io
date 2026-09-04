@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The Certificate Was Valid. The Software Update Was Malicious.", "2026-09-04", "/articles/the-certificate-was-valid-the-software-update-was-malicious.html"],
     ["Industrial Security Assumed Attackers Needed Rare Expertise. AI Is Changing That Assumption.", "2026-09-03", "/articles/industrial-security-assumed-attackers-needed-rare-expertise-ai-is-changing-that-assumption.html"],
     ["The SOC Detected the Attack. The Organisation Still Lost the Domain.", "2026-09-02", "/articles/the-soc-detected-the-attack-the-organisation-still-lost-the-domain.html"],
     ["Too Experienced to Hire, Too Young to Retire: The Cybersecurity Career Trap for Gen X", "2026-09-01", "/articles/too-experienced-to-hire-too-young-to-retire-the-cybersecurity-career-trap-for-gen-x.html"],
