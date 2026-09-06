@@ -27,6 +27,16 @@ SITE_URL = "https://jaizanuar.com"
 IMAGE_MODEL = "gpt-image-2-2026-04-21"
 IMAGE_SIZE = (1600, 900)
 MAX_IMAGE_BYTES = 550_000
+GOOGLE_ANALYTICS_ID = "G-0Z9JZPMN9L"
+GOOGLE_ANALYTICS_TAG = f'''  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={GOOGLE_ANALYTICS_ID}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', '{GOOGLE_ANALYTICS_ID}');
+  </script>
+'''
 
 
 def load_content() -> dict:
@@ -35,6 +45,17 @@ def load_content() -> dict:
 
 def save_content(data: dict) -> None:
     CONTENT.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def ensure_google_analytics() -> None:
+    """Keep the Google tag on every HTML document without creating duplicates."""
+    for path in ROOT.rglob("*.html"):
+        if ".git" in path.parts or GOOGLE_ANALYTICS_ID in path.read_text(encoding="utf-8"):
+            continue
+        source = path.read_text(encoding="utf-8")
+        if "</head>" not in source:
+            raise RuntimeError(f"Could not add Google Analytics because {path.relative_to(ROOT)} has no closing head tag")
+        path.write_text(source.replace("</head>", GOOGLE_ANALYTICS_TAG + "</head>", 1), encoding="utf-8")
 
 
 def image_prompt(article: dict) -> str:
@@ -557,6 +578,7 @@ def build(data: dict) -> None:
         (topic_root / "index.html").write_text(topic_page(category, topic_articles), encoding="utf-8")
     update_dashboard(articles)
     (ROOT / "sitemap.xml").write_text(sitemap_page(articles), encoding="utf-8")
+    ensure_google_analytics()
     print(f"Built {len(articles)} article pages, {len(topics)} topic pages, listings, dashboard index and sitemap")
 
 
@@ -610,6 +632,15 @@ def validate(data: dict) -> None:
     sitemap = ROOT / "sitemap.xml"
     if not sitemap.is_file() or sitemap.read_text(encoding="utf-8") != expected_sitemap:
         errors.append("sitemap.xml is missing or does not match structured content")
+    for path in ROOT.rglob("*.html"):
+        if ".git" in path.parts:
+            continue
+        page_text = path.read_text(encoding="utf-8")
+        relative = path.relative_to(ROOT)
+        script_url = f"https://www.googletagmanager.com/gtag/js?id={GOOGLE_ANALYTICS_ID}"
+        config = f"gtag('config', '{GOOGLE_ANALYTICS_ID}');"
+        if page_text.count(script_url) != 1 or page_text.count(config) != 1:
+            errors.append(f"{relative}: Google Analytics tag is missing or duplicated")
     if errors:
         print("Publication validation failed:", file=sys.stderr)
         for error in errors:
