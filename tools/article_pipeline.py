@@ -37,6 +37,7 @@ GOOGLE_ANALYTICS_TAG = f'''  <!-- Google tag (gtag.js) -->
     gtag('config', '{GOOGLE_ANALYTICS_ID}');
   </script>
 '''
+FAVICON_TAG = '  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />\n'
 
 
 def load_content() -> dict:
@@ -56,6 +57,19 @@ def ensure_google_analytics() -> None:
         if "</head>" not in source:
             raise RuntimeError(f"Could not add Google Analytics because {path.relative_to(ROOT)} has no closing head tag")
         path.write_text(source.replace("</head>", GOOGLE_ANALYTICS_TAG + "</head>", 1), encoding="utf-8")
+
+
+def ensure_favicon() -> None:
+    """Keep the site favicon declaration on every HTML document."""
+    for path in ROOT.rglob("*.html"):
+        if ".git" in path.parts:
+            continue
+        source = path.read_text(encoding="utf-8")
+        if 'href="/favicon.png"' in source:
+            continue
+        if "</head>" not in source:
+            raise RuntimeError(f"Could not add the favicon because {path.relative_to(ROOT)} has no closing head tag")
+        path.write_text(source.replace("</head>", FAVICON_TAG + "</head>", 1), encoding="utf-8")
 
 
 def image_prompt(article: dict) -> str:
@@ -579,6 +593,7 @@ def build(data: dict) -> None:
     update_dashboard(articles)
     (ROOT / "sitemap.xml").write_text(sitemap_page(articles), encoding="utf-8")
     ensure_google_analytics()
+    ensure_favicon()
     print(f"Built {len(articles)} article pages, {len(topics)} topic pages, listings, dashboard index and sitemap")
 
 
@@ -641,6 +656,18 @@ def validate(data: dict) -> None:
         config = f"gtag('config', '{GOOGLE_ANALYTICS_ID}');"
         if page_text.count(script_url) != 1 or page_text.count(config) != 1:
             errors.append(f"{relative}: Google Analytics tag is missing or duplicated")
+        if page_text.count('href="/favicon.png"') != 1:
+            errors.append(f"{relative}: favicon declaration is missing or duplicated")
+    favicon = ROOT / "favicon.png"
+    if not favicon.is_file():
+        errors.append("favicon.png is missing")
+    else:
+        try:
+            with Image.open(favicon) as image:
+                if image.format != "PNG" or image.size != (50, 50):
+                    errors.append("favicon.png must be the supplied 50x50 PNG")
+        except Exception as error:
+            errors.append(f"favicon.png is invalid: {error}")
     if errors:
         print("Publication validation failed:", file=sys.stderr)
         for error in errors:
