@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>If a Security Scan Can Take Down Your System, What Will a Real Attacker Do? | Jaiz Anuar</title>
+  <meta name="description" content="When controlled security testing destabilises production, the outage may reveal a resilience weakness rather than only an aggressive scanner. Attackers and unexpected demand will not respect maintenance windows." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="If a Security Scan Can Take Down Your System, What Will a Real Attacker Do?" />
+  <meta property="og:description" content="When controlled security testing destabilises production, the outage may reveal a resilience weakness rather than only an aggressive scanner. Attackers and unexpected demand will not respect maintenance windows." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="A controlled cyan security scan exposes a failing production component while a larger red attacker-generated pressure wave waits beyond the test boundary." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="If a Security Scan Can Take Down Your System, What Will a Real Attacker Do?" />
+  <meta name="twitter:description" content="When controlled security testing destabilises production, the outage may reveal a resilience weakness rather than only an aggressive scanner. Attackers and unexpected demand will not respect maintenance windows." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "If a Security Scan Can Take Down Your System, What Will a Real Attacker Do?", "description": "When controlled security testing destabilises production, the outage may reveal a resilience weakness rather than only an aggressive scanner. Attackers and unexpected demand will not respect maintenance windows.", "datePublished": "2026-09-08", "dateModified": "2026-09-08", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Operational Resilience", "Cybersecurity"], "keywords": ["Operational Resilience", "Cybersecurity"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/operational-resilience/">Operational Resilience</a><span aria-hidden="true">›</span><span aria-current="page">If a Security Scan Can Take Down Your System, What Will a Real Attacker Do?</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">8 September 2026 · Operational Resilience · Cybersecurity · 7 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>If a Security Scan Can Take Down Your System, What Will a Real Attacker Do?</h1>
+    <p class="lead">Security testing should avoid reckless production impact, but a system that cannot tolerate controlled scanning may also be unable to withstand malicious or unexpected traffic. The trigger deserves investigation; so does the underlying fragility.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.webp" width="1600" height="900" alt="A controlled cyan security scan exposes a failing production component while a larger red attacker-generated pressure wave waits beyond the test boundary." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>There is a familiar conversation between cybersecurity teams and system owners.</p>
+<p>“We need to run a vulnerability scan against production.”</p>
+<p>The response often comes quickly.</p>
+<p>“Only after midnight.”</p>
+<p>“Can you do it between 12AM and 6AM?”</p>
+<p>“Please make sure it stops before business starts.”</p>
+<p>The concern is understandable.</p>
+<p>Nobody wants a vulnerability assessment, penetration test or red team exercise to interrupt customers, transactions or revenue.</p>
+<p>But there is an uncomfortable question behind this arrangement.</p>
+<p><strong>Attackers do not have maintenance windows.</strong></p>
+<p>They do not submit change requests.</p>
+<p>They do not check whether the business is busy.</p>
+<p>They do not stop at 6AM because production traffic is about to increase.</p>
+<p>So if our own controlled security testing can destabilise a system, perhaps the scanner is not the only thing we should be investigating.</p>
+<h2>The Scanner Gets Blamed</h2>
+<p>I have seen variations of this many times.</p>
+<p>Security runs a scan.</p>
+<p>The application slows down.</p>
+<p>CPU utilisation increases.</p>
+<p>A service becomes unresponsive.</p>
+<p>Maybe the server crashes.</p>
+<p>The immediate conclusion is usually:</p>
+<p><strong>“The security scan caused the outage.”</strong></p>
+<p>Technically, that may be true.</p>
+<p>The scan may have triggered the failure.</p>
+<p>But identifying the trigger is not the same as identifying the root cause.</p>
+<p>The better question is:</p>
+<p><strong>Why could the system not tolerate it?</strong></p>
+<p>Was the server already close to capacity?</p>
+<p>Was memory exhausted?</p>
+<p>Were application connection limits too low?</p>
+<p>Did the database hit its threshold?</p>
+<p>Was there a network bottleneck?</p>
+<p>Did a WAF, firewall or load balancer behave unexpectedly?</p>
+<p>Was the application simply more fragile than everyone assumed?</p>
+<p>These questions matter because an attacker can create unusual traffic too.</p>
+<p>So can legitimate customers.</p>
+<h2>Fix The Weakness, Not Just The Testing Window</h2>
+<p>Moving a scan from 2PM to 2AM may solve the immediate operational problem.</p>
+<p>But it does not necessarily solve the resilience problem.</p>
+<p>Imagine an application becomes unstable when a scanner creates 500 concurrent requests.</p>
+<p>The organisation responds by limiting the scanner to 50.</p>
+<p>Problem solved?</p>
+<p>Operationally, perhaps.</p>
+<p>Architecturally, maybe not.</p>
+<p>The application still has the same limitation.</p>
+<p>The organisation has simply configured its own security tool not to expose it.</p>
+<p>An attacker will not necessarily be as considerate.</p>
+<p>Neither will a sudden spike in legitimate traffic.</p>
+<p>This is why security testing that causes an outage should not automatically lead to tighter testing restrictions.</p>
+<p>It should lead to investigation.</p>
+<p>Sometimes the answer will be that the scanner was configured too aggressively.</p>
+<p>That is a valid finding.</p>
+<p>But sometimes the more important finding is this:</p>
+<p><strong>The system was less resilient than everyone believed.</strong></p>
+<h2>Red Teaming Should Test The Organisation, Not Just The Technology</h2>
+<p>This becomes even more important when we move from vulnerability scanning to red teaming.</p>
+<p>A red team exercise should not only answer:</p>
+<p><em>“Can the attacker get in?”</em></p>
+<p>A mature exercise should also help answer:</p>
+<p><strong>What happens when something actually goes wrong?</strong></p>
+<p>Does the SOC detect the activity?</p>
+<p>How quickly does someone investigate?</p>
+<p>Can monitoring explain what is happening?</p>
+<p>Does the system owner know who to contact?</p>
+<p>Can the incident response team contain the problem?</p>
+<p>Can operations isolate one component without taking down the whole service?</p>
+<p>Can the organisation recover within the expected time?</p>
+<p>Do backups actually restore?</p>
+<p>Can Business Continuity Management procedures maintain critical operations?</p>
+<p>Does management know when a technical incident should become a business crisis?</p>
+<p>These are difficult questions to answer if every security exercise happens under perfect conditions.</p>
+<p>Everyone knows the exact testing window.</p>
+<p>Engineers are standing by.</p>
+<p>The SOC has already been informed.</p>
+<p>The application owner knows when the activity starts.</p>
+<p>And everyone knows it will stop at 6AM.</p>
+<p>That may be suitable for some testing.</p>
+<p>But it is not how a real incident happens.</p>
+<h2>The Business Needs To Feel Some Of The Exercise</h2>
+<p>Security teams are often told:</p>
+<p><strong>“Do not interrupt the business.”</strong></p>
+<p>That is reasonable.</p>
+<p>Nobody should deliberately create an outage just to prove a cybersecurity point.</p>
+<p>But there is another side to that statement.</p>
+<p>If every exercise is designed so carefully that the business never experiences pressure, uncertainty or operational disruption, are we really testing resilience?</p>
+<p>Or are we only testing inside a comfort zone?</p>
+<p>Incident response is not just about detecting malware.</p>
+<p>Business continuity is not just about having a document.</p>
+<p>Disaster recovery is not just about passing an annual scheduled exercise.</p>
+<p>Cyber resilience is about whether the organisation can continue operating, make decisions, communicate and recover when conditions are no longer normal.</p>
+<p>That cannot always be learned from a perfectly controlled exercise.</p>
+<h2>This Is Not Permission To Test Production Recklessly</h2>
+<p>There needs to be an important boundary here.</p>
+<p>Giving security teams more freedom does not mean allowing unrestricted destructive testing against production.</p>
+<p>Some techniques genuinely carry significant operational risk.</p>
+<p>Denial-of-service testing.</p>
+<p>Aggressive fuzzing.</p>
+<p>Database manipulation.</p>
+<p>Destructive exploitation.</p>
+<p>Testing that may affect data integrity.</p>
+<p>These require specific approval and safeguards.</p>
+<p>Critical infrastructure and high-value transaction platforms may need even stricter rules.</p>
+<p>There should still be rules of engagement.</p>
+<p>Emergency contacts.</p>
+<p>Stop conditions.</p>
+<p>Explicitly prohibited techniques.</p>
+<p>The objective is not to remove governance.</p>
+<p>The objective is to stop treating:</p>
+<p><strong>“Security testing caused operational impact”</strong></p>
+<p>as the end of the discussion.</p>
+<p>Sometimes that is where the discussion should begin.</p>
+<h2>Move Towards Controlled Realism</h2>
+<p>Organisations do not need to jump from midnight vulnerability scanning to unrestricted daytime red teaming.</p>
+<p>Testing maturity can evolve gradually.</p>
+<p>Start with controlled production scanning.</p>
+<p>Understand which systems are sensitive.</p>
+<p>Measure how they behave.</p>
+<p>Tune scanning appropriately.</p>
+<p>Then investigate why some systems cannot tolerate particular activities.</p>
+<p>Improve capacity.</p>
+<p>Architecture.</p>
+<p>Configuration.</p>
+<p>Monitoring.</p>
+<p>Recovery capability.</p>
+<p>Over time, introduce more realistic exercises.</p>
+<p>Run lower-impact security activities during normal operating hours.</p>
+<p>Conduct controlled red team exercises where fewer operational teams know the exact timing.</p>
+<p>Exercise incident response without telling everyone precisely when the scenario begins.</p>
+<p>Test whether escalation paths actually work.</p>
+<p>Measure recovery against the RTO and RPO that the business has approved.</p>
+<p>Test whether BCM arrangements still work when people are under pressure rather than sitting around a table discussing a hypothetical incident.</p>
+<p>The goal is not chaos.</p>
+<p>The goal is <strong>controlled realism</strong>.</p>
+<h2>A Production Outage Can Be A Security Finding</h2>
+<p>This is perhaps the mindset that needs to change.</p>
+<p>When security testing causes a system to fail, we normally think:</p>
+<p><strong>Security caused an outage.</strong></p>
+<p>Sometimes another interpretation is equally important:</p>
+<p><strong>Security testing discovered a resilience weakness.</strong></p>
+<p>That weakness may not have a CVE.</p>
+<p>It may never appear as Critical or High in a vulnerability assessment report.</p>
+<p>But if predictable activity can make an important business service unavailable, it deserves attention.</p>
+<p>Availability is part of security too.</p>
+<p>And resilience is ultimately about the ability of technology, people and processes to continue functioning when conditions are no longer normal.</p>
+<h2>The Wrong Lesson From A Failed Scan</h2>
+<p>Imagine a vulnerability scan causes an application to crash at 3PM.</p>
+<p>There are two possible lessons.</p>
+<p>The first:</p>
+<p><strong>“From now on, security can only scan this system between midnight and 6AM.”</strong></p>
+<p>The second:</p>
+<p><strong>“Why did this application fail, and could someone outside the organisation reproduce the same condition?”</strong></p>
+<p>The first protects tomorrow’s operations.</p>
+<p>The second may protect the organisation during a real incident.</p>
+<p>Sometimes both actions are necessary.</p>
+<p>Restrict the scan temporarily.</p>
+<p>Investigate the failure.</p>
+<p>Fix the underlying weakness.</p>
+<p>Retest.</p>
+<p>What should be avoided is allowing the temporary restriction to become the permanent solution.</p>
+<p>Because there is a fundamental difference between our security team and a real attacker.</p>
+<p>Our security team will follow the rules.</p>
+<p>They will respect the maintenance window.</p>
+<p>They will reduce the scanning intensity.</p>
+<p>They will stop when the system owner asks them to stop.</p>
+<p><strong>The attacker will not.</strong></p>
+<p>So perhaps the next time a security scan takes down a system, the first question should not be:</p>
+<p><em>“Who approved this scan?”</em></p>
+<p>It should be:</p>
+<p><strong>“If our own scanner can do this, what happens when someone who does not care about our uptime tries the same thing?”</strong></p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="the-most-dangerous-incidents-start-as-normal-days.html">The Most Dangerous Incidents Start as Normal Days</a><span>29 June 2026</span></li>
+        <li><a href="malaysias-hidden-cybersecurity-advantage-is-not-technical.html">Malaysia’s Hidden Cybersecurity Advantage Is Not Technical</a><span>7 September 2026</span></li>
+        <li><a href="the-most-dangerous-attacker-is-the-one-who-does-not-need-to-rush.html">The Most Dangerous Attacker Is The One Who Does Not Need To Rush</a><span>16 August 2026</span></li>
+        <li><a href="ai-is-not-creating-new-attack-techniques-it-is-removing-the-time-between-them.html">AI Is Not Creating New Attack Techniques. It Is Removing The Time Between Them.</a><span>15 August 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fif-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html" target="_blank" rel="noopener noreferrer" aria-label="Share If a Security Scan Can Take Down Your System, What Will a Real Attacker Do? on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fif-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html" target="_blank" rel="noopener noreferrer" aria-label="Share If a Security Scan Can Take Down Your System, What Will a Real Attacker Do? on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fif-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html&amp;text=If%20a%20Security%20Scan%20Can%20Take%20Down%20Your%20System%2C%20What%20Will%20a%20Real%20Attacker%20Do%3F" target="_blank" rel="noopener noreferrer" aria-label="Share If a Security Scan Can Take Down Your System, What Will a Real Attacker Do? on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=If%20a%20Security%20Scan%20Can%20Take%20Down%20Your%20System%2C%20What%20Will%20a%20Real%20Attacker%20Do%3F%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fif-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html" target="_blank" rel="noopener noreferrer" aria-label="Share If a Security Scan Can Take Down Your System, What Will a Real Attacker Do? on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html" aria-label="Copy link to If a Security Scan Can Take Down Your System, What Will a Real Attacker Do?" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
