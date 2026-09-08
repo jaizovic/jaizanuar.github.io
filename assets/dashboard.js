@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["If a Security Scan Can Take Down Your System, What Will a Real Attacker Do?", "2026-09-08", "/articles/if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html"],
     ["Malaysia’s Hidden Cybersecurity Advantage Is Not Technical", "2026-09-07", "/articles/malaysias-hidden-cybersecurity-advantage-is-not-technical.html"],
     ["The Certificate Was Valid. The Software Update Was Malicious.", "2026-09-04", "/articles/the-certificate-was-valid-the-software-update-was-malicious.html"],
     ["Industrial Security Assumed Attackers Needed Rare Expertise. AI Is Changing That Assumption.", "2026-09-03", "/articles/industrial-security-assumed-attackers-needed-rare-expertise-ai-is-changing-that-assumption.html"],
