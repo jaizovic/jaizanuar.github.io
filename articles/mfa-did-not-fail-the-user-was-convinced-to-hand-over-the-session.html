@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MFA Did Not Fail. The User Was Convinced To Hand Over The Session. | Jaiz Anuar</title>
+  <meta name="description" content="Modern identity attacks may not defeat MFA. They persuade users to complete authentication and then steal the trusted session. Identity security must continue after login through session, device and behavioural controls." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="MFA Did Not Fail. The User Was Convinced To Hand Over The Session." />
+  <meta property="og:description" content="Modern identity attacks may not defeat MFA. They persuade users to complete authentication and then steal the trusted session. Identity security must continue after login through session, device and behavioural controls." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="A user successfully completes multi-factor authentication while the resulting trusted session is diverted through a deceptive relay to an unauthorised endpoint." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MFA Did Not Fail. The User Was Convinced To Hand Over The Session." />
+  <meta name="twitter:description" content="Modern identity attacks may not defeat MFA. They persuade users to complete authentication and then steal the trusted session. Identity security must continue after login through session, device and behavioural controls." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "MFA Did Not Fail. The User Was Convinced To Hand Over The Session.", "description": "Modern identity attacks may not defeat MFA. They persuade users to complete authentication and then steal the trusted session. Identity security must continue after login through session, device and behavioural controls.", "datePublished": "2026-09-09", "dateModified": "2026-09-09", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Identity Security", "Cybersecurity"], "keywords": ["Identity Security", "Cybersecurity"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/identity-security/">Identity Security</a><span aria-hidden="true">›</span><span aria-current="page">MFA Did Not Fail. The User Was Convinced To Hand Over The Session.</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">9 September 2026 · Identity Security · Cybersecurity · 6 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>MFA Did Not Fail. The User Was Convinced To Hand Over The Session.</h1>
+    <p class="lead">MFA can work exactly as designed while an attacker captures the trust created afterward. Protecting identity now requires continuous confidence in the session, not only successful authentication at the login screen.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.webp" width="1600" height="900" alt="A user successfully completes multi-factor authentication while the resulting trusted session is diverted through a deceptive relay to an unauthorised endpoint." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>For years, Multi-Factor Authentication has been one of the clearest answers to credential theft.</p>
+<p>Passwords can be guessed.</p>
+<p>Passwords can be stolen.</p>
+<p>Passwords can be reused.</p>
+<p>MFA adds another layer.</p>
+<p>And for a long time, that changed the balance significantly.</p>
+<p>But attackers adapt.</p>
+<p>They do not always need to defeat the control directly.</p>
+<p>Sometimes, they simply convince the user to complete the control for them.</p>
+<p>That is an important distinction.</p>
+<p>Because the problem is no longer only about stolen credentials.</p>
+<p>It is about stolen trust.</p>
+<h2>Authentication Is No Longer The End Of The Story</h2>
+<p>Most organisations still think about identity security in a relatively simple sequence.</p>
+<p>The user enters a password.</p>
+<p>The user completes MFA.</p>
+<p>Access is granted.</p>
+<p>The process is considered successful.</p>
+<p>But modern attacks increasingly target what happens after successful authentication.</p>
+<p>The session.</p>
+<p>Once the user has authenticated, the platform creates a trusted session that allows the user to continue working without proving their identity again for every action.</p>
+<p>That is convenient.</p>
+<p>It is also valuable to an attacker.</p>
+<p>If the attacker can capture that session, they may no longer need the password.</p>
+<p>They may no longer need the MFA code.</p>
+<p>The authentication has already happened.</p>
+<p>The trust has already been granted.</p>
+<h2>The User Can Be Used As Part Of The Attack</h2>
+<p>This is where social engineering becomes more dangerous.</p>
+<p>An attacker may not need to trick a user into giving away a password directly.</p>
+<p>They may only need to create a believable situation.</p>
+<p>A fake IT support call.</p>
+<p>A security warning.</p>
+<p>A request to reauthenticate.</p>
+<p>A convincing login page.</p>
+<p>The user enters the credentials.</p>
+<p>Approves the MFA prompt.</p>
+<p>Everything appears normal.</p>
+<p>But the authentication flow is being intercepted.</p>
+<p>The attacker is not breaking MFA.</p>
+<p>The user is successfully completing MFA.</p>
+<p>For the attacker.</p>
+<p>That is why the statement matters:</p>
+<p><strong>MFA did not fail.</strong></p>
+<p>The security control worked.</p>
+<p>The user was convinced to hand over the resulting trust.</p>
+<h2>Strong Authentication Is Still Necessary</h2>
+<p>This does not mean MFA has become ineffective.</p>
+<p>Far from it.</p>
+<p>MFA remains one of the most important identity controls an organisation can deploy.</p>
+<p>But it should no longer be treated as the final answer.</p>
+<p>The better question is not only:</p>
+<p><em>“Did the user authenticate successfully?”</em></p>
+<p>It should also be:</p>
+<p><em>“Do we still trust this session?”</em></p>
+<p>Is the session coming from the expected device?</p>
+<p>Has the location changed unexpectedly?</p>
+<p>Is the user performing unusual actions?</p>
+<p>Has the session suddenly accessed systems the user rarely touches?</p>
+<p>Has privilege increased?</p>
+<p>Has the authentication method changed?</p>
+<p>Identity security must continue after login.</p>
+<h2>The Session Is Now A Credential Too</h2>
+<p>Security teams have spent years protecting passwords.</p>
+<p>But session tokens deserve similar attention.</p>
+<p>A valid session can represent an already authenticated identity.</p>
+<p>That makes it extremely valuable.</p>
+<p>If a session is stolen, the attacker may inherit the privileges attached to that user without having to repeat the original authentication process.</p>
+<p>This changes how organisations should think about identity architecture.</p>
+<p>Session lifetime matters.</p>
+<p>Reauthentication matters.</p>
+<p>Device trust matters.</p>
+<p>Conditional Access matters.</p>
+<p>Token revocation matters.</p>
+<p>Behaviour monitoring matters.</p>
+<p>The session should never become an unlimited expression of trust.</p>
+<h2>Help Desks Are Part Of The Security Architecture</h2>
+<p>There is another uncomfortable reality.</p>
+<p>Identity security is not only controlled by the identity platform.</p>
+<p>It is also influenced by the people and processes that can change identity state.</p>
+<p>Help desks.</p>
+<p>Support teams.</p>
+<p>Administrators.</p>
+<p>Anyone who can reset a password, enrol a new authentication method or unlock an account becomes part of the identity perimeter.</p>
+<p>An attacker may not need to compromise the authentication technology.</p>
+<p>They may simply persuade someone with authority to change it.</p>
+<p>That means help-desk verification is not just an operational process.</p>
+<p>It is a security control.</p>
+<p>The same applies to privileged account recovery, MFA reset procedures and identity enrolment.</p>
+<p>If those processes are weak, strong authentication can still be undermined.</p>
+<h2>Phishing-Resistant MFA Changes The Equation</h2>
+<p>Not all MFA is equal.</p>
+<p>Some methods are easier to socially engineer than others.</p>
+<p>A push notification can be approved.</p>
+<p>A one-time code can be entered into a phishing page.</p>
+<p>A user can be pressured into completing an authentication step they do not fully understand.</p>
+<p>Phishing-resistant methods such as FIDO2 and passkeys improve this because the authentication is more tightly bound to the legitimate service.</p>
+<p>That reduces the opportunity for a fake site to simply relay the authentication process.</p>
+<p>The direction therefore should not be:</p>
+<p><strong>MFA everywhere and the problem is solved.</strong></p>
+<p>It should be:</p>
+<p><strong>Use stronger authentication where the risk justifies it, and do not assume authentication alone is enough.</strong></p>
+<h2>Sensitive Actions Should Require More Than A Valid Session</h2>
+<p>One of the stronger architectural responses is to separate authentication from authorisation.</p>
+<p>A user may be successfully authenticated.</p>
+<p>That does not mean every action should automatically be trusted.</p>
+<p>Changing MFA settings.</p>
+<p>Creating privileged accounts.</p>
+<p>Exporting sensitive information.</p>
+<p>Approving financial transactions.</p>
+<p>Resetting administrative credentials.</p>
+<p>These actions may deserve additional verification.</p>
+<p>Step-up authentication.</p>
+<p>Independent approval.</p>
+<p>Device validation.</p>
+<p>Additional context.</p>
+<p>The idea is simple.</p>
+<p>If the session has been stolen, the attacker should still encounter another barrier.</p>
+<p>This is where identity architecture becomes more important than the login screen itself.</p>
+<h2>Final Thoughts</h2>
+<p>For years, cybersecurity focused heavily on protecting the password.</p>
+<p>Then we added MFA.</p>
+<p>That was the right move.</p>
+<p>Now attackers are adapting again.</p>
+<p>They are learning that the easiest path may not be to defeat authentication.</p>
+<p>It may be to persuade the user to complete it.</p>
+<p>The user enters the password.</p>
+<p>The user approves the MFA.</p>
+<p>The identity provider creates the session.</p>
+<p>The attacker captures the trust that follows.</p>
+<p>That is why modern identity security cannot stop at successful authentication.</p>
+<p>It must continue throughout the session.</p>
+<p>It must understand the device.</p>
+<p>Monitor behaviour.</p>
+<p>Protect recovery processes.</p>
+<p>Strengthen help-desk verification.</p>
+<p>And apply stronger controls to sensitive actions.</p>
+<p>Because the next identity compromise may not happen because MFA failed.</p>
+<p>It may happen because MFA worked exactly as designed.</p>
+<p>For the wrong person.</p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="the-new-security-perimeter-is-no-longer-the-network-it-is-identity.html">The New Security Perimeter Is No Longer The Network. It Is Identity.</a><span>17 July 2026</span></li>
+        <li><a href="if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html">If a Security Scan Can Take Down Your System, What Will a Real Attacker Do?</a><span>8 September 2026</span></li>
+        <li><a href="malaysias-hidden-cybersecurity-advantage-is-not-technical.html">Malaysia’s Hidden Cybersecurity Advantage Is Not Technical</a><span>7 September 2026</span></li>
+        <li><a href="the-most-dangerous-attacker-is-the-one-who-does-not-need-to-rush.html">The Most Dangerous Attacker Is The One Who Does Not Need To Rush</a><span>16 August 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fmfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html" target="_blank" rel="noopener noreferrer" aria-label="Share MFA Did Not Fail. The User Was Convinced To Hand Over The Session. on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fmfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html" target="_blank" rel="noopener noreferrer" aria-label="Share MFA Did Not Fail. The User Was Convinced To Hand Over The Session. on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fmfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html&amp;text=MFA%20Did%20Not%20Fail.%20The%20User%20Was%20Convinced%20To%20Hand%20Over%20The%20Session." target="_blank" rel="noopener noreferrer" aria-label="Share MFA Did Not Fail. The User Was Convinced To Hand Over The Session. on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=MFA%20Did%20Not%20Fail.%20The%20User%20Was%20Convinced%20To%20Hand%20Over%20The%20Session.%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fmfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html" target="_blank" rel="noopener noreferrer" aria-label="Share MFA Did Not Fail. The User Was Convinced To Hand Over The Session. on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html" aria-label="Copy link to MFA Did Not Fail. The User Was Convinced To Hand Over The Session." title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
