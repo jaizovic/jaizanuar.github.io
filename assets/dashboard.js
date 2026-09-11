@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["Every AI Company Wants Safety. None of Them Wants to Lose the Race.", "2026-09-11", "/articles/every-ai-company-wants-safety-none-of-them-wants-to-lose-the-race.html"],
     ["MFA Did Not Fail. The User Was Convinced To Hand Over The Session.", "2026-09-09", "/articles/mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html"],
     ["If a Security Scan Can Take Down Your System, What Will a Real Attacker Do?", "2026-09-08", "/articles/if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html"],
     ["Malaysia’s Hidden Cybersecurity Advantage Is Not Technical", "2026-09-07", "/articles/malaysias-hidden-cybersecurity-advantage-is-not-technical.html"],
