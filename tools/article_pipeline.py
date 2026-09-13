@@ -441,6 +441,52 @@ render(Number(new URLSearchParams(window.location.search).get('page')) || 1);
 </script>'''
 
 
+ARTICLE_SECTIONS = [
+    {
+        "title": "Security Architecture",
+        "description": "Designing trust, boundaries and controls that protect business outcomes.",
+        "categories": {"Security Architecture"},
+    },
+    {
+        "title": "AI & Emerging Technology",
+        "description": "Governing artificial intelligence, autonomous systems and fast-moving technology.",
+        "categories": {"AI Governance", "AI Security", "Artificial Intelligence", "Emerging Technology"},
+    },
+    {
+        "title": "Cyber Risk & Governance",
+        "description": "Turning technical exposure into accountable decisions, ownership and digital trust.",
+        "categories": {"Governance", "Data Governance", "Data Security", "Privacy", "Digital Trust"},
+    },
+    {
+        "title": "Cyber Resilience",
+        "description": "Preparing organisations to detect, contain, recover and continue operating.",
+        "categories": {"Operational Resilience", "Critical Infrastructure", "Security Operations", "Threat Detection", "Threat Intelligence", "Software Supply Chain", "Active Directory"},
+    },
+    {
+        "title": "Career & Leadership",
+        "description": "Developing judgement, careers, teams and the next generation of cyber leaders.",
+        "categories": {"Careers", "Leadership"},
+    },
+]
+
+
+def focus_area_sections(articles: list[dict], limit: int = 4) -> str:
+    sections = []
+    for area in ARTICLE_SECTIONS:
+        matches = [article for article in articles if area["categories"].intersection(article["categories"])][:limit]
+        links = "\n".join(
+            f'''          <li><a href="{article['slug']}.html">{escape(article['title'])}</a><span>{escape(article['display_date'])}</span></li>'''
+            for article in matches
+        )
+        sections.append(f'''      <section class="focus-area">
+        <div class="focus-area-heading"><h2>{escape(area['title'])}</h2><p>{escape(area['description'])}</p></div>
+        <ul>
+{links}
+        </ul>
+      </section>''')
+    return "\n".join(sections)
+
+
 def index_page(articles: list[dict]) -> str:
     cards = []
     for article in articles:
@@ -464,7 +510,10 @@ def index_page(articles: list[dict]) -> str:
 <body class="light-page">
 <header class="page-header"><div class="logo">Jaiz Anuar</div><nav><a href="../index.html">Home</a><a href="index.html">Articles</a><a href="../about/">About</a><a href="../dashboard/">Dashboard</a></nav></header>
 <section class="article-hero"><h1>Articles</h1><p>Independent reflections on cybersecurity, digital trust, governance, architecture, and leadership.</p><div class="article-filters" aria-label="Filter articles"><input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles" /><select id="categoryFilter" aria-label="Filter by category"><option value="">All topics</option></select><select id="yearFilter" aria-label="Filter by year"><option value="">All years</option></select></div></section>
-<main class="article-list"><p class="results-summary" id="resultsSummary" aria-live="polite"></p><section id="articleList">
+<section class="focus-areas" aria-labelledby="focusAreasTitle"><div class="focus-areas-intro"><p class="section-label">Explore by focus area</p><h2 id="focusAreasTitle">Start with the subjects that matter to you</h2><p>Each section brings together recent perspectives around a connected cybersecurity theme.</p></div><div class="focus-area-grid">
+{focus_area_sections(articles)}
+</div><a class="all-articles-link" href="#all-articles">Browse every article ↓</a></section>
+<main class="article-list" id="all-articles"><div class="archive-heading"><p class="section-label">Complete archive</p><h2>All articles</h2></div><p class="results-summary" id="resultsSummary" aria-live="polite"></p><section id="articleList">
 {chr(10).join(cards)}
   </section><nav class="pagination" id="pagination" aria-label="Article pages"></nav></main>
 <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
