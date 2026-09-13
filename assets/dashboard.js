@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The API Key Is Becoming The New Password", "2026-09-14", "/articles/the-api-key-is-becoming-the-new-password.html"],
     ["Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem.", "2026-09-13", "/articles/shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html"],
     ["Every AI Company Wants Safety. None of Them Wants to Lose the Race.", "2026-09-11", "/articles/every-ai-company-wants-safety-none-of-them-wants-to-lose-the-race.html"],
     ["MFA Did Not Fail. The User Was Convinced To Hand Over The Session.", "2026-09-09", "/articles/mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html"],
