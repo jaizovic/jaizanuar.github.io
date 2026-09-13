@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem. | Jaiz Anuar</title>
+  <meta name="description" content="When Shellshock remains exposed more than a decade after patches became available, the central issue is no longer only technical remediation. It is ownership, lifecycle management and accountable residual-risk governance." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem." />
+  <meta property="og:description" content="When Shellshock remains exposed more than a decade after patches became available, the central issue is no longer only technical remediation. It is ownership, lifecycle management and accountable residual-risk governance." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="A protected legacy server remains connected by an amber residual-risk path to overdue governance review checkpoints and an executive decision room." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem." />
+  <meta name="twitter:description" content="When Shellshock remains exposed more than a decade after patches became available, the central issue is no longer only technical remediation. It is ownership, lifecycle management and accountable residual-risk governance." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem.", "description": "When Shellshock remains exposed more than a decade after patches became available, the central issue is no longer only technical remediation. It is ownership, lifecycle management and accountable residual-risk governance.", "datePublished": "2026-09-13", "dateModified": "2026-09-13", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Governance", "Cybersecurity"], "keywords": ["Governance", "Cybersecurity"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/governance/">Governance</a><span aria-hidden="true">›</span><span aria-current="page">Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem.</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">13 September 2026 · Governance · Cybersecurity · 5 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem.</h1>
+    <p class="lead">Old vulnerabilities reveal whether an organisation can turn technical findings into owned, time-bound risk decisions. Compensating controls may reduce exposure, but they cannot replace accountability or permanent resolution.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.webp" width="1600" height="900" alt="A protected legacy server remains connected by an amber residual-risk path to overdue governance review checkpoints and an executive decision room." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>Shellshock is usually remembered as an old vulnerability.</p>
+<p>That is exactly why it remains useful.</p>
+<p>The technical issue was discovered in 2014. Patches have existed for years. Detection signatures are mature. Security teams know what CVE-2014-6271 is.</p>
+<p>So if Shellshock still appears in an environment today, the more important question is no longer:</p>
+<p><em>“How do we patch Bash?”</em></p>
+<p>It is:</p>
+<p><strong>“Why does this exposure still exist after more than a decade?”</strong></p>
+<p>At that point, the discussion has moved beyond vulnerability management.</p>
+<p>It has become a governance problem.</p>
+<h2>Old Vulnerabilities Often Reveal New Governance Failures</h2>
+<p>In mature organisations, security teams will eventually find vulnerabilities that cannot be fixed immediately.</p>
+<p>An old server may support a critical business process.</p>
+<p>A third-party appliance may have limited vendor support.</p>
+<p>An application may fail if the operating system changes.</p>
+<p>A legacy platform may already be scheduled for retirement.</p>
+<p>Those situations are real.</p>
+<p>The problem begins when the organisation treats the scanner finding as the end of the conversation.</p>
+<p>A vulnerability can remain technically open while still being actively managed from a risk perspective.</p>
+<p>But that requires clarity.</p>
+<p>Who owns the asset?</p>
+<p>Why has remediation been deferred?</p>
+<p>What is the business dependency?</p>
+<p>Which compensating controls are in place?</p>
+<p>How long will the exception remain valid?</p>
+<p>Who has accepted the residual risk?</p>
+<p>And what would trigger that decision to be reviewed?</p>
+<p>Without answers to those questions, the organisation does not have an accepted risk.</p>
+<p>It has an unresolved problem.</p>
+<h2>The CVSS Score Is Not The Whole Risk</h2>
+<p>Security operations often report vulnerability findings using technical severity.</p>
+<p>Critical.</p>
+<p>High.</p>
+<p>Medium.</p>
+<p>Low.</p>
+<p>That is useful.</p>
+<p>But it is not enough.</p>
+<p>The same Shellshock vulnerability may exist on two different systems and create very different levels of business risk.</p>
+<p>One system may be internet-facing, poorly segmented and actively using vulnerable CGI functionality.</p>
+<p>Another may be isolated internally, tightly administered, heavily monitored and scheduled for retirement within six months.</p>
+<p>The CVE is the same.</p>
+<p>The CVSS score may be the same.</p>
+<p>The residual risk is not.</p>
+<p>That is why security teams should move beyond simply reporting:</p>
+<p><strong>“Critical vulnerability still open.”</strong></p>
+<p>A better assessment considers technical exposure, exploitability, business criticality and the effectiveness of existing controls.</p>
+<p>The purpose is not to downgrade serious vulnerabilities for convenience.</p>
+<p>It is to describe the actual risk the organisation is carrying.</p>
+<h2>Compensating Controls Are Temporary Risk Treatments</h2>
+<p>Sometimes immediate remediation is genuinely not possible.</p>
+<p>In those cases, compensating controls matter.</p>
+<p>Network isolation.</p>
+<p>Removal of unnecessary functionality.</p>
+<p>WAF or IPS protection.</p>
+<p>Restricted administrative access.</p>
+<p>Enhanced logging.</p>
+<p>EDR monitoring.</p>
+<p>Tighter outbound controls.</p>
+<p>Continuous validation that the vulnerable service has not become newly exposed.</p>
+<p>These controls can reduce risk.</p>
+<p>But they should never become a permanent substitute for remediation.</p>
+<p>That distinction matters.</p>
+<p>A compensating control exists because the preferred control cannot yet be implemented.</p>
+<p>It should therefore have an expiry date.</p>
+<p>A review date.</p>
+<p>An owner.</p>
+<p>And a clear path towards permanent resolution.</p>
+<p>Otherwise temporary risk treatment slowly becomes permanent architecture.</p>
+<h2>Repeated Exceptions Usually Point To A Bigger Problem</h2>
+<p>If the same Shellshock finding appears quarter after quarter, the problem may no longer be vulnerability management.</p>
+<p>It may be asset lifecycle management.</p>
+<p>Unsupported technology.</p>
+<p>Weak ownership.</p>
+<p>Incomplete inventories.</p>
+<p>Poor retirement planning.</p>
+<p>Or a business process that has become dependent on infrastructure nobody wants to change.</p>
+<p>This is why old vulnerabilities are so useful from a governance perspective.</p>
+<p>They expose organisational weaknesses that newer vulnerabilities may not.</p>
+<p>A ten-year-old finding raises uncomfortable questions.</p>
+<p>Why is the technology still there?</p>
+<p>Why was it never replaced?</p>
+<p>Why has the business dependency remained unresolved?</p>
+<p>Why has the risk been repeatedly accepted?</p>
+<p>Who is accountable for the final outcome?</p>
+<p>These are not technical questions.</p>
+<p>They are governance questions.</p>
+<h2>Risk Acceptance Must Be Deliberate</h2>
+<p>There is another important distinction.</p>
+<p>Risk acceptance should not mean:</p>
+<p><em>“Security has reported it, so the business accepts it.”</em></p>
+<p>Acceptance should mean that the decision-maker understands the exposure, the potential impact, the available alternatives and the reason remediation cannot happen now.</p>
+<p>It should also mean that the decision can be challenged later.</p>
+<p>Threat conditions change.</p>
+<p>Compensating controls degrade.</p>
+<p>Business criticality changes.</p>
+<p>Retirement dates slip.</p>
+<p>A risk accepted six months ago may no longer be acceptable today.</p>
+<p>That is why residual risk requires active ownership.</p>
+<p>Not just documentation.</p>
+<h2>SecOps Should Help Management Make Better Decisions</h2>
+<p>Security Operations has an important role here.</p>
+<p>Not only detecting vulnerabilities.</p>
+<p>Not only producing dashboards.</p>
+<p>But translating technical findings into management decisions.</p>
+<p>For an old vulnerability like Shellshock, the useful question is not simply:</p>
+<p><em>“Is the patch installed?”</em></p>
+<p>It is:</p>
+<p><em>“What is the current exposure, how effective are the compensating controls, who owns the risk, and what is the path to closure?”</em></p>
+<p>That is a much stronger conversation.</p>
+<p>It moves SecOps from finding problems to helping the organisation manage them.</p>
+<h2>Final Thoughts</h2>
+<p>Shellshock is old.</p>
+<p>The governance problem behind an unresolved Shellshock finding may be very current.</p>
+<p>An organisation that still carries the vulnerability may have a valid reason.</p>
+<p>Legacy dependency.</p>
+<p>Vendor constraint.</p>
+<p>Operational risk.</p>
+<p>Planned retirement.</p>
+<p>But those reasons need to be visible, owned and time-bound.</p>
+<p>Because an old vulnerability with a named owner, effective controls and a clear remediation plan is residual risk.</p>
+<p>An old vulnerability with no owner, no review date and no path to closure is not.</p>
+<p>It is unmanaged risk.</p>
+<p>And that is why Shellshock remains relevant more than a decade later.</p>
+<p>Not because the vulnerability is new.</p>
+<p>Because the governance lesson still is.</p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="shadow-it-is-not-the-problem-invisible-risk-is.html">Shadow IT Is Not the Problem. Invisible Risk Is.</a><span>3 August 2026</span></li>
+        <li><a href="risk-acceptance-is-not-risk-transfer.html">Risk Acceptance Is Not Risk Transfer</a><span>2 August 2026</span></li>
+        <li><a href="mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html">MFA Did Not Fail. The User Was Convinced To Hand Over The Session.</a><span>9 September 2026</span></li>
+        <li><a href="if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html">If a Security Scan Can Take Down Your System, What Will a Real Attacker Do?</a><span>8 September 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fshellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html" target="_blank" rel="noopener noreferrer" aria-label="Share Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem. on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fshellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html" target="_blank" rel="noopener noreferrer" aria-label="Share Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem. on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fshellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html&amp;text=Shellshock%20Was%20Patched%20Years%20Ago.%20Residual%20Risk%20Is%20a%20Governance%20Problem." target="_blank" rel="noopener noreferrer" aria-label="Share Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem. on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=Shellshock%20Was%20Patched%20Years%20Ago.%20Residual%20Risk%20Is%20a%20Governance%20Problem.%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fshellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html" target="_blank" rel="noopener noreferrer" aria-label="Share Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem. on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html" aria-label="Copy link to Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem." title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
