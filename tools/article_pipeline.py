@@ -510,12 +510,12 @@ def index_page(articles: list[dict]) -> str:
 <body class="light-page">
 <header class="page-header"><div class="logo">Jaiz Anuar</div><nav><a href="../index.html">Home</a><a href="index.html">Articles</a><a href="../about/">About</a><a href="../dashboard/">Dashboard</a></nav></header>
 <section class="article-hero"><h1>Articles</h1><p>Independent reflections on cybersecurity, digital trust, governance, architecture, and leadership.</p><div class="article-filters" aria-label="Filter articles"><input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles" /><select id="categoryFilter" aria-label="Filter by category"><option value="">All topics</option></select><select id="yearFilter" aria-label="Filter by year"><option value="">All years</option></select></div></section>
-<section class="focus-areas" aria-labelledby="focusAreasTitle"><div class="focus-areas-intro"><p class="section-label">Explore by focus area</p><h2 id="focusAreasTitle">Start with the subjects that matter to you</h2><p>Each section brings together recent perspectives around a connected cybersecurity theme.</p></div><div class="focus-area-grid">
-{focus_area_sections(articles)}
-</div><a class="all-articles-link" href="#all-articles">Browse every article ↓</a></section>
 <main class="article-list" id="all-articles"><div class="archive-heading"><p class="section-label">Complete archive</p><h2>All articles</h2></div><p class="results-summary" id="resultsSummary" aria-live="polite"></p><section id="articleList">
 {chr(10).join(cards)}
   </section><nav class="pagination" id="pagination" aria-label="Article pages"></nav></main>
+<section class="focus-areas" aria-labelledby="focusAreasTitle"><div class="focus-areas-intro"><p class="section-label">Explore by focus area</p><h2 id="focusAreasTitle">Continue with the subjects that matter to you</h2><p>Each section brings together recent perspectives around a connected cybersecurity theme.</p></div><div class="focus-area-grid">
+{focus_area_sections(articles)}
+</div></section>
 <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
 {INDEX_SCRIPT}
 <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
