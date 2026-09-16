@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The AI Gateway Should Govern Trust, Tokens And Tools", "2026-09-16", "/articles/the-ai-gateway-should-govern-trust-tokens-and-tools.html"],
     ["The API Key Is Becoming The New Password", "2026-09-14", "/articles/the-api-key-is-becoming-the-new-password.html"],
     ["Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem.", "2026-09-13", "/articles/shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html"],
     ["Every AI Company Wants Safety. None of Them Wants to Lose the Race.", "2026-09-11", "/articles/every-ai-company-wants-safety-none-of-them-wants-to-lose-the-race.html"],
