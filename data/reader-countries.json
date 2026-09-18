@@ -1,6 +1,10 @@
 {
   "countries": [
     {
+      "code": "TH",
+      "name": "Thailand"
+    },
+    {
       "code": "MY",
       "name": "Malaysia"
     },
