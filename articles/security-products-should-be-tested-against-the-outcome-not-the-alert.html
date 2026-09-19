@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security Products Should Be Tested Against The Outcome, Not The Alert | Jaiz Anuar</title>
+  <meta name="description" content="Security products should be evaluated by whether they interrupt attack progression, contain compromise and prevent business impact—not simply by how quickly they generate an alert." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Security Products Should Be Tested Against The Outcome, Not The Alert" />
+  <meta property="og:description" content="Security products should be evaluated by whether they interrupt attack progression, contain compromise and prevent business impact—not simply by how quickly they generate an alert." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="A layered attack chain crosses endpoint, identity and network controls before coordinated defences interrupt lateral movement and protect a critical business system." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Security Products Should Be Tested Against The Outcome, Not The Alert" />
+  <meta name="twitter:description" content="Security products should be evaluated by whether they interrupt attack progression, contain compromise and prevent business impact—not simply by how quickly they generate an alert." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Security Products Should Be Tested Against The Outcome, Not The Alert", "description": "Security products should be evaluated by whether they interrupt attack progression, contain compromise and prevent business impact—not simply by how quickly they generate an alert.", "datePublished": "2026-09-20", "dateModified": "2026-09-20", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Security Operations", "Security Architecture"], "keywords": ["Security Operations", "Security Architecture"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/security-operations/">Security Operations</a><span aria-hidden="true">›</span><span aria-current="page">Security Products Should Be Tested Against The Outcome, Not The Alert</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">20 September 2026 · Security Operations · Security Architecture · 5 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>Security Products Should Be Tested Against The Outcome, Not The Alert</h1>
+    <p class="lead">Detection is evidence, but protection is an outcome. The strongest security testing follows the complete attack chain to determine whether controls actually change what the attacker can achieve.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.webp" width="1600" height="900" alt="A layered attack chain crosses endpoint, identity and network controls before coordinated defences interrupt lateral movement and protect a critical business system." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>For years, cybersecurity products have been measured by what they can detect.</p>
+<p>How many attack techniques can the product identify? How much telemetry does it generate? How many MITRE ATT&amp;CK techniques does it map? How quickly does it raise an alert?</p>
+<p>Those questions are useful, but they do not tell the whole story.</p>
+<p>A product may detect malicious activity and still allow the attacker to continue moving through the environment. It may generate an alert while privilege escalation continues. It may identify suspicious behaviour while the attacker still reaches a critical system.</p>
+<p>That creates a more important question:</p>
+<p><strong>Did the security control actually change the outcome of the attack?</strong></p>
+<h2>Detection Is Evidence. Protection Is Outcome.</h2>
+<p>The recent launch of SE Labs’ PIVOT testing programme is interesting because it takes a broader view of security testing. Rather than stopping at whether a product detected malicious activity, PIVOT follows the attack chain and looks at how far the attacker was able to progress, what defenders could see, and whether the security product actually interrupted the attack before meaningful harm occurred. <a href="https://www.infosecurity-magazine.com/news/cyber-vendors-mitre-uk-testing/" target="_blank" rel="noopener noreferrer">Infosecurity Magazine covered the programme here</a>.</p>
+<p>That is a useful shift in thinking.</p>
+<p>Detection is important. But detection alone is not the final objective.</p>
+<p>The real objective is reducing impact.</p>
+<p>If the attacker is detected at the first stage but still steals credentials, escalates privileges and moves laterally, the organisation has visibility.</p>
+<p>It may not yet have protection.</p>
+<h2>The Alert Is Only The Beginning</h2>
+<p>Security teams often celebrate detection metrics.</p>
+<p>An alert was generated within thirty seconds.</p>
+<p>The EDR identified the behaviour.</p>
+<p>The SIEM correlated the events.</p>
+<p>The NDR saw the unusual connection.</p>
+<p>All of these are positive signals.</p>
+<p>But the next question should always be:</p>
+<p><strong>What happened after the alert?</strong></p>
+<p>Did the endpoint get isolated?</p>
+<p>Was the credential revoked?</p>
+<p>Was the session terminated?</p>
+<p>Was lateral movement blocked?</p>
+<p>Did the attacker reach the crown jewels before containment happened?</p>
+<p>A good security product should help the organisation move from detection to action.</p>
+<p>If the product produces excellent telemetry but the attacker can still complete the objective, the architecture still has a problem.</p>
+<h2>Security Controls Should Be Tested As Part Of An Attack Chain</h2>
+<p>Real attackers do not attack one control at a time.</p>
+<p>They move through environments.</p>
+<p>Initial access leads to credential access. Credential access leads to privilege escalation. Privilege escalation leads to lateral movement. Lateral movement eventually reaches the target.</p>
+<p>That is why testing individual controls in isolation can create false confidence.</p>
+<p>An EDR may perform well.</p>
+<p>A firewall may perform well.</p>
+<p>An identity platform may perform well.</p>
+<p>But what happens when those controls are tested together against a complete attack path?</p>
+<p>The weakness may exist between them.</p>
+<p>The attacker may exploit the gap between endpoint detection and identity response, or between network segmentation and privileged access.</p>
+<p>Architecture lives in those gaps.</p>
+<h2>Buyers Need To Understand What “Good” Actually Means</h2>
+<p>Cybersecurity products are difficult to compare.</p>
+<p>Marketing material naturally highlights strengths. Vendor reports often emphasise detection coverage, threat intelligence and technical capability.</p>
+<p>Independent testing helps.</p>
+<p>But even independent testing needs to answer questions that matter to the organisation.</p>
+<p>A product detecting 98% of techniques may sound better than one detecting 95%.</p>
+<p>But what if the second product stopped the attack earlier?</p>
+<p>What if it gave analysts enough context to contain the incident faster?</p>
+<p>What if the first product detected more individual techniques but still allowed the attacker to reach a privileged account?</p>
+<p>Percentages are useful.</p>
+<p>Outcomes are more useful.</p>
+<h2>Architecture Should Measure How Far The Attacker Gets</h2>
+<p>From a security architecture perspective, one of the strongest measures of defensive effectiveness is simple:</p>
+<p><strong>How far can the attacker move after the first control fails?</strong></p>
+<p>If one compromised endpoint immediately leads to domain-level access, the architecture is weak regardless of how quickly the first alert appeared.</p>
+<p>If the attacker must cross multiple trust boundaries, obtain additional identities, overcome segmentation and trigger multiple independent controls, the architecture is doing something valuable.</p>
+<p>The objective is not necessarily to prevent every initial compromise.</p>
+<p>That is unrealistic.</p>
+<p>The objective is to prevent one compromise from becoming a business-impacting incident.</p>
+<p>This is where security products should support architecture rather than become substitutes for it.</p>
+<h2>The SOC Experience Matters Too</h2>
+<p>There is another aspect that product testing sometimes overlooks.</p>
+<p>What does the analyst actually see?</p>
+<p>A security product may detect an attack accurately but provide so little context that the SOC spends another thirty minutes trying to understand what happened.</p>
+<p>That delay matters.</p>
+<p>An alert should help answer:</p>
+<p>What happened? Which identity was involved? Which system was affected? What did the attacker attempt next? What should be contained first?</p>
+<p>Visibility without context can become another form of noise.</p>
+<p>The effectiveness of a security product therefore depends not only on what it detects, but also on whether the organisation can understand and act on that detection quickly enough.</p>
+<h2>Final Thoughts</h2>
+<p>Security testing should continue to measure detection.</p>
+<p>But detection should not become the destination.</p>
+<p>The more important measure is whether the control changes the attack outcome.</p>
+<p>Did it slow the attacker?</p>
+<p>Did it prevent privilege escalation?</p>
+<p>Did it block lateral movement?</p>
+<p>Did it protect the critical asset?</p>
+<p>Did it give defenders enough information to contain the incident before business impact occurred?</p>
+<p>A security product can generate the perfect alert and still lose the attack.</p>
+<p>That is why the next generation of security testing should increasingly focus on what happens after detection.</p>
+<p>Because organisations do not buy cybersecurity products to generate alerts.</p>
+<p>They buy them to prevent attacks from becoming incidents.</p>
+<p><strong>Security products should be tested against the outcome, not the alert.</strong></p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="the-soc-detected-the-attack-the-organisation-still-lost-the-domain.html">The SOC Detected the Attack. The Organisation Still Lost the Domain.</a><span>2 September 2026</span></li>
+        <li><a href="the-ai-gateway-should-govern-trust-tokens-and-tools.html">The AI Gateway Should Govern Trust, Tokens And Tools</a><span>16 September 2026</span></li>
+        <li><a href="the-api-key-is-becoming-the-new-password.html">The API Key Is Becoming The New Password</a><span>14 September 2026</span></li>
+        <li><a href="every-ai-company-wants-safety-none-of-them-wants-to-lose-the-race.html">Every AI Company Wants Safety. None of Them Wants to Lose the Race.</a><span>11 September 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fsecurity-products-should-be-tested-against-the-outcome-not-the-alert.html" target="_blank" rel="noopener noreferrer" aria-label="Share Security Products Should Be Tested Against The Outcome, Not The Alert on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fsecurity-products-should-be-tested-against-the-outcome-not-the-alert.html" target="_blank" rel="noopener noreferrer" aria-label="Share Security Products Should Be Tested Against The Outcome, Not The Alert on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fsecurity-products-should-be-tested-against-the-outcome-not-the-alert.html&amp;text=Security%20Products%20Should%20Be%20Tested%20Against%20The%20Outcome%2C%20Not%20The%20Alert" target="_blank" rel="noopener noreferrer" aria-label="Share Security Products Should Be Tested Against The Outcome, Not The Alert on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=Security%20Products%20Should%20Be%20Tested%20Against%20The%20Outcome%2C%20Not%20The%20Alert%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fsecurity-products-should-be-tested-against-the-outcome-not-the-alert.html" target="_blank" rel="noopener noreferrer" aria-label="Share Security Products Should Be Tested Against The Outcome, Not The Alert on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.html" aria-label="Copy link to Security Products Should Be Tested Against The Outcome, Not The Alert" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
