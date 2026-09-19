@@ -4,6 +4,7 @@
   <url><loc>https://jaizanuar.com/about/</loc></url>
   <url><loc>https://jaizanuar.com/articles/</loc></url>
   <url><loc>https://jaizanuar.com/topics/</loc></url>
+  <url><loc>https://jaizanuar.com/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.html</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://jaizanuar.com/articles/the-ai-gateway-should-govern-trust-tokens-and-tools.html</loc><lastmod>2026-09-16</lastmod></url>
   <url><loc>https://jaizanuar.com/articles/the-api-key-is-becoming-the-new-password.html</loc><lastmod>2026-09-14</lastmod></url>
   <url><loc>https://jaizanuar.com/articles/shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html</loc><lastmod>2026-09-13</lastmod></url>
@@ -85,8 +86,8 @@
   <url><loc>https://jaizanuar.com/topics/leadership/</loc><lastmod>2026-09-07</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/operational-resilience/</loc><lastmod>2026-09-08</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/privacy/</loc><lastmod>2026-07-10</lastmod></url>
-  <url><loc>https://jaizanuar.com/topics/security-architecture/</loc><lastmod>2026-09-16</lastmod></url>
-  <url><loc>https://jaizanuar.com/topics/security-operations/</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://jaizanuar.com/topics/security-architecture/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://jaizanuar.com/topics/security-operations/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/software-supply-chain/</loc><lastmod>2026-09-04</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/threat-detection/</loc><lastmod>2026-08-16</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/threat-intelligence/</loc><lastmod>2024-05-23</lastmod></url>
