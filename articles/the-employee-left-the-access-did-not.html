@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Employee Left. The Access Did Not. | Jaiz Anuar</title>
+  <meta name="description" content="Offboarding must remove more than a directory account. Cloud access, SaaS sessions, repository credentials, SSH keys, API tokens and machine identities can preserve trust after an employee leaves." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/the-employee-left-the-access-did-not.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Employee Left. The Access Did Not." />
+  <meta property="og:description" content="Offboarding must remove more than a directory account. Cloud access, SaaS sessions, repository credentials, SSH keys, API tokens and machine identities can preserve trust after an employee leaves." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/the-employee-left-the-access-did-not.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/the-employee-left-the-access-did-not.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="An employee returns a laptop while identity specialists trace and revoke residual cloud, SaaS, repository, SSH, API and machine-credential access paths." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Employee Left. The Access Did Not." />
+  <meta name="twitter:description" content="Offboarding must remove more than a directory account. Cloud access, SaaS sessions, repository credentials, SSH keys, API tokens and machine identities can preserve trust after an employee leaves." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/the-employee-left-the-access-did-not.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Employee Left. The Access Did Not.", "description": "Offboarding must remove more than a directory account. Cloud access, SaaS sessions, repository credentials, SSH keys, API tokens and machine identities can preserve trust after an employee leaves.", "datePublished": "2026-09-19", "dateModified": "2026-09-19", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Identity Security", "Governance"], "keywords": ["Identity Security", "Governance"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/the-employee-left-the-access-did-not.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/the-employee-left-the-access-did-not.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/identity-security/">Identity Security</a><span aria-hidden="true">›</span><span aria-current="page">The Employee Left. The Access Did Not.</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">19 September 2026 · Identity Security · Governance · 5 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>The Employee Left. The Access Did Not.</h1>
+    <p class="lead">Modern access is distributed across human and machine identities. A mature Leaver process must discover and revoke every credential, token and trust relationship associated with the departing employee.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/the-employee-left-the-access-did-not.webp" width="1600" height="900" alt="An employee returns a laptop while identity specialists trace and revoke residual cloud, SaaS, repository, SSH, API and machine-credential access paths." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>An employee leaves the organisation.</p>
+<p>HR closes the employment record. The laptop is returned. The Active Directory account is disabled. Email access is removed.</p>
+<p>Everyone assumes the access is gone.</p>
+<p>But modern enterprise access is no longer limited to the corporate directory.</p>
+<p>What about GitHub? Cloud platforms? SaaS applications? Personal access tokens? SSH keys? API credentials? CI/CD pipelines? Third-party portals?</p>
+<p>This is where offboarding becomes more than an HR process.</p>
+<p>It becomes an identity security problem.</p>
+<h2>Leaving The Company Does Not Mean Leaving Every System</h2>
+<p>A decade ago, disabling a corporate account might have removed most of an employee’s access.</p>
+<p>Today, access is distributed.</p>
+<p>Developers may have GitHub accounts connected to repositories. Engineers may hold cloud credentials. Administrators may have SSH keys. Business users may still have access to SaaS platforms that sit outside the central identity lifecycle.</p>
+<p>Some of that access may be federated through the organisation’s identity provider.</p>
+<p>Some may not.</p>
+<p>And that difference matters.</p>
+<p>If access exists outside the central identity lifecycle, disabling one account may not remove everything associated with the person.</p>
+<p>That is how orphaned access is created.</p>
+<h2>Identity Lifecycle Is A Security Control</h2>
+<p>Joiner, Mover, Leaver processes are often treated as administrative workflow.</p>
+<p>Create an account when someone joins.</p>
+<p>Change access when they move.</p>
+<p>Disable the account when they leave.</p>
+<p>But from a security architecture perspective, the process is much more important.</p>
+<p>It defines how trust is created, changed and removed.</p>
+<p>The Leaver stage is particularly critical because the organisation is removing trust from someone who may previously have had significant access.</p>
+<p>If that process only checks Active Directory, the organisation may be solving yesterday’s identity problem.</p>
+<p>Modern identity governance must consider all the places where access exists.</p>
+<h2>The Hidden Problem Is Access That Does Not Expire</h2>
+<p>The most dangerous access is often the access that nobody remembers.</p>
+<p>A personal access token created twelve months ago.</p>
+<p>An SSH key added to a server during a project.</p>
+<p>A cloud API key generated for testing.</p>
+<p>A GitHub credential tied to a personal account.</p>
+<p>A third-party portal that was never integrated with Single Sign-On.</p>
+<p>These credentials may continue working long after the employee has left.</p>
+<p>That is the real problem.</p>
+<p>The user is gone.</p>
+<p>The identity relationship is supposed to be gone.</p>
+<p>But the credential remains valid.</p>
+<h2>Offboarding Should Trigger More Than Account Disablement</h2>
+<p>A mature offboarding process should not ask only:</p>
+<p><em>“Has the user account been disabled?”</em></p>
+<p>It should ask:</p>
+<p><em>“What access, credentials, tokens and trust relationships were associated with this person?”</em></p>
+<p>That means reviewing cloud access, SaaS platforms, source-code repositories, privileged accounts, service credentials, API tokens and any system where the employee may have created long-lived secrets.</p>
+<p>For privileged or technical users, the process may need to go further.</p>
+<p>Rotate shared credentials.</p>
+<p>Revoke tokens.</p>
+<p>Remove SSH keys.</p>
+<p>Review service accounts they managed.</p>
+<p>Check whether any automation still depends on credentials they created.</p>
+<p>The objective is to remove the trust relationship completely.</p>
+<h2>Personal Accounts Create Another Risk</h2>
+<p>Developer platforms create a particular challenge.</p>
+<p>An employee may contribute to corporate repositories using an account they personally own.</p>
+<p>That may be convenient.</p>
+<p>It may also create ambiguity.</p>
+<p>Who owns the identity?</p>
+<p>Who controls the recovery process?</p>
+<p>Can the organisation revoke access immediately?</p>
+<p>Does the employee retain tokens or local clones after leaving?</p>
+<p>This is why enterprise use of developer platforms needs clear identity architecture.</p>
+<p>Corporate access should be centrally governed where possible.</p>
+<p>Privileged access should not depend on personal identities that the organisation does not fully control.</p>
+<h2>Access Reviews Should Not Wait For Someone To Leave</h2>
+<p>There is another lesson here.</p>
+<p>If the organisation only discovers orphaned access during offboarding, the problem may have existed for years.</p>
+<p>Regular access reviews are important because employees accumulate permissions over time.</p>
+<p>A developer changes team.</p>
+<p>A manager moves to another function.</p>
+<p>A contractor finishes one project and starts another.</p>
+<p>Old access remains because nobody removed it.</p>
+<p>Eventually, the user may have permissions that no longer reflect their role.</p>
+<p>The Leaver process should therefore be the final identity review.</p>
+<p>Not the first one.</p>
+<h2>Machine Identities Make This More Complicated</h2>
+<p>The problem becomes even harder when people create machine credentials.</p>
+<p>An employee may leave, but the API key they generated continues running.</p>
+<p>A service account may still exist.</p>
+<p>A CI/CD token may still deploy applications.</p>
+<p>An automation workflow may still use credentials created under their ownership.</p>
+<p>This is why machine identity governance is becoming as important as human identity governance.</p>
+<p>The organisation needs to know not only who owns an account, but who owns the credentials created around it.</p>
+<p>Because the human identity may disappear while the machine identity continues operating.</p>
+<h2>Final Thoughts</h2>
+<p>Offboarding is often treated as a checklist.</p>
+<p>Return the laptop.</p>
+<p>Disable the account.</p>
+<p>Remove email.</p>
+<p>Close the HR record.</p>
+<p>But modern enterprise access is much broader than that.</p>
+<p>Employees interact with cloud platforms, SaaS services, developer tools, APIs and automation systems. Each of those may create another form of trust.</p>
+<p>The employee leaving should trigger the removal of that trust.</p>
+<p>Not just the removal of one account.</p>
+<p>Because the real risk begins when the organisation believes access has been revoked, but something somewhere is still working.</p>
+<p>The employee left.</p>
+<p>The access did not.</p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="the-api-key-is-becoming-the-new-password.html">The API Key Is Becoming The New Password</a><span>14 September 2026</span></li>
+        <li><a href="shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html">Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem.</a><span>13 September 2026</span></li>
+        <li><a href="mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html">MFA Did Not Fail. The User Was Convinced To Hand Over The Session.</a><span>9 September 2026</span></li>
+        <li><a href="when-an-ai-security-test-becomes-a-real-cyber-incident-who-owns-the-breach.html">When an AI Security Test Becomes a Real Cyber Incident, Who Owns the Breach?</a><span>30 August 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-employee-left-the-access-did-not.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Employee Left. The Access Did Not. on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-employee-left-the-access-did-not.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Employee Left. The Access Did Not. on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-employee-left-the-access-did-not.html&amp;text=The%20Employee%20Left.%20The%20Access%20Did%20Not." target="_blank" rel="noopener noreferrer" aria-label="Share The Employee Left. The Access Did Not. on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=The%20Employee%20Left.%20The%20Access%20Did%20Not.%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-employee-left-the-access-did-not.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Employee Left. The Access Did Not. on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/the-employee-left-the-access-did-not.html" aria-label="Copy link to The Employee Left. The Access Did Not." title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
