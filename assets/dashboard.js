@@ -6,6 +6,7 @@
   var articleLimit = 20;
   var articles = [
     ["Security Products Should Be Tested Against The Outcome, Not The Alert", "2026-09-20", "/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.html"],
+    ["The Employee Left. The Access Did Not.", "2026-09-19", "/articles/the-employee-left-the-access-did-not.html"],
     ["The AI Gateway Should Govern Trust, Tokens And Tools", "2026-09-16", "/articles/the-ai-gateway-should-govern-trust-tokens-and-tools.html"],
     ["The API Key Is Becoming The New Password", "2026-09-14", "/articles/the-api-key-is-becoming-the-new-password.html"],
     ["Shellshock Was Patched Years Ago. Residual Risk Is a Governance Problem.", "2026-09-13", "/articles/shellshock-was-patched-years-ago-residual-risk-is-a-governance-problem.html"],
