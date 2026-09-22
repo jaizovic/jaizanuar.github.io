@@ -1,12 +1,12 @@
 {
   "countries": [
     {
-      "code": "TH",
-      "name": "Thailand"
-    },
-    {
       "code": "MY",
       "name": "Malaysia"
+    },
+    {
+      "code": "TH",
+      "name": "Thailand"
     },
     {
       "code": "TR",
