@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox | Jaiz Anuar</title>
+  <meta name="description" content="A cyber-capable AI test is not safely sandboxed if it can reach public systems. Enforced egress restrictions, synthetic identities, tool limits, independent shutdown and complete logging must contain unexpected agent behaviour." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox" />
+  <meta property="og:description" content="A cyber-capable AI test is not safely sandboxed if it can reach public systems. Enforced egress restrictions, synthetic identities, tool limits, independent shutdown and complete logging must contain unexpected agent behaviour." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="A cyber-capable AI agent operates inside a monitored test sandbox while default-deny controls block its attempted connection to the real public internet." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox" />
+  <meta name="twitter:description" content="A cyber-capable AI test is not safely sandboxed if it can reach public systems. Enforced egress restrictions, synthetic identities, tool limits, independent shutdown and complete logging must contain unexpected agent behaviour." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox", "description": "A cyber-capable AI test is not safely sandboxed if it can reach public systems. Enforced egress restrictions, synthetic identities, tool limits, independent shutdown and complete logging must contain unexpected agent behaviour.", "datePublished": "2026-09-25", "dateModified": "2026-09-25", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["AI Security", "Security Architecture"], "keywords": ["AI Security", "Security Architecture"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/ai-security/">AI Security</a><span aria-hidden="true">›</span><span aria-current="page">If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">25 September 2026 · AI Security · Security Architecture · 7 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox</h1>
+    <p class="lead">Instructions can influence an AI agent, but only architecture can contain it. A credible AI security sandbox must make out-of-scope networks, credentials and tools technically unreachable.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.webp" width="1600" height="900" alt="A cyber-capable AI agent operates inside a monitored test sandbox while default-deny controls block its attempted connection to the real public internet." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>A cybersecurity test is supposed to create a safe place to discover unsafe behaviour.</p>
+<p>The target is controlled. The credentials are synthetic. The environment is isolated. Researchers can allow the system to behave aggressively because the consequences are contained.</p>
+<p>That assumption becomes much more important when the thing being tested is an autonomous AI agent.</p>
+<p>In May 2026, Google’s Gemini was being evaluated in a cybersecurity exercise run by Irregular. The test was intended to operate against simulated targets, but the environment unintentionally allowed access to the public internet. Gemini subsequently accessed systems belonging to three real companies before stopping after recognising that the targets were real. (<a href="https://www.securityweek.com/google-confirms-gemini-ai-breached-three-firms/" target="_blank" rel="noopener noreferrer">SecurityWeek</a>)</p>
+<p>The interesting security question is not whether Gemini eventually stopped.</p>
+<p>It is why the architecture allowed it to get there in the first place.</p>
+<h2>A Sandbox Should Enforce The Boundary</h2>
+<p>We often use the word <em>sandbox</em> as though it automatically means safe.</p>
+<p>But a sandbox is only as effective as the boundaries around it.</p>
+<p>If an AI agent can resolve public domains, establish unrestricted outbound connections, discover real credentials and interact with systems outside the approved scope, then the isolation exists mainly as an assumption.</p>
+<p>That is not enough.</p>
+<p>The agent should not need to understand that a target is out of scope. The architecture should make the target unreachable.</p>
+<p>This principle is not unique to AI. In <a href="if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html">If a Security Scan Can Take Down Your System, What Will a Real Attacker Do?</a>, I argued that security testing should reveal how systems behave under conditions that are less comfortable than normal operations. But realistic testing still needs controlled boundaries. The objective is controlled realism, not uncontrolled exposure.</p>
+<p>AI makes that distinction even more important.</p>
+<h2>Instructions Are Not Containment</h2>
+<p>One of the emerging mistakes in AI security is relying too heavily on instructions.</p>
+<p>Do not access production.</p>
+<p>Do not contact external systems.</p>
+<p>Only use the test environment.</p>
+<p>Stop when the target is outside scope.</p>
+<p>Those instructions are useful. They are not security boundaries.</p>
+<p>An autonomous agent can misunderstand context, follow an unexpected reasoning path or interact with something the test designer did not anticipate.</p>
+<p>This is where AI safety guardrails and security architecture need to be separated conceptually.</p>
+<p>A guardrail attempts to influence behaviour.</p>
+<p>A security boundary limits capability.</p>
+<p>For a cyber-capable AI agent, the second matters much more when the first fails.</p>
+<h2>Default Deny Should Apply To AI Agents Too</h2>
+<p>A properly contained AI security environment should begin with a simple architectural assumption:</p>
+<p><strong>Anything not explicitly required for the test should be unreachable.</strong></p>
+<p>That means outbound connectivity should be restricted rather than broadly available. DNS resolution should be controlled. Test targets should be explicitly allowlisted. Credentials should be synthetic. Production identities should never be available to the agent.</p>
+<p>The environment should also know exactly which tools the agent can invoke and which actions those tools can perform.</p>
+<p>An AI agent with a browser is one risk.</p>
+<p>An AI agent with a browser, terminal, credential store, code execution capability and unrestricted internet access is a very different risk.</p>
+<p>Capability changes the threat model.</p>
+<p>This is similar to the broader identity problem I discussed in <a href="the-new-security-perimeter-is-no-longer-the-network-it-is-identity.html">The New Security Perimeter Is No Longer The Network. It Is Identity.</a>. An AI agent becomes dangerous not simply because it is intelligent, but because of the identities, permissions and systems placed within its reach.</p>
+<h2>The Kill Switch Should Not Depend On The Agent</h2>
+<p>Another architectural question is who can stop the activity.</p>
+<p>In the Gemini incidents, the models reportedly stopped after recognising that they had reached real companies. That behaviour limited the reported impact. (<a href="https://arstechnica.com/google/2026/09/google-confirms-gemini-models-hacked-three-companies-in-may-2026/" target="_blank" rel="noopener noreferrer">Ars Technica</a>)</p>
+<p>But an enterprise security design should not assume that the agent will always make that decision correctly.</p>
+<p>There should be an independent mechanism capable of terminating the session, revoking credentials, blocking network access and stopping tool execution.</p>
+<p>The control should exist outside the agent.</p>
+<p>This is the same principle used elsewhere in security architecture: the system being controlled should not also be the only system responsible for controlling itself.</p>
+<h2>Logging Becomes Part Of Containment</h2>
+<p>Containment is also about visibility.</p>
+<p>If an AI agent makes hundreds of autonomous decisions during a test, security teams need to know exactly what happened.</p>
+<p>Which systems did it contact? Which credentials did it use? Which commands did it execute? Which tools were invoked? What data left the environment? At what point did its actions move outside the expected path?</p>
+<p>Without that evidence, an organisation may know that something went wrong without being able to establish how far it went.</p>
+<p>That turns an AI evaluation into an incident-response problem.</p>
+<p>And once an external organisation is touched without authorisation, the exercise is no longer purely a simulation.</p>
+<h2>Third-Party AI Testing Is Still Your Risk</h2>
+<p>There is another lesson for enterprises adopting external AI testing platforms.</p>
+<p>Outsourcing the test does not outsource accountability.</p>
+<p>If a third party is running autonomous agents on behalf of the organisation, the architecture review should include the testing environment itself.</p>
+<p>How is internet egress restricted? How are targets isolated? What credentials are available? Are production systems reachable? Who monitors agent activity? How quickly will the organisation be informed if the test moves outside scope?</p>
+<p>These are not administrative questions.</p>
+<p>They are architecture questions.</p>
+<p>A provider saying that an environment is isolated should not be the end of the assessment.</p>
+<p>The design should demonstrate how isolation is enforced.</p>
+<h2>Assume The Agent Will Eventually Do Something Unexpected</h2>
+<p>Good security architecture does not depend on every component behaving perfectly.</p>
+<p>That principle becomes even more important with autonomous AI.</p>
+<p>An AI agent may follow the expected path thousands of times. The architecture still needs to survive the one time it does not.</p>
+<p>This is consistent with a broader principle I have written about before: security architecture should assume controls will eventually fail. The objective is therefore not only to prevent failure, but to limit what happens next.</p>
+<p>For AI security testing, that means assuming the model may misunderstand scope, select the wrong target or invoke an unexpected tool.</p>
+<p>The architecture should still contain the outcome.</p>
+<h2>Final Thoughts</h2>
+<p>The most reassuring part of the Gemini story is that the models reportedly stopped once they recognised that they had reached real companies.</p>
+<p>The more important architectural lesson is that they were able to reach those companies at all.</p>
+<p>AI safety should not depend entirely on the AI making the correct decision.</p>
+<p>Network boundaries should restrict where it can communicate. Identity controls should restrict what it can authenticate to. Tool permissions should restrict what it can execute. Logging should reveal exactly what it did. Independent controls should be able to stop it.</p>
+<p>The more autonomous the AI becomes, the less we should depend on instructions alone.</p>
+<p>Because a sandbox is not defined by what we tell the AI not to do.</p>
+<p><strong>It is defined by what the architecture makes impossible for it to do.</strong></p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="ai-agents-need-security-boundaries-not-just-safety-guardrails.html">AI Agents Need Security Boundaries, Not Just Safety Guardrails</a><span>7 August 2026</span></li>
+        <li><a href="security-products-should-be-tested-against-the-outcome-not-the-alert.html">Security Products Should Be Tested Against The Outcome, Not The Alert</a><span>20 September 2026</span></li>
+        <li><a href="the-ai-gateway-should-govern-trust-tokens-and-tools.html">The AI Gateway Should Govern Trust, Tokens And Tools</a><span>16 September 2026</span></li>
+        <li><a href="the-api-key-is-becoming-the-new-password.html">The API Key Is Becoming The New Password</a><span>14 September 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fif-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html" target="_blank" rel="noopener noreferrer" aria-label="Share If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fif-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html" target="_blank" rel="noopener noreferrer" aria-label="Share If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fif-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html&amp;text=If%20Your%20AI%20Test%20Can%20Reach%20The%20Real%20Internet%2C%20It%20Is%20Not%20Really%20A%20Sandbox" target="_blank" rel="noopener noreferrer" aria-label="Share If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=If%20Your%20AI%20Test%20Can%20Reach%20The%20Real%20Internet%2C%20It%20Is%20Not%20Really%20A%20Sandbox%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fif-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html" target="_blank" rel="noopener noreferrer" aria-label="Share If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html" aria-label="Copy link to If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
