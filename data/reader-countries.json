@@ -5,6 +5,10 @@
       "name": "Malaysia"
     },
     {
+      "code": "US",
+      "name": "United States"
+    },
+    {
       "code": "TH",
       "name": "Thailand"
     },
@@ -15,10 +19,6 @@
     {
       "code": "IE",
       "name": "Ireland"
-    },
-    {
-      "code": "US",
-      "name": "United States"
     },
     {
       "code": "NZ",
