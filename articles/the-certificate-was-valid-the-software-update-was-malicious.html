@@ -4,21 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Certificate Was Valid. The Software Update Was Malicious. | Jaiz Anuar</title>
-  <meta name="description" content="A valid certificate can protect an encrypted connection while malicious software travels through it. Secure update architecture must independently verify transport, publisher, package integrity and post-installation behaviour." />
+  <meta name="description" content="A valid code-signing certificate proves who signed a package and that it was not modified afterward. It cannot prove the software was safe before signing or that the upstream build pipeline was trustworthy." />
   <link rel="canonical" href="https://jaizanuar.com/articles/the-certificate-was-valid-the-software-update-was-malicious.html" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="The Certificate Was Valid. The Software Update Was Malicious." />
-  <meta property="og:description" content="A valid certificate can protect an encrypted connection while malicious software travels through it. Secure update architecture must independently verify transport, publisher, package integrity and post-installation behaviour." />
+  <meta property="og:description" content="A valid code-signing certificate proves who signed a package and that it was not modified afterward. It cannot prove the software was safe before signing or that the upstream build pipeline was trustworthy." />
   <meta property="og:url" content="https://jaizanuar.com/articles/the-certificate-was-valid-the-software-update-was-malicious.html" />
   <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/the-certificate-was-valid-the-software-update-was-malicious.webp" />
   <meta property="og:image:width" content="1600" />
   <meta property="og:image:height" content="900" />
-  <meta property="og:image:alt" content="A malicious software package with a red core travels through a verified encrypted update channel toward protected critical infrastructure." />
+  <meta property="og:image:alt" content="Malicious code enters a legitimate software build before a protected signing station applies a valid certificate and releases the compromised update through an official channel." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Certificate Was Valid. The Software Update Was Malicious." />
-  <meta name="twitter:description" content="A valid certificate can protect an encrypted connection while malicious software travels through it. Secure update architecture must independently verify transport, publisher, package integrity and post-installation behaviour." />
+  <meta name="twitter:description" content="A valid code-signing certificate proves who signed a package and that it was not modified afterward. It cannot prove the software was safe before signing or that the upstream build pipeline was trustworthy." />
   <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/the-certificate-was-valid-the-software-update-was-malicious.webp" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Certificate Was Valid. The Software Update Was Malicious.", "description": "A valid certificate can protect an encrypted connection while malicious software travels through it. Secure update architecture must independently verify transport, publisher, package integrity and post-installation behaviour.", "datePublished": "2026-09-04", "dateModified": "2026-09-04", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Software Supply Chain", "Digital Trust"], "keywords": ["Software Supply Chain", "Digital Trust"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/the-certificate-was-valid-the-software-update-was-malicious.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/the-certificate-was-valid-the-software-update-was-malicious.html"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Certificate Was Valid. The Software Update Was Malicious.", "description": "A valid code-signing certificate proves who signed a package and that it was not modified afterward. It cannot prove the software was safe before signing or that the upstream build pipeline was trustworthy.", "datePublished": "2026-09-26", "dateModified": "2026-09-26", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Software Supply Chain", "Digital Trust"], "keywords": ["Software Supply Chain", "Digital Trust"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/the-certificate-was-valid-the-software-update-was-malicious.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/the-certificate-was-valid-the-software-update-was-malicious.html"}</script>
   <link rel="stylesheet" href="../assets/style.css" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
@@ -46,125 +46,113 @@
       <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/software-supply-chain/">Software Supply Chain</a><span aria-hidden="true">›</span><span aria-current="page">The Certificate Was Valid. The Software Update Was Malicious.</span>
     </nav>
     <a class="back-link" href="index.html">← Back to Articles</a>
-    <div class="article-meta">4 September 2026 · Software Supply Chain · Digital Trust · 7 min read</div>
+    <div class="article-meta">26 September 2026 · Software Supply Chain · Digital Trust · 6 min read</div>
     <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
     <h1>The Certificate Was Valid. The Software Update Was Malicious.</h1>
-    <p class="lead">The Virtualizor incident demonstrates why secure transport cannot substitute for software integrity. A valid certificate may authenticate the connection while a compromised update channel delivers malicious code.</p>
+    <p class="lead">Modern software trust requires more than a valid signature. Source integrity, dependency control, build provenance, protected signing infrastructure and post-installation defence must support the final certificate.</p>
     <figure class="article-featured-image">
-      <img src="../assets/images/articles/the-certificate-was-valid-the-software-update-was-malicious.webp" width="1600" height="900" alt="A malicious software package with a red core travels through a verified encrypted update channel toward protected critical infrastructure." fetchpriority="high" decoding="async" />
+      <img src="../assets/images/articles/the-certificate-was-valid-the-software-update-was-malicious.webp" width="1600" height="900" alt="Malicious code enters a legitimate software build before a protected signing station applies a valid certificate and releases the compromised update through an official channel." fetchpriority="high" decoding="async" />
     </figure>
 
-<p>A secure connection does not guarantee secure software.</p>
-<p>In late August 2026, attackers reportedly used a Border Gateway Protocol hijack to divert internet traffic intended for Softaculous infrastructure. The affected addresses included the update service used by Virtualizor, a platform for managing virtual private servers.</p>
-<p>The attackers did not simply create a convincing imitation of the vendor’s website.</p>
-<p>They obtained a valid TLS certificate for the diverted infrastructure. Systems connecting through HTTPS therefore received no certificate warning. During the incident window, some Virtualizor installations reportedly downloaded a modified software package from the attacker-controlled server.</p>
-<p>The connection was encrypted.</p>
-<p>The certificate was valid.</p>
-<p>The software update was malicious.</p>
-<p>According to <a href="https://www.virtualizor.com/blog/security-incident-bgp-hijacking/" target="_blank" rel="noopener noreferrer">Virtualizor’s incident disclosure</a>, only a small number of installations were confirmed to have received the malicious package. However, the company could not produce a definitive list of affected systems because requests diverted to the attacker never reached its own infrastructure or logs.</p>
-<p>The incident exposes an important weakness in how organisations think about digital trust.</p>
-<h2>HTTPS Protected the Wrong Thing</h2>
-<p>TLS performs an essential function.</p>
-<p>It encrypts communication between a client and a server. It also helps the client confirm that the server controls the expected domain.</p>
-<p>But TLS does not prove that every file delivered by that server is safe.</p>
-<p>In this incident, the attacker allegedly manipulated internet routing so traffic was directed somewhere it was never supposed to go. A valid certificate then made that diverted connection appear legitimate.</p>
-<p>The certificate did what it was designed to do.</p>
-<p>The security failure occurred because too much trust was placed in what the certificate represented.</p>
-<p>A valid certificate confirmed that the connection was encrypted and associated with the requested domain at that moment. It did not prove that the software package came from the vendor’s authorised build process.</p>
-<p>It did not prove that the package had not been modified.</p>
-<p>It did not prove that the code was safe to execute.</p>
-<p>Most importantly, it did not prove that the system at the other end of the connection was still under the vendor’s control.</p>
-<h2>Transport Security Is Not Software Integrity</h2>
-<p>Secure software distribution requires at least two different forms of trust.</p>
-<p>The first is transport security.</p>
-<p>This protects the connection used to retrieve the software.</p>
-<p>The second is software integrity.</p>
-<p>This verifies that the package was produced or approved by the expected publisher and has not been altered since it was released.</p>
-<p>These controls address different risks.</p>
-<p>If software integrity depends only on HTTPS, the update process is effectively saying:</p>
-<blockquote><p>If the connection looks legitimate, trust whatever arrives through it.</p></blockquote>
-<p>That assumption becomes dangerous when DNS, routing, certificate issuance, hosting infrastructure or the update server itself can be compromised.</p>
-<p>A stronger update mechanism cryptographically signs the package. The client then verifies that signature using a trusted public key before installation.</p>
-<p>If the signature is missing, invalid or associated with an unapproved publisher, the update must be rejected even when it was downloaded through a perfectly valid HTTPS connection.</p>
-<p>Encryption protects the journey.</p>
-<p>Digital signing protects the package.</p>
-<p>A mature architecture needs both.</p>
-<h2>Automatic Updates Create Privileged Trust</h2>
-<p>Automatic updates are usually treated as good security practice.</p>
-<p>They reduce the time between vulnerability disclosure and remediation. They help organisations remove known weaknesses without waiting for administrators to perform every installation manually.</p>
-<p>But an update mechanism also possesses significant privilege.</p>
-<p>It can download software.</p>
-<p>It can replace trusted files.</p>
-<p>It can modify configurations.</p>
-<p>It may execute code as root or another highly privileged account.</p>
-<p>That makes the update channel part of the privileged security architecture.</p>
-<p>An attacker who controls it may not need to bypass endpoint protection, exploit an application or steal an administrator’s password. The trusted update process can deliver and execute the attacker’s code for them.</p>
-<p>This is why software distribution infrastructure must be protected with the same seriousness as identity systems, privileged-access platforms and deployment pipelines.</p>
-<p>As discussed previously in <a href="the-tools-we-trust-to-secure-the-supply-chain-can-become-the-supply-chain-risk.html">The Tools We Trust To Secure The Supply Chain Can Become The Supply Chain Risk</a>, concentrated trust creates concentrated consequences. A tool connected to many systems can become an efficient path into all of them when that trust is compromised.</p>
-<h2>A Trusted Source Is Not a Permanent Condition</h2>
-<p>Organisations often approve software sources once.</p>
-<p>The vendor is assessed.</p>
-<p>The domain is allowlisted.</p>
-<p>The certificate is valid.</p>
-<p>The update service is permitted through the firewall.</p>
-<p>From that point onward, the source may be treated as permanently trusted.</p>
-<p>But trust is not a permanent attribute.</p>
-<p>A legitimate vendor can be compromised.</p>
-<p>A valid domain can be redirected.</p>
-<p>A trusted certificate can be issued during an infrastructure attack.</p>
-<p>A genuine update service can distribute a malicious package.</p>
-<p>A previously approved supplier can become the path through which an attacker enters.</p>
-<p>Trust should therefore be continuously verified at multiple layers. The identity of the server, integrity of the package, authority of the publisher and behaviour of the installed software should not depend on one shared assumption.</p>
-<h2>What Security Architecture Should Require</h2>
-<p>Critical software update processes should include several independent controls:</p>
-<ul>
-  <li>Cryptographic signing of every package</li>
-  <li>Mandatory signature verification before installation</li>
-  <li>Protection of signing keys through tightly controlled hardware or services</li>
-  <li>Separation between build, signing and distribution environments</li>
-  <li>Approved publisher and version policies</li>
-  <li>Tamper-resistant logging of update activity</li>
-  <li>Monitoring for unexpected routing, DNS and certificate changes</li>
-  <li>Staged deployment before updates reach critical systems</li>
-  <li>Behavioural monitoring after installation</li>
-  <li>A tested method to revoke compromised signing keys and packages</li>
-</ul>
-<p>For highly privileged infrastructure, organisations should also determine whether an update can be installed automatically or requires additional validation.</p>
-<p>A hypervisor management platform, identity system, security appliance or orchestration tool should not necessarily inherit the same update policy as an ordinary desktop application.</p>
-<p>The greater the privilege of the software, the stronger the verification required before new code is allowed to execute.</p>
-<h2>Detection Must Extend Beyond the Vendor</h2>
-<p>This incident also demonstrates the limitation of relying entirely on a supplier’s telemetry.</p>
-<p>If traffic is diverted before it reaches the legitimate service, the vendor may never see the affected request. Its logs can appear normal while customers are communicating with attacker-controlled infrastructure.</p>
-<p>Customers therefore need their own evidence.</p>
-<p>Which systems checked for updates?</p>
-<p>What packages were downloaded?</p>
-<p>What hashes were installed?</p>
-<p>Which processes were created afterward?</p>
-<p>Were privileged accounts, SSH keys, services or scheduled tasks changed?</p>
-<p>Did affected systems establish unexpected outbound connections?</p>
-<p>Supplier assurance cannot replace customer visibility.</p>
-<p>The vendor may investigate the source of the incident, but each organisation must determine whether its own systems were exposed and whether trust can still be restored.</p>
-<h2>Removing the Malware May Not Restore Trust</h2>
-<p>When malicious code gains root-level access, deleting the known files is not necessarily enough.</p>
-<p>The attacker may have created additional accounts, installed alternative persistence, captured credentials or modified other trusted components.</p>
-<p>A scanner can identify known indicators.</p>
-<p>It cannot prove that an attacker with complete administrative control made no other changes.</p>
-<p>For systems confirmed to have suffered root compromise, rebuilding from a known-good source may be more reliable than attempting to clean the existing installation. Credentials, API keys and administrative secrets accessible from the affected system should also be treated as potentially exposed.</p>
-<p>Containment removes known malicious activity.</p>
-<p>Recovery must restore confidence in the system.</p>
-<p>Those are not the same outcome.</p>
-<h2>Final Thought</h2>
-<p>The lesson from the Virtualizor incident is not that TLS has failed.</p>
-<p>TLS remains necessary.</p>
-<p>The lesson is that one valid security control should never be mistaken for complete trust.</p>
-<p>A certificate can confirm an encrypted connection without confirming the integrity of the software travelling through it.</p>
-<p>An approved vendor can remain legitimate while part of its delivery path is compromised.</p>
-<p>An automatic update can close vulnerabilities while also possessing enough privilege to create a much larger breach.</p>
-<p>Security architecture must verify the connection, the publisher, the package and the behaviour that follows installation.</p>
-<p>The certificate was valid.</p>
-<p>The software update was malicious.</p>
-<p>Between those two facts lies the difference between trusting a connection and engineering digital trust.</p>
-<p>Question assumptions. Share knowledge. Build trust.</p>
+<p>For years, one of the basic rules of secure software distribution has been simple: verify the signature.</p>
+<p>If the software is digitally signed by a trusted vendor, the certificate is valid and the package has not been modified after signing, we tend to trust the update.</p>
+<p>That model still matters.</p>
+<p>But modern software supply-chain attacks expose an uncomfortable problem.</p>
+<p><strong>A valid signature can prove who signed the software. It cannot prove that the software was safe before it was signed.</strong></p>
+<p>That distinction is becoming increasingly important.</p>
+<h2>Trusting The Signature Is Not The Same As Trusting The Software</h2>
+<p>Code signing provides something valuable. It helps verify authenticity and integrity. If a legitimate vendor signs a software package, the receiving system can confirm that the package came through the expected signing process and has not been altered afterwards.</p>
+<p>But imagine the compromise happens earlier.</p>
+<p>An attacker gains access to the vendor&#39;s development environment. They manipulate source code, poison a dependency, modify the build process or compromise a CI/CD pipeline.</p>
+<p>The malicious component then enters the legitimate build.</p>
+<p>The vendor signs the resulting software with a perfectly valid certificate.</p>
+<p>From the customer&#39;s perspective, everything may look normal.</p>
+<p>The certificate is trusted.</p>
+<p>The signature validates.</p>
+<p>The update arrives through the official channel.</p>
+<p>And the software is malicious.</p>
+<p>The cryptography did not fail.</p>
+<p>The trust process did.</p>
+<h2>The Build Pipeline Is Part Of The Security Perimeter</h2>
+<p>This changes how we should think about software security architecture.</p>
+<p>Many organisations focus heavily on securing the application after deployment. They protect endpoints, monitor networks, scan vulnerabilities and control privileged access.</p>
+<p>But increasingly, some of the most important security decisions happen before the software reaches production.</p>
+<p>Source repositories.</p>
+<p>Build servers.</p>
+<p>Package registries.</p>
+<p>CI/CD pipelines.</p>
+<p>Dependency repositories.</p>
+<p>Signing infrastructure.</p>
+<p>Release platforms.</p>
+<p>These systems are not simply development tooling anymore.</p>
+<p>They are part of the software trust chain.</p>
+<p>If an attacker compromises that chain, they may not need to bypass security controls on thousands of customer systems individually.</p>
+<p>They can attempt to make trusted systems distribute the malicious software for them.</p>
+<h2>A Trusted Update Channel Can Become A Privileged Attack Path</h2>
+<p>Automatic software updates are designed for good reasons.</p>
+<p>Security patches need to be deployed quickly. Applications require maintenance. Customers expect fixes without complicated manual processes.</p>
+<p>The architecture therefore gives update mechanisms considerable trust.</p>
+<p>Sometimes they can download software, execute installers, restart services and replace privileged components.</p>
+<p>That makes the update channel powerful.</p>
+<p>And anything with that level of authority deserves to be treated as a privileged attack path.</p>
+<p>The question should not only be:</p>
+<p><em>“Is this update signed?”</em></p>
+<p>We should also ask:</p>
+<p><em>“What evidence do we have about how this software was produced?”</em></p>
+<p>That is where software provenance becomes increasingly important.</p>
+<h2>Provenance Answers A Different Question</h2>
+<p>An SBOM can tell us what components exist inside software.</p>
+<p>A digital signature can tell us who signed the package and whether it changed afterwards.</p>
+<p>Software provenance goes further.</p>
+<p>It helps answer questions such as: Where did this build originate? Which source produced it? Which dependencies were included? What build process created the binary? Which environment performed the build? Who authorised the release?</p>
+<p>These are different forms of evidence.</p>
+<p>And modern software security increasingly needs all of them.</p>
+<p>Trust should not depend on one certificate at the final stage of a long supply chain.</p>
+<h2>The Signing Infrastructure Is A Crown Jewel</h2>
+<p>There is another architectural implication.</p>
+<p>If attackers can compromise the signing process itself, they may be able to make malicious software appear legitimate.</p>
+<p>Signing keys should therefore be treated as some of the most sensitive credentials in the software delivery environment.</p>
+<p>They should not sit casually inside build scripts or broadly accessible developer systems.</p>
+<p>Access should be tightly controlled. Signing operations should be auditable. Keys should be protected using appropriate cryptographic key-management infrastructure. Release processes should require strong separation of duties.</p>
+<p>Ideally, compromising a developer workstation should not automatically provide a path to signing production software.</p>
+<p>This is the same principle we apply elsewhere in security architecture.</p>
+<p>A single compromise should not automatically compromise the entire trust chain.</p>
+<h2>Security Reviews Need To Look Upstream</h2>
+<p>Enterprise software assessments often focus on the software itself.</p>
+<p>Does it support encryption?</p>
+<p>Does it integrate with SSO?</p>
+<p>Has the vendor performed penetration testing?</p>
+<p>Does the product contain known vulnerabilities?</p>
+<p>Those questions still matter.</p>
+<p>But supply-chain risk requires another set of questions.</p>
+<p>How does the vendor secure its development environment? How are dependencies managed? How are production builds isolated? How are releases authorised? How are signing keys protected? Can the vendor provide evidence of build provenance?</p>
+<p>For critical software, those questions should become part of architecture and third-party security assessment.</p>
+<p>Because by the time malicious code arrives as a perfectly signed package, many opportunities to stop the attack have already passed.</p>
+<h2>Defence In Depth Must Continue After Verification</h2>
+<p>Even trusted software should not automatically receive unlimited trust after installation.</p>
+<p>Application allowlisting, endpoint monitoring, behavioural detection, network segmentation and least privilege still matter.</p>
+<p>Why?</p>
+<p>Because provenance can fail.</p>
+<p>Certificates can be compromised.</p>
+<p>Build pipelines can be breached.</p>
+<p>Trusted vendors can make mistakes.</p>
+<p>Security architecture should therefore assume that even something arriving through a trusted channel may eventually behave unexpectedly.</p>
+<p>The signature should contribute to the trust decision.</p>
+<p>It should not end the trust decision.</p>
+<h2>Final Thoughts</h2>
+<p>Digital signatures remain essential.</p>
+<p>Code signing remains essential.</p>
+<p>Software update mechanisms remain essential.</p>
+<p>The mistake is assuming that any one of them can answer every question about trust.</p>
+<p>A valid certificate tells us something important.</p>
+<p>But it does not tell us everything.</p>
+<p>As software supply chains become more complex, organisations will need stronger evidence about how software was developed, built, signed and distributed.</p>
+<p>The future of software trust will therefore depend less on a single signal and more on a chain of verifiable evidence.</p>
+<p>Because one day the certificate may be valid.</p>
+<p>The vendor may be trusted.</p>
+<p>The update may arrive through the official channel.</p>
+<p>And the software may still be malicious.</p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
 
     <aside class="author-card" aria-label="About the author">
       <h2>Written by Jaiz Anuar</h2>

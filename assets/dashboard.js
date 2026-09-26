@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The Certificate Was Valid. The Software Update Was Malicious.", "2026-09-26", "/articles/the-certificate-was-valid-the-software-update-was-malicious.html"],
     ["If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox", "2026-09-25", "/articles/if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html"],
     ["Security Products Should Be Tested Against The Outcome, Not The Alert", "2026-09-20", "/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.html"],
     ["The Employee Left. The Access Did Not.", "2026-09-19", "/articles/the-employee-left-the-access-did-not.html"],
@@ -15,7 +16,6 @@
     ["MFA Did Not Fail. The User Was Convinced To Hand Over The Session.", "2026-09-09", "/articles/mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html"],
     ["If a Security Scan Can Take Down Your System, What Will a Real Attacker Do?", "2026-09-08", "/articles/if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html"],
     ["Malaysia’s Hidden Cybersecurity Advantage Is Not Technical", "2026-09-07", "/articles/malaysias-hidden-cybersecurity-advantage-is-not-technical.html"],
-    ["The Certificate Was Valid. The Software Update Was Malicious.", "2026-09-04", "/articles/the-certificate-was-valid-the-software-update-was-malicious.html"],
     ["Industrial Security Assumed Attackers Needed Rare Expertise. AI Is Changing That Assumption.", "2026-09-03", "/articles/industrial-security-assumed-attackers-needed-rare-expertise-ai-is-changing-that-assumption.html"],
     ["The SOC Detected the Attack. The Organisation Still Lost the Domain.", "2026-09-02", "/articles/the-soc-detected-the-attack-the-organisation-still-lost-the-domain.html"],
     ["Too Experienced to Hire, Too Young to Retire: The Cybersecurity Career Trap for Gen X", "2026-09-01", "/articles/too-experienced-to-hire-too-young-to-retire-the-cybersecurity-career-trap-for-gen-x.html"],

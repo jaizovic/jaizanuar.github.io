@@ -4,6 +4,7 @@
   <url><loc>https://jaizanuar.com/about/</loc></url>
   <url><loc>https://jaizanuar.com/articles/</loc></url>
   <url><loc>https://jaizanuar.com/topics/</loc></url>
+  <url><loc>https://jaizanuar.com/articles/the-certificate-was-valid-the-software-update-was-malicious.html</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://jaizanuar.com/articles/if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://jaizanuar.com/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.html</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://jaizanuar.com/articles/the-employee-left-the-access-did-not.html</loc><lastmod>2026-09-19</lastmod></url>
@@ -14,7 +15,6 @@
   <url><loc>https://jaizanuar.com/articles/mfa-did-not-fail-the-user-was-convinced-to-hand-over-the-session.html</loc><lastmod>2026-09-09</lastmod></url>
   <url><loc>https://jaizanuar.com/articles/if-a-security-scan-can-take-down-your-system-what-will-a-real-attacker-do.html</loc><lastmod>2026-09-08</lastmod></url>
   <url><loc>https://jaizanuar.com/articles/malaysias-hidden-cybersecurity-advantage-is-not-technical.html</loc><lastmod>2026-09-07</lastmod></url>
-  <url><loc>https://jaizanuar.com/articles/the-certificate-was-valid-the-software-update-was-malicious.html</loc><lastmod>2026-09-04</lastmod></url>
   <url><loc>https://jaizanuar.com/articles/industrial-security-assumed-attackers-needed-rare-expertise-ai-is-changing-that-assumption.html</loc><lastmod>2026-09-03</lastmod></url>
   <url><loc>https://jaizanuar.com/articles/the-soc-detected-the-attack-the-organisation-still-lost-the-domain.html</loc><lastmod>2026-09-02</lastmod></url>
   <url><loc>https://jaizanuar.com/articles/too-experienced-to-hire-too-young-to-retire-the-cybersecurity-career-trap-for-gen-x.html</loc><lastmod>2026-09-01</lastmod></url>
@@ -81,7 +81,7 @@
   <url><loc>https://jaizanuar.com/topics/data-governance/</loc><lastmod>2026-07-10</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/data-security/</loc><lastmod>2026-07-31</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/deception-technology/</loc><lastmod>2026-07-18</lastmod></url>
-  <url><loc>https://jaizanuar.com/topics/digital-trust/</loc><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://jaizanuar.com/topics/digital-trust/</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/emerging-technology/</loc><lastmod>2026-08-19</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/governance/</loc><lastmod>2026-09-19</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/identity-security/</loc><lastmod>2026-09-19</lastmod></url>
@@ -90,7 +90,7 @@
   <url><loc>https://jaizanuar.com/topics/privacy/</loc><lastmod>2026-07-10</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/security-architecture/</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/security-operations/</loc><lastmod>2026-09-20</lastmod></url>
-  <url><loc>https://jaizanuar.com/topics/software-supply-chain/</loc><lastmod>2026-09-04</lastmod></url>
+  <url><loc>https://jaizanuar.com/topics/software-supply-chain/</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/threat-detection/</loc><lastmod>2026-08-16</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/threat-intelligence/</loc><lastmod>2024-05-23</lastmod></url>
   <url><loc>https://jaizanuar.com/topics/zero-trust/</loc><lastmod>2026-07-04</lastmod></url>
