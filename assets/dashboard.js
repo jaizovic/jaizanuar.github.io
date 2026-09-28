@@ -7,6 +7,7 @@
   var articles = [
     ["The Certificate Was Valid. The Software Update Was Malicious.", "2026-09-26", "/articles/the-certificate-was-valid-the-software-update-was-malicious.html"],
     ["If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox", "2026-09-25", "/articles/if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html"],
+    ["AI Security Architecture: A Practical Enterprise Framework — Part 1", "2026-09-23", "/articles/ai-security-architecture-a-practical-enterprise-framework-part-1.html"],
     ["Security Products Should Be Tested Against The Outcome, Not The Alert", "2026-09-20", "/articles/security-products-should-be-tested-against-the-outcome-not-the-alert.html"],
     ["The Employee Left. The Access Did Not.", "2026-09-19", "/articles/the-employee-left-the-access-did-not.html"],
     ["The AI Gateway Should Govern Trust, Tokens And Tools", "2026-09-16", "/articles/the-ai-gateway-should-govern-trust-tokens-and-tools.html"],
