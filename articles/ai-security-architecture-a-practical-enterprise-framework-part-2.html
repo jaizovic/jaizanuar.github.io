@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Security Architecture: A Practical Enterprise Framework — Part 2 | Jaiz Anuar</title>
+  <meta name="description" content="A practical enterprise framework for operating AI securely through complete logging, behavioural monitoring, trust-boundary controls, human approval, resilient failure design and lifecycle governance." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/ai-security-architecture-a-practical-enterprise-framework-part-2.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="AI Security Architecture: A Practical Enterprise Framework — Part 2" />
+  <meta property="og:description" content="A practical enterprise framework for operating AI securely through complete logging, behavioural monitoring, trust-boundary controls, human approval, resilient failure design and lifecycle governance." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/ai-security-architecture-a-practical-enterprise-framework-part-2.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/ai-security-architecture-a-practical-enterprise-framework-part-2.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="Security analysts continuously monitor an enterprise AI system while approval gates, behavioural controls and containment boundaries govern data, tools and business actions." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Security Architecture: A Practical Enterprise Framework — Part 2" />
+  <meta name="twitter:description" content="A practical enterprise framework for operating AI securely through complete logging, behavioural monitoring, trust-boundary controls, human approval, resilient failure design and lifecycle governance." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/ai-security-architecture-a-practical-enterprise-framework-part-2.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI Security Architecture: A Practical Enterprise Framework — Part 2", "description": "A practical enterprise framework for operating AI securely through complete logging, behavioural monitoring, trust-boundary controls, human approval, resilient failure design and lifecycle governance.", "datePublished": "2026-09-28", "dateModified": "2026-09-28", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["AI Security", "Security Architecture"], "keywords": ["AI Security", "Security Architecture"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/ai-security-architecture-a-practical-enterprise-framework-part-2.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/ai-security-architecture-a-practical-enterprise-framework-part-2.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/ai-security/">AI Security</a><span aria-hidden="true">›</span><span aria-current="page">AI Security Architecture: A Practical Enterprise Framework — Part 2</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">28 September 2026 · AI Security · Security Architecture · 6 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>AI Security Architecture: A Practical Enterprise Framework — Part 2</h1>
+    <p class="lead">AI security architecture must remain effective after deployment. Continuous observability, constrained authority, human approval, resilience testing and lifecycle governance keep changing AI systems within their intended trust boundaries.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/ai-security-architecture-a-practical-enterprise-framework-part-2.webp" width="1600" height="900" alt="Security analysts continuously monitor an enterprise AI system while approval gates, behavioural controls and containment boundaries govern data, tools and business actions." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>Good AI security architecture does not end when the design diagram is approved. The real test begins when the system enters production.</p>
+<p>Models change. Agents gain new capabilities. MCP servers are added. Business teams connect new data sources. Prompts evolve. Vendors update APIs and new models appear. An architecture that was secure six months ago may no longer represent the system that exists today.</p>
+<p>This is why AI security must be treated as an operating model, not a one-time design exercise.</p>
+<p><a href="ai-security-architecture-a-practical-enterprise-framework-part-1.html">Part 1 of this practical enterprise framework</a> established the trust model, identity, data, gateway, tool and boundary principles that shape the design. Part 2 focuses on how those principles must operate in production.</p>
+<h2>Logging Must Capture More Than The Prompt</h2>
+<p>Traditional application logging may record who accessed a system and what transaction occurred. AI systems need more context.</p>
+<p>Security teams should be able to determine who submitted the request, which model answered, which tools were called, which MCP server was used, what data was retrieved, what identity the AI used, whether the response was served from cache and whether the AI attempted an unauthorised action.</p>
+<p>Without this information, incident investigation becomes difficult. A security team may know that an AI agent performed an action without being able to reconstruct why or how.</p>
+<p>AI activity should therefore be observable as a chain of decisions and actions, not simply a collection of prompts and responses.</p>
+<h2>Monitor Behaviour, Not Just Availability</h2>
+<p>Traditional monitoring often asks whether a system is available.</p>
+<p>AI monitoring needs another dimension: is the agent behaving as expected?</p>
+<p>An AI assistant suddenly making thousands of API calls may indicate misuse. An agent that normally reads documents but begins requesting write permissions may indicate a compromised workflow. A model retrieving unusually large volumes of confidential data may represent abuse even if every individual request appears legitimate.</p>
+<p>AI security monitoring therefore needs behavioural context. The question is not only whether the request succeeded, but whether the request should have happened at all.</p>
+<h2>Treat Prompt Injection As A Trust-Boundary Problem</h2>
+<p>Prompt injection is often discussed as though it were only a model problem.</p>
+<p>Architecturally, it is more useful to think of it as a trust-boundary problem.</p>
+<p>The model may receive instructions from users, documents, websites, emails or external data sources. Not all of those instructions should be trusted equally.</p>
+<p>A document retrieved from the internet should not be able to override enterprise policy. An email should not be able to instruct an agent to transfer money. Retrieved content should therefore be treated as untrusted input.</p>
+<p>The architecture must separate data from authority.</p>
+<p>Just because the AI can read something does not mean the content should control what the AI is allowed to do.</p>
+<h2>Human Approval Still Matters</h2>
+<p>Not every AI action should be autonomous.</p>
+<p>Some actions have limited impact, such as summarising a document, searching a knowledge base or drafting an email.</p>
+<p>Others have consequences. Changing a firewall rule, creating a privileged account, approving a payment, deleting customer information or deploying code should not be treated the same way.</p>
+<p>High-impact actions should have clear approval boundaries. Human-in-the-loop should not be treated as an inconvenience that disappears once the model becomes better. It is a control.</p>
+<p>The more consequential the action, the stronger the independent approval should be.</p>
+<h2>Design For Model Failure</h2>
+<p>AI systems fail differently from traditional deterministic applications.</p>
+<p>A model may produce an incorrect answer with complete confidence. It may misunderstand an instruction, choose the wrong tool, repeatedly call an API or retrieve inappropriate data.</p>
+<p>The architecture should therefore assume model failure is normal.</p>
+<p>Rate limits can prevent runaway activity. Tool permissions can limit impact. Transaction limits can restrict financial exposure. Network segmentation can contain movement. Approval workflows can stop high-risk actions. Fallback models can maintain availability.</p>
+<p>The objective is not to make the model perfect.</p>
+<p>It is to make model failure survivable.</p>
+<h2>Protect The AI Supply Chain</h2>
+<p>Enterprise AI depends on more than the model.</p>
+<p>It depends on model providers, libraries, vector databases, embeddings, MCP servers, plugins, APIs, prompt templates and external datasets.</p>
+<p>Each dependency introduces trust.</p>
+<p>A compromised MCP server could manipulate what an AI agent sees. A poisoned knowledge source could influence decisions. A compromised model endpoint could expose confidential prompts. A malicious dependency could gain access to credentials.</p>
+<p>AI security therefore becomes another software supply-chain problem.</p>
+<p>Organisations should maintain an inventory of approved models, agents, MCP servers, tools and external AI services because you cannot govern what you do not know exists.</p>
+<h2>Build Lifecycle Governance Around AI</h2>
+<p>AI systems evolve quickly, and that creates a lifecycle problem.</p>
+<p>Who approves a new model? Who reviews a new MCP integration? Who decides whether a model can process confidential data? Who owns the AI agent? Who removes access when the application is retired? Who reviews permissions when the agent’s purpose changes?</p>
+<p>These are governance questions.</p>
+<p>Every enterprise AI capability should have an owner, a defined purpose, authorised data access, approved tools and a review cycle. Temporary experiments should also have expiry dates because pilots have a habit of quietly becoming production systems.</p>
+<h2>Test The Architecture, Not Just The Model</h2>
+<p>AI security testing should go beyond asking whether the model produces harmful output.</p>
+<p>Test the boundaries around it.</p>
+<p>Can the agent access systems outside its authorised scope? Can it call an MCP server it should not reach? Can a malicious document manipulate tool execution? Can one user retrieve another user’s information? Can token limits be bypassed? What happens if the primary AI provider becomes unavailable? What happens if the model begins calling the same tool repeatedly?</p>
+<p>These are architecture tests.</p>
+<p>The objective is not merely to determine whether the model behaves safely. The objective is to determine whether the enterprise remains safe when it does not.</p>
+<h2>Final Thoughts</h2>
+<p>AI security architecture requires a different mindset.</p>
+<p>Do not protect only the model. Protect the identities around it, the data moving through it, the tools it can reach and the actions it performs. Limit the consequences when it fails and govern the entire lifecycle.</p>
+<p>A practical enterprise framework therefore comes down to a simple principle:</p>
+<p>The AI should never have more trust, access or authority than the business outcome requires.</p>
+<p>The model can be intelligent.</p>
+<p>The architecture must still be disciplined.</p>
+<p>Because the most important question in enterprise AI is not what the model is capable of doing.</p>
+<p>It is what the organisation has allowed it to do.</p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html">If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox</a><span>25 September 2026</span></li>
+        <li><a href="ai-security-architecture-a-practical-enterprise-framework-part-1.html">AI Security Architecture: A Practical Enterprise Framework — Part 1</a><span>23 September 2026</span></li>
+        <li><a href="ai-agents-need-security-boundaries-not-just-safety-guardrails.html">AI Agents Need Security Boundaries, Not Just Safety Guardrails</a><span>7 August 2026</span></li>
+        <li><a href="security-products-should-be-tested-against-the-outcome-not-the-alert.html">Security Products Should Be Tested Against The Outcome, Not The Alert</a><span>20 September 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fai-security-architecture-a-practical-enterprise-framework-part-2.html" target="_blank" rel="noopener noreferrer" aria-label="Share AI Security Architecture: A Practical Enterprise Framework — Part 2 on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fai-security-architecture-a-practical-enterprise-framework-part-2.html" target="_blank" rel="noopener noreferrer" aria-label="Share AI Security Architecture: A Practical Enterprise Framework — Part 2 on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fai-security-architecture-a-practical-enterprise-framework-part-2.html&amp;text=AI%20Security%20Architecture%3A%20A%20Practical%20Enterprise%20Framework%20%E2%80%94%20Part%202" target="_blank" rel="noopener noreferrer" aria-label="Share AI Security Architecture: A Practical Enterprise Framework — Part 2 on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=AI%20Security%20Architecture%3A%20A%20Practical%20Enterprise%20Framework%20%E2%80%94%20Part%202%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fai-security-architecture-a-practical-enterprise-framework-part-2.html" target="_blank" rel="noopener noreferrer" aria-label="Share AI Security Architecture: A Practical Enterprise Framework — Part 2 on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/ai-security-architecture-a-practical-enterprise-framework-part-2.html" aria-label="Copy link to AI Security Architecture: A Practical Enterprise Framework — Part 2" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
