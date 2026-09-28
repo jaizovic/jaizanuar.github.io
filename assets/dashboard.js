@@ -6,6 +6,7 @@
   var articleLimit = 20;
   var articles = [
     ["AI Security Architecture: A Practical Enterprise Framework — Part 2", "2026-09-28", "/articles/ai-security-architecture-a-practical-enterprise-framework-part-2.html"],
+    ["Every Trust Relationship Is An Attack Path", "2026-09-27", "/articles/every-trust-relationship-is-an-attack-path.html"],
     ["The Certificate Was Valid. The Software Update Was Malicious.", "2026-09-26", "/articles/the-certificate-was-valid-the-software-update-was-malicious.html"],
     ["If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox", "2026-09-25", "/articles/if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html"],
     ["AI Security Architecture: A Practical Enterprise Framework — Part 1", "2026-09-23", "/articles/ai-security-architecture-a-practical-enterprise-framework-part-1.html"],

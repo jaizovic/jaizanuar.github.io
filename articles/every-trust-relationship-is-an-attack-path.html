@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Every Trust Relationship Is An Attack Path | Jaiz Anuar</title>
+  <meta name="description" content="Every identity, API, machine credential, AI tool, software update and vendor connection creates trust—and every trust relationship can become an attack path when it is invisible, excessive or compromised." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/every-trust-relationship-is-an-attack-path.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Every Trust Relationship Is An Attack Path" />
+  <meta property="og:description" content="Every identity, API, machine credential, AI tool, software update and vendor connection creates trust—and every trust relationship can become an attack path when it is invisible, excessive or compromised." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/every-trust-relationship-is-an-attack-path.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/every-trust-relationship-is-an-attack-path.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="Trusted connections link users, cloud services, APIs, AI agents and databases while one compromised trust path spreads toward downstream systems." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Every Trust Relationship Is An Attack Path" />
+  <meta name="twitter:description" content="Every identity, API, machine credential, AI tool, software update and vendor connection creates trust—and every trust relationship can become an attack path when it is invisible, excessive or compromised." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/every-trust-relationship-is-an-attack-path.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Every Trust Relationship Is An Attack Path", "description": "Every identity, API, machine credential, AI tool, software update and vendor connection creates trust—and every trust relationship can become an attack path when it is invisible, excessive or compromised.", "datePublished": "2026-09-27", "dateModified": "2026-09-27", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Security Architecture", "Digital Trust"], "keywords": ["Security Architecture", "Digital Trust"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/every-trust-relationship-is-an-attack-path.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/every-trust-relationship-is-an-attack-path.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/security-architecture/">Security Architecture</a><span aria-hidden="true">›</span><span aria-current="page">Every Trust Relationship Is An Attack Path</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">27 September 2026 · Security Architecture · Digital Trust · 6 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>Every Trust Relationship Is An Attack Path</h1>
+    <p class="lead">Security architecture must read every connection as a trust decision: who trusts whom, why the relationship exists, how much authority it grants, how long it lasts and what happens when that trust is abused.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/every-trust-relationship-is-an-attack-path.webp" width="1600" height="900" alt="Trusted connections link users, cloud services, APIs, AI agents and databases while one compromised trust path spreads toward downstream systems." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>Architecture diagrams are full of arrows.</p>
+<p>An application connects to a database. A user authenticates to a cloud service. An API calls another API. A software platform retrieves an update. An AI agent connects to an MCP server.</p>
+<p>We normally read those arrows as connectivity.</p>
+<p>A security architect should read them differently.</p>
+<p><strong>Every arrow represents trust.</strong></p>
+<p>System A trusts System B to accept something from it. That something may be an identity, a token, data, a command, software, or an instruction. Once that trust exists, it can potentially be abused.</p>
+<p>The objective is not to eliminate trust. Modern technology cannot operate without it. The architectural challenge is to understand where trust exists, why it exists, how much authority it provides and what happens when that trust is wrong.</p>
+<h2>Identity Establishes Trust</h2>
+<p>Many modern trust relationships begin with identity.</p>
+<p>A user presents credentials. A workload presents a certificate. An application uses a service identity. An API presents a token. Once the identity has been validated, another system decides what it should be allowed to do.</p>
+<p>This is why I previously argued that <a href="https://jaizanuar.com/articles/the-new-security-perimeter-is-no-longer-the-network-it-is-identity.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">The New Security Perimeter Is No Longer The Network. It Is Identity.</a></p>
+<p>The network may provide connectivity, but identity increasingly determines trust.</p>
+<p>That makes compromised identity especially dangerous. The attacker does not necessarily need to break through the system. If they can successfully inherit an existing trust relationship, the system may willingly provide access.</p>
+<h2>Machine-To-Machine Trust Is Growing Faster</h2>
+<p>The same principle applies when no human is involved.</p>
+<p>Applications communicate through APIs. Automation platforms call cloud services. CI/CD pipelines deploy workloads. AI agents invoke tools. These interactions depend on API keys, service accounts, certificates and access tokens.</p>
+<p>As discussed in <strong>The API Key Is Becoming The New Password</strong>, an API key is not merely configuration. It represents a machine-to-machine trust relationship.</p>
+<p>If that credential is stolen, the attacker inherits whatever authority the receiving system associates with it.</p>
+<p>The architectural question should therefore not only be, <em>“Is the key encrypted?”</em> It should also be: What can this identity access? How long does that trust remain valid? Can it be revoked? Can abnormal use be detected?</p>
+<p>Long-lived trust creates long-lived opportunity.</p>
+<h2>Trust Should Expire When The Relationship Ends</h2>
+<p>Human identity creates another version of the same problem.</p>
+<p>An employee leaves. The corporate account is disabled. But a personal access token continues working. A GitHub account remains authorised. An SSH key is still present. A SaaS platform was never connected to central identity governance.</p>
+<p>I explored this in <strong>The Employee Left. The Access Did Not.</strong></p>
+<p>The deeper architectural problem is not merely incomplete offboarding. It is <strong>trust that survived longer than the business relationship that justified it</strong>.</p>
+<p>Trust should have a lifecycle.</p>
+<p>It should be established for a reason, reviewed while it remains necessary and removed when that reason disappears.</p>
+<p>Otherwise, organisations gradually accumulate trust relationships that nobody remembers creating but attackers may eventually discover.</p>
+<h2>AI Is Creating New Trust Relationships</h2>
+<p>AI makes this problem even more interesting.</p>
+<p>An enterprise AI system may involve a user, an AI Gateway, a model provider, several MCP servers, internal APIs, databases and business applications.</p>
+<p>Each connection creates another trust relationship.</p>
+<p>In <a href="https://jaizanuar.com/articles/the-ai-gateway-should-govern-trust-tokens-and-tools.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">The AI Gateway Should Govern Trust, Tokens And Tools</a>, I discussed using the gateway as a control point for deciding which models, tools and MCP servers the AI should be allowed to reach.</p>
+<p>That becomes increasingly important as AI moves from answering questions to performing actions.</p>
+<p>An AI agent that can query HR information should not automatically be trusted to access finance. An agent that can read a repository should not automatically be able to deploy code. An MCP server trusted to retrieve information should not automatically receive authority to modify the source system.</p>
+<p>The AI may decide which tool it wants to use.</p>
+<p>The architecture must decide which trust relationships are permitted.</p>
+<h2>Trusted Components Can Still Become Attack Paths</h2>
+<p>One of the uncomfortable realities of cybersecurity is that trusted systems eventually fail.</p>
+<p>A legitimate administrator account becomes compromised. A security appliance develops a vulnerability. A SaaS provider is breached. A trusted API token leaks.</p>
+<p>This is why <a href="https://jaizanuar.com/articles/good-security-architecture-assumes-every-control-will-eventually-fail.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Good Security Architecture Assumes Every Control Will Eventually Fail</a> remains an important architectural principle.</p>
+<p>The important question is not simply whether a component is trusted today.</p>
+<p>It is:</p>
+<p><strong>What can that trusted component reach if it becomes compromised tomorrow?</strong></p>
+<p>A trusted application with unrestricted database access creates one kind of blast radius. A trusted workload restricted to specific tables and operations creates another.</p>
+<p>Good architecture does not assume trust will never fail. It limits the consequences when it does.</p>
+<h2>Even Software Trust Can Be Weaponised</h2>
+<p>Trust relationships are not limited to identities and network connections.</p>
+<p>Software distribution is built on trust too.</p>
+<p>Customers trust vendors. Operating systems trust certificates. Update mechanisms trust signing infrastructure. Organisations trust that software arriving through an approved channel is legitimate.</p>
+<p>But as I discussed in <a href="https://jaizanuar.com/articles/the-certificate-was-valid-the-software-update-was-malicious.html?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">The Certificate Was Valid. The Software Update Was Malicious.</a>, legitimate trust mechanisms can still distribute malicious outcomes if the attacker compromises the process before the trust decision is made.</p>
+<p>The certificate can be valid.</p>
+<p>The vendor can be genuine.</p>
+<p>The update channel can be official.</p>
+<p>And the software can still be malicious.</p>
+<p>That is why trust must be supported by evidence, provenance and independent controls rather than a single signal.</p>
+<h2>Architecture Should Make Trust Visible</h2>
+<p>A useful security architecture review should therefore look beyond components and connectivity.</p>
+<p>For every important relationship, ask: Who trusts whom? Why is the trust necessary? What authority is being granted? How is the relationship authenticated? How long does the trust remain valid? Can it be monitored and revoked? What happens if either side becomes compromised?</p>
+<p>These questions often reveal risks that a normal connectivity diagram does not.</p>
+<p>An arrow labelled <strong>HTTPS 443</strong> tells me how two systems communicate.</p>
+<p>It does not tell me whether they should trust each other.</p>
+<p>That is a much more important question.</p>
+<h2>Final Thoughts</h2>
+<p>Modern enterprise architecture depends on trust.</p>
+<p>Identity creates trust. API keys create trust. Employees accumulate trust. AI agents consume trust. Certificates establish trust. Vendors inherit trust.</p>
+<p>The problem begins when trust becomes invisible, permanent or broader than necessary.</p>
+<p>Security architecture should therefore treat every trust relationship as a potential attack path and design accordingly.</p>
+<p>Make trust explicit.</p>
+<p>Keep it minimal.</p>
+<p>Make it verifiable.</p>
+<p>Give it an expiry.</p>
+<p>Monitor how it is used.</p>
+<p>And assume that one day the thing you trust may become the thing an attacker controls.</p>
+<p>Because every trust relationship enables the business.</p>
+<p><strong>And every trust relationship can also become an attack path.</strong></p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="ai-security-architecture-a-practical-enterprise-framework-part-2.html">AI Security Architecture: A Practical Enterprise Framework — Part 2</a><span>28 September 2026</span></li>
+        <li><a href="the-certificate-was-valid-the-software-update-was-malicious.html">The Certificate Was Valid. The Software Update Was Malicious.</a><span>26 September 2026</span></li>
+        <li><a href="if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html">If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox</a><span>25 September 2026</span></li>
+        <li><a href="ai-security-architecture-a-practical-enterprise-framework-part-1.html">AI Security Architecture: A Practical Enterprise Framework — Part 1</a><span>23 September 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fevery-trust-relationship-is-an-attack-path.html" target="_blank" rel="noopener noreferrer" aria-label="Share Every Trust Relationship Is An Attack Path on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fevery-trust-relationship-is-an-attack-path.html" target="_blank" rel="noopener noreferrer" aria-label="Share Every Trust Relationship Is An Attack Path on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fevery-trust-relationship-is-an-attack-path.html&amp;text=Every%20Trust%20Relationship%20Is%20An%20Attack%20Path" target="_blank" rel="noopener noreferrer" aria-label="Share Every Trust Relationship Is An Attack Path on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=Every%20Trust%20Relationship%20Is%20An%20Attack%20Path%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fevery-trust-relationship-is-an-attack-path.html" target="_blank" rel="noopener noreferrer" aria-label="Share Every Trust Relationship Is An Attack Path on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/every-trust-relationship-is-an-attack-path.html" aria-label="Copy link to Every Trust Relationship Is An Attack Path" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
