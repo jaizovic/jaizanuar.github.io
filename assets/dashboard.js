@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The Strongest Architecture Is The One That Limits Blast Radius", "2026-10-03", "/articles/the-strongest-architecture-is-the-one-that-limits-blast-radius.html"],
     ["AI Security Architecture: A Practical Enterprise Framework — Part 2", "2026-09-28", "/articles/ai-security-architecture-a-practical-enterprise-framework-part-2.html"],
     ["Every Trust Relationship Is An Attack Path", "2026-09-27", "/articles/every-trust-relationship-is-an-attack-path.html"],
     ["The Certificate Was Valid. The Software Update Was Malicious.", "2026-09-26", "/articles/the-certificate-was-valid-the-software-update-was-malicious.html"],
