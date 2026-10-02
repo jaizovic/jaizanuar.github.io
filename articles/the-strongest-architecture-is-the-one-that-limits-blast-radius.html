@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Strongest Architecture Is The One That Limits Blast Radius | Jaiz Anuar</title>
+  <meta name="description" content="Strong security architecture assumes prevention can fail and deliberately limits how far a compromised identity, endpoint, API key, vendor, software update or AI agent can reach." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/the-strongest-architecture-is-the-one-that-limits-blast-radius.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Strongest Architecture Is The One That Limits Blast Radius" />
+  <meta property="og:description" content="Strong security architecture assumes prevention can fail and deliberately limits how far a compromised identity, endpoint, API key, vendor, software update or AI agent can reach." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/the-strongest-architecture-is-the-one-that-limits-blast-radius.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/the-strongest-architecture-is-the-one-that-limits-blast-radius.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="A cyber incident burns inside one tightly segmented security domain while identity gates and isolation boundaries protect surrounding enterprise systems." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Strongest Architecture Is The One That Limits Blast Radius" />
+  <meta name="twitter:description" content="Strong security architecture assumes prevention can fail and deliberately limits how far a compromised identity, endpoint, API key, vendor, software update or AI agent can reach." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/the-strongest-architecture-is-the-one-that-limits-blast-radius.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Strongest Architecture Is The One That Limits Blast Radius", "description": "Strong security architecture assumes prevention can fail and deliberately limits how far a compromised identity, endpoint, API key, vendor, software update or AI agent can reach.", "datePublished": "2026-10-03", "dateModified": "2026-10-03", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Security Architecture", "Operational Resilience"], "keywords": ["Security Architecture", "Operational Resilience"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/the-strongest-architecture-is-the-one-that-limits-blast-radius.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/the-strongest-architecture-is-the-one-that-limits-blast-radius.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/security-architecture/">Security Architecture</a><span aria-hidden="true">›</span><span aria-current="page">The Strongest Architecture Is The One That Limits Blast Radius</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">3 October 2026 · Security Architecture · Operational Resilience · 6 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>The Strongest Architecture Is The One That Limits Blast Radius</h1>
+    <p class="lead">The quality of security architecture is revealed after the first control fails. Least privilege, segmentation, constrained trust and resilient control planes keep an individual compromise from becoming an enterprise-wide incident.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/the-strongest-architecture-is-the-one-that-limits-blast-radius.webp" width="1600" height="900" alt="A cyber incident burns inside one tightly segmented security domain while identity gates and isolation boundaries protect surrounding enterprise systems." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>Security architecture is often judged by how well it prevents compromise. That matters, but prevention is only part of the job.</p>
+<p>A stronger question is: <strong>What happens after the first thing goes wrong?</strong></p>
+<p>A user account is compromised. An endpoint is infected. An API key leaks. A trusted vendor is breached. An AI agent receives the wrong permission. A software update carries malicious code. At that point, the quality of the architecture is no longer measured by whether the first control failed. It is measured by <strong>how far the failure can travel</strong>.</p>
+<p>That is blast radius.</p>
+<h2>Prevention Is Important. Containment Is Architectural.</h2>
+<p>Many security programmes still behave as though the objective is to stop every attack at the perimeter. That is unrealistic. Controls fail, credentials are stolen, vulnerabilities appear, users make mistakes and trusted third parties become compromised.</p>
+<p>As discussed in <a href="https://jaizanuar.com/articles/good-security-architecture-assumes-every-control-will-eventually-fail.html" target="_blank" rel="noopener noreferrer">Good Security Architecture Assumes Every Control Will Eventually Fail</a>, the stronger architecture is not the one that assumes every control will work perfectly. It is the one that prevents a single failure from becoming a business-wide event.</p>
+<p>If one compromised endpoint can reach every server, the blast radius is large. If one stolen administrator credential provides access across multiple platforms, the blast radius is large. If one SaaS integration can read every business dataset, the blast radius is large.</p>
+<p>The original compromise may be small. The architecture determines whether it stays small.</p>
+<h2>Every Trust Relationship Expands The Blast Radius</h2>
+<p>In <strong>Every Trust Relationship Is An Attack Path</strong>, I discussed how architecture diagrams should be read not simply as connectivity maps, but as maps of trust.</p>
+<p>That leads naturally to another question: <strong>How much of the environment becomes reachable when one of those trust relationships is compromised?</strong></p>
+<p>A connection between two systems may be necessary. But if System A has broad access to System B, and System B has unrestricted access to System C, the attacker may inherit a much larger path than the original business requirement intended.</p>
+<p>This is why trust should not only be explicit. It should also be constrained. The fewer systems that depend on one identity, credential, network segment or control plane, the smaller the potential blast radius.</p>
+<h2>Identity Can Create Enormous Blast Radius</h2>
+<p>Identity is one of the clearest examples.</p>
+<p>In <a href="https://jaizanuar.com/articles/the-new-security-perimeter-is-no-longer-the-network-it-is-identity.html" target="_blank" rel="noopener noreferrer">The New Security Perimeter Is No Longer The Network. It Is Identity.</a>, I argued that modern access increasingly depends on identity and permission rather than physical network location.</p>
+<p>That makes overprivileged identities particularly dangerous.</p>
+<p>A compromised employee account with access to one application is one problem. A compromised privileged account that can administer cloud infrastructure, reset identities and access security tooling is another. The credential may be the same size, but the blast radius is completely different.</p>
+<p>Least privilege is therefore not simply an access-control principle. It is a blast-radius control. The less authority one identity carries, the less an attacker inherits when that identity is compromised.</p>
+<h2>Segmentation Is About More Than Networks</h2>
+<p>Blast-radius reduction is often associated with network segmentation. That is still important, but modern segmentation needs to go further.</p>
+<p>Identity should be segmented. Administrative roles should be separated. Cloud accounts and subscriptions should have clear boundaries. Applications should have narrowly scoped data access. API permissions should be limited. Production should be isolated from development.</p>
+<p>The same principle applies to AI agents. They should only reach the tools required for their task.</p>
+<p>The principle is simple: <strong>do not allow one compromise to inherit unnecessary trust.</strong></p>
+<p>This is why security architecture should think in terms of security domains rather than simply systems. Two systems may technically be able to communicate, but that does not mean they should share the same administrative boundary, credentials or privileges.</p>
+<h2>The Same Principle Applies To AI</h2>
+<p>AI makes blast-radius thinking even more important because agents can increasingly take action.</p>
+<p>An AI assistant that can search documents has one level of potential impact. An AI agent connected to multiple MCP servers, cloud APIs, repositories and business applications has another.</p>
+<p>The architecture around that agent should therefore determine not only what it can do, but how far an error or compromise can propagate.</p>
+<p>This is closely related to the control-point approach discussed in <strong>The AI Gateway Should Govern Trust, Tokens And Tools</strong>. If an AI agent calls the wrong tool, can the action be blocked? If one MCP server is compromised, can it influence other systems? If an agent credential leaks, how many applications become reachable?</p>
+<p>AI autonomy should not automatically mean enterprise-wide authority. The agent may be intelligent, but its blast radius should still be intentionally small.</p>
+<h2>Software Supply Chains Have Blast Radius Too</h2>
+<p>Software trust creates another example.</p>
+<p>In <strong>The Certificate Was Valid. The Software Update Was Malicious.</strong>, the key lesson was that legitimate trust mechanisms can still distribute harmful outcomes when the software supply chain is compromised.</p>
+<p>The architectural issue is scale.</p>
+<p>Compromise one endpoint and perhaps one endpoint is affected. Compromise a trusted software-update mechanism and potentially thousands of endpoints inherit the same compromise.</p>
+<p>The trust relationship amplifies the blast radius.</p>
+<p>This is why build pipelines, signing infrastructure and update channels should be treated as high-value systems with stronger isolation and independent controls. The more systems that trust something, the more carefully that thing must be protected.</p>
+<h2>Concentration Creates Hidden Risk</h2>
+<p>Centralisation can make architecture easier to manage.</p>
+<p>A single identity provider, a single AI Gateway, a central secrets platform or one security-management plane can improve consistency and governance. But they also create concentration risk.</p>
+<p>If everything depends on one service, the compromise or failure of that service may affect everything downstream.</p>
+<p>That does not mean centralisation is wrong. It means the architecture needs to recognise the dependency and design around it with administrative separation, independent recovery paths, limited privileges and resilient control planes.</p>
+<p>Convenience should never hide concentration risk.</p>
+<h2>Security Architecture Should Ask “How Far?”</h2>
+<p>During architecture reviews, we often ask whether controls exist.</p>
+<p>Is MFA enabled? Is encryption implemented? Is segmentation present? Are logs collected?</p>
+<p>Those questions are necessary, but they should be followed by another:</p>
+<p><strong>If this control fails, how far can the attacker go?</strong></p>
+<p>That question changes the conversation.</p>
+<p>A database may be encrypted, but how many applications can query it? MFA may protect administrators, but what can one administrator account control? A firewall may segment networks, but can a shared privileged identity cross all of them? An API may require authentication, but does one token provide access to every function?</p>
+<p>This is where security architecture moves beyond control compliance and starts protecting business outcomes.</p>
+<p>As discussed in <a href="https://jaizanuar.com/articles/security-architecture-protects-the-business-security-controls-protect-the-technology.html" target="_blank" rel="noopener noreferrer">Security Architecture Protects The Business; Security Controls Protect The Technology</a>, individual controls can work exactly as intended while the wider architecture still exposes the business.</p>
+<h2>Final Thoughts</h2>
+<p>The strongest architecture is not necessarily the one with the most controls. It is the one where individual failures remain individual failures.</p>
+<p>One compromised user should not compromise the organisation. One vulnerable application should not expose every database. One stolen API key should not unlock an entire cloud environment. One compromised vendor should not automatically become a path to every critical system. One AI agent should not have authority across the enterprise.</p>
+<p>Security architecture cannot guarantee that nothing will ever fail.</p>
+<p>It can decide how much damage that failure is allowed to cause.</p>
+<p>That is why prevention matters, but containment matters just as much.</p>
+<p><strong>The strongest architecture is the one that limits blast radius.</strong></p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="ai-security-architecture-a-practical-enterprise-framework-part-2.html">AI Security Architecture: A Practical Enterprise Framework — Part 2</a><span>28 September 2026</span></li>
+        <li><a href="every-trust-relationship-is-an-attack-path.html">Every Trust Relationship Is An Attack Path</a><span>27 September 2026</span></li>
+        <li><a href="if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html">If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox</a><span>25 September 2026</span></li>
+        <li><a href="ai-security-architecture-a-practical-enterprise-framework-part-1.html">AI Security Architecture: A Practical Enterprise Framework — Part 1</a><span>23 September 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-strongest-architecture-is-the-one-that-limits-blast-radius.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Strongest Architecture Is The One That Limits Blast Radius on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-strongest-architecture-is-the-one-that-limits-blast-radius.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Strongest Architecture Is The One That Limits Blast Radius on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-strongest-architecture-is-the-one-that-limits-blast-radius.html&amp;text=The%20Strongest%20Architecture%20Is%20The%20One%20That%20Limits%20Blast%20Radius" target="_blank" rel="noopener noreferrer" aria-label="Share The Strongest Architecture Is The One That Limits Blast Radius on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=The%20Strongest%20Architecture%20Is%20The%20One%20That%20Limits%20Blast%20Radius%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-strongest-architecture-is-the-one-that-limits-blast-radius.html" target="_blank" rel="noopener noreferrer" aria-label="Share The Strongest Architecture Is The One That Limits Blast Radius on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/the-strongest-architecture-is-the-one-that-limits-blast-radius.html" aria-label="Copy link to The Strongest Architecture Is The One That Limits Blast Radius" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
