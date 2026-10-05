@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["ISO 42001 Is an AI Management System, Not an AI Security Architecture", "2026-10-05", "/articles/iso-42001-is-an-ai-management-system-not-an-ai-security-architecture.html"],
     ["The Strongest Architecture Is The One That Limits Blast Radius", "2026-10-03", "/articles/the-strongest-architecture-is-the-one-that-limits-blast-radius.html"],
     ["AI Security Architecture: A Practical Enterprise Framework — Part 2", "2026-09-28", "/articles/ai-security-architecture-a-practical-enterprise-framework-part-2.html"],
     ["Every Trust Relationship Is An Attack Path", "2026-09-27", "/articles/every-trust-relationship-is-an-attack-path.html"],
