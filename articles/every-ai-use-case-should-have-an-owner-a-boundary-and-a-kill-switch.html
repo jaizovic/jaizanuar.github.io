@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch | Jaiz Anuar</title>
+  <meta name="description" content="Every enterprise AI use case needs accountable ownership, technically enforced boundaries and an independent kill switch that matches its authority and blast radius." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/every-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch" />
+  <meta property="og:description" content="Every enterprise AI use case needs accountable ownership, technically enforced boundaries and an independent kill switch that matches its authority and blast radius." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/every-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/every-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="An enterprise AI system sits inside a transparent containment boundary while an accountable operator oversees scoped connections and an independent emergency shutdown control." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch" />
+  <meta name="twitter:description" content="Every enterprise AI use case needs accountable ownership, technically enforced boundaries and an independent kill switch that matches its authority and blast radius." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/every-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch", "description": "Every enterprise AI use case needs accountable ownership, technically enforced boundaries and an independent kill switch that matches its authority and blast radius.", "datePublished": "2026-10-14", "dateModified": "2026-10-14", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["AI Governance", "AI Security", "Security Architecture"], "keywords": ["AI Governance", "AI Security", "Security Architecture"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/every-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/every-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/ai-governance/">AI Governance</a><span aria-hidden="true">›</span><span aria-current="page">Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">14 October 2026 · AI Governance · AI Security · Security Architecture · 6 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch</h1>
+    <p class="lead">As enterprise AI gains access to data, tools and business systems, every use case needs more than a sponsor: it needs an accountable owner, enforceable boundaries and an independent way to stop it.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/every-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.webp" width="1600" height="900" alt="An enterprise AI system sits inside a transparent containment boundary while an accountable operator oversees scoped connections and an independent emergency shutdown control." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>Enterprise AI adoption is accelerating faster than most governance models were designed to handle.</p>
+<p>A business team experiments with a chatbot. A developer connects an LLM to an internal API. An operations team introduces an AI assistant. Another team adds an MCP server so an agent can reach business systems.</p>
+<p>Individually, each use case may look small.</p>
+<p>Collectively, they create a new operating environment where AI can read data, call tools, make decisions and increasingly take action.</p>
+<p>That means every AI use case needs more than a business sponsor.</p>
+<p>It needs <strong>an owner, a boundary and a kill switch</strong>.</p>
+<h2>The Owner Answers For The Use Case</h2>
+<p>Every AI capability should have a clearly identified owner.</p>
+<p>Not just the team that built it.</p>
+<p>Not just the vendor that provides the model.</p>
+<p>The owner should be accountable for why the AI exists, what business outcome it supports, what data it uses, what systems it can reach and what level of risk the organisation is willing to accept.</p>
+<p>This becomes especially important when an AI proof of concept quietly becomes part of day-to-day operations.</p>
+<p>Pilots often start with limited access and few users. Over time, more data sources are connected, more permissions are granted and more teams begin to depend on the capability.</p>
+<p>Without a named owner, that growth can become unmanaged.</p>
+<p>Ownership is what keeps the use case tied to a business purpose rather than allowing capability to expand simply because the technology makes it possible.</p>
+<h2>The Boundary Defines What The AI Is Allowed To Do</h2>
+<p>Ownership alone is not enough.</p>
+<p>The architecture still needs to define boundaries.</p>
+<p>What data can the AI access? Which models can it use? Which MCP servers can it call? What tools can it invoke? Can it read only, or can it modify data? Can it reach production? Can it send information outside the organisation?</p>
+<p>These are architectural questions.</p>
+<p>In <a href="ai-security-architecture-a-practical-enterprise-framework-part-1.html">AI Security Architecture: A Practical Enterprise Framework</a>, I argued that AI security should begin with the trust model, not with the product. The organisation needs to understand who or what is making the request, which tools and data sources are trusted, and where the boundaries actually exist.</p>
+<p>The same principle applies to every individual AI use case.</p>
+<p>An AI assistant that summarises internal policy documents should not inherit the same access as an agent that operates business workflows.</p>
+<p>A coding assistant should not automatically reach production credentials.</p>
+<p>An AI agent that creates tickets should not automatically have permission to approve or close them.</p>
+<p>The boundary should reflect the business outcome.</p>
+<p>Not the maximum capability of the technology.</p>
+<h2>A Boundary Must Be Technically Enforced</h2>
+<p>Policies are useful.</p>
+<p>Instructions are useful.</p>
+<p>Prompt guardrails are useful.</p>
+<p>But none of them should be confused with a security boundary.</p>
+<p>If an AI use case is not allowed to access production, then production should be technically unreachable. If the agent should only read data, the identity it uses should not have write privileges. If an MCP server is not approved for a particular use case, the agent should not be able to call it.</p>
+<p>This is the same distinction discussed in <a href="ai-agents-need-security-boundaries-not-just-safety-guardrails.html">AI Agents Need Security Boundaries, Not Just Safety Guardrails</a>.</p>
+<p>A guardrail tries to influence behaviour.</p>
+<p>A boundary limits capability.</p>
+<p>For enterprise AI, both matter. But when the model behaves unexpectedly, the boundary is what determines the consequence.</p>
+<h2>The Kill Switch Is The Control Nobody Wants To Need</h2>
+<p>The third requirement is the one organisations often forget.</p>
+<p>How do you stop the AI?</p>
+<p>Not eventually.</p>
+<p>Immediately.</p>
+<p>Imagine an AI agent begins making repeated transactions. A model starts returning inappropriate information. An MCP server is discovered to be compromised. A vendor reports a security incident. The AI begins calling tools outside its normal pattern.</p>
+<p>Can the organisation disable the use case quickly?</p>
+<p>A kill switch should not depend on the AI deciding to stop itself.</p>
+<p>The organisation should be able to revoke the agent identity, disable tool access, disconnect the MCP integration, block model access or stop outbound connectivity independently of the model.</p>
+<p>This principle also connects to <a href="if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html">If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox</a>. Containment should be enforced outside the AI, because the system being controlled should not be the only system responsible for controlling itself.</p>
+<h2>The Kill Switch Must Match The Blast Radius</h2>
+<p>Not every AI use case requires the same emergency controls.</p>
+<p>A chatbot that answers questions from public information creates a different risk from an autonomous agent with access to financial systems.</p>
+<p>The more authority the AI has, the stronger the isolation and shutdown mechanisms should be.</p>
+<p>This links directly to <a href="the-strongest-architecture-is-the-one-that-limits-blast-radius.html">The Strongest Architecture Is The One That Limits Blast Radius</a>.</p>
+<p>If one AI use case becomes compromised, how much of the organisation can it affect?</p>
+<p>If the answer is “many systems, many users and many data sources,” the architecture has concentrated too much authority.</p>
+<p>The kill switch is useful.</p>
+<p>A smaller blast radius is better.</p>
+<h2>AI Gateways Can Help Enforce The Model</h2>
+<p>For organisations running multiple AI use cases, central control becomes important.</p>
+<p>An AI Gateway can help enforce approved models, identity policies, token limits, data controls, logging and MCP access. As discussed in <a href="the-ai-gateway-should-govern-trust-tokens-and-tools.html">The AI Gateway Should Govern Trust, Tokens And Tools</a>, the gateway can become a control point for both security and cost.</p>
+<p>It can also become part of the kill-switch design.</p>
+<p>If an AI use case needs to be suspended, the gateway may be able to block the model, revoke routing, prevent MCP calls or restrict the agent to a safer mode.</p>
+<p>That is much easier than trying to locate dozens of direct model integrations during an incident.</p>
+<p>Central control does create concentration risk, so the gateway itself must be resilient and strongly governed.</p>
+<p>But without some form of coordinated control plane, enterprise AI can quickly become fragmented.</p>
+<h2>The Lifecycle Matters Too</h2>
+<p>Owner, boundary and kill switch should not be defined only at launch.</p>
+<p>AI use cases change.</p>
+<p>New data sources are connected. New tools are added. The model changes. A read-only assistant becomes an autonomous workflow. A temporary pilot becomes permanent.</p>
+<p>The original risk assessment may no longer describe the system.</p>
+<p>Every AI use case should therefore have a review cycle.</p>
+<p>Is the owner still valid? Is the business purpose unchanged? Are the permissions still appropriate? Are all connected tools still required? Has the blast radius increased? Does the kill switch still work?</p>
+<p>AI governance should not assume that approval is permanent.</p>
+<p>Trust should evolve with the use case.</p>
+<h2>Final Thoughts</h2>
+<p>Enterprise AI does not need to be slowed down by excessive governance.</p>
+<p>But it does need accountability and control.</p>
+<p>Every use case should have someone who owns the outcome.</p>
+<p>Every use case should have boundaries that limit what the AI can see and do.</p>
+<p>Every use case should have a way to stop it when the assumptions behind the design are no longer valid.</p>
+<p>These are simple principles, but they create a useful test for any AI proposal.</p>
+<p><strong>Who owns it?</strong></p>
+<p><strong>Where does it stop?</strong></p>
+<p><strong>How do we stop it?</strong></p>
+<p>If those three questions cannot be answered clearly, the use case is probably not ready for production.</p>
+<p>Because responsible AI adoption is not only about allowing AI to work.</p>
+<p>It is also about making sure the organisation remains in control when it does not.</p>
+<p><strong>Every AI use case should have an owner, a boundary and a kill switch.</strong></p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="iso-42001-is-an-ai-management-system-not-an-ai-security-architecture.html">ISO 42001 Is an AI Management System, Not an AI Security Architecture</a><span>5 October 2026</span></li>
+        <li><a href="ai-security-architecture-a-practical-enterprise-framework-part-2.html">AI Security Architecture: A Practical Enterprise Framework — Part 2</a><span>28 September 2026</span></li>
+        <li><a href="if-your-ai-test-can-reach-the-real-internet-it-is-not-really-a-sandbox.html">If Your AI Test Can Reach The Real Internet, It Is Not Really A Sandbox</a><span>25 September 2026</span></li>
+        <li><a href="ai-security-architecture-a-practical-enterprise-framework-part-1.html">AI Security Architecture: A Practical Enterprise Framework — Part 1</a><span>23 September 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fevery-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.html" target="_blank" rel="noopener noreferrer" aria-label="Share Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fevery-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.html" target="_blank" rel="noopener noreferrer" aria-label="Share Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fevery-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.html&amp;text=Every%20AI%20Use%20Case%20Should%20Have%20an%20Owner%2C%20a%20Boundary%20and%20a%20Kill%20Switch" target="_blank" rel="noopener noreferrer" aria-label="Share Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=Every%20AI%20Use%20Case%20Should%20Have%20an%20Owner%2C%20a%20Boundary%20and%20a%20Kill%20Switch%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fevery-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.html" target="_blank" rel="noopener noreferrer" aria-label="Share Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/every-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.html" aria-label="Copy link to Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
