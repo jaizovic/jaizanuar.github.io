@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["Three-Tier Architecture Was Built for Yesterday. Future Architecture Must Be Designed to Survive.", "2026-10-19", "/articles/three-tier-architecture-was-built-for-yesterday-future-architecture-must-be-designed-to-survive.html"],
     ["Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch", "2026-10-14", "/articles/every-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.html"],
     ["Your Trusted Business Partner Is Compromised. Are You Next?", "2026-10-11", "/articles/your-trusted-business-partner-is-compromised-are-you-next.html"],
     ["ISO 42001 Is an AI Management System, Not an AI Security Architecture", "2026-10-05", "/articles/iso-42001-is-an-ai-management-system-not-an-ai-security-architecture.html"],
