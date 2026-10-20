@@ -5,16 +5,16 @@
       "name": "Malaysia"
     },
     {
+      "code": "US",
+      "name": "United States"
+    },
+    {
       "code": "IN",
       "name": "India"
     },
     {
       "code": "VN",
       "name": "Vietnam"
-    },
-    {
-      "code": "US",
-      "name": "United States"
     },
     {
       "code": "TH",
