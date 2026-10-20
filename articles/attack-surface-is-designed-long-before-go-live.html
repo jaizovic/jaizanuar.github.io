@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attack Surface Is Designed Long Before Go-Live | Jaiz Anuar</title>
+  <meta name="description" content="Attack surface is created during architecture through trust, connectivity, privilege, integrations, cloud design and AI authority—long before production security testing begins." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/attack-surface-is-designed-long-before-go-live.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Attack Surface Is Designed Long Before Go-Live" />
+  <meta property="og:description" content="Attack surface is created during architecture through trust, connectivity, privilege, integrations, cloud design and AI authority—long before production security testing begins." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/attack-surface-is-designed-long-before-go-live.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/attack-surface-is-designed-long-before-go-live.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="An architect designs enterprise connections across cloud, applications, partners and AI, with narrow blue trust paths contrasted against broad red attack paths before production launch." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Attack Surface Is Designed Long Before Go-Live" />
+  <meta name="twitter:description" content="Attack surface is created during architecture through trust, connectivity, privilege, integrations, cloud design and AI authority—long before production security testing begins." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/attack-surface-is-designed-long-before-go-live.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Attack Surface Is Designed Long Before Go-Live", "description": "Attack surface is created during architecture through trust, connectivity, privilege, integrations, cloud design and AI authority—long before production security testing begins.", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Security Architecture", "Cybersecurity"], "keywords": ["Security Architecture", "Cybersecurity"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/attack-surface-is-designed-long-before-go-live.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/attack-surface-is-designed-long-before-go-live.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/security-architecture/">Security Architecture</a><span aria-hidden="true">›</span><span aria-current="page">Attack Surface Is Designed Long Before Go-Live</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">20 October 2026 · Security Architecture · Cybersecurity · 7 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>Attack Surface Is Designed Long Before Go-Live</h1>
+    <p class="lead">By the time a system reaches production, much of its attack surface already exists. Architecture determines which systems connect, which identities are trusted and how much authority compromise can inherit.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/attack-surface-is-designed-long-before-go-live.webp" width="1600" height="900" alt="An architect designs enterprise connections across cloud, applications, partners and AI, with narrow blue trust paths contrasted against broad red attack paths before production launch." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>Security teams often talk about attack surface as though it appears when a system reaches production.</p>
+<p>The application goes live. Vulnerability scanning begins. Internet exposure is reviewed. Firewall rules are checked. Security monitoring is enabled.</p>
+<p>But by that point, much of the attack surface has already been created.</p>
+<p>It was created when the architecture decided which systems could communicate, which identities would be trusted, which APIs would be exposed, which third parties could connect, how production and non-production would be separated, and how much authority each component would receive.</p>
+<p>In other words, <strong>attack surface is often designed long before go-live</strong>.</p>
+<h2>Attack Surface Is More Than Internet Exposure</h2>
+<p>The term is often associated with public-facing systems, open ports and vulnerabilities.</p>
+<p>That is only part of the picture.</p>
+<p>A modern enterprise attack surface also includes identities, APIs, cloud permissions, SaaS integrations, machine credentials, CI/CD pipelines, partner connections, AI agents and trusted software dependencies.</p>
+<p>A system may not be exposed directly to the internet and still have a large attack surface.</p>
+<p>An internal API with excessive privilege is an attack surface.</p>
+<p>A service account shared across multiple applications is an attack surface.</p>
+<p>An AI agent connected to several MCP servers is an attack surface.</p>
+<p>A third-party integration with broad access is an attack surface.</p>
+<p>The more trust and authority the architecture creates, the more opportunity an attacker may inherit when one component is compromised.</p>
+<h2>Architecture Decisions Create Future Exposure</h2>
+<p>Consider a simple design decision.</p>
+<p>Two systems need to exchange data.</p>
+<p>The easiest approach may be to create a broad service account, allow wide network access and connect the systems directly.</p>
+<p>The integration works.</p>
+<p>The project moves forward.</p>
+<p>But the architecture has also created a future attack path.</p>
+<p>If that service account is compromised, what can it reach? If one system is breached, can the attacker move into the other? Can the connection be isolated quickly without affecting unrelated services?</p>
+<p>These questions should be answered during design.</p>
+<p>Not after deployment.</p>
+<p>This is closely related to the principle in <a href="every-trust-relationship-is-an-attack-path.html">Every Trust Relationship Is An Attack Path</a>. Every connection is not only a connectivity decision. It is also a trust decision.</p>
+<p>And every trust decision can increase attack surface.</p>
+<h2>Excessive Authority Is Attack Surface</h2>
+<p>Not all attack surface is created by connectivity.</p>
+<p>Some of it is created by privilege.</p>
+<p>An application may only need to read customer records but is given read-and-write access.</p>
+<p>A CI/CD pipeline may only need to deploy one application but receives broad cloud permissions.</p>
+<p>An administrator may manage one platform but is given enterprise-wide privileges.</p>
+<p>An AI assistant may only need to retrieve documents but is allowed to invoke tools that can modify data.</p>
+<p>These decisions may be convenient during implementation.</p>
+<p>They also increase the consequences of compromise.</p>
+<p>This is why the principle in <a href="the-strongest-architecture-is-the-one-that-limits-blast-radius.html">The Strongest Architecture Is The One That Limits Blast Radius</a> matters before go-live.</p>
+<p>Least privilege does more than protect access.</p>
+<p>It reduces the amount of attack surface created by each identity and workload.</p>
+<h2>Integration Design Matters</h2>
+<p>External integration is another area where attack surface is often created early.</p>
+<p>A business partner needs access.</p>
+<p>A firewall rule is opened.</p>
+<p>A VPN is established.</p>
+<p>An API credential is issued.</p>
+<p>The integration works.</p>
+<p>But the design may also introduce dependency on another organisation's security posture.</p>
+<p>As discussed in <a href="your-trusted-business-partner-is-compromised-are-you-next.html">Your Trusted Business Partner Is Compromised. Are You Next?</a>, a trusted partner can become an attack path if the connection is too broad or too difficult to isolate.</p>
+<p>A defendable architecture should therefore ask:</p>
+<p>What exactly does the partner need to access? Can the integration terminate in a controlled zone? Can the credential be revoked quickly? Can abnormal behaviour be detected? Can the partner be isolated without interrupting other critical services?</p>
+<p>Those are architecture questions.</p>
+<p>They define attack surface before the first production transaction occurs.</p>
+<h2>Cloud Can Reduce Attack Surface Or Multiply It</h2>
+<p>Cloud architecture creates the same choice.</p>
+<p>An organisation can use cloud capabilities to create strong boundaries, separate accounts, short-lived identities and tightly scoped services.</p>
+<p>Or it can recreate a flat data-centre model in the cloud.</p>
+<p>Shared credentials, broad network reachability, overprivileged roles and weak separation between production and non-production can create a much larger attack surface than the original design intended.</p>
+<p>This is why the argument in <a href="three-tier-architecture-was-built-for-yesterday-future-architecture-must-be-designed-to-survive.html">Three-Tier Architecture Was Built for Yesterday. Future Architecture Must Be Designed to Survive.</a> matters.</p>
+<p>Future architecture should not only ask whether a system can scale and integrate.</p>
+<p>It should ask how much of the environment becomes exposed when one component fails.</p>
+<p>That decision is made during architecture.</p>
+<h2>AI Expands Attack Surface Through Capability</h2>
+<p>AI introduces another dimension.</p>
+<p>The attack surface is no longer only the model or the prompt.</p>
+<p>It includes everything the AI can reach.</p>
+<p>A model that only generates text has one risk profile.</p>
+<p>An AI agent that can query data, call APIs, access repositories, invoke MCP tools and perform transactions has a much larger attack surface.</p>
+<p>This is why <a href="the-ai-gateway-should-govern-trust-tokens-and-tools.html">The AI Gateway Should Govern Trust, Tokens And Tools</a> is not only about AI governance.</p>
+<p>It is also about attack-surface control.</p>
+<p>Every model connection, MCP server and tool invocation should be deliberate.</p>
+<p>The architecture should decide which capabilities are actually required.</p>
+<p>AI capability should not automatically become AI authority.</p>
+<h2>Security Controls Cannot Fully Repair Poor Architecture</h2>
+<p>This is the uncomfortable part.</p>
+<p>Once a system is built, security teams can add controls.</p>
+<p>They can deploy EDR.</p>
+<p>They can enable monitoring.</p>
+<p>They can add DLP.</p>
+<p>They can tighten firewall rules.</p>
+<p>They can improve logging.</p>
+<p>All of that helps.</p>
+<p>But security controls may not fully compensate for architecture that created excessive trust, privilege or dependency from the beginning.</p>
+<p>As discussed in <a href="security-architecture-protects-the-business-security-controls-protect-the-technology.html">Security Architecture Protects The Business; Security Controls Protect The Technology</a>, controls answer how something is protected.</p>
+<p>Architecture determines what needs to be protected, what can reach it and how much damage can occur when protection fails.</p>
+<p>That is why architectural decisions matter so much.</p>
+<h2>Architecture Reviews Should Ask Different Questions</h2>
+<p>A good architecture review should therefore look for attack surface before implementation begins.</p>
+<p>Not only:</p>
+<p>Is the traffic encrypted?</p>
+<p>Is MFA enabled?</p>
+<p>Is logging configured?</p>
+<p>But also:</p>
+<p>Why does this connection exist? Does the system need this level of privilege? Can this identity reach more than the business requirement demands? Can the integration be isolated? What happens if the trusted component is compromised? Can the design operate safely in degraded mode?</p>
+<p>These questions challenge the architecture before expensive dependencies become permanent.</p>
+<p>That is the point of security architecture.</p>
+<p>Not to approve controls at the end.</p>
+<p>To shape the design before risk becomes embedded.</p>
+<h2>Final Thoughts</h2>
+<p>Attack surface is not something security discovers only after deployment.</p>
+<p>Much of it is created during architecture.</p>
+<p>It is created when trust is broad.</p>
+<p>When identities are overprivileged.</p>
+<p>When integrations are too open.</p>
+<p>When cloud environments are too flat.</p>
+<p>When AI agents are given unnecessary capability.</p>
+<p>When recovery depends on the same systems that may be compromised.</p>
+<p>By go-live, many of those decisions may already be expensive to change.</p>
+<p>That is why the best time to reduce attack surface is not after the first vulnerability scan.</p>
+<p>It is when the architecture is still being designed.</p>
+<p><strong>Attack surface is designed long before go-live.</strong></p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="the-security-tools-we-forgot-to-retire.html">The Security Tools We Forgot to Retire</a><span>13 August 2026</span></li>
+        <li><a href="the-most-dangerous-software-may-be-the-software-you-never-use.html">The Most Dangerous Software May Be the Software You Never Use</a><span>7 August 2026</span></li>
+        <li><a href="good-security-architecture-assumes-every-control-will-eventually-fail.html">Good Security Architecture Assumes Every Control Will Eventually Fail</a><span>4 August 2026</span></li>
+        <li><a href="good-security-architecture-begins-with-better-questions.html">Good Security Architecture Begins With Better Questions</a><span>24 July 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fattack-surface-is-designed-long-before-go-live.html" target="_blank" rel="noopener noreferrer" aria-label="Share Attack Surface Is Designed Long Before Go-Live on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fattack-surface-is-designed-long-before-go-live.html" target="_blank" rel="noopener noreferrer" aria-label="Share Attack Surface Is Designed Long Before Go-Live on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fattack-surface-is-designed-long-before-go-live.html&amp;text=Attack%20Surface%20Is%20Designed%20Long%20Before%20Go-Live" target="_blank" rel="noopener noreferrer" aria-label="Share Attack Surface Is Designed Long Before Go-Live on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=Attack%20Surface%20Is%20Designed%20Long%20Before%20Go-Live%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fattack-surface-is-designed-long-before-go-live.html" target="_blank" rel="noopener noreferrer" aria-label="Share Attack Surface Is Designed Long Before Go-Live on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/attack-surface-is-designed-long-before-go-live.html" aria-label="Copy link to Attack Surface Is Designed Long Before Go-Live" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
