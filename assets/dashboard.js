@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["Security Controls Cannot Fully Repair Poor Architecture", "2026-10-21", "/articles/security-controls-cannot-fully-repair-poor-architecture.html"],
     ["Attack Surface Is Designed Long Before Go-Live", "2026-10-20", "/articles/attack-surface-is-designed-long-before-go-live.html"],
     ["Three-Tier Architecture Was Built for Yesterday. Future Architecture Must Be Designed to Survive.", "2026-10-19", "/articles/three-tier-architecture-was-built-for-yesterday-future-architecture-must-be-designed-to-survive.html"],
     ["Every AI Use Case Should Have an Owner, a Boundary and a Kill Switch", "2026-10-14", "/articles/every-ai-use-case-should-have-an-owner-a-boundary-and-a-kill-switch.html"],
