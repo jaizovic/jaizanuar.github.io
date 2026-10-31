@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The System Designed To Recover You Can Also Become An Attack Path", "2026-10-31", "/articles/the-system-designed-to-recover-you-can-also-become-an-attack-path.html"],
     ["The PHP2Shell Lesson Is Not Just Patch Faster. Know What You Are Running.", "2026-10-27", "/articles/the-php2shell-lesson-is-not-just-patch-faster-know-what-you-are-running.html"],
     ["Security Controls Cannot Fully Repair Poor Architecture", "2026-10-21", "/articles/security-controls-cannot-fully-repair-poor-architecture.html"],
     ["Attack Surface Is Designed Long Before Go-Live", "2026-10-20", "/articles/attack-surface-is-designed-long-before-go-live.html"],

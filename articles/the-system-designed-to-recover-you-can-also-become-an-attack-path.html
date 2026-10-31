@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The System Designed To Recover You Can Also Become An Attack Path | Jaiz Anuar</title>
+  <meta name="description" content="Backup and recovery platforms are highly trusted systems. If their privileged identities are compromised, the safety net can become a path into the wider enterprise." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/the-system-designed-to-recover-you-can-also-become-an-attack-path.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The System Designed To Recover You Can Also Become An Attack Path" />
+  <meta property="og:description" content="Backup and recovery platforms are highly trusted systems. If their privileged identities are compromised, the safety net can become a path into the wider enterprise." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/the-system-designed-to-recover-you-can-also-become-an-attack-path.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/the-system-designed-to-recover-you-can-also-become-an-attack-path.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="An isolated backup vault remains protected while a compromised privileged application identity forms an attack bridge into cloud applications, mail, databases and production systems." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The System Designed To Recover You Can Also Become An Attack Path" />
+  <meta name="twitter:description" content="Backup and recovery platforms are highly trusted systems. If their privileged identities are compromised, the safety net can become a path into the wider enterprise." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/the-system-designed-to-recover-you-can-also-become-an-attack-path.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The System Designed To Recover You Can Also Become An Attack Path", "description": "Backup and recovery platforms are highly trusted systems. If their privileged identities are compromised, the safety net can become a path into the wider enterprise.", "datePublished": "2026-10-31", "dateModified": "2026-10-31", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Cybersecurity", "Security Architecture", "Operational Resilience"], "keywords": ["Cybersecurity", "Security Architecture", "Operational Resilience"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/the-system-designed-to-recover-you-can-also-become-an-attack-path.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/the-system-designed-to-recover-you-can-also-become-an-attack-path.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/cybersecurity/">Cybersecurity</a><span aria-hidden="true">›</span><span aria-current="page">The System Designed To Recover You Can Also Become An Attack Path</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">31 October 2026 · Cybersecurity · Security Architecture · Operational Resilience · 7 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>The System Designed To Recover You Can Also Become An Attack Path</h1>
+    <p class="lead">Recovery systems need broad, persistent access for legitimate reasons. That trust makes them valuable—and means recovery architecture must survive compromise of the provider, platform or identity itself.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/the-system-designed-to-recover-you-can-also-become-an-attack-path.webp" width="1600" height="900" alt="An isolated backup vault remains protected while a compromised privileged application identity forms an attack bridge into cloud applications, mail, databases and production systems." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>Backup and recovery systems are usually treated as part of the organisation's safety net.</p>
+<p>They protect data. They preserve business continuity. They provide a path back when systems fail, ransomware strikes or infrastructure becomes unavailable.</p>
+<p>Because of that role, they are naturally trusted.</p>
+<p>Sometimes extensively.</p>
+<p>That is exactly why they can also become attractive attack paths.</p>
+<p>The recent ConnectWise Cloud Backup incident is a useful reminder. <a href="https://www.connectwise.com/company/trust/advisories" target="_blank" rel="noopener noreferrer">ConnectWise disclosed</a> unauthorised access to application identities associated with its Cloud Backup service. <a href="https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/" target="_blank" rel="noopener noreferrer">Microsoft later reported</a> that the threat actor used compromised multi-tenant application identities and their existing trusted permissions to reach downstream customer environments, perform cloud discovery and access resources including Azure Key Vaults.</p>
+<p>The backup data itself was reported as encrypted, isolated and preserved, with no indication of compromise. The more important architectural issue is what the trusted application identity could reach.</p>
+<p>That changes the question.</p>
+<p><strong>What happens when the system designed to help you recover is itself compromised?</strong></p>
+<h2>Recovery Systems Are Highly Trusted Systems</h2>
+<p>Backup platforms often need broad access.</p>
+<p>They may need to read mailboxes, files, databases or application data. They may require service principals, OAuth permissions, certificates or persistent integration with cloud platforms.</p>
+<p>Those permissions exist for legitimate reasons.</p>
+<p>But from an attacker's perspective, they are also valuable.</p>
+<p>A compromised backup platform may not need to exploit a vulnerability in every downstream system individually. If the platform already has trusted access, the attacker may attempt to inherit that trust.</p>
+<p>This is the same architectural principle discussed in <a href="every-trust-relationship-is-an-attack-path.html">Every Trust Relationship Is An Attack Path</a>.</p>
+<p>The backup platform is not simply storing data.</p>
+<p>It is participating in a trust relationship.</p>
+<p>That trust needs the same scrutiny as any other privileged identity.</p>
+<h2>The Backup Identity May Matter More Than The Backup Server</h2>
+<p>Traditional discussions about backup security often focus on the repository.</p>
+<p>Is the backup encrypted?</p>
+<p>Is it immutable?</p>
+<p>Can ransomware delete it?</p>
+<p>Is there an offline copy?</p>
+<p>Those questions remain important.</p>
+<p>But cloud backup introduces another layer.</p>
+<p>The identity used by the backup platform may itself have significant authority.</p>
+<p>In the ConnectWise case, Microsoft described activity involving compromised trusted application access, cloud resource enumeration, credential changes, role assignments and access to downstream environments.</p>
+<p>That means the architecture must consider not only the integrity of the backup data, but also the permissions surrounding the backup service.</p>
+<p>What can the application identity read?</p>
+<p>What can it modify?</p>
+<p>Can it create credentials?</p>
+<p>Can it assign roles?</p>
+<p>Can it reach other cloud services?</p>
+<p>How quickly can that identity be revoked?</p>
+<p>These are identity architecture questions.</p>
+<p>And they are particularly important because backup systems often operate continuously and without interactive human authentication.</p>
+<h2>Third-Party Recovery Creates Third-Party Trust</h2>
+<p>The risk becomes more complicated when recovery is delivered by an external provider.</p>
+<p>An organisation may have strong internal security controls but still depend on a third party that maintains persistent access into its cloud environment.</p>
+<p>That relationship may be necessary.</p>
+<p>It is still a trust relationship.</p>
+<p>As discussed in <a href="your-trusted-business-partner-is-compromised-are-you-next.html">Your Trusted Business Partner Is Compromised. Are You Next?</a>, third-party connectivity should never be assumed safe simply because the business relationship is legitimate.</p>
+<p>The same principle applies to backup providers, managed service providers and recovery platforms.</p>
+<p>A trusted provider may be secure today.</p>
+<p>Architecture must still assume that the provider could be compromised tomorrow.</p>
+<p>The question should therefore become:</p>
+<p><strong>If the recovery provider is compromised, how much of our environment can the attacker inherit through that trust?</strong></p>
+<h2>Recovery Access Should Have A Small Blast Radius</h2>
+<p>Recovery platforms often need significant access, but significant does not have to mean unlimited.</p>
+<p>Permissions should be narrowly scoped.</p>
+<p>Backup identities should be separated from administrative identities.</p>
+<p>Recovery services should not automatically receive authority to manage unrelated infrastructure.</p>
+<p>Production privileges should not be reused casually across backup, recovery and administration functions.</p>
+<p>This is where the principle in <a href="the-strongest-architecture-is-the-one-that-limits-blast-radius.html">The Strongest Architecture Is The One That Limits Blast Radius</a> becomes especially relevant.</p>
+<p>If a backup identity is compromised, the architecture should limit what the attacker inherits.</p>
+<p>The goal is not simply to protect the backup system.</p>
+<p>It is to prevent compromise of that system from becoming compromise of the wider enterprise.</p>
+<h2>Recovery Infrastructure Needs Its Own Trust Boundary</h2>
+<p>Organisations often treat backup and recovery as support services behind production.</p>
+<p>I think that model needs to change.</p>
+<p>Recovery infrastructure should be treated as its own high-value trust domain.</p>
+<p>Its administrative identities should be separated.</p>
+<p>Its credentials should be independently protected.</p>
+<p>Its access should be monitored.</p>
+<p>Its connections should be revocable.</p>
+<p>And where possible, its recovery data should remain isolated from the identities and control planes used to operate normal production systems.</p>
+<p>This becomes particularly important during a serious cyber incident.</p>
+<p>If the attacker controls production identities, the recovery process should not depend entirely on those same identities.</p>
+<p>Otherwise, the organisation may restore the technology without restoring trust.</p>
+<p>That is why future-state architecture needs to think beyond traditional disaster recovery.</p>
+<p>Recovery should be designed to rebuild a <strong>known-good environment</strong>, not merely restart an available one.</p>
+<h2>Isolation Must Be Possible Before Recovery Begins</h2>
+<p>There is another important lesson from the incident.</p>
+<p>ConnectWise disabled affected application identities, revoked certificates and suspended services while investigation and restoration continued. The company later began restoration using a new security-hardened Microsoft 365 application, with tenants required to re-authorise the new application.</p>
+<p>That is an important architectural pattern.</p>
+<p>The first objective after compromise is not always restoration.</p>
+<p>Sometimes it is isolation.</p>
+<p>Trust must be removed before it can be safely re-established.</p>
+<p>This principle applies well beyond backup systems.</p>
+<p>If an identity, integration or vendor connection becomes untrusted, the organisation should be able to disconnect it without redesigning the environment during the incident.</p>
+<p>That capability needs to exist before the compromise occurs.</p>
+<h2>Recovery Must Not Become A Permanent Backdoor</h2>
+<p>Backup and recovery systems are sometimes granted broad permissions because availability is considered more important than security complexity.</p>
+<p>That can be dangerous.</p>
+<p>A service account that can access every workload may make backup operations easier.</p>
+<p>A shared application identity may simplify administration.</p>
+<p>Persistent privileged access may reduce operational friction.</p>
+<p>But convenience creates concentration risk.</p>
+<p>This is exactly the type of architectural weakness discussed in <a href="security-controls-cannot-fully-repair-poor-architecture.html">Security Controls Cannot Fully Repair Poor Architecture</a>.</p>
+<p>Monitoring the backup account does not eliminate excessive privilege.</p>
+<p>Encrypting the backup repository does not reduce what the application identity can reach.</p>
+<p>Adding alerts does not replace proper isolation.</p>
+<p>The stronger solution is to reduce unnecessary trust before additional controls are added around it.</p>
+<h2>The Recovery Architecture Question Needs To Change</h2>
+<p>Security reviews often ask whether backups exist.</p>
+<p>Are they encrypted?</p>
+<p>Are they immutable?</p>
+<p>Have restore tests been performed?</p>
+<p>Those are necessary questions.</p>
+<p>But a defendable architecture should also ask:</p>
+<p>What identities operate the recovery platform? What privileges do those identities hold? Which systems trust the recovery provider? Can those connections be revoked quickly? Can recovery continue if the provider itself is compromised? Can the organisation rebuild using credentials that are independent from production?</p>
+<p>These questions move recovery from an operational capability into an architectural one.</p>
+<p>And that is where it belongs.</p>
+<h2>Final Thoughts</h2>
+<p>Backup systems exist because organisations accept that production systems can fail.</p>
+<p>Cybersecurity architecture should extend the same assumption to the backup platform itself.</p>
+<p>The recovery provider can be compromised.</p>
+<p>The service principal can be abused.</p>
+<p>The trusted application can become hostile.</p>
+<p>The administrative account can be stolen.</p>
+<p>The architecture must still survive.</p>
+<p>A strong recovery design therefore protects more than backup data.</p>
+<p>It protects the trust surrounding the recovery process.</p>
+<p>It limits the authority of recovery identities.</p>
+<p>It isolates recovery infrastructure.</p>
+<p>It allows compromised connections to be revoked.</p>
+<p>And it provides a path to rebuild the business into an environment that can be trusted again.</p>
+<p>Because the system designed to recover you may be one of the most privileged systems you have.</p>
+<p><strong>And anything highly trusted can also become an attack path.</strong></p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="the-php2shell-lesson-is-not-just-patch-faster-know-what-you-are-running.html">The PHP2Shell Lesson Is Not Just Patch Faster. Know What You Are Running.</a><span>27 October 2026</span></li>
+        <li><a href="security-controls-cannot-fully-repair-poor-architecture.html">Security Controls Cannot Fully Repair Poor Architecture</a><span>21 October 2026</span></li>
+        <li><a href="attack-surface-is-designed-long-before-go-live.html">Attack Surface Is Designed Long Before Go-Live</a><span>20 October 2026</span></li>
+        <li><a href="three-tier-architecture-was-built-for-yesterday-future-architecture-must-be-designed-to-survive.html">Three-Tier Architecture Was Built for Yesterday. Future Architecture Must Be Designed to Survive.</a><span>19 October 2026</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-system-designed-to-recover-you-can-also-become-an-attack-path.html" target="_blank" rel="noopener noreferrer" aria-label="Share The System Designed To Recover You Can Also Become An Attack Path on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-system-designed-to-recover-you-can-also-become-an-attack-path.html" target="_blank" rel="noopener noreferrer" aria-label="Share The System Designed To Recover You Can Also Become An Attack Path on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-system-designed-to-recover-you-can-also-become-an-attack-path.html&amp;text=The%20System%20Designed%20To%20Recover%20You%20Can%20Also%20Become%20An%20Attack%20Path" target="_blank" rel="noopener noreferrer" aria-label="Share The System Designed To Recover You Can Also Become An Attack Path on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=The%20System%20Designed%20To%20Recover%20You%20Can%20Also%20Become%20An%20Attack%20Path%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fthe-system-designed-to-recover-you-can-also-become-an-attack-path.html" target="_blank" rel="noopener noreferrer" aria-label="Share The System Designed To Recover You Can Also Become An Attack Path on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/the-system-designed-to-recover-you-can-also-become-an-attack-path.html" aria-label="Copy link to The System Designed To Recover You Can Also Become An Attack Path" title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
