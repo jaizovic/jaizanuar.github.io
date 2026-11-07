@@ -1,24 +1,20 @@
 {
   "countries": [
     {
-      "code": "MY",
-      "name": "Malaysia"
-    },
-    {
-      "code": "CA",
-      "name": "Canada"
-    },
-    {
       "code": "US",
       "name": "United States"
     },
     {
-      "code": "IN",
-      "name": "India"
+      "code": "IT",
+      "name": "Italy"
     },
     {
-      "code": "VN",
-      "name": "Vietnam"
+      "code": "MY",
+      "name": "Malaysia"
+    },
+    {
+      "code": "RU",
+      "name": "Russia"
     },
     {
       "code": "TH",
@@ -27,6 +23,54 @@
     {
       "code": "TR",
       "name": "Turkey"
+    },
+    {
+      "code": "UY",
+      "name": "Uruguay"
+    },
+    {
+      "code": "BR",
+      "name": "Brazil"
+    },
+    {
+      "code": "CO",
+      "name": "Colombia"
+    },
+    {
+      "code": "DO",
+      "name": "Dominican Republic"
+    },
+    {
+      "code": "EC",
+      "name": "Ecuador"
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom"
+    },
+    {
+      "code": "VE",
+      "name": "Venezuela"
+    },
+    {
+      "code": "VN",
+      "name": "Vietnam"
+    },
+    {
+      "code": "MX",
+      "name": "Mexico"
+    },
+    {
+      "code": "QA",
+      "name": "Qatar"
+    },
+    {
+      "code": "CA",
+      "name": "Canada"
+    },
+    {
+      "code": "IN",
+      "name": "India"
     },
     {
       "code": "IE",
@@ -39,10 +83,6 @@
     {
       "code": "SG",
       "name": "Singapore"
-    },
-    {
-      "code": "CO",
-      "name": "Colombia"
     },
     {
       "code": "FR",
@@ -59,14 +99,6 @@
     {
       "code": "BE",
       "name": "Belgium"
-    },
-    {
-      "code": "PK",
-      "name": "Pakistan"
-    },
-    {
-      "code": "IT",
-      "name": "Italy"
     }
   ]
 }
