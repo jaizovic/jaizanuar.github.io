@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked. | Jaiz Anuar</title>
+  <meta name="description" content="Live cyber threat maps visualise observed activity, not confirmed compromise, attacker identity or business impact. Telemetry becomes intelligence only when context is added." />
+  <link rel="canonical" href="https://jaizanuar.com/articles/a-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked." />
+  <meta property="og:description" content="Live cyber threat maps visualise observed activity, not confirmed compromise, attacker identity or business impact. Telemetry becomes intelligence only when context is added." />
+  <meta property="og:url" content="https://jaizanuar.com/articles/a-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.html" />
+  <meta property="og:image" content="https://jaizanuar.com/assets/images/articles/a-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.webp" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="Security analysts separate a colourful global map of scans, bot traffic and blocked attempts from a narrow evidence chain leading to one verified compromise." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked." />
+  <meta name="twitter:description" content="Live cyber threat maps visualise observed activity, not confirmed compromise, attacker identity or business impact. Telemetry becomes intelligence only when context is added." />
+  <meta name="twitter:image" content="https://jaizanuar.com/assets/images/articles/a-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.webp" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked.", "description": "Live cyber threat maps visualise observed activity, not confirmed compromise, attacker identity or business impact. Telemetry becomes intelligence only when context is added.", "datePublished": "2026-11-09", "dateModified": "2026-11-09", "author": {"@type": "Person", "name": "Jaiz Anuar", "url": "https://jaizanuar.com/about/"}, "articleSection": ["Cybersecurity", "Security Operations", "Threat Intelligence"], "keywords": ["Cybersecurity", "Security Operations", "Threat Intelligence"], "inLanguage": "en", "image": {"@type": "ImageObject", "url": "https://jaizanuar.com/assets/images/articles/a-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.webp", "width": 1600, "height": 900}, "mainEntityOfPage": "https://jaizanuar.com/articles/a-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9JZPMN9L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z9JZPMN9L');
+  </script>
+  <link rel="icon" type="image/png" sizes="50x50" href="/favicon.png" />
+</head>
+<body class="light-page">
+  <header class="page-header">
+    <div class="logo">Jaiz Anuar</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../about/">About</a>
+      <a href="../dashboard/">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="reader">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a><span aria-hidden="true">›</span><a href="index.html">Articles</a><span aria-hidden="true">›</span><a href="../topics/cybersecurity/">Cybersecurity</a><span aria-hidden="true">›</span><span aria-current="page">A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked.</span>
+    </nav>
+    <a class="back-link" href="index.html">← Back to Articles</a>
+    <div class="article-meta">9 November 2026 · Cybersecurity · Security Operations · Threat Intelligence · 7 min read</div>
+    <p class="article-byline">Written by <a rel="author" href="../about/">Jaiz Anuar</a></p>
+    <h1>A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked.</h1>
+    <p class="lead">Bright lines and large counters make cyber threat maps compelling, but they show what a particular sensor network observed—not necessarily which systems were breached or who was behind the traffic.</p>
+    <figure class="article-featured-image">
+      <img src="../assets/images/articles/a-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.webp" width="1600" height="900" alt="Security analysts separate a colourful global map of scans, bot traffic and blocked attempts from a narrow evidence chain leading to one verified compromise." fetchpriority="high" decoding="async" />
+    </figure>
+
+<p>Over the past few days, screenshots of live cyber threat maps have been widely shared on social media. Bright lines appear to travel between countries, counters show thousands or millions of events, and locations suddenly appear to be under intense cyberattack.</p>
+<p>The visualisation is powerful. It creates the impression that we are watching a cyber battle happen in real time.</p>
+<p>But there is an important distinction that is easily lost.</p>
+<p><strong>A cyber threat map can show observed security activity. It does not automatically show successful compromise.</strong></p>
+<p>Malaysia's National Security Council has cautioned against interpreting unverified social-media claims as confirmed cyberattacks. In a <a href="https://www.bernama.com/bm/news.php?id=2631489" target="_blank" rel="noopener noreferrer">7 November statement reported by Bernama</a>, it said the national cyber threat level remained Moderate while NC4 continued monitoring the situation.</p>
+<p>The following day, <a href="https://berita.rtm.gov.my/nasional/senarai-berita-nasional/senarai-artikel/nacsa-perkukuh-kesiapsiagaan-hadapi-ancaman-siber/" target="_blank" rel="noopener noreferrer">NACSA clarified through RTM</a> that high detection numbers do not necessarily mean systems have been breached and that one widely shared live map reflected telemetry from a particular security platform rather than the country's complete cybersecurity situation.</p>
+<p>That distinction matters because cybersecurity telemetry needs context before it becomes intelligence.</p>
+<h2>Millions Of Events Do Not Mean Millions Of Breaches</h2>
+<p>The internet is noisy.</p>
+<p>Internet-facing systems are constantly scanned. Bots search for exposed services. Automated tools probe web applications. Malware attempts connections. Vulnerability scanners search for particular software versions. Threat researchers operate honeypots specifically to attract malicious traffic.</p>
+<p>A security vendor may observe millions of these events.</p>
+<p>That does not mean millions of organisations were successfully compromised.</p>
+<p>One IP address may generate thousands of repeated attempts. One automated bot may scan an entire address range. One malicious request may be blocked before reaching the application. A honeypot may deliberately accept connections so researchers can study attacker behaviour.</p>
+<p>All of these can create security telemetry.</p>
+<p>The important question is what happened next.</p>
+<p>Was the connection blocked? Did authentication succeed? Was code executed? Did the attacker obtain a session? Was data accessed? Did lateral movement occur?</p>
+<p>Without that context, the number alone tells only part of the story.</p>
+<h2>Threat Maps Show What Their Sensors Can See</h2>
+<p>Another important point is that every threat map represents a particular view of the internet.</p>
+<p>The visibility depends on where the provider has sensors, customers, security products, honeypots and telemetry sources.</p>
+<p>One provider may see large volumes of activity that another provider does not. A country with significant data-centre capacity or internet infrastructure may also naturally generate or receive large amounts of observable traffic.</p>
+<p>NACSA made the same clarification regarding the viral threat-map data, explaining that high detection volumes from one security platform do not represent the complete cybersecurity situation of the country.</p>
+<p>That does not mean the map is wrong.</p>
+<p>It means the map needs to be understood for what it is.</p>
+<p><strong>A view from a particular set of sensors, not a complete view of cyberspace.</strong></p>
+<h2>The Source Country May Not Be The Attacker</h2>
+<p>Those moving lines also create another dangerous assumption.</p>
+<p>If traffic appears to originate from Country A and terminate in Country B, it is tempting to conclude that Country A is attacking Country B.</p>
+<p>Cyber attribution is rarely that simple.</p>
+<p>Attackers commonly use compromised servers, cloud infrastructure, VPNs, proxies, residential devices and botnets distributed across many countries.</p>
+<p>The system generating malicious traffic may itself be a victim.</p>
+<p>An attacker sitting in one country could operate infrastructure in five others. A compromised web server in Europe could attack an organisation in Asia while the person controlling it is somewhere else entirely.</p>
+<p>An IP address tells us where traffic appears to originate.</p>
+<p>It does not automatically tell us who is behind it.</p>
+<p>This is why claims that one country is “attacking” or “counter-attacking” another based only on animated lines on a threat map should be treated carefully.</p>
+<p>Attribution requires much more evidence.</p>
+<h2>Detection Is Not The Same As Impact</h2>
+<p>There is another distinction that security professionals should communicate more clearly.</p>
+<p><strong>Attempted attack, detected attack and successful compromise are not the same thing.</strong></p>
+<p>Consider a web application receiving an exploit attempt.</p>
+<p>The WAF detects it.</p>
+<p>The request is blocked.</p>
+<p>The SIEM records the event.</p>
+<p>The threat-intelligence platform classifies the source as malicious.</p>
+<p>A live map displays the attack.</p>
+<p>Five security systems may now have evidence that malicious activity occurred.</p>
+<p>But the application was never compromised.</p>
+<p>The security controls actually worked.</p>
+<p>This is closely related to the principle in <a href="security-products-should-be-tested-against-the-outcome-not-the-alert.html">Security Products Should Be Tested Against The Outcome, Not The Alert</a>.</p>
+<p>An alert tells us something happened.</p>
+<p>The outcome tells us whether the attacker succeeded.</p>
+<p>That is the difference that matters.</p>
+<h2>Telemetry Is Not Intelligence Until Context Is Added</h2>
+<p>Security operations centres process huge volumes of telemetry every day.</p>
+<p>Firewall events, endpoint detections, DNS queries, authentication logs, vulnerability alerts, threat-intelligence indicators and cloud activity all provide signals.</p>
+<p>But individual signals rarely tell the whole story.</p>
+<p>Intelligence comes from correlation.</p>
+<p>A suspicious IP address becomes more meaningful when it is combined with a successful login, unusual privilege escalation, abnormal API activity and unexpected data transfer.</p>
+<p>One event is telemetry.</p>
+<p>Multiple correlated events supported by context may indicate an incident.</p>
+<p>This is why mature cyber defence cannot simply count alerts.</p>
+<p>It needs to understand behaviour.</p>
+<p>That also connects with <a href="cyber-threat-levels-matter-only-if-they-trigger-different-defences.html">Cyber Threat Levels Matter Only If They Trigger Different Defences</a>. Threat intelligence has value when organisations translate external information into decisions about their own exposure and defensive posture.</p>
+<p>A dramatic threat map may tell you that malicious activity is occurring.</p>
+<p>The next question should be:</p>
+<p><strong>Does any of this activity intersect with something we actually operate?</strong></p>
+<h2>Ask What Actually Got Through</h2>
+<p>For security teams, the useful questions are different from those normally asked on social media.</p>
+<p>Are our internet-facing assets being targeted? Are attackers exploiting vulnerabilities that exist in our environment? Have authentication attempts increased? Are security controls blocking the activity? Are there successful sessions following those attempts? Are critical assets behaving differently? Is there evidence of lateral movement or persistence?</p>
+<p>Those questions connect external threat activity with internal evidence.</p>
+<p>That is where situational awareness becomes useful.</p>
+<p>This also reinforces the lesson from <a href="the-php2shell-lesson-is-not-just-patch-faster-know-what-you-are-running.html">The PHP2Shell Lesson Is Not Just Patch Faster. Know What You Are Running.</a></p>
+<p>When a new attack campaign appears, the organisation should already know whether it operates the affected technology, where it is exposed and who owns it.</p>
+<p>A global threat map cannot answer those questions for you.</p>
+<p>Your architecture, asset visibility and security telemetry must.</p>
+<h2>A Busy Threat Map Can Actually Mean Your Controls Are Working</h2>
+<p>There is another side to this discussion.</p>
+<p>Large numbers of detected attacks are not necessarily evidence of weak security.</p>
+<p>Sometimes they demonstrate that defensive controls are seeing and stopping malicious activity.</p>
+<p>An organisation may block thousands of exploit attempts every day without experiencing a successful compromise.</p>
+<p>That does not mean the attempts should be ignored.</p>
+<p>It means success should be measured differently.</p>
+<p>How many attempts reached vulnerable systems? How many bypassed controls? How quickly were abnormal behaviours detected? How far could an attacker move if one attempt succeeded?</p>
+<p>This brings us back to <a href="the-strongest-architecture-is-the-one-that-limits-blast-radius.html">The Strongest Architecture Is The One That Limits Blast Radius</a>.</p>
+<p>The real test is not whether someone attempts to attack you.</p>
+<p>If you are connected to the internet, someone eventually will.</p>
+<p>The architectural question is what happens when one attempt gets through.</p>
+<h2>Social Media Rewards The Most Dramatic Interpretation</h2>
+<p>Cybersecurity has another problem.</p>
+<p>Animated maps look impressive.</p>
+<p>“Two million cyberattacks” gets attention.</p>
+<p>“Millions of network events were observed and most may have been automatically blocked” does not produce the same reaction.</p>
+<p>But cybersecurity professionals should resist the temptation to turn telemetry into drama.</p>
+<p>Exaggerating every spike creates unnecessary fear and eventually damages credibility.</p>
+<p>At the same time, dismissing threat activity simply because many attempts are unsuccessful would also be wrong.</p>
+<p>The balanced position is to understand what the data actually represents.</p>
+<p>Threat activity matters.</p>
+<p>Attempted exploitation matters.</p>
+<p>National threat posture matters.</p>
+<p>But successful compromise and business impact require additional evidence.</p>
+<h2>Final Thoughts</h2>
+<p>Cyber threat maps are useful.</p>
+<p>They remind us how continuously hostile the internet can be and provide another source of situational awareness.</p>
+<p>But they should not be interpreted as real-time maps of organisations being successfully hacked.</p>
+<p>A line on a map may represent scanning.</p>
+<p>A dot may represent a blocked exploit.</p>
+<p>A large number may represent repeated automated events.</p>
+<p>A source country may represent compromised infrastructure rather than the attacker behind it.</p>
+<p>Cybersecurity requires context.</p>
+<p>The question should therefore move from:</p>
+<p><em>“How many attacks are happening?”</em></p>
+<p>to:</p>
+<p><strong>“What are attackers attempting, what are they targeting, what actually succeeded, and what would happen if one of those attempts got through?”</strong></p>
+<p>That is where telemetry becomes intelligence.</p>
+<p>And where cybersecurity moves from watching colourful maps to understanding actual risk.</p>
+<p><strong>A cyber threat map shows activity. It does not show who was hacked.</strong></p>
+<p><strong>Question assumptions. Share knowledge. Build trust.</strong></p>
+
+    <aside class="author-card" aria-label="About the author">
+      <h2>Written by Jaiz Anuar</h2>
+      <p>Independent perspectives on cybersecurity, digital trust, governance, architecture, and leadership.</p>
+      <a href="../about/">About Jaiz Anuar →</a>
+    </aside>
+
+    <section class="related-articles" aria-labelledby="relatedArticlesTitle">
+      <h2 id="relatedArticlesTitle">Related articles</h2>
+      <ul>
+        <li><a href="siem-migration-checklist-how-to-avoid-detection-gaps.html">SIEM Migration Checklist: How to Avoid Detection Gaps</a><span>25 July 2026</span></li>
+        <li><a href="a-siem-migration-is-not-just-a-technology-refresh-it-is-a-security-risk-event.html">A SIEM Migration Is Not Just a Technology Refresh. It Is a Security Risk Event.</a><span>23 July 2026</span></li>
+        <li><a href="when-security-tools-become-the-noise.html">When Security Tools Become the Noise</a><span>12 April 2025</span></li>
+        <li><a href="real-data-breach-vs-honeypot-data-breach.html">Real Data Breach vs Honeypot Data Breach</a><span>23 May 2024</span></li>
+      </ul>
+    </section>
+
+    <section class="article-share" aria-labelledby="shareArticleTitle">
+      <h2 id="shareArticleTitle">Share this article</h2>
+      <p>If this perspective was useful, share it with your network.</p>
+      <div class="share-actions">
+        <a class="share-button share-link share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fa-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.html" target="_blank" rel="noopener noreferrer" aria-label="Share A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked. on LinkedIn" title="Share on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a class="share-button share-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fa-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.html" target="_blank" rel="noopener noreferrer" aria-label="Share A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked. on Facebook" title="Share on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+        <a class="share-button share-link share-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaizanuar.com%2Farticles%2Fa-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.html&amp;text=A%20Cyber%20Threat%20Map%20Shows%20Activity.%20It%20Does%20Not%20Show%20Who%20Was%20Hacked." target="_blank" rel="noopener noreferrer" aria-label="Share A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked. on X" title="Share on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span class="visually-hidden">X</span>
+        </a>
+        <a class="share-button share-link share-whatsapp" href="https://wa.me/?text=A%20Cyber%20Threat%20Map%20Shows%20Activity.%20It%20Does%20Not%20Show%20Who%20Was%20Hacked.%20https%3A%2F%2Fjaizanuar.com%2Farticles%2Fa-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.html" target="_blank" rel="noopener noreferrer" aria-label="Share A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked. on WhatsApp" title="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.8-.9L3 21l1.7-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 8.2c.4 3.5 2.1 5.2 5.5 5.9l1.3-1.3 2.8 1v2.3c-5.7 1.2-10.9-4-9.7-9.7h2.3l1 2.8-1.3 1.3"/></svg>
+          <span class="visually-hidden">WhatsApp</span>
+        </a>
+        <button class="share-button share-copy" type="button" data-share-url="https://jaizanuar.com/articles/a-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.html" aria-label="Copy link to A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked." title="Copy article link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+          <span class="visually-hidden">Copy link</span>
+        </button>
+      </div>
+      <span class="share-status" aria-live="polite"></span>
+    </section>
+  </main>
+
+  <footer>© 2026 Jaiz Anuar. Independent perspectives on cybersecurity and digital trust.</footer>
+  <script src="../assets/share.js"></script>
+  <script data-goatcounter="https://jaizanuar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
