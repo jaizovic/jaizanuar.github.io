@@ -1,16 +1,20 @@
 {
   "countries": [
     {
+      "code": "MY",
+      "name": "Malaysia"
+    },
+    {
+      "code": "BR",
+      "name": "Brazil"
+    },
+    {
       "code": "US",
       "name": "United States"
     },
     {
       "code": "IT",
       "name": "Italy"
-    },
-    {
-      "code": "MY",
-      "name": "Malaysia"
     },
     {
       "code": "RU",
@@ -27,10 +31,6 @@
     {
       "code": "UY",
       "name": "Uruguay"
-    },
-    {
-      "code": "BR",
-      "name": "Brazil"
     },
     {
       "code": "CO",
