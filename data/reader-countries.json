@@ -5,6 +5,14 @@
       "name": "Malaysia"
     },
     {
+      "code": "TH",
+      "name": "Thailand"
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom"
+    },
+    {
       "code": "BR",
       "name": "Brazil"
     },
@@ -19,10 +27,6 @@
     {
       "code": "RU",
       "name": "Russia"
-    },
-    {
-      "code": "TH",
-      "name": "Thailand"
     },
     {
       "code": "TR",
@@ -43,10 +47,6 @@
     {
       "code": "EC",
       "name": "Ecuador"
-    },
-    {
-      "code": "GB",
-      "name": "United Kingdom"
     },
     {
       "code": "VE",
