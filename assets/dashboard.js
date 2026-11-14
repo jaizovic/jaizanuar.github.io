@@ -177,7 +177,7 @@
       return;
     }
 
-    countries.slice(0, 25).forEach(function (country) {
+    countries.slice(0, 50).forEach(function (country) {
       var item = document.createElement('li');
       var flag = document.createElement('span');
       var name = document.createElement('span');
