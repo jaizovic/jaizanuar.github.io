@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The AI Agent Was Authorised. The Action Was Not.", "2026-11-14", "/articles/the-ai-agent-was-authorised-the-action-was-not.html"],
     ["The AI Model Passed Every Test. It Was Still Compromised.", "2026-11-13", "/articles/the-ai-model-passed-every-test-it-was-still-compromised.html"],
     ["A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked.", "2026-11-09", "/articles/a-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.html"],
     ["Cyber Threat Levels Matter Only If They Trigger Different Defences", "2026-11-04", "/articles/cyber-threat-levels-matter-only-if-they-trigger-different-defences.html"],
