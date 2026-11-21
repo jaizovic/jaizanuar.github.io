@@ -5,6 +5,7 @@
   var counterBase = 'https://' + siteCode + '.goatcounter.com/counter/';
   var articleLimit = 20;
   var articles = [
+    ["The Java Vulnerability Is Easy To Name. Finding Every Place Java Runs Is Harder.", "2026-11-21", "/articles/the-java-vulnerability-is-easy-to-name-finding-every-place-java-runs-is-harder.html"],
     ["The AI Agent Was Authorised. The Action Was Not.", "2026-11-14", "/articles/the-ai-agent-was-authorised-the-action-was-not.html"],
     ["The AI Model Passed Every Test. It Was Still Compromised.", "2026-11-13", "/articles/the-ai-model-passed-every-test-it-was-still-compromised.html"],
     ["A Cyber Threat Map Shows Activity. It Does Not Show Who Was Hacked.", "2026-11-09", "/articles/a-cyber-threat-map-shows-activity-it-does-not-show-who-was-hacked.html"],
